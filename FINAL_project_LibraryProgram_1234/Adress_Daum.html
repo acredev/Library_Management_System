@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
+    <title>다음API</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- 주소 검색 -->
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script>
+                $(document).ready(function () {
+                    showzip = function () {
+                        var element_layer = document.getElementById('layer');
+                        new daum.Postcode({
+                            oncomplete: function (data) {
+                                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분입니다.
+                                // 예제를 참고하여 다양한 활용법을 확인해 보세요.
+                                if (window.external) {
+                                    window.external.CallForm(data.zonecode, data.address);
+                                }
+                                //alert(data.zonecode + data.address);
+                            }
+                        }).embed(element_layer);
+                    }
+                    showzip();
+                });
+    </script>
+</head>
+<body>
+    <div id='layer' style='position:fixed;overflow:hidden;z-index:1;-webkit-overflow-scrolling:touch;'></div>
+</body>
+</html>

@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B616289F-743A-4AE0-8227-3DAD68FE4511}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FINAL_project_LibraryProgram_1234</RootNamespace>
+    <AssemblyName>FINAL_project_LibraryProgram_1234</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin">
+      <HintPath>C:\Users\m_fil\Downloads\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.30.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="j. NewMember_Normal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="j. NewMember_Normal.Designer.cs">
+      <DependentUpon>j. NewMember_Normal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="b. info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="b. info.Designer.cs">
+      <DependentUpon>b. info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="c. Login_Master.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="c. Login_Master.Designer.cs">
+      <DependentUpon>c. Login_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="d. Login_Normal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="d. Login_Normal.Designer.cs">
+      <DependentUpon>d. Login_Normal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="a. Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="a. Main.Designer.cs">
+      <DependentUpon>a. Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="e. Master.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="e. Master.Designer.cs">
+      <DependentUpon>e. Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="g. Master_Find_IDPW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="g. Master_Find_IDPW.Designer.cs">
+      <DependentUpon>g. Master_Find_IDPW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f. Normal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f. Normal.Designer.cs">
+      <DependentUpon>f. Normal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="h. Normal_Find_ID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="h. Normal_Find_ID.Designer.cs">
+      <DependentUpon>h. Normal_Find_ID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="i. Normal_Find_PW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="i. Normal_Find_PW.Designer.cs">
+      <DependentUpon>i. Normal_Find_PW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SupportMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupportMail.Designer.cs">
+      <DependentUpon>SupportMail.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="b. info.resx">
+      <DependentUpon>b. info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="c. Login_Master.resx">
+      <DependentUpon>c. Login_Master.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="d. Login_Normal.resx">
+      <DependentUpon>d. Login_Normal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="a. Main.resx">
+      <DependentUpon>a. Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="e. Master.resx">
+      <DependentUpon>e. Master.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f. Normal.resx">
+      <DependentUpon>f. Normal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="g. Master_Find_IDPW.resx">
+      <DependentUpon>g. Master_Find_IDPW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h. Normal_Find_ID.resx">
+      <DependentUpon>h. Normal_Find_ID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="i. Normal_Find_PW.resx">
+      <DependentUpon>i. Normal_Find_PW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="j. NewMember_Normal.resx">
+      <DependentUpon>j. NewMember_Normal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SupportMail.resx">
+      <DependentUpon>SupportMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
