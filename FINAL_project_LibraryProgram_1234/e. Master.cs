@@ -47,6 +47,11 @@ namespace FINAL_project_LibraryProgram_1234
             }
         }
 
+        // <Master.cs 전체에서 사용할 변수들>
+        public static bool tab2_isBookModify = false;
+        public static bool tab2_isBookNew = false;
+        public static bool tab2_isBookReadOnly = false;
+
         // <탭 1에서, 조회/재조회 버튼 클릭시>
         private void btn_tab1_load_Click(object sender, EventArgs e)
         {
@@ -745,19 +750,189 @@ namespace FINAL_project_LibraryProgram_1234
             }
         }
 
-        // <탭 2에서, 신규 버튼 클릭 시>
-        private void btn_tab2_new_Click(object sender, EventArgs e)
+        // <탭 2에서, 관리모드가 열람모드로 변경 시>
+        private void rdobtn_tab2_seemode_CheckedChanged(object sender, EventArgs e)
         {
-            txtbox_tab2_bookabout.Text = "";
-            txtbox_tab2_isbn.Text = "";
+            tab2_isBookReadOnly = true;
+            tab2_isBookModify = false;
+            tab2_isBookNew = false;
+
+            txtbox_tab2_booknum.ReadOnly = true;
+            txtbox_tab2_bookname.ReadOnly = true;
+            txtbox_tab2_isbn.ReadOnly = true;
+            txtbox_tab2_bookwrite.ReadOnly = true;
+            txtbox_tab2_bookpublisher.ReadOnly = true;
+            txtbox_tab2_bookdate.ReadOnly = true;
+            txtbox_tab2_bookprice.ReadOnly = true;
+            txtbox_tab2_bookpages.ReadOnly = true;
+            txtbox_tab2_bookabout.ReadOnly = true;
+
+            btn_tab2_save.Visible = false;
+            btn_tab2_reset.Visible = false;
+        }
+
+        // <탭 2에서, 관리모드가 수정모드로 변경 시>
+
+        private void rdobtn_tab2_editmode_CheckedChanged(object sender, EventArgs e)
+        {
+            tab2_isBookReadOnly = false;
+            tab2_isBookModify = true;
+            tab2_isBookNew = false;
+
+            txtbox_tab2_booknum.ReadOnly = true;
+            txtbox_tab2_bookname.ReadOnly = false;
+            txtbox_tab2_isbn.ReadOnly = false;
+            txtbox_tab2_bookwrite.ReadOnly = false;
+            txtbox_tab2_bookpublisher.ReadOnly = false;
+            txtbox_tab2_bookdate.ReadOnly = false;
+            txtbox_tab2_bookprice.ReadOnly = false;
+            txtbox_tab2_bookpages.ReadOnly = false;
+            txtbox_tab2_bookabout.ReadOnly = false;
+
+            btn_tab2_save.Visible = true;
+            btn_tab2_reset.Visible = true;
+        }
+
+        // <탭 2에서, 관리모드가 신규등록모드로 변경 시>
+        private void rdobtn_tab2_newmode_CheckedChanged(object sender, EventArgs e)
+        {
+            tab2_isBookReadOnly = false;
+            tab2_isBookModify = false;
+            tab2_isBookNew = true;
+
+            txtbox_tab2_booknum.ReadOnly = true;
+            txtbox_tab2_bookname.ReadOnly = false;
+            txtbox_tab2_isbn.ReadOnly = false;
+            txtbox_tab2_bookwrite.ReadOnly = false;
+            txtbox_tab2_bookpublisher.ReadOnly = false;
+            txtbox_tab2_bookdate.ReadOnly = false;
+            txtbox_tab2_bookprice.ReadOnly = false;
+            txtbox_tab2_bookpages.ReadOnly = false;
+            txtbox_tab2_bookabout.ReadOnly = false;
+
+            btn_tab2_save.Visible = true;
+            btn_tab2_reset.Visible = true;
+
+            txtbox_tab2_booknum.Text = "시스템에서 자동 입력되며, 보안을 위해 수정할 수 없습니다.";
             txtbox_tab2_bookname.Text = "";
-            txtbox_tab2_bookpages.Text = "";
-            txtbox_tab2_bookprice.Text = "";
+            txtbox_tab2_isbn.Text = "";
+            txtbox_tab2_bookwrite.Text = "";
             txtbox_tab2_bookpublisher.Text = "";
             txtbox_tab2_bookdate.Text = "";
+            txtbox_tab2_bookprice.Text = "";
+            txtbox_tab2_bookpages.Text = "";
+            txtbox_tab2_bookabout.Text = "";
+        }
+
+        // <탭 2에서, 저장버튼 클릭 시>
+
+        private void btn_tab2_save_Click(object sender, EventArgs e)
+        {
+            if (tab2_isBookReadOnly == true)
+            {
+                MessageBox.Show("신규 도서 등록시에만 사용 가능한 버튼입니다.");
+            }
+            else if (tab2_isBookModify == true)
+            {
+                if (txtbox_tab2_bookname.Text != "" && combobox_tab2_bookstatus.Text != "")
+                {
+                    string modifybook_insertQuery = "UPDATE library_project.book SET 이름 = '" + txtbox_tab2_bookname.Text + "', ISBN = '" + txtbox_tab2_isbn.Text + "', 저자 = '" + txtbox_tab2_bookwrite.Text + "', 출판일자 = '" + txtbox_tab2_bookdate.Text + "', 출판사 = '" + txtbox_tab2_bookpublisher.Text + "', 도서상태 = '" + combobox_tab2_bookstatus.Text + "', 대출여부 = '" + combobox_tab2_bookloanstatus.Text + "', 도서가격 = '" + txtbox_tab2_bookprice.Text + "', 페이지수 = '" + txtbox_tab2_bookpages.Text + "', 도서소개 = '" + txtbox_tab2_bookabout.Text + "' WHERE 관리번호 = '" + txtbox_tab2_booknum.Text + "';";
+                    connection.Open();
+                    MySqlCommand modi1fy_command = new MySqlCommand(modifybook_insertQuery, connection);
+
+                    try
+                    {
+                        if (modi1fy_command.ExecuteNonQuery() != 0)
+                        {
+                            MessageBox.Show("수정 요청하신 도서 관리번호 " + txtbox_tab2_booknum.Text + " 도서가 데이터베이스에 수정되었습니다. 조회 버튼을 눌러, 도서 목록을 다시 재 조회 바랍니다.");
+                            // 도서 정보 텍스트박스 초기화
+                            txtbox_tab2_bookname.Text = "";
+                            txtbox_tab2_isbn.Text = "";
+                            txtbox_tab2_bookwrite.Text = "";
+                            txtbox_tab2_bookpublisher.Text = "";
+                            txtbox_tab2_bookdate.Text = "";
+                            txtbox_tab2_bookprice.Text = "";
+                            txtbox_tab2_bookpages.Text = "";
+                            txtbox_tab2_bookabout.Text = "";
+
+                            // 데이터 조회 화면 초기화
+                            data_tab2_book.DataSource = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show("알 수 없는 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : ", "도서수정 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "도서수정 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    connection.Close();
+                }
+            }
+            else if (tab2_isBookNew == true)
+            {
+                if (txtbox_tab2_bookname.Text != "" && combobox_tab2_bookstatus.Text != "")
+                {
+                    string book_num = DateTime.Now.ToString("ssmmhhddMMyy");
+
+                    string newbook_insertQuery = "INSERT INTO library_project.book (관리번호, 이름, ISBN, 저자, 출판일자, 출판사, 도서상태, 대출여부, 도서가격, 페이지수, 도서소개) VALUES ('" + book_num + "', '" + txtbox_tab2_bookname.Text + "', '" + txtbox_tab2_isbn.Text + "', '" + txtbox_tab2_bookwrite.Text + "', '" + txtbox_tab2_bookdate.Text + "', '" + txtbox_tab2_bookpublisher.Text + "', '" + combobox_tab2_bookstatus.Text + "', '" + combobox_tab2_bookloanstatus.Text + "', '" + txtbox_tab2_bookprice.Text + "', '" + txtbox_tab2_bookpages.Text + "', '" + txtbox_tab2_bookabout.Text + "');";
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand(newbook_insertQuery, connection);
+
+                    try
+                    {
+                        if (command.ExecuteNonQuery() != 0)
+                        {
+                            MessageBox.Show("신규 등록하신 " + txtbox_tab2_bookname.Text + " 도서가 데이터베이스에 등록되었습니다. 본 도서의 관리 번호는 " + book_num + "입니다. 조회 버튼을 눌러, 도서 목록을 다시 재 조회 바랍니다.");
+
+                            // 도서 정보 텍스트박스 초기화
+                            txtbox_tab2_bookname.Text = "";
+                            txtbox_tab2_isbn.Text = "";
+                            txtbox_tab2_bookwrite.Text = "";
+                            txtbox_tab2_bookpublisher.Text = "";
+                            txtbox_tab2_bookdate.Text = "";
+                            txtbox_tab2_bookprice.Text = "";
+                            txtbox_tab2_bookpages.Text = "";
+                            txtbox_tab2_bookabout.Text = "";
+
+                            // 데이터 조회 화면 초기화
+                            data_tab2_book.DataSource = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show("알 수 없는 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : ", "도서등록 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "도서등록 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    connection.Close();
+                }
+                else
+                {
+                    MessageBox.Show("도서 이름과 도서 상태 항목은 필수 입력 항목입니다. 필수 입력 항목을 입력 후, 다시 시도해 주세요.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("도서 관리 모드를 우선 선택 후 진행 바랍니다.");
+            }
+        }
+
+        // <탭 2에서, 입력내용 초기화 버튼 클릭 시>
+
+        private void btn_tab2_reset_Click(object sender, EventArgs e)
+        {
+            txtbox_tab2_bookname.Text = "";
+            txtbox_tab2_isbn.Text = "";
             txtbox_tab2_bookwrite.Text = "";
-            combobox_tab2_bookstatus.Text = "";
-            combobox_tab2_bookloanstatus.Text = "";
+            txtbox_tab2_bookpublisher.Text = "";
+            txtbox_tab2_bookdate.Text = "";
+            txtbox_tab2_bookprice.Text = "";
+            txtbox_tab2_bookpages.Text = "";
+            txtbox_tab2_bookabout.Text = "";
         }
 
         // <탭 3에서, 조회/재조회 버튼 클릭시>
@@ -795,64 +970,6 @@ namespace FINAL_project_LibraryProgram_1234
             {
                 // 예외처리는 따로 안함, catch문을 써야 cellclick시 에러가 발생하지 않음
             }
-        }
-
-        private void rdobtn_tab2_seemode_CheckedChanged(object sender, EventArgs e)
-        {
-            txtbox_tab2_booknum.ReadOnly = true;
-            txtbox_tab2_bookname.ReadOnly = true;
-            txtbox_tab2_isbn.ReadOnly = true;
-            txtbox_tab2_bookwrite.ReadOnly = true;
-            txtbox_tab2_bookpublisher.ReadOnly = true;
-            txtbox_tab2_bookdate.ReadOnly = true;
-            txtbox_tab2_bookprice.ReadOnly = true;
-            txtbox_tab2_bookpages.ReadOnly = true;
-            txtbox_tab2_bookabout.ReadOnly = true;
-
-            btn_tab2_save.Visible = false;
-            btn_tab2_reset.Visible = false;
-        }
-
-        private void rdobtn_tab2_editmode_CheckedChanged(object sender, EventArgs e)
-        {
-            txtbox_tab2_booknum.ReadOnly = true;
-            txtbox_tab2_bookname.ReadOnly = false;
-            txtbox_tab2_isbn.ReadOnly = false;
-            txtbox_tab2_bookwrite.ReadOnly = false;
-            txtbox_tab2_bookpublisher.ReadOnly = false;
-            txtbox_tab2_bookdate.ReadOnly = false;
-            txtbox_tab2_bookprice.ReadOnly = false;
-            txtbox_tab2_bookpages.ReadOnly = false;
-            txtbox_tab2_bookabout.ReadOnly = false;
-
-            btn_tab2_save.Visible = true;
-            btn_tab2_reset.Visible = true;
-        }
-
-        private void rdobtn_tab2_newmode_CheckedChanged(object sender, EventArgs e)
-        {
-            txtbox_tab2_booknum.ReadOnly = true;
-            txtbox_tab2_bookname.ReadOnly = false;
-            txtbox_tab2_isbn.ReadOnly = false;
-            txtbox_tab2_bookwrite.ReadOnly = false;
-            txtbox_tab2_bookpublisher.ReadOnly = false;
-            txtbox_tab2_bookdate.ReadOnly = false;
-            txtbox_tab2_bookprice.ReadOnly = false;
-            txtbox_tab2_bookpages.ReadOnly = false;
-            txtbox_tab2_bookabout.ReadOnly = false;
-
-            btn_tab2_save.Visible = true;
-            btn_tab2_reset.Visible = true;
-
-            txtbox_tab2_booknum.Text = "";
-            txtbox_tab2_bookname.Text = "";
-            txtbox_tab2_isbn.Text = "";
-            txtbox_tab2_bookwrite.Text = "";
-            txtbox_tab2_bookpublisher.Text = "";
-            txtbox_tab2_bookdate.Text = "";
-            txtbox_tab2_bookprice.Text = "";
-            txtbox_tab2_bookpages.Text = "";
-            txtbox_tab2_bookabout.Text = "";
         }
     }
 }

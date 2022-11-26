@@ -113,6 +113,8 @@ namespace FINAL_project_LibraryProgram_1234
             this.rdobtn_tab2_seemode = new System.Windows.Forms.RadioButton();
             this.label33 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_tab2_reset = new System.Windows.Forms.Button();
+            this.btn_tab2_save = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.txtbox_tab2_booknum = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -184,8 +186,6 @@ namespace FINAL_project_LibraryProgram_1234
             this.picture_logout = new System.Windows.Forms.PictureBox();
             this.picture_support = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btn_tab2_save = new System.Windows.Forms.Button();
-            this.btn_tab2_reset = new System.Windows.Forms.Button();
             this.tabcontrol_master.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -1175,6 +1175,30 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             // 
+            // btn_tab2_reset
+            // 
+            this.btn_tab2_reset.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_tab2_reset.Location = new System.Drawing.Point(11, 463);
+            this.btn_tab2_reset.Name = "btn_tab2_reset";
+            this.btn_tab2_reset.Size = new System.Drawing.Size(613, 33);
+            this.btn_tab2_reset.TabIndex = 35;
+            this.btn_tab2_reset.Text = "입력내용 초기화";
+            this.btn_tab2_reset.UseVisualStyleBackColor = true;
+            this.btn_tab2_reset.Visible = false;
+            this.btn_tab2_reset.Click += new System.EventHandler(this.btn_tab2_reset_Click);
+            // 
+            // btn_tab2_save
+            // 
+            this.btn_tab2_save.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_tab2_save.Location = new System.Drawing.Point(12, 417);
+            this.btn_tab2_save.Name = "btn_tab2_save";
+            this.btn_tab2_save.Size = new System.Drawing.Size(613, 45);
+            this.btn_tab2_save.TabIndex = 34;
+            this.btn_tab2_save.Text = "저장";
+            this.btn_tab2_save.UseVisualStyleBackColor = true;
+            this.btn_tab2_save.Visible = false;
+            this.btn_tab2_save.Click += new System.EventHandler(this.btn_tab2_save_Click);
+            // 
             // label26
             // 
             this.label26.AutoSize = true;
@@ -1896,28 +1920,6 @@ namespace FINAL_project_LibraryProgram_1234
             this.label5.TabIndex = 26;
             this.label5.Text = "일이삼사 도서관 관리";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btn_tab2_save
-            // 
-            this.btn_tab2_save.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_tab2_save.Location = new System.Drawing.Point(12, 417);
-            this.btn_tab2_save.Name = "btn_tab2_save";
-            this.btn_tab2_save.Size = new System.Drawing.Size(613, 45);
-            this.btn_tab2_save.TabIndex = 34;
-            this.btn_tab2_save.Text = "저장";
-            this.btn_tab2_save.UseVisualStyleBackColor = true;
-            this.btn_tab2_save.Visible = false;
-            // 
-            // btn_tab2_reset
-            // 
-            this.btn_tab2_reset.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_tab2_reset.Location = new System.Drawing.Point(11, 463);
-            this.btn_tab2_reset.Name = "btn_tab2_reset";
-            this.btn_tab2_reset.Size = new System.Drawing.Size(613, 33);
-            this.btn_tab2_reset.TabIndex = 35;
-            this.btn_tab2_reset.Text = "입력내용 초기화";
-            this.btn_tab2_reset.UseVisualStyleBackColor = true;
-            this.btn_tab2_reset.Visible = false;
             // 
             // Master
             // 
