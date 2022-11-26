@@ -52,6 +52,9 @@ namespace FINAL_project_LibraryProgram_1234
         public static bool tab2_isBookNew = false;
         public static bool tab2_isBookReadOnly = false;
 
+        public static bool tab3_isMemModify = false;
+        public static bool tab3_isMemReadOnly = false;
+
         // <탭 1에서, 조회/재조회 버튼 클릭시>
         private void btn_tab1_load_Click(object sender, EventArgs e)
         {
@@ -789,6 +792,7 @@ namespace FINAL_project_LibraryProgram_1234
             txtbox_tab2_bookpages.ReadOnly = false;
             txtbox_tab2_bookabout.ReadOnly = false;
 
+            btn_tab2_delete.Visible = true;
             btn_tab2_save.Visible = true;
             btn_tab2_reset.Visible = true;
         }
@@ -810,6 +814,7 @@ namespace FINAL_project_LibraryProgram_1234
             txtbox_tab2_bookpages.ReadOnly = false;
             txtbox_tab2_bookabout.ReadOnly = false;
 
+            btn_tab2_delete.Visible = false;
             btn_tab2_save.Visible = true;
             btn_tab2_reset.Visible = true;
 
@@ -921,8 +926,59 @@ namespace FINAL_project_LibraryProgram_1234
             }
         }
 
-        // <탭 2에서, 입력내용 초기화 버튼 클릭 시>
+        // <탭 2에서, 도서정보 강제삭제 클릭 시>
+        private void btn_tab2_delete_Click(object sender, EventArgs e)
+        {
+            if (tab2_isBookModify == true)
+            {
+                if (MessageBox.Show("정말 " + txtbox_tab2_bookname.Text + "도서의 정보를 삭제하시겠습니까? 처리 이후에는 복구할 수 없습니다.", "도서정보 삭제", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string delBook_insertQuery = "DELETE FROM library_project.book WHERE 관리번호 = '" + txtbox_tab2_booknum.Text + "';";
+                    connection.Open();
+                    MySqlCommand delBook_command = new MySqlCommand(delBook_insertQuery, connection);
 
+                    try
+                    {
+                        if (delBook_command.ExecuteNonQuery() != 0)
+                        {
+                            MessageBox.Show("삭제 요청하신 관리번호 " + txtbox_tab2_booknum.Text + " 도서의 정보가 데이터베이스에서 삭제되었습니다. 조회 버튼을 눌러, 도서 목록을 다시 재 조회 바랍니다.");
+                            // 도서 정보 텍스트박스 초기화
+                            txtbox_tab2_booknum.Text = "";
+                            txtbox_tab2_bookname.Text = "";
+                            txtbox_tab2_isbn.Text = "";
+                            txtbox_tab2_bookwrite.Text = "";
+                            txtbox_tab2_bookpublisher.Text = "";
+                            txtbox_tab2_bookdate.Text = "";
+                            txtbox_tab2_bookprice.Text = "";
+                            txtbox_tab2_bookpages.Text = "";
+                            txtbox_tab2_bookabout.Text = "";
+
+                            // 데이터 조회 화면 초기화
+                            data_tab2_book.DataSource = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show("알 수 없는 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : ", "회원정보 수정 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "회원정보 수정 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    connection.Close();
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("도서정보 수정 모드에서만 강제 삭제 처리가 가능합니다. 도서 관리 모드를 변경 후 진행 바랍니다.");
+            }
+        }
+
+        // <탭 2에서, 입력내용 초기화 버튼 클릭 시>
         private void btn_tab2_reset_Click(object sender, EventArgs e)
         {
             txtbox_tab2_bookname.Text = "";
@@ -936,7 +992,7 @@ namespace FINAL_project_LibraryProgram_1234
         }
 
         // <탭 3에서, 조회/재조회 버튼 클릭시>
-        private void btn_tab3_load_Click(object sender, EventArgs e)
+        private void btn_tab3_loadmem_Click(object sender, EventArgs e)
         {
             string insertQuery_loadMember = "SELECT 회원번호, 이름, 아이디, 성별, 주소, 연락처, 생년월일, 이메일, 가입일, 대출권수, 회원상태 FROM library_project.member;";
             connection.Open();
@@ -970,6 +1026,214 @@ namespace FINAL_project_LibraryProgram_1234
             {
                 // 예외처리는 따로 안함, catch문을 써야 cellclick시 에러가 발생하지 않음
             }
+        }
+
+        // <탭 3에서, 회원관리모드 변경 시 - 열람모드>
+
+        private void rdobtn_tab3_seemode_CheckedChanged(object sender, EventArgs e)
+        {
+            tab3_isMemModify = false;
+            tab3_isMemReadOnly = true;
+
+            txtbox_tab3_membername.ReadOnly = true;
+            txtbox_tab3_memberid.ReadOnly = true;
+            txtbox_tab3_membergender.ReadOnly = true;
+            txtbox_tab3_membernewdate.ReadOnly = true;
+            txtbox_tab3_memberbirth.ReadOnly = true;
+            txtbox_tab3_membertel.ReadOnly = true;
+            txtbox_tab3_memberemail.ReadOnly = true;
+            txtbox_tab3_loan.ReadOnly = true;
+            txtbox_tab3_address.ReadOnly = true;
+        }
+
+        // <탭 3에서, 회원관리모드 변경 시 - 수정모드>
+
+        private void rdobtn_tab3_modifymode_CheckedChanged(object sender, EventArgs e)
+        {
+            tab3_isMemModify = true;
+            tab3_isMemReadOnly = false;
+
+            txtbox_tab3_membername.ReadOnly = false;
+            txtbox_tab3_memberid.ReadOnly = true;
+            txtbox_tab3_membergender.ReadOnly = false;
+            txtbox_tab3_membernewdate.ReadOnly = false;
+            txtbox_tab3_memberbirth.ReadOnly = false;
+            txtbox_tab3_membertel.ReadOnly = false;
+            txtbox_tab3_memberemail.ReadOnly = false;
+            txtbox_tab3_loan.ReadOnly = true;
+            txtbox_tab3_address.ReadOnly = false;
+
+            btn_tab3_save.Visible = true;
+            btn_tab3_delete.Visible = true;
+            btn_tab3_reset.Visible = true;
+        }
+
+        // <탭 3에서, 도서검색 범주 선택시>
+        private void combobox_tab3_searchmem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (combobox_tab3_searchmem.SelectedIndex.ToString() == "회원번호")
+            {
+                txtbox_tab3_membername.Visible = false;
+                maskedtxtbox_tab3_search.Visible = true;
+
+                maskedtxtbox_tab3_search.Mask = "000000000000";
+            }
+            else if (combobox_tab3_searchmem.SelectedIndex.ToString() == "이름")
+            {
+                txtbox_tab3_membername.Visible = true;
+                maskedtxtbox_tab3_search.Visible = false;
+            }
+            else if (combobox_tab3_searchmem.SelectedIndex.ToString() == "아이디")
+            {
+                txtbox_tab3_membername.Visible = true;
+                maskedtxtbox_tab3_search.Visible = false;
+            }
+            else if (combobox_tab3_searchmem.SelectedIndex.ToString() == "연락처")
+            {
+                txtbox_tab3_membername.Visible = false;
+                maskedtxtbox_tab3_search.Visible = true;
+
+                maskedtxtbox_tab3_search.Mask = "000-0000-0000";
+            }
+            else if (combobox_tab3_searchmem.SelectedIndex.ToString() == "생년월일")
+            {
+                txtbox_tab3_membername.Visible = false;
+                maskedtxtbox_tab3_search.Visible = true;
+
+                maskedtxtbox_tab3_search.Mask = "0000-00-00";
+            }
+            else if (combobox_tab3_searchmem.SelectedIndex.ToString() == "이메일")
+            {
+                txtbox_tab3_membername.Visible = true;
+                maskedtxtbox_tab3_search.Visible = false;
+            }
+        }
+
+        // <탭 3에서, 회원정보 저장 버튼 클릭 시>
+        private void btn_tab3_save_Click(object sender, EventArgs e)
+        {
+            if (tab3_isMemReadOnly == true)
+            {
+                MessageBox.Show("신규 멤버 등록시에만 사용 가능한 버튼입니다.");
+            }
+            else if (tab3_isMemModify == true)
+            {
+                if (txtbox_tab3_membername.Text != "" && txtbox_tab3_membername.Text != "")
+                {
+                    string modifymem_insertQuery = "UPDATE library_project.member SET 이름 = '" + txtbox_tab3_membername.Text + "', 성별 = '" + txtbox_tab3_membergender.Text + "', 주소 = '" + txtbox_tab3_address.Text + "', 연락처 = '" + txtbox_tab3_membertel.Text + "', 생년월일 = '" + txtbox_tab3_memberbirth.Text + "', 이메일 = '" + txtbox_tab3_memberemail.Text + "', 가입일 = '" + txtbox_tab3_membernewdate.Text + "', 회원상태 = '" + combobox_tab3_memberstatus.Text + "' WHERE 회원번호 = '" + txtbox_tab3_membernum.Text + "';";
+                    connection.Open();
+                    MySqlCommand modifymem_command = new MySqlCommand(modifymem_insertQuery, connection);
+
+                    try
+                    {
+                        if (modifymem_command.ExecuteNonQuery() != 0)
+                        {
+                            MessageBox.Show("수정 요청하신 회원번호 " + txtbox_tab3_membernum.Text + " 회원의 정보가 데이터베이스에 수정되었습니다. 조회 버튼을 눌러, 회원 목록을 다시 재 조회 바랍니다.");
+                            // 회원 정보 텍스트박스 초기화
+                            txtbox_tab3_membername.Text = "";
+                            txtbox_tab3_memberid.Text = "";
+                            txtbox_tab3_membergender.Text = "";
+                            txtbox_tab3_membernewdate.Text = "";
+                            txtbox_tab3_memberbirth.Text = "";
+                            txtbox_tab3_membertel.Text = "";
+                            txtbox_tab3_memberemail.Text = "";
+                            txtbox_tab3_loan.Text = "";
+                            txtbox_tab3_address.Text = "";
+
+                            // 데이터 조회 화면 초기화
+                            data_tab3_member.DataSource = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show("알 수 없는 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : ", "회원정보 수정 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "회원정보 수정 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    connection.Close();
+                }
+                else
+                {
+                    MessageBox.Show("도서 관리 모드를 우선 선택 후 진행 바랍니다.");
+                }
+            }
+        }
+
+        // <탭 3에서, 입력내용 초기화 클릭 시>
+
+        private void btn_tab3_reset_Click(object sender, EventArgs e)
+        {
+            // 회원 정보 텍스트박스 초기화
+            txtbox_tab3_membernum.Text = "";
+            txtbox_tab3_membername.Text = "";
+            txtbox_tab3_memberid.Text = "";
+            txtbox_tab3_membergender.Text = "";
+            txtbox_tab3_membernewdate.Text = "";
+            txtbox_tab3_memberbirth.Text = "";
+            txtbox_tab3_membertel.Text = "";
+            txtbox_tab3_memberemail.Text = "";
+            txtbox_tab3_loan.Text = "";
+            txtbox_tab3_address.Text = "";
+        }
+
+        // <탭 3에서, 회원 강제탈퇴 클릭 시>
+
+        private void btn_tab3_delete_Click(object sender, EventArgs e)
+        {
+            if (tab3_isMemModify == true)
+            {
+                if (MessageBox.Show("정말 " + txtbox_tab3_membername.Text + "회원을 강제 탈퇴 처리하시겠습니까? 처리 이후에는 복구할 수 없습니다.", "회원정보 삭제", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string delMem_insertQuery = "DELETE FROM library_project.member WHERE 회원번호 = '" + txtbox_tab3_membernum.Text + "';";
+                    connection.Open();
+                    MySqlCommand delMem_command = new MySqlCommand(delMem_insertQuery, connection);
+
+                    try
+                    {
+                        if (delMem_command.ExecuteNonQuery() != 0)
+                        {
+                            MessageBox.Show("삭제 요청하신 회원번호 " + txtbox_tab3_membernum.Text + " 회원의 정보가 데이터베이스에서 삭제되었습니다. 조회 버튼을 눌러, 회원 목록을 다시 재 조회 바랍니다.");
+                            // 회원 정보 텍스트박스 초기화
+                            txtbox_tab3_membername.Text = "";
+                            txtbox_tab3_memberid.Text = "";
+                            txtbox_tab3_membergender.Text = "";
+                            txtbox_tab3_membernewdate.Text = "";
+                            txtbox_tab3_memberbirth.Text = "";
+                            txtbox_tab3_membertel.Text = "";
+                            txtbox_tab3_memberemail.Text = "";
+                            txtbox_tab3_loan.Text = "";
+                            txtbox_tab3_address.Text = "";
+
+                            // 데이터 조회 화면 초기화
+                            data_tab3_member.DataSource = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show("알 수 없는 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : ", "강제 회원탈퇴 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "강제 회원탈퇴 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    connection.Close();
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("회원정보 수정 모드에서만 강제 탈퇴 처리가 가능합니다. 회원 관리 모드를 변경 후 진행 바랍니다.");
+            }
+        }
+
+        private void btn_tab3_searchmem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

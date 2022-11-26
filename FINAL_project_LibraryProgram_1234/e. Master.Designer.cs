@@ -140,19 +140,21 @@ namespace FINAL_project_LibraryProgram_1234
             this.label2 = new System.Windows.Forms.Label();
             this.data_tab2_book = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_tab3_loadmem = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.rdobtn_tab3_modifymode = new System.Windows.Forms.RadioButton();
+            this.rdobtn_tab3_seemode = new System.Windows.Forms.RadioButton();
             this.label35 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.maskedtxtbox_tab3_search = new System.Windows.Forms.MaskedTextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.combobox_tab3_searchmem = new System.Windows.Forms.ComboBox();
+            this.btn_tab3_searchmem = new System.Windows.Forms.Button();
+            this.rdobtn_tab3_searchmem = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btn_tab3_reset = new System.Windows.Forms.Button();
+            this.btn_tab3_save = new System.Windows.Forms.Button();
             this.label52 = new System.Windows.Forms.Label();
             this.txtbox_tab3_memberbirth = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
@@ -186,6 +188,8 @@ namespace FINAL_project_LibraryProgram_1234
             this.picture_logout = new System.Windows.Forms.PictureBox();
             this.picture_support = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btn_tab3_delete = new System.Windows.Forms.Button();
+            this.btn_tab2_delete = new System.Windows.Forms.Button();
             this.tabcontrol_master.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -1144,6 +1148,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_tab2_delete);
             this.groupBox1.Controls.Add(this.btn_tab2_reset);
             this.groupBox1.Controls.Add(this.btn_tab2_save);
             this.groupBox1.Controls.Add(this.label26);
@@ -1192,7 +1197,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_tab2_save.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_tab2_save.Location = new System.Drawing.Point(12, 417);
             this.btn_tab2_save.Name = "btn_tab2_save";
-            this.btn_tab2_save.Size = new System.Drawing.Size(613, 45);
+            this.btn_tab2_save.Size = new System.Drawing.Size(304, 45);
             this.btn_tab2_save.TabIndex = 34;
             this.btn_tab2_save.Text = "저장";
             this.btn_tab2_save.UseVisualStyleBackColor = true;
@@ -1425,7 +1430,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.button3);
+            this.tabPage3.Controls.Add(this.btn_tab3_loadmem);
             this.tabPage3.Controls.Add(this.groupBox7);
             this.tabPage3.Controls.Add(this.groupBox10);
             this.tabPage3.Controls.Add(this.groupBox6);
@@ -1438,21 +1443,21 @@ namespace FINAL_project_LibraryProgram_1234
             this.tabPage3.Text = "회원 관리";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_tab3_loadmem
             // 
-            this.button3.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button3.Location = new System.Drawing.Point(6, 693);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(744, 38);
-            this.button3.TabIndex = 55;
-            this.button3.Text = "도서목록 조회";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_tab3_loadmem.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_tab3_loadmem.Location = new System.Drawing.Point(6, 693);
+            this.btn_tab3_loadmem.Name = "btn_tab3_loadmem";
+            this.btn_tab3_loadmem.Size = new System.Drawing.Size(744, 38);
+            this.btn_tab3_loadmem.TabIndex = 55;
+            this.btn_tab3_loadmem.Text = "회원목록 조회";
+            this.btn_tab3_loadmem.UseVisualStyleBackColor = true;
+            this.btn_tab3_loadmem.Click += new System.EventHandler(this.btn_tab3_loadmem_Click);
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.radioButton4);
-            this.groupBox7.Controls.Add(this.radioButton5);
-            this.groupBox7.Controls.Add(this.radioButton6);
+            this.groupBox7.Controls.Add(this.rdobtn_tab3_modifymode);
+            this.groupBox7.Controls.Add(this.rdobtn_tab3_seemode);
             this.groupBox7.Controls.Add(this.label35);
             this.groupBox7.Location = new System.Drawing.Point(756, 10);
             this.groupBox7.Name = "groupBox7";
@@ -1460,37 +1465,29 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox7.TabIndex = 53;
             this.groupBox7.TabStop = false;
             // 
-            // radioButton4
+            // rdobtn_tab3_modifymode
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(416, 47);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(163, 24);
-            this.radioButton4.TabIndex = 32;
-            this.radioButton4.Text = "신규회원 등록모드";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rdobtn_tab3_modifymode.AutoSize = true;
+            this.rdobtn_tab3_modifymode.Location = new System.Drawing.Point(330, 45);
+            this.rdobtn_tab3_modifymode.Name = "rdobtn_tab3_modifymode";
+            this.rdobtn_tab3_modifymode.Size = new System.Drawing.Size(163, 24);
+            this.rdobtn_tab3_modifymode.TabIndex = 31;
+            this.rdobtn_tab3_modifymode.Text = "회원정보 수정모드";
+            this.rdobtn_tab3_modifymode.UseVisualStyleBackColor = true;
+            this.rdobtn_tab3_modifymode.CheckedChanged += new System.EventHandler(this.rdobtn_tab3_modifymode_CheckedChanged);
             // 
-            // radioButton5
+            // rdobtn_tab3_seemode
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(247, 47);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(163, 24);
-            this.radioButton5.TabIndex = 31;
-            this.radioButton5.Text = "회원정보 수정모드";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            // 
-            // radioButton6
-            // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Checked = true;
-            this.radioButton6.Location = new System.Drawing.Point(79, 47);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(163, 24);
-            this.radioButton6.TabIndex = 30;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "회원정보 열람모드";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.rdobtn_tab3_seemode.AutoSize = true;
+            this.rdobtn_tab3_seemode.Checked = true;
+            this.rdobtn_tab3_seemode.Location = new System.Drawing.Point(162, 45);
+            this.rdobtn_tab3_seemode.Name = "rdobtn_tab3_seemode";
+            this.rdobtn_tab3_seemode.Size = new System.Drawing.Size(163, 24);
+            this.rdobtn_tab3_seemode.TabIndex = 30;
+            this.rdobtn_tab3_seemode.TabStop = true;
+            this.rdobtn_tab3_seemode.Text = "회원정보 열람모드";
+            this.rdobtn_tab3_seemode.UseVisualStyleBackColor = true;
+            this.rdobtn_tab3_seemode.CheckedChanged += new System.EventHandler(this.rdobtn_tab3_seemode_CheckedChanged);
             // 
             // label35
             // 
@@ -1505,16 +1502,26 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.maskedtxtbox_tab3_search);
             this.groupBox10.Controls.Add(this.label36);
             this.groupBox10.Controls.Add(this.label51);
-            this.groupBox10.Controls.Add(this.comboBox1);
-            this.groupBox10.Controls.Add(this.button2);
-            this.groupBox10.Controls.Add(this.textBox2);
+            this.groupBox10.Controls.Add(this.combobox_tab3_searchmem);
+            this.groupBox10.Controls.Add(this.btn_tab3_searchmem);
+            this.groupBox10.Controls.Add(this.rdobtn_tab3_searchmem);
             this.groupBox10.Location = new System.Drawing.Point(756, 120);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(639, 104);
             this.groupBox10.TabIndex = 54;
             this.groupBox10.TabStop = false;
+            // 
+            // maskedtxtbox_tab3_search
+            // 
+            this.maskedtxtbox_tab3_search.Location = new System.Drawing.Point(228, 45);
+            this.maskedtxtbox_tab3_search.Mask = "000000000000";
+            this.maskedtxtbox_tab3_search.Name = "maskedtxtbox_tab3_search";
+            this.maskedtxtbox_tab3_search.Size = new System.Drawing.Size(301, 27);
+            this.maskedtxtbox_tab3_search.TabIndex = 31;
+            this.maskedtxtbox_tab3_search.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label36
             // 
@@ -1537,41 +1544,46 @@ namespace FINAL_project_LibraryProgram_1234
             this.label51.TabIndex = 27;
             this.label51.Text = "회원검색";
             // 
-            // comboBox1
+            // combobox_tab3_searchmem
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.combobox_tab3_searchmem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combobox_tab3_searchmem.FormattingEnabled = true;
+            this.combobox_tab3_searchmem.Items.AddRange(new object[] {
             "회원번호",
             "이름",
             "아이디",
             "연락처",
             "생년월일",
             "이메일"});
-            this.comboBox1.Location = new System.Drawing.Point(101, 44);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
-            this.comboBox1.TabIndex = 29;
+            this.combobox_tab3_searchmem.Location = new System.Drawing.Point(101, 44);
+            this.combobox_tab3_searchmem.Name = "combobox_tab3_searchmem";
+            this.combobox_tab3_searchmem.Size = new System.Drawing.Size(121, 28);
+            this.combobox_tab3_searchmem.TabIndex = 29;
+            this.combobox_tab3_searchmem.SelectedIndexChanged += new System.EventHandler(this.combobox_tab3_searchmem_SelectedIndexChanged);
             // 
-            // button2
+            // btn_tab3_searchmem
             // 
-            this.button2.Location = new System.Drawing.Point(534, 44);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 28);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "검색";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_tab3_searchmem.Location = new System.Drawing.Point(534, 44);
+            this.btn_tab3_searchmem.Name = "btn_tab3_searchmem";
+            this.btn_tab3_searchmem.Size = new System.Drawing.Size(90, 28);
+            this.btn_tab3_searchmem.TabIndex = 30;
+            this.btn_tab3_searchmem.Text = "검색";
+            this.btn_tab3_searchmem.UseVisualStyleBackColor = true;
+            this.btn_tab3_searchmem.Click += new System.EventHandler(this.btn_tab3_searchmem_Click);
             // 
-            // textBox2
+            // rdobtn_tab3_searchmem
             // 
-            this.textBox2.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox2.Location = new System.Drawing.Point(228, 45);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(301, 27);
-            this.textBox2.TabIndex = 28;
+            this.rdobtn_tab3_searchmem.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.rdobtn_tab3_searchmem.Location = new System.Drawing.Point(228, 45);
+            this.rdobtn_tab3_searchmem.Name = "rdobtn_tab3_searchmem";
+            this.rdobtn_tab3_searchmem.Size = new System.Drawing.Size(301, 27);
+            this.rdobtn_tab3_searchmem.TabIndex = 28;
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.btn_tab3_delete);
+            this.groupBox6.Controls.Add(this.btn_tab3_reset);
+            this.groupBox6.Controls.Add(this.btn_tab3_save);
             this.groupBox6.Controls.Add(this.label52);
             this.groupBox6.Controls.Add(this.txtbox_tab3_memberbirth);
             this.groupBox6.Controls.Add(this.label28);
@@ -1600,6 +1612,30 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox6.Size = new System.Drawing.Size(639, 497);
             this.groupBox6.TabIndex = 52;
             this.groupBox6.TabStop = false;
+            // 
+            // btn_tab3_reset
+            // 
+            this.btn_tab3_reset.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_tab3_reset.Location = new System.Drawing.Point(11, 458);
+            this.btn_tab3_reset.Name = "btn_tab3_reset";
+            this.btn_tab3_reset.Size = new System.Drawing.Size(613, 33);
+            this.btn_tab3_reset.TabIndex = 37;
+            this.btn_tab3_reset.Text = "입력내용 초기화";
+            this.btn_tab3_reset.UseVisualStyleBackColor = true;
+            this.btn_tab3_reset.Visible = false;
+            this.btn_tab3_reset.Click += new System.EventHandler(this.btn_tab3_reset_Click);
+            // 
+            // btn_tab3_save
+            // 
+            this.btn_tab3_save.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_tab3_save.Location = new System.Drawing.Point(11, 412);
+            this.btn_tab3_save.Name = "btn_tab3_save";
+            this.btn_tab3_save.Size = new System.Drawing.Size(305, 45);
+            this.btn_tab3_save.TabIndex = 36;
+            this.btn_tab3_save.Text = "저장";
+            this.btn_tab3_save.UseVisualStyleBackColor = true;
+            this.btn_tab3_save.Visible = false;
+            this.btn_tab3_save.Click += new System.EventHandler(this.btn_tab3_save_Click);
             // 
             // label52
             // 
@@ -1651,10 +1687,8 @@ namespace FINAL_project_LibraryProgram_1234
             this.combobox_tab3_memberstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combobox_tab3_memberstatus.FormattingEnabled = true;
             this.combobox_tab3_memberstatus.Items.AddRange(new object[] {
-            "이상 무",
-            "훼손",
-            "분실",
-            "기타"});
+            "정상",
+            "비정상"});
             this.combobox_tab3_memberstatus.Location = new System.Drawing.Point(84, 238);
             this.combobox_tab3_memberstatus.Name = "combobox_tab3_memberstatus";
             this.combobox_tab3_memberstatus.Size = new System.Drawing.Size(241, 28);
@@ -1692,7 +1726,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.txtbox_tab3_address.Multiline = true;
             this.txtbox_tab3_address.Name = "txtbox_tab3_address";
             this.txtbox_tab3_address.ReadOnly = true;
-            this.txtbox_tab3_address.Size = new System.Drawing.Size(540, 178);
+            this.txtbox_tab3_address.Size = new System.Drawing.Size(540, 127);
             this.txtbox_tab3_address.TabIndex = 25;
             // 
             // label17
@@ -1921,12 +1955,36 @@ namespace FINAL_project_LibraryProgram_1234
             this.label5.Text = "일이삼사 도서관 관리";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btn_tab3_delete
+            // 
+            this.btn_tab3_delete.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_tab3_delete.Location = new System.Drawing.Point(319, 412);
+            this.btn_tab3_delete.Name = "btn_tab3_delete";
+            this.btn_tab3_delete.Size = new System.Drawing.Size(305, 45);
+            this.btn_tab3_delete.TabIndex = 38;
+            this.btn_tab3_delete.Text = "강제탈퇴";
+            this.btn_tab3_delete.UseVisualStyleBackColor = true;
+            this.btn_tab3_delete.Visible = false;
+            this.btn_tab3_delete.Click += new System.EventHandler(this.btn_tab3_delete_Click);
+            // 
+            // btn_tab2_delete
+            // 
+            this.btn_tab2_delete.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_tab2_delete.Location = new System.Drawing.Point(319, 417);
+            this.btn_tab2_delete.Name = "btn_tab2_delete";
+            this.btn_tab2_delete.Size = new System.Drawing.Size(305, 45);
+            this.btn_tab2_delete.TabIndex = 39;
+            this.btn_tab2_delete.Text = "강제삭제";
+            this.btn_tab2_delete.UseVisualStyleBackColor = true;
+            this.btn_tab2_delete.Visible = false;
+            this.btn_tab2_delete.Click += new System.EventHandler(this.btn_tab2_delete_Click);
+            // 
             // Master
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(206)))), ((int)(((byte)(172)))));
-            this.ClientSize = new System.Drawing.Size(1434, 884);
+            this.ClientSize = new System.Drawing.Size(1436, 886);
             this.Controls.Add(this.tabcontrol_master);
             this.Controls.Add(this.picture_support);
             this.Controls.Add(this.picture_logout);
@@ -2117,22 +2175,26 @@ namespace FINAL_project_LibraryProgram_1234
         private System.Windows.Forms.RadioButton rdobtn_tab2_seemode;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_tab3_loadmem;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton rdobtn_tab3_modifymode;
+        private System.Windows.Forms.RadioButton rdobtn_tab3_seemode;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox combobox_tab3_searchmem;
+        private System.Windows.Forms.Button btn_tab3_searchmem;
+        private System.Windows.Forms.TextBox rdobtn_tab3_searchmem;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.ComboBox combobox_tab2_searchbybookstatus;
         private System.Windows.Forms.MaskedTextBox maskedtextbox_tab2_searchbookbynum;
         private System.Windows.Forms.Button btn_tab2_reset;
         private System.Windows.Forms.Button btn_tab2_save;
+        private System.Windows.Forms.Button btn_tab3_reset;
+        private System.Windows.Forms.Button btn_tab3_save;
+        private System.Windows.Forms.MaskedTextBox maskedtxtbox_tab3_search;
+        private System.Windows.Forms.Button btn_tab2_delete;
+        private System.Windows.Forms.Button btn_tab3_delete;
     }
 }
