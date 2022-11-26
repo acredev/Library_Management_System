@@ -1,7 +1,7 @@
 ﻿
 namespace FINAL_project_LibraryProgram_1234
 {
-    partial class Normal
+    partial class Normal_2
     {
         /// <summary>
         /// Required designer variable.
@@ -29,22 +29,10 @@ namespace FINAL_project_LibraryProgram_1234
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Normal));
-            this.SuspendLayout();
-            // 
-            // Normal
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1067, 510);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Name = "Normal";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "일반 사용자 모드 (일이삼사 도서관)";
-            this.ResumeLayout(false);
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "Normal_2";
         }
 
         #endregion

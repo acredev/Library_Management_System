@@ -73,7 +73,9 @@ namespace FINAL_project_LibraryProgram_1234
 
         private void txtBody_TextChanged(object sender, EventArgs e)
         {
+			string length = Encoding.Default.GetBytes(txtBody.Text).Length.ToString();
 
+			label_bodylength.Text = "(" + length + "byte / 최대 1000자)";
 		}
 
         private void button2_Click(object sender, EventArgs e)

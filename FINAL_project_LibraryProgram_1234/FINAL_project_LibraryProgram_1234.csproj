@@ -33,10 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CoolSms, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\CoolSms.1.1.1\lib\net451\CoolSms.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialSkin">
       <HintPath>C:\Users\m_fil\Downloads\MaterialSkin.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=8.0.30.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,11 +56,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="j. NewMember_Normal.cs">
+    <Compile Include="k. NewMember_PersonalInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="j. NewMember_Normal.Designer.cs">
-      <DependentUpon>j. NewMember_Normal.cs</DependentUpon>
+    <Compile Include="k. NewMember_PersonalInformation.Designer.cs">
+      <DependentUpon>k. NewMember_PersonalInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="l. NewMember_Normal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="l. NewMember_Normal.Designer.cs">
+      <DependentUpon>l. NewMember_Normal.cs</DependentUpon>
     </Compile>
     <Compile Include="b. info.cs">
       <SubType>Form</SubType>
@@ -92,31 +104,43 @@
     <Compile Include="g. Master_Find_IDPW.Designer.cs">
       <DependentUpon>g. Master_Find_IDPW.cs</DependentUpon>
     </Compile>
-    <Compile Include="f. Normal.cs">
+    <Compile Include="g. Normal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="f. Normal.Designer.cs">
-      <DependentUpon>f. Normal.cs</DependentUpon>
+    <Compile Include="g. Normal.Designer.cs">
+      <DependentUpon>g. Normal.cs</DependentUpon>
     </Compile>
-    <Compile Include="h. Normal_Find_ID.cs">
+    <Compile Include="i. Normal_Find_ID.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="h. Normal_Find_ID.Designer.cs">
-      <DependentUpon>h. Normal_Find_ID.cs</DependentUpon>
+    <Compile Include="i. Normal_Find_ID.Designer.cs">
+      <DependentUpon>i. Normal_Find_ID.cs</DependentUpon>
     </Compile>
-    <Compile Include="i. Normal_Find_PW.cs">
+    <Compile Include="j. Normal_Find_PW.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="i. Normal_Find_PW.Designer.cs">
-      <DependentUpon>i. Normal_Find_PW.cs</DependentUpon>
+    <Compile Include="j. Normal_Find_PW.Designer.cs">
+      <DependentUpon>j. Normal_Find_PW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="h, Normal_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="h, Normal_2.Designer.cs">
+      <DependentUpon>h, Normal_2.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SupportMail.cs">
+    <Compile Include="n. SupportMail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SupportMail.Designer.cs">
-      <DependentUpon>SupportMail.cs</DependentUpon>
+    <Compile Include="n. SupportMail.Designer.cs">
+      <DependentUpon>n. SupportMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="m. SupportMail_Before.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="m. SupportMail_Before.Designer.cs">
+      <DependentUpon>m. SupportMail_Before.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="b. info.resx">
       <DependentUpon>b. info.cs</DependentUpon>
@@ -133,20 +157,23 @@
     <EmbeddedResource Include="e. Master.resx">
       <DependentUpon>e. Master.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="f. Normal.resx">
-      <DependentUpon>f. Normal.cs</DependentUpon>
+    <EmbeddedResource Include="g. Normal.resx">
+      <DependentUpon>g. Normal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="g. Master_Find_IDPW.resx">
       <DependentUpon>g. Master_Find_IDPW.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="h. Normal_Find_ID.resx">
-      <DependentUpon>h. Normal_Find_ID.cs</DependentUpon>
+    <EmbeddedResource Include="i. Normal_Find_ID.resx">
+      <DependentUpon>i. Normal_Find_ID.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="i. Normal_Find_PW.resx">
-      <DependentUpon>i. Normal_Find_PW.cs</DependentUpon>
+    <EmbeddedResource Include="j. Normal_Find_PW.resx">
+      <DependentUpon>j. Normal_Find_PW.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="j. NewMember_Normal.resx">
-      <DependentUpon>j. NewMember_Normal.cs</DependentUpon>
+    <EmbeddedResource Include="l. NewMember_Normal.resx">
+      <DependentUpon>l. NewMember_Normal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="k. NewMember_PersonalInformation.resx">
+      <DependentUpon>k. NewMember_PersonalInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -157,9 +184,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SupportMail.resx">
-      <DependentUpon>SupportMail.cs</DependentUpon>
+    <EmbeddedResource Include="n. SupportMail.resx">
+      <DependentUpon>n. SupportMail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="m. SupportMail_Before.resx">
+      <DependentUpon>m. SupportMail_Before.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

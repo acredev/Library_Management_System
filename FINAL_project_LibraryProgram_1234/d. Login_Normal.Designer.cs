@@ -30,126 +30,128 @@ namespace FINAL_project_LibraryProgram_1234
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_Normal));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label_id = new System.Windows.Forms.Label();
+            this.label_normallogin = new System.Windows.Forms.Label();
+            this.label_pwd = new System.Windows.Forms.Label();
             this.txtbox_id = new System.Windows.Forms.TextBox();
             this.txtbox_pwd = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_login = new System.Windows.Forms.Button();
+            this.btn_new = new System.Windows.Forms.Button();
+            this.linklabel_findid = new System.Windows.Forms.LinkLabel();
+            this.linklabel_findpwd = new System.Windows.Forms.LinkLabel();
+            this.picture_normallogin = new System.Windows.Forms.PictureBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btn_exit = new System.Windows.Forms.Button();
+            this.btn_gotomain = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_normallogin)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // label_id
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(84, 221);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "아이디";
+            this.label_id.AutoSize = true;
+            this.label_id.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_id.Location = new System.Drawing.Point(84, 221);
+            this.label_id.Name = "label_id";
+            this.label_id.Size = new System.Drawing.Size(57, 20);
+            this.label_id.TabIndex = 2;
+            this.label_id.Text = "아이디";
             // 
-            // label3
+            // label_normallogin
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(137, 158);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(374, 50);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "개인 사용자 로그인";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_normallogin.AutoSize = true;
+            this.label_normallogin.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_normallogin.Location = new System.Drawing.Point(137, 158);
+            this.label_normallogin.Name = "label_normallogin";
+            this.label_normallogin.Size = new System.Drawing.Size(374, 50);
+            this.label_normallogin.TabIndex = 1;
+            this.label_normallogin.Text = "개인 사용자 로그인";
+            this.label_normallogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // label_pwd
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(84, 256);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 20);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "비밀번호";
+            this.label_pwd.AutoSize = true;
+            this.label_pwd.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_pwd.Location = new System.Drawing.Point(84, 256);
+            this.label_pwd.Name = "label_pwd";
+            this.label_pwd.Size = new System.Drawing.Size(73, 20);
+            this.label_pwd.TabIndex = 4;
+            this.label_pwd.Text = "비밀번호";
             // 
             // txtbox_id
             // 
             this.txtbox_id.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtbox_id.Location = new System.Drawing.Point(163, 215);
+            this.txtbox_id.MaxLength = 10;
             this.txtbox_id.Name = "txtbox_id";
             this.txtbox_id.Size = new System.Drawing.Size(243, 26);
-            this.txtbox_id.TabIndex = 4;
+            this.txtbox_id.TabIndex = 3;
             // 
             // txtbox_pwd
             // 
             this.txtbox_pwd.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtbox_pwd.Location = new System.Drawing.Point(163, 252);
+            this.txtbox_pwd.MaxLength = 20;
             this.txtbox_pwd.Name = "txtbox_pwd";
             this.txtbox_pwd.Size = new System.Drawing.Size(243, 26);
             this.txtbox_pwd.TabIndex = 5;
             this.txtbox_pwd.UseSystemPasswordChar = true;
             // 
-            // button1
+            // btn_login
             // 
-            this.button1.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.Location = new System.Drawing.Point(413, 215);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 63);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "로그인";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_login.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_login.Location = new System.Drawing.Point(413, 215);
+            this.btn_login.Name = "btn_login";
+            this.btn_login.Size = new System.Drawing.Size(75, 63);
+            this.btn_login.TabIndex = 6;
+            this.btn_login.Text = "로그인";
+            this.btn_login.UseVisualStyleBackColor = true;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
-            // button2
+            // btn_new
             // 
-            this.button2.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button2.Location = new System.Drawing.Point(493, 215);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 63);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "회원\r\n가입\r\n";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_new.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_new.Location = new System.Drawing.Point(493, 215);
+            this.btn_new.Name = "btn_new";
+            this.btn_new.Size = new System.Drawing.Size(75, 63);
+            this.btn_new.TabIndex = 7;
+            this.btn_new.Text = "회원\r\n가입\r\n";
+            this.btn_new.UseVisualStyleBackColor = true;
+            this.btn_new.Click += new System.EventHandler(this.btn_new_Click);
             // 
-            // linkLabel1
+            // linklabel_findid
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.linkLabel1.Location = new System.Drawing.Point(359, 286);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(94, 20);
-            this.linkLabel1.TabIndex = 10;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "아이디 찾기";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linklabel_findid.AutoSize = true;
+            this.linklabel_findid.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.linklabel_findid.Location = new System.Drawing.Point(359, 286);
+            this.linklabel_findid.Name = "linklabel_findid";
+            this.linklabel_findid.Size = new System.Drawing.Size(94, 20);
+            this.linklabel_findid.TabIndex = 9;
+            this.linklabel_findid.TabStop = true;
+            this.linklabel_findid.Text = "아이디 찾기";
+            this.linklabel_findid.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklabel_findid_LinkClicked);
             // 
-            // linkLabel2
+            // linklabel_findpwd
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.linkLabel2.Location = new System.Drawing.Point(459, 286);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(110, 20);
-            this.linkLabel2.TabIndex = 11;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "비밀번호 찾기";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.linklabel_findpwd.AutoSize = true;
+            this.linklabel_findpwd.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.linklabel_findpwd.Location = new System.Drawing.Point(459, 286);
+            this.linklabel_findpwd.Name = "linklabel_findpwd";
+            this.linklabel_findpwd.Size = new System.Drawing.Size(110, 20);
+            this.linklabel_findpwd.TabIndex = 10;
+            this.linklabel_findpwd.TabStop = true;
+            this.linklabel_findpwd.Text = "비밀번호 찾기";
+            this.linklabel_findpwd.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklabel_findpwd_LinkClicked);
             // 
-            // pictureBox1
+            // picture_normallogin
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(273, 34);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(133, 113);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
+            this.picture_normallogin.Image = ((System.Drawing.Image)(resources.GetObject("picture_normallogin.Image")));
+            this.picture_normallogin.Location = new System.Drawing.Point(267, 34);
+            this.picture_normallogin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.picture_normallogin.Name = "picture_normallogin";
+            this.picture_normallogin.Size = new System.Drawing.Size(133, 113);
+            this.picture_normallogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture_normallogin.TabIndex = 12;
+            this.picture_normallogin.TabStop = false;
             // 
             // checkBox1
             // 
@@ -158,33 +160,33 @@ namespace FINAL_project_LibraryProgram_1234
             this.checkBox1.Location = new System.Drawing.Point(163, 283);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(132, 21);
-            this.checkBox1.TabIndex = 23;
+            this.checkBox1.TabIndex = 8;
             this.checkBox1.Text = "비밀번호 보이기";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // button4
+            // btn_exit
             // 
-            this.button4.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button4.ForeColor = System.Drawing.Color.OrangeRed;
-            this.button4.Location = new System.Drawing.Point(88, 356);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(480, 35);
-            this.button4.TabIndex = 25;
-            this.button4.Text = "프로그램 종료";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btn_exit.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_exit.ForeColor = System.Drawing.Color.OrangeRed;
+            this.btn_exit.Location = new System.Drawing.Point(88, 356);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(480, 35);
+            this.btn_exit.TabIndex = 12;
+            this.btn_exit.Text = "프로그램 종료";
+            this.btn_exit.UseVisualStyleBackColor = true;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
-            // button3
+            // btn_gotomain
             // 
-            this.button3.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button3.Location = new System.Drawing.Point(88, 315);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(481, 35);
-            this.button3.TabIndex = 24;
-            this.button3.Text = "초기 화면으로";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btn_gotomain.Font = new System.Drawing.Font("나눔고딕", 9.75F);
+            this.btn_gotomain.Location = new System.Drawing.Point(88, 315);
+            this.btn_gotomain.Name = "btn_gotomain";
+            this.btn_gotomain.Size = new System.Drawing.Size(481, 35);
+            this.btn_gotomain.TabIndex = 11;
+            this.btn_gotomain.Text = "초기 화면으로";
+            this.btn_gotomain.UseVisualStyleBackColor = true;
+            this.btn_gotomain.Click += new System.EventHandler(this.btn_gotomain_Click);
             // 
             // Login_Normal
             // 
@@ -192,26 +194,26 @@ namespace FINAL_project_LibraryProgram_1234
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(655, 405);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btn_exit);
+            this.Controls.Add(this.btn_gotomain);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.picture_normallogin);
+            this.Controls.Add(this.linklabel_findpwd);
+            this.Controls.Add(this.linklabel_findid);
+            this.Controls.Add(this.btn_new);
+            this.Controls.Add(this.btn_login);
             this.Controls.Add(this.txtbox_pwd);
             this.Controls.Add(this.txtbox_id);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label_pwd);
+            this.Controls.Add(this.label_normallogin);
+            this.Controls.Add(this.label_id);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Login_Normal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "개인 사용자 로그인 (일이삼사 도서관)";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_normallogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,18 +221,18 @@ namespace FINAL_project_LibraryProgram_1234
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_id;
+        private System.Windows.Forms.Label label_normallogin;
+        private System.Windows.Forms.Label label_pwd;
         private System.Windows.Forms.TextBox txtbox_id;
         private System.Windows.Forms.TextBox txtbox_pwd;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btn_login;
+        private System.Windows.Forms.Button btn_new;
+        private System.Windows.Forms.LinkLabel linklabel_findid;
+        private System.Windows.Forms.LinkLabel linklabel_findpwd;
+        private System.Windows.Forms.PictureBox picture_normallogin;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_exit;
+        private System.Windows.Forms.Button btn_gotomain;
     }
 }

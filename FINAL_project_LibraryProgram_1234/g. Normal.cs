@@ -16,5 +16,10 @@ namespace FINAL_project_LibraryProgram_1234
         {
             InitializeComponent();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAABAAAAAQACAYAAAB/HSuDAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAC6WSURBVHhe7d3hkRtXmqXhNqFNkAkyYU2QCTRBJsgD
+        mSATaIJMkAkyoU2YzRsTjOW2DkiQ/BJ5T+J5It5f0yNVAaWLxCkA9S8AAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDX+T9H/6PbtO5PAAAA+AcDwL0yAAAAABAZ
+        AO6VAQAAAIDIAHCvDAAAAABEBoB7ZQAAAAAgMgDcKwMAAAAAkQHgXhkAAAAAiAwA98oAAAAAQGQAuFcG
+        AAAAACIDwL0yAAAAABAZAO6VAQAAAIDIAHCvDAAAAABEBoB7ZQAAAAAgMgDcKwMAAAAAkQHgXhkAAAAA
+        iAwA98oAAAAAQGQAuFcGAAAAACIDwL0yAAAAABAZAO6VAQAAAIDIAHCvDAAAAABEBoB7ZQAAAAAgMgDc
+        KwMAAAAAkQHgXhkAAAAAiAwA98oAAAAAQGQAuFcGAAAAACIDwL0yAAAAABAZAO6VAQAAAIDIAHCvDAAA
+        AABEBoB7ZQAAAAAgMgDcKwMAAAAAkQHgXhkAAAAAiAwA98oAAAAAQGQAuFcGAAAAACIDwL0yAAAAABAZ
+        AO6VAQAAAIDIAHCvDAAAAABEBoB7ZQAAAAAgMgDcKwMAAAAAkQHgXhkAAAAAiAwA98oAAAAAQGQAuFcG
+        AAAAACIDwL0yAAAAABAZAO6VAQAAAIDIAHCvDAAAAABEBoB7ZQAAAAAgMgDcKwMAAAAAkQHgXhkAAAAA
+        iAwA98oAAAAAQGQAuFcGAAAAACIDwL0yAAAAABAZAO6VAQAAAIDIAHCvDAAAAABEBoB7ZQAAAAAgMgDc
+        KwMAAAAAkQHgXhkAAAAAiAwA98oAAAAAQGQAuFcGAAAAACIDwL0yAAAAABAZAO6VAQAAAIDIAHCvDAAA
+        AABEBoB7ZQAAAAAgMgDcKwMAAAAAkQHgXhkAAAAAiAwA98oAAAAAQGQAuFcGAAAAACIDwL0yAAAAABAZ
+        AO6VAQAAAIDIAHCvDAAAAABEBoB7ZQAAAAAgMgDcKwMAAAAAkQHgXhkAAAAAiAwA98oAAAAAQGQAuFcG
+        AAAAACIDwL0yAAAAABAZAO6VAQAAAIDIAHCvDAAAAABEBoB7ZQAAAAAgMgDcKwMAAAAAkQHgXhkAAAAA
+        iAwA98oAAAAAQGQAuFcGAAAAACIDwL0yAAAAABAZAO6VAQAAAIDIAHCvDAAAAABEBoB7ZQAAAAAgMgDc
+        KwMAAAAAkQHgXhkAAAAAiAwA98oAAAAAQGQAuFcGAAAAACIDwL0yAAAAABAZAO6VAQAAAIDIAHCvDAAA
+        AABEBoB7ZQAAAAAgMgDcKwMAAAAAkQHgXhkAAAC+Q7qwkiRJknR9Bk9gVDpoJEmSJF2fAQAYlQ4aSZIk
+        SddnAABGpYNGkiRJ0vUZAIBR6aCRJEmSdH0GAGBUOmgkSZIkXZ8BABiVDhpJkiRJ12cAAEalg0aSJEnS
+        9RkAgFHpoJEkSZJ0fQYAYFQ6aCRJkiRdnwEAGJUOGkmSJEnXZwAARqWDRpIkSdL1GQCAUemgkSRJknR9
+        BgBgVDpoJEmSJF2fAQAYlQ4aSZIkSddnAABGpYNGkiRJ0vUZAIBR6aCRJEmSdH0GAGBUOmgkSZIkXZ8B
+        ABiVDhpJkiRJ12cAAEalg0aSJEnS9RkAgFHpoJEkSZJ0fQYAYFQ6aCRJkiRdnwEAGJUOGkmSJEnXZwAA
+        RqWDRpIkSdL1GQCAUemgkSRJknR9BgBgVDpoJEmSJF2fAQAYlQ4aSZIkSddnAABGpYNGkiRJ0vUZAIBR
+        6aCRJEmSdH0GAGBUOmgkSZIkXZ8BABiVDhpJkiRJ12cAAEalg0aSJEnS9RkAgFHpoJEkSZJ0fQYAYFQ6
+        aCRJkiRdnwEAGJUOGkmSJEnXZwAARqWDRpIkSdL1GQCAUemgkSRJknR9BgBgVDpoJEmSJF2fAQAYlQ4a
+        SZIkSddnAABGpYNGkiRJ0vUZAIBR6aCRJEmSdH0GAGBUOmgkSZIkXZ8BABiVDhpJkiRJ12cAAEalg0aS
+        JEnS9RkAgFHpoJEkSZJ0fQYAYFQ6aCRJkiRdnwEAGJUOGkmSJEnXZwAARqWDRpIkSdL1GQCAUemgaWod
+        ipIkSVIqXT82tb4HgDHpoGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHp
+        oGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHp
+        oGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHp
+        oGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHp
+        oGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHp
+        oGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHp
+        oGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHp
+        oGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHp
+        oGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHp
+        oGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHp
+        oGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHp
+        oGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHpoGkKAAAeSdePTRkAgFHp
+        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
+        kiRJuj4DADAqHTSSJEmSrs8AAIxKB40kSZKk6zMAAKPSQSNJkiTp+gwAwKh00EiSJEm6PgMAMCodNJIk
+        SZKuzwAAjEoHjSRJkqTrMwAAo9JBI0mSJOn6DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAcFv/+tf/BcKKwDwaTIJvAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>&lt;제1장 총 칙&gt;
+제1조(목적) 이 약관은 일이삼사도서관(이하 "도서관"이라 한다)이 제공하는 도서관리 프로그램(이하 "서비스"라 한다)의 이용조건 및 절차에 관한 사항을 규정함을 목적으로 한다.
+제2조(정의) 이 약관에서 사용하는 용어의 정의는 다음 각 호와 같다.
+ㆍ1. 회원 : 이용자 아이디를 부여받은 자
+ㆍ2. ID : 도서관이 승인하는 문자 또는 숫자의 조합
+ㆍ3. 비밀번호 : 비밀 보호를 위해 회원 자신이 설정한 문자, 숫자의 조합
+제3조(효력의 발생과 변경)
+ㆍ① 이 약관의 내용은 도서관리 프로그렘 화면에 게시하거나 기타의 방법으로 공지함으로써 효력이 발생한다.
+ㆍ② 도서관은 이 약관을 변경할 수 있으며, 변경된 약관은 이용자에게 공지함으로써 효력이 발생한다.
+제4조(준용규정) 본 약관에 명시되지 않은 이용자의 권리, 의무 및 책임사항은 전기통신사업법 및 기타 대한민국의 관련법령의 규정에 따른다.
+
+&lt;제2장 서비스 이용계약&gt;
+제5조(이용계약의 성립) 이용계약은 이용자의 이용신청에 대한 도서관의 승낙과 이용자의 약관 내용에 대한 동의로 성립된다.
+제6조(이용신청) 이용신청은 도서관리 프로그램을 통하여 이용자가 도서관에서 정한 회원가입 신청서에 기록하여 신청할 수 있다.
+제7조(이용신청의 승낙)
+ㆍ① 회원이 신청서의 모든 사항을 정확히 기재하여 이용신청을 하였을 경우에 승낙한다.
+ㆍ② 다음 각 호에 해당하는 경우에는 이용 승낙을 하지 않을 수 있다.
+        ㆍ1. 이용신청의 내용을 허위로 기재한 경우
+        ㆍ2. 다른 사람의 명의를 사용하여 신청한 경우
+        ㆍ3. 기타 이용신청 요건에 미비 되었을 때
+제8조(계약사항의 변경) 회원은 이용신청 시 기재한 사항이 변경되었을 경우에는 도서관에 문의하여 수정 요청을 할 수 있다.
+
+&lt;제3장 계약당사자의 의무&gt;
+제9조(도서관의 의무) 도서관은 서비스 제공과 관련해서 알고 있는 회원의 신상 정보를 본인의 승낙 없이 제3자에게 누설·배포하지 않는다. 단, 전기통신기본법 법률의 규정에 의해 국가기관의 요구가 있는 경우, 범죄에 대한 수사상의 목적이 있거나 또는 기타 관계법령에서 정한 절차에 의한 요청이 있을 경우에는 예외로 한다.
+제10조(회원의 의무)
+ㆍ① 회원은 서비스를 이용할 때 다음 각 호의 행위를 하여서는 아니 된다.
+        ㆍ1. 다른 회원의 ID를 부정하게 사용하는 행위
+        ㆍ2. 서비스에서 얻은 정보를 복제, 출판 또는 제3자에게 제공하는 행위
+        ㆍ3. 도서관의 저작권, 제3자의 저작권 기타 권리를 침해하는 행위
+        ㆍ4. 공공질서 및 미풍양속에 위반되는 내용을 유포하는 행위
+        ㆍ5. 범죄와 결부된다고 객관적으로 판단되는 행위
+        ㆍ6. 기타 관계법령에 위반되는 행위
+ㆍ② 회원은 서비스를 이용하여 영업활동을 할 수 없으며, 영업활동에 이용하여 발생한 결과에 대하여 도서관은 책임을 지지 않는다.
+ㆍ③ 회원은 서비스의 이용권한, 기타 이용계약상 지위를 타인에게 양도·증여할 수 없으며, 이를 담보로도 제공할 수 없다.
+
+&lt;제4장 서비스 이용&gt;
+제11조(회원 홈페이지에 관한 의무)
+ㆍ① 회원은 필요에 따라 자신의 게시판, 방명록, 등록자료 유지보수에 대한 관리책임을 갖는다.
+ㆍ② 회원은 도서관에서 제공하는 자료를 임의로 삭제, 변경할 수 없다.
+ㆍ③ 회원은 도서관리 프로그램 게시판에 공공질서 및 미풍양속에 위반되는 내용물이나 제3자의 저작권 기타 권리를 침해하는 내용물을 등록하는 행위를 하여서는 아니 된다. 만약 이와 같은 내용물을 게재하였을 때 발생하는 결과에 대한 모든 책임은 회원에게 있다.
+제12조(회원의 게시물 관리 및 삭제) 효율적인 서비스 운영을 위하여 회원의 메모리 공간, 메시지크기, 보관일수를 제한할 수 있으며 등록하는 내용이 다음 각 호에 해당하는 경우에는 사전 통지없이 삭제할 수 있다.
+ㆍ① 다른 회원 또는 제3자를 비방하거나 중상모략으로 명예를 손상시키는 내용인 경우
+ㆍ② 공공질서 및 미풍양속에 위반되는 내용인 경우
+ㆍ③ 범죄적 행위에 결부된다고 인정되는 내용인 경우
+ㆍ④ 도서관의 저작권, 제3자의 저작권 기타 권리를 침해하는 내용인 경우
+ㆍ⑤ 회원이 게시판에 음란물을 게재하거나 음란 사이트를 링크하는 경우
+ㆍ⑥ 기타 관계법령에 위반된다고 판단되는 경우
+제13조(게시물의 저작권) 게시물의 저작권은 게시자 본인에게 있으며 회원은 서비스를 이용하여 얻은 정보를 가공, 판매하는 행위 서비스에 게재된 자료를 상업적으로 사용할 수 없다.
+제14조(서비스 이용 책임) 서비스를 이용하여 해킹, 음란사이트 링크, 상용S/W 불법배포 행위를 하여서는 아니 되며 이를 위반으로 인해 발생한 영업활동의 결과 및 손실, 관계기관에 의한 법적 조치에 관하여는 도서관은 책임을 지지 않는다.
+제15조(서비스 제공의 중지) 다음 각 호에 해당하는 경우에는 서비스 제공을 중지할 수 있다.
+ㆍ① 서비스용 설비의 보수 공사로 인한 부득이한 경우
+ㆍ② 전기통신사업법에 규정된 기간통신사업자가 전기통신 서비스를 중지했을 경우
+ㆍ③ 시스템 점검이 필요한 경우
+ㆍ④ 기타 불가항력적 사유가 있는 경우
+
+&lt;제5장 계약해지 및 이용제한&gt;
+제17조(계약해지 및 이용제한)
+ㆍ① 회원이 이용계약을 해지하고자 하는 때에는 회원 본인이 도서관에 문의하여 해지신청을 하여야 하며, 도서관에서는 본인 여부와 대출 자료를 확인 후 조치한다.
+ㆍ② 도서관은 회원이 다음 각 호에 해당하는 행위를 하였을 경우 사전 통지없이 이용계약을 해지하거나 또는 서비스 이용을 중지할 수 있다.
+        ㆍ1. 타인의 이용자ID 및 비밀번호를 도용한 경우
+        ㆍ2. 서비스 운영을 고의로 방해한 경우
+        ㆍ3. 허위로 가입 신청을 한 경우
+        ㆍ4. 같은 사용자가 다른 ID로 이중 등록을 한 경우
+        ㆍ5. 공공질서 및 미풍양속에 저해되는 내용을 유포시킨 경우
+        ㆍ6. 타인의 명예를 손상시키거나 불이익을 주는 행위를 한 경우
+        ㆍ7. 서비스의 안정적 운영을 방해할 목적으로 다량의 정보를 전송하거나 광고성 정보를 전송하는 경우
+        ㆍ8. 정보통신설비의 오작동이나 정보의 파괴를 유발시키는 컴퓨터바이러스 프로그램을 유포하는 경우
+        ㆍ9. 도서관 또는 다른 회원이나 제3자의 지적재산권을 침해하는 경우
+        ㆍ10. 타인의 개인정보, 이용자ID 및 비밀번호를 부정하게 사용하는 경우
+        ㆍ11. 회원이 게시판에 음란물을 게재하거나 음란 사이트를 링크하는 경우
+        ㆍ12. 기타 관련법령에 위반된다고 판단되는 경우
+
+&lt;제6장 면 책&gt;
+제18조(면책 조항)
+① 도서관은 회원이 서비스를 이용하여 얻은 정보 및 자료에 대하여 책임을 지지 않는다.
+② 도서관은 회원이 서비스에 게재한 정보, 자료, 사실의 신뢰도, 정확성, 기타 어떠한 내용에 관하여서도 책임을 지지 않는다.
+제19조(재판 관할) 서비스 이용으로 발생한 분쟁에 대해 소송이 제기 될 경우 도서관은 본청 소재지를 관할하는 법원을 전속 관할법원으로 한다</value>
+  </data>
+  <data name="textBox2.Text" xml:space="preserve">
+    <value>1. 개인정보 수집·이용 목적
+ㆍ도서관 운영 및 서비스 제공을 위한 업무 이행
+ㆍ도서관리 프로그램 및 도서관 정보 서비스 제공, 도서관 자료관리시스템 회원 통합 운영
+ㆍ대출 회원 서비스 이용 및 제한적 본인 확인제에 따른 본인확인
+ㆍ분쟁 조정을 위한 기록보존, 불만처리 민원처리, 고지사항 전달
+    (※ 만14세 미만 아동 개인정보 수집 시 법정 대리인 동의여부, 추후 법정 대리인 본인확인)
+2. 수집하는 개인정보의 항목
+ㆍ아래와 같이 이용자가 도서관서비스를 이용할 때 반드시 필요한 최소한의 개인정보를 수집
+     - 필수항목 : 이름, 생년월일, 로그인ID, 비밀번호, 주소, 전화번호, 휴대전화번호, 이메일
+3. 개인정보의 보유 및 이용 기간
+ㆍ보유 기간 : 탈퇴 시까지
+ㆍ회원 이용자의 개인정보는 탈퇴시까지 보유 및 이용되며 재동의 절차를 통해 보유기한을 연장 가능. 원칙적으로 개인정보의 수집 및 이용목적이 달성되면 지체 없이 파기처리. 따라서 우리 도서관은 정보주체의 회원탈퇴 요청 시 그 회원의 개인정보를 지체 없이 파기.
+4. 거부권 및 불이익
+ㆍ정보주체는 개인정보의 수집·이용에 대한 동의를 거부할 수 있으며, 동의 거부 시 도서관리 프로그램에 회원가입이 되지 않으며, 도서관리 프로그램에서 제공하는 서비스를 이용할 수 없음.</value>
+  </data>
+</root>
