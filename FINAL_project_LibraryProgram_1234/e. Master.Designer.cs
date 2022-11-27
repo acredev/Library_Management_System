@@ -146,12 +146,11 @@ namespace FINAL_project_LibraryProgram_1234
             this.rdobtn_tab3_seemode = new System.Windows.Forms.RadioButton();
             this.label35 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.maskedtxtbox_tab3_search = new System.Windows.Forms.MaskedTextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.combobox_tab3_searchmem = new System.Windows.Forms.ComboBox();
             this.btn_tab3_searchmem = new System.Windows.Forms.Button();
-            this.rdobtn_tab3_searchmem = new System.Windows.Forms.TextBox();
+            this.txtbox_tab3_searchmem = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.btn_tab3_reset = new System.Windows.Forms.Button();
             this.btn_tab3_save = new System.Windows.Forms.Button();
@@ -190,6 +189,8 @@ namespace FINAL_project_LibraryProgram_1234
             this.label5 = new System.Windows.Forms.Label();
             this.btn_tab3_delete = new System.Windows.Forms.Button();
             this.btn_tab2_delete = new System.Windows.Forms.Button();
+            this.maskedtxtbox_tab3_search = new System.Windows.Forms.MaskedTextBox();
+            this.combobox_tab3_searchmembystatus = new System.Windows.Forms.ComboBox();
             this.tabcontrol_master.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -1502,26 +1503,18 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.combobox_tab3_searchmembystatus);
             this.groupBox10.Controls.Add(this.maskedtxtbox_tab3_search);
             this.groupBox10.Controls.Add(this.label36);
             this.groupBox10.Controls.Add(this.label51);
             this.groupBox10.Controls.Add(this.combobox_tab3_searchmem);
             this.groupBox10.Controls.Add(this.btn_tab3_searchmem);
-            this.groupBox10.Controls.Add(this.rdobtn_tab3_searchmem);
+            this.groupBox10.Controls.Add(this.txtbox_tab3_searchmem);
             this.groupBox10.Location = new System.Drawing.Point(756, 120);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(639, 104);
             this.groupBox10.TabIndex = 54;
             this.groupBox10.TabStop = false;
-            // 
-            // maskedtxtbox_tab3_search
-            // 
-            this.maskedtxtbox_tab3_search.Location = new System.Drawing.Point(228, 45);
-            this.maskedtxtbox_tab3_search.Mask = "000000000000";
-            this.maskedtxtbox_tab3_search.Name = "maskedtxtbox_tab3_search";
-            this.maskedtxtbox_tab3_search.Size = new System.Drawing.Size(301, 27);
-            this.maskedtxtbox_tab3_search.TabIndex = 31;
-            this.maskedtxtbox_tab3_search.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label36
             // 
@@ -1550,6 +1543,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.combobox_tab3_searchmem.FormattingEnabled = true;
             this.combobox_tab3_searchmem.Items.AddRange(new object[] {
             "회원번호",
+            "회원상태",
             "이름",
             "아이디",
             "연락처",
@@ -1571,13 +1565,13 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_tab3_searchmem.UseVisualStyleBackColor = true;
             this.btn_tab3_searchmem.Click += new System.EventHandler(this.btn_tab3_searchmem_Click);
             // 
-            // rdobtn_tab3_searchmem
+            // txtbox_tab3_searchmem
             // 
-            this.rdobtn_tab3_searchmem.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rdobtn_tab3_searchmem.Location = new System.Drawing.Point(228, 45);
-            this.rdobtn_tab3_searchmem.Name = "rdobtn_tab3_searchmem";
-            this.rdobtn_tab3_searchmem.Size = new System.Drawing.Size(301, 27);
-            this.rdobtn_tab3_searchmem.TabIndex = 28;
+            this.txtbox_tab3_searchmem.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtbox_tab3_searchmem.Location = new System.Drawing.Point(228, 45);
+            this.txtbox_tab3_searchmem.Name = "txtbox_tab3_searchmem";
+            this.txtbox_tab3_searchmem.Size = new System.Drawing.Size(301, 27);
+            this.txtbox_tab3_searchmem.TabIndex = 28;
             // 
             // groupBox6
             // 
@@ -1979,6 +1973,29 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_tab2_delete.Visible = false;
             this.btn_tab2_delete.Click += new System.EventHandler(this.btn_tab2_delete_Click);
             // 
+            // maskedtxtbox_tab3_search
+            // 
+            this.maskedtxtbox_tab3_search.Location = new System.Drawing.Point(227, 45);
+            this.maskedtxtbox_tab3_search.Mask = "000000000000";
+            this.maskedtxtbox_tab3_search.Name = "maskedtxtbox_tab3_search";
+            this.maskedtxtbox_tab3_search.Size = new System.Drawing.Size(301, 27);
+            this.maskedtxtbox_tab3_search.TabIndex = 31;
+            this.maskedtxtbox_tab3_search.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.maskedtxtbox_tab3_search.Visible = false;
+            // 
+            // combobox_tab3_searchmembystatus
+            // 
+            this.combobox_tab3_searchmembystatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combobox_tab3_searchmembystatus.FormattingEnabled = true;
+            this.combobox_tab3_searchmembystatus.Items.AddRange(new object[] {
+            "정상",
+            "비정상"});
+            this.combobox_tab3_searchmembystatus.Location = new System.Drawing.Point(227, 44);
+            this.combobox_tab3_searchmembystatus.Name = "combobox_tab3_searchmembystatus";
+            this.combobox_tab3_searchmembystatus.Size = new System.Drawing.Size(300, 28);
+            this.combobox_tab3_searchmembystatus.TabIndex = 32;
+            this.combobox_tab3_searchmembystatus.Visible = false;
+            // 
             // Master
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -2185,7 +2202,7 @@ namespace FINAL_project_LibraryProgram_1234
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.ComboBox combobox_tab3_searchmem;
         private System.Windows.Forms.Button btn_tab3_searchmem;
-        private System.Windows.Forms.TextBox rdobtn_tab3_searchmem;
+        private System.Windows.Forms.TextBox txtbox_tab3_searchmem;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.ComboBox combobox_tab2_searchbybookstatus;
         private System.Windows.Forms.MaskedTextBox maskedtextbox_tab2_searchbookbynum;
@@ -2193,8 +2210,9 @@ namespace FINAL_project_LibraryProgram_1234
         private System.Windows.Forms.Button btn_tab2_save;
         private System.Windows.Forms.Button btn_tab3_reset;
         private System.Windows.Forms.Button btn_tab3_save;
-        private System.Windows.Forms.MaskedTextBox maskedtxtbox_tab3_search;
         private System.Windows.Forms.Button btn_tab2_delete;
         private System.Windows.Forms.Button btn_tab3_delete;
+        private System.Windows.Forms.MaskedTextBox maskedtxtbox_tab3_search;
+        private System.Windows.Forms.ComboBox combobox_tab3_searchmembystatus;
     }
 }

@@ -1068,44 +1068,199 @@ namespace FINAL_project_LibraryProgram_1234
             btn_tab3_reset.Visible = true;
         }
 
-        // <탭 3에서, 도서검색 범주 선택시>
+        // <탭 3에서, 회원검색 범주 선택시>
         private void combobox_tab3_searchmem_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (combobox_tab3_searchmem.SelectedIndex.ToString() == "회원번호")
+            if (combobox_tab3_searchmem.SelectedItem.ToString() == "회원번호")
             {
-                txtbox_tab3_membername.Visible = false;
-                maskedtxtbox_tab3_search.Visible = true;
+                txtbox_tab3_searchmem.Visible = false;
+                txtbox_tab3_searchmem.Text = "";
 
+                maskedtxtbox_tab3_search.Visible = true;
+                maskedtxtbox_tab3_search.Text = "";
                 maskedtxtbox_tab3_search.Mask = "000000000000";
-            }
-            else if (combobox_tab3_searchmem.SelectedIndex.ToString() == "이름")
-            {
-                txtbox_tab3_membername.Visible = true;
-                maskedtxtbox_tab3_search.Visible = false;
-            }
-            else if (combobox_tab3_searchmem.SelectedIndex.ToString() == "아이디")
-            {
-                txtbox_tab3_membername.Visible = true;
-                maskedtxtbox_tab3_search.Visible = false;
-            }
-            else if (combobox_tab3_searchmem.SelectedIndex.ToString() == "연락처")
-            {
-                txtbox_tab3_membername.Visible = false;
-                maskedtxtbox_tab3_search.Visible = true;
 
+                combobox_tab3_searchmembystatus.Visible = false;
+            }
+            else if (combobox_tab3_searchmem.SelectedItem.ToString() == "회원상태")
+            {
+                txtbox_tab3_searchmem.Visible = false;
+                txtbox_tab3_searchmem.Text = "";
+
+                maskedtxtbox_tab3_search.Visible = false;
+                maskedtxtbox_tab3_search.Text = "";
+                maskedtxtbox_tab3_search.Mask = "000000000000";
+
+                combobox_tab3_searchmembystatus.Visible = true;
+            }
+            else if (combobox_tab3_searchmem.SelectedItem.ToString() == "이름")
+            {
+                txtbox_tab3_searchmem.Visible = true;
+                txtbox_tab3_searchmem.Text = "";
+
+                maskedtxtbox_tab3_search.Visible = false;
+                maskedtxtbox_tab3_search.Text = "";
+                maskedtxtbox_tab3_search.Mask = "000000000000";
+
+                combobox_tab3_searchmembystatus.Visible = false;
+            }
+            else if (combobox_tab3_searchmem.SelectedItem.ToString() == "아이디")
+            {
+                txtbox_tab3_searchmem.Visible = true;
+                txtbox_tab3_searchmem.Text = "";
+
+                maskedtxtbox_tab3_search.Visible = false;
+                maskedtxtbox_tab3_search.Text = "";
+                maskedtxtbox_tab3_search.Mask = "000000000000";
+
+                combobox_tab3_searchmembystatus.Visible = false;
+            }
+            else if (combobox_tab3_searchmem.SelectedItem.ToString() == "연락처")
+            {
+                txtbox_tab3_searchmem.Visible = false;
+                txtbox_tab3_searchmem.Text = "";
+
+                maskedtxtbox_tab3_search.Visible = true;
+                maskedtxtbox_tab3_search.Text = "";
                 maskedtxtbox_tab3_search.Mask = "000-0000-0000";
-            }
-            else if (combobox_tab3_searchmem.SelectedIndex.ToString() == "생년월일")
-            {
-                txtbox_tab3_membername.Visible = false;
-                maskedtxtbox_tab3_search.Visible = true;
 
-                maskedtxtbox_tab3_search.Mask = "0000-00-00";
+                combobox_tab3_searchmembystatus.Visible = false;
             }
-            else if (combobox_tab3_searchmem.SelectedIndex.ToString() == "이메일")
+            else if (combobox_tab3_searchmem.SelectedItem.ToString() == "생년월일")
             {
-                txtbox_tab3_membername.Visible = true;
+                txtbox_tab3_searchmem.Visible = false;
+                txtbox_tab3_searchmem.Text = "";
+
+                maskedtxtbox_tab3_search.Visible = true;
+                maskedtxtbox_tab3_search.Text = "";
+                maskedtxtbox_tab3_search.Mask = "0000-00-00";
+
+                combobox_tab3_searchmembystatus.Visible = false;
+            }
+            else if (combobox_tab3_searchmem.SelectedItem.ToString() == "이메일")
+            {
+                txtbox_tab3_searchmem.Visible = true;
+                txtbox_tab3_searchmem.Text = "";
+
                 maskedtxtbox_tab3_search.Visible = false;
+                maskedtxtbox_tab3_search.Text = "";
+                maskedtxtbox_tab3_search.Mask = "000000000000";
+
+                combobox_tab3_searchmembystatus.Visible = false;
+            }
+        }
+
+        // <탭 3에서, 회원 검색 버튼 클릭 시>
+        private void btn_tab3_searchmem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtbox_tab3_searchmem.Text == "" && maskedtxtbox_tab3_search.Text == "" && combobox_tab3_searchmembystatus.Text == "")
+                {
+                    MessageBox.Show("검색명 입력 후 시도 바랍니다.");
+                }
+                else
+                {
+                    if (combobox_tab3_searchmem.Text == "회원번호")
+                    {
+                        string searchMemNum_insertQuery = "SELECT * FROM library_project.member WHERE 회원번호 ='" + maskedtxtbox_tab3_search.Text + "';";
+                        connection.Open();
+                        MySqlCommand searchMem_command = new MySqlCommand(searchMemNum_insertQuery, connection);
+                        MySqlDataAdapter result_searchMem = new MySqlDataAdapter(searchMem_command);
+
+                        DataTable load_mem_search = new DataTable();
+                        result_searchMem.Fill(load_mem_search);
+
+                        data_tab3_member.DataSource = load_mem_search;
+                        connection.Close();
+                    }
+                    else if (combobox_tab3_searchmem.Text == "회원상태")
+                    {
+                        string searchMemStatus_insertQuery = "SELECT * FROM library_project.member WHERE 회원상태 ='" + combobox_tab3_searchmembystatus.Text + "';";
+                        connection.Open();
+                        MySqlCommand searchMem_command = new MySqlCommand(searchMemStatus_insertQuery, connection);
+                        MySqlDataAdapter result_searchMem = new MySqlDataAdapter(searchMem_command);
+
+                        DataTable load_mem_search = new DataTable();
+                        result_searchMem.Fill(load_mem_search);
+
+                        data_tab3_member.DataSource = load_mem_search;
+                        connection.Close();
+                    }
+                    else if (combobox_tab3_searchmem.Text == "이름")
+                    {
+                        string searchMemName_insertQuery = "SELECT * FROM library_project.member WHERE 이름 ='" + txtbox_tab3_searchmem.Text + "';";
+                        connection.Open();
+                        MySqlCommand searchMem_command = new MySqlCommand(searchMemName_insertQuery, connection);
+                        MySqlDataAdapter result_searchMem = new MySqlDataAdapter(searchMem_command);
+
+                        DataTable load_mem_search = new DataTable();
+                        result_searchMem.Fill(load_mem_search);
+
+                        data_tab3_member.DataSource = load_mem_search;
+                        connection.Close();
+                    }
+                    else if (combobox_tab3_searchmem.Text == "아이디")
+                    {
+                        string searchMemId_insertQuery = "SELECT * FROM library_project.member WHERE 아이디 ='" + txtbox_tab3_memberid.Text + "';";
+                        connection.Open();
+                        MySqlCommand searchMem_command = new MySqlCommand(searchMemId_insertQuery, connection);
+                        MySqlDataAdapter result_searchMem = new MySqlDataAdapter(searchMem_command);
+
+                        DataTable load_mem_search = new DataTable();
+                        result_searchMem.Fill(load_mem_search);
+
+                        data_tab3_member.DataSource = load_mem_search;
+                        connection.Close();
+                    }
+                    else if (combobox_tab3_searchmem.Text == "연락처")
+                    {
+                        string searchMemTel_insertQuery = "SELECT * FROM library_project.member WHERE 연락처 ='" + maskedtxtbox_tab3_search.Text + "';";
+                        connection.Open();
+                        MySqlCommand searchMem_command = new MySqlCommand(searchMemTel_insertQuery, connection);
+                        MySqlDataAdapter result_searchMem = new MySqlDataAdapter(searchMem_command);
+
+                        DataTable load_mem_search = new DataTable();
+                        result_searchMem.Fill(load_mem_search);
+
+                        data_tab3_member.DataSource = load_mem_search;
+                        connection.Close();
+                    }
+                    else if (combobox_tab3_searchmem.Text == "생년월일")
+                    {
+                        string searchMembirth_insertQuery = "SELECT * FROM library_project.member WHERE 생년월일 ='" + maskedtxtbox_tab3_search.Text + "';";
+                        connection.Open();
+                        MySqlCommand searchMem_command = new MySqlCommand(searchMembirth_insertQuery, connection);
+                        MySqlDataAdapter result_searchMem = new MySqlDataAdapter(searchMem_command);
+
+                        DataTable load_mem_search = new DataTable();
+                        result_searchMem.Fill(load_mem_search);
+
+                        data_tab3_member.DataSource = load_mem_search;
+                        connection.Close();
+                    }
+                    else if (combobox_tab3_searchmem.Text == "이메일")
+                    {
+                        string searchMemEmail_insertQuery = "SELECT * FROM library_project.member WHERE 이메일 ='" + txtbox_tab3_memberemail.Text + "';";
+                        connection.Open();
+                        MySqlCommand searchMem_command = new MySqlCommand(searchMemEmail_insertQuery, connection);
+                        MySqlDataAdapter result_searchMem = new MySqlDataAdapter(searchMem_command);
+
+                        DataTable load_mem_search = new DataTable();
+                        result_searchMem.Fill(load_mem_search);
+
+                        data_tab3_member.DataSource = load_mem_search;
+                        connection.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("범주 선택 후 검색 바랍니다.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "회원검색 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -1229,11 +1384,6 @@ namespace FINAL_project_LibraryProgram_1234
             {
                 MessageBox.Show("회원정보 수정 모드에서만 강제 탈퇴 처리가 가능합니다. 회원 관리 모드를 변경 후 진행 바랍니다.");
             }
-        }
-
-        private void btn_tab3_searchmem_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
