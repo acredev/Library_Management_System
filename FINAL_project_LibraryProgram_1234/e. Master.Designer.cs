@@ -2722,11 +2722,12 @@ namespace FINAL_project_LibraryProgram_1234
             this.chkbox_tab5_emailsend.TabIndex = 45;
             this.chkbox_tab5_emailsend.Text = "문의 답변등록 알림 이메일 발송";
             this.chkbox_tab5_emailsend.UseVisualStyleBackColor = true;
+            this.chkbox_tab5_emailsend.CheckedChanged += new System.EventHandler(this.chkbox_tab5_emailsend_CheckedChanged);
             // 
             // btn_tab5_delete
             // 
             this.btn_tab5_delete.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_tab5_delete.Location = new System.Drawing.Point(4, 180);
+            this.btn_tab5_delete.Location = new System.Drawing.Point(244, 179);
             this.btn_tab5_delete.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_tab5_delete.Name = "btn_tab5_delete";
             this.btn_tab5_delete.Size = new System.Drawing.Size(231, 40);
@@ -2734,11 +2735,12 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_tab5_delete.Text = "삭제";
             this.btn_tab5_delete.UseVisualStyleBackColor = true;
             this.btn_tab5_delete.Visible = false;
+            this.btn_tab5_delete.Click += new System.EventHandler(this.btn_tab5_delete_Click);
             // 
             // btn_tab5_save
             // 
             this.btn_tab5_save.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_tab5_save.Location = new System.Drawing.Point(237, 180);
+            this.btn_tab5_save.Location = new System.Drawing.Point(11, 179);
             this.btn_tab5_save.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_tab5_save.Name = "btn_tab5_save";
             this.btn_tab5_save.Size = new System.Drawing.Size(231, 40);
@@ -2746,6 +2748,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_tab5_save.Text = "저장";
             this.btn_tab5_save.UseVisualStyleBackColor = true;
             this.btn_tab5_save.Visible = false;
+            this.btn_tab5_save.Click += new System.EventHandler(this.btn_tab5_save_Click);
             // 
             // txtbox_tab5_answer
             // 

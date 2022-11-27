@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Net.Mail;
 
 namespace FINAL_project_LibraryProgram_1234
 {
@@ -64,6 +65,7 @@ namespace FINAL_project_LibraryProgram_1234
 
         public static bool tab5_isModify = false;
         public static bool tab5_isReadOnly = true;
+        public static bool tab5_emailsend = false;
 
         // <탭 1에서, 조회/재조회 버튼 클릭시>
         private void btn_tab1_load_Click(object sender, EventArgs e)
@@ -1883,10 +1885,11 @@ namespace FINAL_project_LibraryProgram_1234
             tab5_isReadOnly = false;
             tab5_isModify = true;
 
-            txtbox_tab5_memname.ReadOnly = false;
-            txtbox_tab5_memnum.ReadOnly = false;
-            txtbox_tab5_title.ReadOnly = false;
-            txtbox_tab5_body.ReadOnly = false;
+            txtbox_tab5_memname.ReadOnly = true;
+            txtbox_tab5_memnum.ReadOnly = true;
+            txtbox_tab5_title.ReadOnly = true;
+            txtbox_tab5_body.ReadOnly = true;
+            txtbox_tab5_answer.ReadOnly = false;
         }
 
         private void btn_tab5_search_Click(object sender, EventArgs e)
@@ -1934,6 +1937,159 @@ namespace FINAL_project_LibraryProgram_1234
             catch (Exception ex)
             {
                 MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "문의 게시글 검색 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void chkbox_tab5_emailsend_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkbox_tab5_emailsend.Checked == true)
+            {
+                tab5_emailsend = true;
+            }
+            else if (chkbox_tab5_emailsend.Checked == false)
+            {
+                tab5_emailsend = false;
+            }
+        }
+
+        private void btn_tab5_save_Click(object sender, EventArgs e)
+        {
+            if (tab5_isReadOnly == true)
+            {
+                MessageBox.Show("수정 모드에서만 사용 가능한 버튼입니다. 회원 관리 모드를 변경 후 진행 바랍니다.");
+            }
+            else if (tab5_isModify == true)
+            {
+                if (txtbox_tab5_answer.Text != "")
+                {
+                    string insertQuery_qnaanswer = "UPDATE library_project.board_qna SET 답변 = '" + txtbox_tab5_answer.Text + "'WHERE 회원번호 = '" + txtbox_tab5_memnum.Text + "';";
+                    connection.Open();
+                    MySqlCommand qnaanswer_command = new MySqlCommand(insertQuery_qnaanswer, connection);
+
+                    try
+                    {
+                        if (qnaanswer_command.ExecuteNonQuery() != 0)
+                        {
+                            MessageBox.Show(txtbox_tab5_memname + " 회원님이 작성하신 " + txtbox_tab5_title.Text + " 문의 게시글에 대한 답변이 등록되었습니다. 잠시 후, 회원에게 답변 알림 이메일이 발송됩니다.");
+                            if (tab5_emailsend == true)
+                            {
+                                MailMessage mail = new MailMessage();
+                                mail.From = new MailAddress("praticecoding.h@gmail.com", "[일이삼사 도서관] 문의하신 내용에 대한 답변이 달렸습니다.", System.Text.Encoding.UTF8);
+                                mail.To.Add(txtbox_tab5_mememail.Text);
+                                mail.Subject = "[일이삼사 도서관] 문의하신 내용에 대한 답변이 달렸습니다.";
+                                mail.Body = txtbox_tab5_memname.Text + " 회원님께서 작성하신 " + txtbox_tab5_title.Text + " 문의에 대한 답변입니다.\n\n" + "-------------------------------------------------------\n" + "답변 : " + txtbox_tab5_body.Text;
+
+                                mail.IsBodyHtml = false;
+                                mail.Priority = MailPriority.High;
+                                mail.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
+
+                                mail.SubjectEncoding = Encoding.UTF8;
+                                mail.BodyEncoding = Encoding.UTF8;
+
+                                SmtpClient smtp = new SmtpClient();
+                                smtp.Host = "smtp.gmail.com";
+                                smtp.Port = 587;
+                                smtp.Timeout = 10000;
+                                smtp.UseDefaultCredentials = true;
+                                smtp.EnableSsl = true;
+                                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                                smtp.Credentials = new System.Net.NetworkCredential("praticecoding.h@gmail.com", "cthoxecsadvgxoat");
+
+                                try
+                                {
+                                    smtp.Send(mail);
+                                    mail.Dispose();
+
+                                    MessageBox.Show(txtbox_tab5_memname + " 회원에게 정상적으로 답변 안내 이메일을 전송 완료 했습니다.  조회 버튼을 눌러, 게시글 목록을 다시 재 조회 바랍니다.");
+
+                                    txtbox_tab5_title.Text = "";
+                                    txtbox_tab5_body.Text = "";
+                                    txtbox_tab5_memname.Text = "";
+                                    txtbox_tab5_memnum.Text = "";
+                                    txtbox_tab5_mememail.Text = "";
+                                    txtbox_tab5_answer.Text = "";
+
+                                    data_tab5_qna.DataSource = "";
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.ToString());
+                                }
+                            }
+                            else if (tab5_emailsend == false)
+                            {
+                                MessageBox.Show(txtbox_tab5_memname + " 회원님이 작성하신 " + txtbox_tab5_title.Text + " 문의 게시글에 대한 답변이 등록되었습니다. 조회 버튼을 눌러, 게시글 목록을 다시 재 조회 바랍니다.");
+
+                                txtbox_tab5_title.Text = "";
+                                txtbox_tab5_body.Text = "";
+                                txtbox_tab5_memname.Text = "";
+                                txtbox_tab5_memnum.Text = "";
+                                txtbox_tab5_mememail.Text = "";
+                                txtbox_tab5_answer.Text = "";
+
+                                data_tab5_qna.DataSource = "";
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("알 수 없는 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : ", "문의내용 답변 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "문의내용 답변 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("답변 내용 작성 후 진행 바랍니다.");
+                }
+            }
+        }
+
+        private void btn_tab5_delete_Click(object sender, EventArgs e)
+        {
+            if (tab5_isReadOnly == true)
+            {
+                MessageBox.Show("문의내용 삭제 / 답변 모드에서만 강제 삭제가 가능합니다. 모드를 변경해 주세요.");
+            }
+            else if (tab5_isModify == true)
+            {
+                if (MessageBox.Show("정말 " + txtbox_tab5_title.Text + " 문의 게시글을 삭제 처리하시겠습니까? 처리 이후에는 복구할 수 없습니다.", "문의 게시글 삭제", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string delqna_insertQuery = "DELETE FROM library_project.board_qna WHERE 회원번호 = '" + txtbox_tab5_memnum.Text + "';";
+                    connection.Open();
+                    MySqlCommand delqna_command = new MySqlCommand(delqna_insertQuery, connection);
+
+                    try
+                    {
+                        if (delqna_command.ExecuteNonQuery() != 0)
+                        {
+                            MessageBox.Show("삭제 요청하신 게시글 " + txtbox_tab5_title.Text + " 글이 데이터베이스에서 삭제되었습니다. 조회 버튼을 눌러, 게시글 목록을 다시 재 조회 바랍니다.");
+
+                            txtbox_tab5_title.Text = "";
+                            txtbox_tab5_body.Text = "";
+                            txtbox_tab5_memname.Text = "";
+                            txtbox_tab5_memnum.Text = "";
+                            txtbox_tab5_mememail.Text = "";
+                            txtbox_tab5_answer.Text = "";
+
+                            data_tab5_qna.DataSource = "";
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "게시글 삭제 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("삭제/답변 모드에서만 삭제가 가능합니다. 모드를 변경해 주세요.");
+                }
+            }
+            else
+            {
+                //없음
             }
         }
     }
