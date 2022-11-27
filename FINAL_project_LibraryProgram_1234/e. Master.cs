@@ -1528,6 +1528,7 @@ namespace FINAL_project_LibraryProgram_1234
                     {
                         MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "공지사항 수정 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                    connection.Close();
                 }
             }
             else if (tab4_isNoticeNew == true)
@@ -1560,6 +1561,7 @@ namespace FINAL_project_LibraryProgram_1234
                     {
                         MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "공지사항 등록 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                    connection.Close();
                 }
             }
             else
@@ -1608,6 +1610,7 @@ namespace FINAL_project_LibraryProgram_1234
                     {
                         MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "공지사항 삭제 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                    connection.Close();
                 }
                 else
                 {
@@ -1761,6 +1764,7 @@ namespace FINAL_project_LibraryProgram_1234
                     {
                         MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "게시글 삭제 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                    connection.Close();
                 }
                 else
                 {
