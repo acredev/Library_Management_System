@@ -1370,5 +1370,36 @@ namespace FINAL_project_LibraryProgram_1234
                 MessageBox.Show("회원정보 수정 모드에서만 강제 탈퇴 처리가 가능합니다. 회원 관리 모드를 변경 후 진행 바랍니다.");
             }
         }
+
+        private void btn_tab4_load_Click(object sender, EventArgs e)
+        {
+            string loadfree_insertQuery = "SELECT * FROM library_project.board_free;";
+            connection.Open();
+            MySqlCommand loadfree_command = new MySqlCommand(loadfree_insertQuery, connection);
+
+            try
+            {
+                MySqlDataAdapter result_loadfree = new MySqlDataAdapter(loadfree_command);
+
+                DataTable data_load_free = new DataTable();
+                result_loadfree.Fill(data_load_free);
+
+                data_tab4_free.DataSource = data_load_free;
+
+                string loadnotice_insertQuery = "SELECT * FROM library_project.board_notice;";
+                MySqlCommand loadnotice_command = new MySqlCommand(loadnotice_insertQuery, connection);
+                MySqlDataAdapter result_loadnotice = new MySqlDataAdapter(loadnotice_command);
+
+                DataTable data_load_notice = new DataTable();
+                result_loadnotice.Fill(data_load_notice);
+
+                data_tab4_notice.DataSource = data_load_notice;
+            }
+            catch (Exception ex)
+            {
+
+            }
+            connection.Close();
+        }
     }
 }
