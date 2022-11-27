@@ -1737,11 +1737,51 @@ namespace FINAL_project_LibraryProgram_1234
             txtbox_tab4_free_writernum.ReadOnly = true;
         }
 
+        // <탭 4에서, 자유게시판 삭제 버튼 클릭 시>
+
         private void btn_tab4_free_delete_Click(object sender, EventArgs e)
         {
+            if (tab4_isFreeModify == true)
+            {
+                if (MessageBox.Show("정말 자유게시판 " + txtbox_tab4_free_name.Text + " 글을 삭제 처리하시겠습니까? 처리 이후에는 복구할 수 없습니다.", "자유게시판 삭제", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string delFree_insertQuery = "DELETE FROM library_project.board_notice WHERE 제목 = '" + txtbox_tab4_free_name.Text + "';";
+                    connection.Open();
+                    MySqlCommand delFree_command = new MySqlCommand(delFree_insertQuery, connection);
 
+                    try
+                    {
+                        if (delFree_command.ExecuteNonQuery() != 0)
+                        {
+                            MessageBox.Show("삭제 요청하신 게시글 " + txtbox_tab4_free_name.Text + " 글이 데이터베이스에서 삭제되었습니다. 조회 버튼을 눌러, 게시글 목록을 다시 재 조회 바랍니다.");
+
+                            // 게시글 정보 텍스트박스 초기화
+                            txtbox_tab4_free_name.Text = "";
+                            txtbox_tab4_free_body.Text = "";
+                            txtbox_tab4_free_writer.Text = "";
+                            txtbox_tab4_free_writernum.Text = "";
+
+                            // 데이터 조회 화면 초기화
+                            data_tab4_free.DataSource = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show("알 수 없는 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : ", "게시글 삭제 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "게시글 삭제 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    // 없음
+                }
+            }
         }
 
+        // <탭 4에서, 자유게시판 입력내용 초기화 버튼 클릭 시>
         private void btn_tab4_free_reset_Click(object sender, EventArgs e)
         {
             txtbox_tab4_free_name.Text = "";
