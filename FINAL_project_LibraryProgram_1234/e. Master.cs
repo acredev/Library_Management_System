@@ -1856,10 +1856,12 @@ namespace FINAL_project_LibraryProgram_1234
         {
             try
             {
-                txtbox_tab5_memname.Text = data_tab5_qna.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtbox_tab5_memnum.Text = data_tab5_qna.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtbox_tab5_memnum.Text = data_tab5_qna.Rows[e.RowIndex].Cells[1].Value.ToString();
-                txtbox_tab5_title.Text = data_tab5_qna.Rows[e.RowIndex].Cells[2].Value.ToString();
-                txtbox_tab5_body.Text = data_tab5_qna.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txtbox_tab5_mememail.Text = data_tab5_qna.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtbox_tab5_title.Text = data_tab5_qna.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txtbox_tab5_body.Text = data_tab5_qna.Rows[e.RowIndex].Cells[4].Value.ToString();
+                txtbox_tab5_answer.Text = data_tab5_qna.Rows[e.RowIndex].Cells[5].Value.ToString();
 
             }
             catch (Exception)

@@ -25,6 +25,8 @@ DROP TABLE IF EXISTS `board_free`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `board_free` (
+  `작성자` varchar(5) NOT NULL,
+  `회원번호` varchar(12) NOT NULL,
   `제목` varchar(20) NOT NULL,
   `내용` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -48,8 +50,7 @@ DROP TABLE IF EXISTS `board_notice`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `board_notice` (
   `제목` varchar(20) NOT NULL,
-  `내용` varchar(200) NOT NULL,
-  `답변` varchar(200) DEFAULT NULL
+  `내용` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -59,7 +60,35 @@ CREATE TABLE `board_notice` (
 
 LOCK TABLES `board_notice` WRITE;
 /*!40000 ALTER TABLE `board_notice` DISABLE KEYS */;
+INSERT INTO `board_notice` VALUES ('test','test'),('test22','test22'),('test3','test3');
 /*!40000 ALTER TABLE `board_notice` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `board_qna`
+--
+
+DROP TABLE IF EXISTS `board_qna`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `board_qna` (
+  `회원번호` varchar(12) NOT NULL,
+  `작성자` varchar(5) NOT NULL,
+  `회원EMail` varchar(30) NOT NULL,
+  `제목` varchar(20) NOT NULL,
+  `내용` varchar(200) NOT NULL,
+  `답변` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`작성자`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `board_qna`
+--
+
+LOCK TABLES `board_qna` WRITE;
+/*!40000 ALTER TABLE `board_qna` DISABLE KEYS */;
+/*!40000 ALTER TABLE `board_qna` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -146,4 +175,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-27 18:50:29
+-- Dump completed on 2022-11-27 21:24:32
