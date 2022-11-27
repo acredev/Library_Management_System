@@ -1427,6 +1427,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab2_bookabout.Location = new System.Drawing.Point(63, 210);
             this.txtbox_tab2_bookabout.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab2_bookabout.MaxLength = 200;
             this.txtbox_tab2_bookabout.Multiline = true;
             this.txtbox_tab2_bookabout.Name = "txtbox_tab2_bookabout";
             this.txtbox_tab2_bookabout.ReadOnly = true;
@@ -1447,6 +1448,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab2_bookpages.Location = new System.Drawing.Point(308, 176);
             this.txtbox_tab2_bookpages.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab2_bookpages.MaxLength = 20;
             this.txtbox_tab2_bookpages.Name = "txtbox_tab2_bookpages";
             this.txtbox_tab2_bookpages.ReadOnly = true;
             this.txtbox_tab2_bookpages.Size = new System.Drawing.Size(162, 23);
@@ -1466,6 +1468,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab2_bookprice.Location = new System.Drawing.Point(63, 176);
             this.txtbox_tab2_bookprice.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab2_bookprice.MaxLength = 20;
             this.txtbox_tab2_bookprice.Name = "txtbox_tab2_bookprice";
             this.txtbox_tab2_bookprice.ReadOnly = true;
             this.txtbox_tab2_bookprice.Size = new System.Drawing.Size(188, 23);
@@ -1533,6 +1536,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab2_bookdate.Location = new System.Drawing.Point(308, 139);
             this.txtbox_tab2_bookdate.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab2_bookdate.MaxLength = 20;
             this.txtbox_tab2_bookdate.Name = "txtbox_tab2_bookdate";
             this.txtbox_tab2_bookdate.ReadOnly = true;
             this.txtbox_tab2_bookdate.Size = new System.Drawing.Size(162, 23);
@@ -1552,6 +1556,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab2_bookpublisher.Location = new System.Drawing.Point(63, 139);
             this.txtbox_tab2_bookpublisher.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab2_bookpublisher.MaxLength = 20;
             this.txtbox_tab2_bookpublisher.Name = "txtbox_tab2_bookpublisher";
             this.txtbox_tab2_bookpublisher.ReadOnly = true;
             this.txtbox_tab2_bookpublisher.Size = new System.Drawing.Size(188, 23);
@@ -1571,6 +1576,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab2_bookwrite.Location = new System.Drawing.Point(308, 102);
             this.txtbox_tab2_bookwrite.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab2_bookwrite.MaxLength = 20;
             this.txtbox_tab2_bookwrite.Name = "txtbox_tab2_bookwrite";
             this.txtbox_tab2_bookwrite.ReadOnly = true;
             this.txtbox_tab2_bookwrite.Size = new System.Drawing.Size(162, 23);
@@ -1590,6 +1596,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab2_bookname.Location = new System.Drawing.Point(63, 66);
             this.txtbox_tab2_bookname.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab2_bookname.MaxLength = 45;
             this.txtbox_tab2_bookname.Name = "txtbox_tab2_bookname";
             this.txtbox_tab2_bookname.ReadOnly = true;
             this.txtbox_tab2_bookname.Size = new System.Drawing.Size(406, 23);
@@ -1599,6 +1606,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab2_isbn.Location = new System.Drawing.Point(63, 102);
             this.txtbox_tab2_isbn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab2_isbn.MaxLength = 45;
             this.txtbox_tab2_isbn.Name = "txtbox_tab2_isbn";
             this.txtbox_tab2_isbn.ReadOnly = true;
             this.txtbox_tab2_isbn.Size = new System.Drawing.Size(188, 23);
@@ -1911,6 +1919,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab3_memberbirth.Location = new System.Drawing.Point(308, 139);
             this.txtbox_tab3_memberbirth.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab3_memberbirth.MaxLength = 10;
             this.txtbox_tab3_memberbirth.Name = "txtbox_tab3_memberbirth";
             this.txtbox_tab3_memberbirth.ReadOnly = true;
             this.txtbox_tab3_memberbirth.Size = new System.Drawing.Size(162, 23);
@@ -1930,6 +1939,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab3_loan.Location = new System.Drawing.Point(308, 210);
             this.txtbox_tab3_loan.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab3_loan.MaxLength = 10;
             this.txtbox_tab3_loan.Name = "txtbox_tab3_loan";
             this.txtbox_tab3_loan.ReadOnly = true;
             this.txtbox_tab3_loan.Size = new System.Drawing.Size(162, 23);
@@ -1972,6 +1982,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab3_membernum.Location = new System.Drawing.Point(63, 34);
             this.txtbox_tab3_membernum.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab3_membernum.MaxLength = 12;
             this.txtbox_tab3_membernum.Name = "txtbox_tab3_membernum";
             this.txtbox_tab3_membernum.ReadOnly = true;
             this.txtbox_tab3_membernum.Size = new System.Drawing.Size(406, 23);
@@ -1991,6 +2002,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab3_address.Location = new System.Drawing.Point(63, 246);
             this.txtbox_tab3_address.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab3_address.MaxLength = 50;
             this.txtbox_tab3_address.Multiline = true;
             this.txtbox_tab3_address.Name = "txtbox_tab3_address";
             this.txtbox_tab3_address.ReadOnly = true;
@@ -2011,6 +2023,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab3_memberemail.Location = new System.Drawing.Point(308, 176);
             this.txtbox_tab3_memberemail.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab3_memberemail.MaxLength = 30;
             this.txtbox_tab3_memberemail.Name = "txtbox_tab3_memberemail";
             this.txtbox_tab3_memberemail.ReadOnly = true;
             this.txtbox_tab3_memberemail.Size = new System.Drawing.Size(162, 23);
@@ -2030,6 +2043,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab3_membertel.Location = new System.Drawing.Point(63, 176);
             this.txtbox_tab3_membertel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab3_membertel.MaxLength = 14;
             this.txtbox_tab3_membertel.Name = "txtbox_tab3_membertel";
             this.txtbox_tab3_membertel.ReadOnly = true;
             this.txtbox_tab3_membertel.Size = new System.Drawing.Size(182, 23);
@@ -2049,6 +2063,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab3_membergender.Location = new System.Drawing.Point(308, 101);
             this.txtbox_tab3_membergender.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab3_membergender.MaxLength = 2;
             this.txtbox_tab3_membergender.Name = "txtbox_tab3_membergender";
             this.txtbox_tab3_membergender.ReadOnly = true;
             this.txtbox_tab3_membergender.Size = new System.Drawing.Size(162, 23);
@@ -2068,6 +2083,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab3_membernewdate.Location = new System.Drawing.Point(63, 139);
             this.txtbox_tab3_membernewdate.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab3_membernewdate.MaxLength = 10;
             this.txtbox_tab3_membernewdate.Name = "txtbox_tab3_membernewdate";
             this.txtbox_tab3_membernewdate.ReadOnly = true;
             this.txtbox_tab3_membernewdate.Size = new System.Drawing.Size(182, 23);
@@ -2087,6 +2103,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab3_membername.Location = new System.Drawing.Point(63, 66);
             this.txtbox_tab3_membername.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab3_membername.MaxLength = 5;
             this.txtbox_tab3_membername.Name = "txtbox_tab3_membername";
             this.txtbox_tab3_membername.ReadOnly = true;
             this.txtbox_tab3_membername.Size = new System.Drawing.Size(406, 23);
@@ -2096,6 +2113,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab3_memberid.Location = new System.Drawing.Point(63, 101);
             this.txtbox_tab3_memberid.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab3_memberid.MaxLength = 10;
             this.txtbox_tab3_memberid.Name = "txtbox_tab3_memberid";
             this.txtbox_tab3_memberid.ReadOnly = true;
             this.txtbox_tab3_memberid.Size = new System.Drawing.Size(182, 23);
@@ -2240,6 +2258,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab4_free_writernum.Location = new System.Drawing.Point(316, 188);
             this.txtbox_tab4_free_writernum.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab4_free_writernum.MaxLength = 12;
             this.txtbox_tab4_free_writernum.Name = "txtbox_tab4_free_writernum";
             this.txtbox_tab4_free_writernum.ReadOnly = true;
             this.txtbox_tab4_free_writernum.Size = new System.Drawing.Size(190, 23);
@@ -2259,6 +2278,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab4_free_writer.Location = new System.Drawing.Point(43, 188);
             this.txtbox_tab4_free_writer.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab4_free_writer.MaxLength = 5;
             this.txtbox_tab4_free_writer.Name = "txtbox_tab4_free_writer";
             this.txtbox_tab4_free_writer.ReadOnly = true;
             this.txtbox_tab4_free_writer.Size = new System.Drawing.Size(210, 23);
@@ -2304,6 +2324,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab4_free_body.Location = new System.Drawing.Point(43, 45);
             this.txtbox_tab4_free_body.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab4_free_body.MaxLength = 200;
             this.txtbox_tab4_free_body.Multiline = true;
             this.txtbox_tab4_free_body.Name = "txtbox_tab4_free_body";
             this.txtbox_tab4_free_body.ReadOnly = true;
@@ -2314,6 +2335,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab4_free_name.Location = new System.Drawing.Point(43, 19);
             this.txtbox_tab4_free_name.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab4_free_name.MaxLength = 20;
             this.txtbox_tab4_free_name.Name = "txtbox_tab4_free_name";
             this.txtbox_tab4_free_name.ReadOnly = true;
             this.txtbox_tab4_free_name.Size = new System.Drawing.Size(462, 23);
@@ -2554,6 +2576,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab4_notice_body.Location = new System.Drawing.Point(41, 45);
             this.txtbox_tab4_notice_body.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab4_notice_body.MaxLength = 200;
             this.txtbox_tab4_notice_body.Multiline = true;
             this.txtbox_tab4_notice_body.Name = "txtbox_tab4_notice_body";
             this.txtbox_tab4_notice_body.ReadOnly = true;
@@ -2564,6 +2587,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab4_notice_title.Location = new System.Drawing.Point(41, 19);
             this.txtbox_tab4_notice_title.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab4_notice_title.MaxLength = 20;
             this.txtbox_tab4_notice_title.Name = "txtbox_tab4_notice_title";
             this.txtbox_tab4_notice_title.ReadOnly = true;
             this.txtbox_tab4_notice_title.Size = new System.Drawing.Size(464, 23);
@@ -2759,6 +2783,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab5_answer.Location = new System.Drawing.Point(76, 20);
             this.txtbox_tab5_answer.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab5_answer.MaxLength = 200;
             this.txtbox_tab5_answer.Multiline = true;
             this.txtbox_tab5_answer.Name = "txtbox_tab5_answer";
             this.txtbox_tab5_answer.ReadOnly = true;
@@ -2978,6 +3003,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab5_body.Location = new System.Drawing.Point(76, 129);
             this.txtbox_tab5_body.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab5_body.MaxLength = 200;
             this.txtbox_tab5_body.Multiline = true;
             this.txtbox_tab5_body.Name = "txtbox_tab5_body";
             this.txtbox_tab5_body.ReadOnly = true;
@@ -3011,6 +3037,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab5_title.Location = new System.Drawing.Point(76, 34);
             this.txtbox_tab5_title.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab5_title.MaxLength = 20;
             this.txtbox_tab5_title.Name = "txtbox_tab5_title";
             this.txtbox_tab5_title.ReadOnly = true;
             this.txtbox_tab5_title.Size = new System.Drawing.Size(393, 23);
@@ -3031,6 +3058,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab5_mememail.Location = new System.Drawing.Point(308, 98);
             this.txtbox_tab5_mememail.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab5_mememail.MaxLength = 30;
             this.txtbox_tab5_mememail.Name = "txtbox_tab5_mememail";
             this.txtbox_tab5_mememail.ReadOnly = true;
             this.txtbox_tab5_mememail.Size = new System.Drawing.Size(162, 23);
@@ -3050,6 +3078,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab5_memname.Location = new System.Drawing.Point(76, 66);
             this.txtbox_tab5_memname.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab5_memname.MaxLength = 5;
             this.txtbox_tab5_memname.Name = "txtbox_tab5_memname";
             this.txtbox_tab5_memname.ReadOnly = true;
             this.txtbox_tab5_memname.Size = new System.Drawing.Size(393, 23);
@@ -3059,6 +3088,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_tab5_memnum.Location = new System.Drawing.Point(76, 98);
             this.txtbox_tab5_memnum.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab5_memnum.MaxLength = 12;
             this.txtbox_tab5_memnum.Name = "txtbox_tab5_memnum";
             this.txtbox_tab5_memnum.ReadOnly = true;
             this.txtbox_tab5_memnum.Size = new System.Drawing.Size(146, 23);

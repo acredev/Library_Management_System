@@ -258,6 +258,7 @@ namespace FINAL_project_LibraryProgram_1234
             // textBox10
             // 
             this.textBox10.Location = new System.Drawing.Point(49, 161);
+            this.textBox10.MaxLength = 200;
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
             this.textBox10.ReadOnly = true;
@@ -277,6 +278,7 @@ namespace FINAL_project_LibraryProgram_1234
             // textBox7
             // 
             this.textBox7.Location = new System.Drawing.Point(246, 133);
+            this.textBox7.MaxLength = 10;
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(75, 22);
@@ -294,6 +296,7 @@ namespace FINAL_project_LibraryProgram_1234
             // textBox9
             // 
             this.textBox9.Location = new System.Drawing.Point(49, 133);
+            this.textBox9.MaxLength = 20;
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(136, 22);
@@ -312,6 +315,7 @@ namespace FINAL_project_LibraryProgram_1234
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(246, 105);
+            this.textBox6.MaxLength = 20;
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(75, 22);
@@ -329,6 +333,7 @@ namespace FINAL_project_LibraryProgram_1234
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(49, 105);
+            this.textBox5.MaxLength = 20;
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(136, 22);
@@ -347,6 +352,7 @@ namespace FINAL_project_LibraryProgram_1234
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(49, 21);
+            this.textBox1.MaxLength = 45;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(272, 22);
@@ -355,6 +361,7 @@ namespace FINAL_project_LibraryProgram_1234
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(49, 77);
+            this.textBox4.MaxLength = 20;
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(136, 22);
@@ -391,6 +398,7 @@ namespace FINAL_project_LibraryProgram_1234
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(235, 77);
+            this.textBox3.MaxLength = 20;
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(86, 22);
@@ -399,6 +407,7 @@ namespace FINAL_project_LibraryProgram_1234
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(49, 49);
+            this.textBox2.MaxLength = 45;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(272, 22);
