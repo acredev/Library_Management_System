@@ -61,7 +61,6 @@ namespace FINAL_project_LibraryProgram_1234
 
         public static bool tab4_isFreeModify = false;
         public static bool tab4_isFreeReadOnly = true;
-        public static bool tab4_isFreeNew = false;
 
         // <탭 1에서, 조회/재조회 버튼 클릭시>
         private void btn_tab1_load_Click(object sender, EventArgs e)
@@ -1428,9 +1427,11 @@ namespace FINAL_project_LibraryProgram_1234
             tab4_isNoticeModify = true;
             tab4_isNoticeNew = false;
 
-            txtbox_tab4_notice_title.ReadOnly = false;
+            txtbox_tab4_notice_title.ReadOnly = true;
             txtbox_tab4_notice_body.ReadOnly = false;
             txtbox_tab4_notice_writer.ReadOnly = false;
+
+            MessageBox.Show("제목은 변경하실 수 없습니다.");
         }
 
         // <탭 4에서, 공지 관리모드를 신규모드로 변경 시>
@@ -1443,45 +1444,6 @@ namespace FINAL_project_LibraryProgram_1234
             txtbox_tab4_notice_title.ReadOnly = false;
             txtbox_tab4_notice_body.ReadOnly = false;
             txtbox_tab4_notice_writer.ReadOnly = false;
-        }
-
-        // <탭 4에서, 자유 관리모드를 열람모드로 변경 시>
-        private void rdobtn_tab4_seeFree_CheckedChanged(object sender, EventArgs e)
-        {
-            tab4_isFreeReadOnly = true;
-            tab4_isFreeModify = false;
-            tab4_isFreeNew = false;
-
-            txtbox_tab4_free_name.ReadOnly = true;
-            txtbox_tab4_free_body.ReadOnly = true;
-            txtbox_tab4_free_writer.ReadOnly = true;
-            txtbox_tab4_free_writernum.ReadOnly = true;
-        }
-
-        // <탭 4에서, 자유 관리모드를 삭제모드로 변경 시>
-        private void rdobtn_tab4_deleteFree_CheckedChanged(object sender, EventArgs e)
-        {
-            tab4_isFreeReadOnly = false;
-            tab4_isFreeModify = true;
-            tab4_isFreeNew = false;
-
-            txtbox_tab4_free_name.ReadOnly = true;
-            txtbox_tab4_free_body.ReadOnly = true;
-            txtbox_tab4_free_writer.ReadOnly = true;
-            txtbox_tab4_free_writernum.ReadOnly = true;
-        }
-
-        // <탭 4에서, 자유 관리모드를 신규모드로 변경 시>
-        private void rdobtn_tab4_freeNew_CheckedChanged(object sender, EventArgs e)
-        {
-            tab4_isFreeReadOnly = false;
-            tab4_isFreeModify = false;
-            tab4_isFreeNew = true;
-
-            txtbox_tab4_free_name.ReadOnly = false;
-            txtbox_tab4_free_body.ReadOnly = false;
-            txtbox_tab4_free_writer.ReadOnly = false;
-            txtbox_tab4_free_writernum.ReadOnly = false;
         }
 
         // <탭 4에서, 공지 검색 버튼 클릭 시>
@@ -1534,6 +1496,173 @@ namespace FINAL_project_LibraryProgram_1234
             }
         }
 
+        // <탭 4에서, 공지 저장 버튼 클릭 시>
+        private void btn_tab4_notice_save_Click(object sender, EventArgs e)
+        {
+            if (tab4_isNoticeReadOnly == true)
+            {
+                MessageBox.Show("수정 모드에서만 사용 가능한 버튼입니다. 회원 관리 모드를 변경 후 진행 바랍니다.");
+            }
+            else if (tab4_isNoticeModify == true)
+            {
+                if (txtbox_tab4_notice_title.Text != "" && txtbox_tab4_notice_body.Text != "")
+                {
+                    string modifyNotice_insertQuery = "UPDATE library_project.board_notice SET 내용 = '" + txtbox_tab4_notice_body.Text + "' WHERE 제목 = '" + txtbox_tab4_notice_body.Text + "';";
+                    connection.Open();
+                    MySqlCommand modifyNotice_command = new MySqlCommand(modifyNotice_insertQuery, connection);
+
+                    try
+                    {
+                        if (modifyNotice_command.ExecuteNonQuery() != 0)
+                        {
+                            MessageBox.Show("수정 요청하신 공지사항 제목 : " + txtbox_tab4_notice_title.Text + " 공지의 내용 수정이 완료되었습니다. 조회 버튼을 눌러, 공지사항 목록을 다시 재 조회 바랍니다.");
+
+                            // 공지사항 텍스트박스 초기화
+                            txtbox_tab4_notice_title.Text = "";
+                            txtbox_tab4_notice_title.Text = "";
+                            txtbox_tab4_notice_writer.Text = "";
+
+                            // 데이터 조회 화면 초기화
+                            data_tab4_notice.DataSource = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show("알 수 없는 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : ", "공지사항 수정 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "공지사항 수정 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else if (tab4_isNoticeNew == true)
+            {
+                if (txtbox_tab4_notice_title.Text != "" && txtbox_tab4_notice_body.Text != "")
+                {
+                    string newNotice_insertQuery = "INSERT INTO library_project.board_notice (제목, 내용, 작성자) VALUES ('" + txtbox_tab4_notice_title.Text + "', " + txtbox_tab4_notice_body.Text + "', " + txtbox_tab4_notice_writer.Text + "');";
+                    connection.Open();
+                    MySqlCommand newNotice_command = new MySqlCommand(newNotice_insertQuery, connection);
+
+                    try
+                    {
+                        if (newNotice_command.ExecuteNonQuery() != 0)
+                        {
+                            MessageBox.Show("신규등록 요청하신 공지사항 제목 : " + txtbox_tab4_notice_title.Text + " 공지사항 게시글이 데이터베이스에 등록되었습니다. 조회 버튼을 눌러, 공지사항 목록을 다시 재 조회 바랍니다.");
+
+                            // 공지사항 텍스트박스 초기화
+                            txtbox_tab4_notice_title.Text = "";
+                            txtbox_tab4_notice_title.Text = "";
+                            txtbox_tab4_notice_writer.Text = "";
+
+                            // 데이터 조회 화면 초기화
+                            data_tab4_notice.DataSource = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show("알 수 없는 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : ", "공지사항 등록 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "공지사항 등록 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("게시판 관리 모드를 우선 선택 후 진행 바랍니다.");
+            }
+        }
+
+        // <탭 4에서, 공지 삭제 버튼 클릭 시>
+        private void btn_tab4_notice_delete_Click(object sender, EventArgs e)
+        {
+            if (tab4_isNoticeReadOnly == true)
+            {
+                MessageBox.Show("수정 모드에서만 사용 가능한 버튼입니다. 회원 관리 모드를 변경 후 진행 바랍니다.");
+            }
+            else if (tab4_isNoticeModify == true)
+            {
+                txtbox_tab4_notice_title.ReadOnly = false;
+                txtbox_tab4_notice_body.ReadOnly = false;
+                txtbox_tab4_notice_writer.ReadOnly = false;
+
+                if (MessageBox.Show("정말 " + txtbox_tab4_notice_title.Text + " 공지사항을 삭제하시겠습니까? 처리 이후에는 복구할 수 없습니다.", "공지사항 삭제", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string delNotice_insertQuery = "DELETE FROM library_project.board_notice WHERE 제목 = '" + txtbox_tab4_notice_title.Text + "';";
+                    connection.Open();
+                    MySqlCommand delNotice_command = new MySqlCommand(delNotice_insertQuery, connection);
+
+                    try
+                    {
+                        if (delNotice_command.ExecuteNonQuery() != 0)
+                        {
+                            MessageBox.Show("삭제 요청하신 공지사항 " + txtbox_tab4_notice_title.Text + " 게시글이 데이터베이스에서 삭제되었습니다. 조회 버튼을 눌러, 공지사항 목록을 다시 재 조회 바랍니다.");
+
+                            // 공지사항 텍스트박스 초기화
+                            txtbox_tab4_notice_title.Text = "";
+                            txtbox_tab4_notice_title.Text = "";
+                            txtbox_tab4_notice_writer.Text = "";
+
+                            // 데이터 조회 화면 초기화
+                            data_tab4_notice.DataSource = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show("알 수 없는 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : ", "공지사항 삭제 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "공지사항 삭제 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    // 메시지박스 닫힘.
+                }
+            }
+            else if (tab4_isNoticeNew == true)
+            {
+                txtbox_tab4_notice_title.ReadOnly = true;
+                txtbox_tab4_notice_body.ReadOnly = true;
+                txtbox_tab4_notice_writer.ReadOnly = true;
+
+                MessageBox.Show("수정 모드에서만 사용 가능한 버튼입니다. 회원 관리 모드를 변경 후 진행 바랍니다.");
+            }
+            else
+            {
+                MessageBox.Show("게시판 관리 모드를 우선 선택 후 진행 바랍니다.");
+            }
+        }
+
+        // <탭 4에서, 입력 내용 초기화 버튼 클릭 시>
+
+        private void btn_tab4_notice_reset_Click(object sender, EventArgs e)
+        {
+            if (tab4_isNoticeReadOnly)
+            {
+                MessageBox.Show("수정 모드에서만 사용 가능한 버튼입니다. 회원 관리 모드를 변경 후 진행 바랍니다.");
+            }
+            else if (tab4_isNoticeModify)
+            {
+                txtbox_tab4_notice_title.ReadOnly = false;
+                txtbox_tab4_notice_body.ReadOnly = false;
+                txtbox_tab4_notice_writer.ReadOnly = false;
+            }
+            else if (tab4_isNoticeNew)
+            {
+                txtbox_tab4_notice_title.ReadOnly = false;
+                txtbox_tab4_notice_body.ReadOnly = false;
+                txtbox_tab4_notice_writer.ReadOnly = false;
+            }
+            else
+            {
+                MessageBox.Show("게시판 관리 모드를 우선 선택 후 진행 바랍니다.");
+            }
+        }
+
         // <탭 4에서, 자유 검색 버튼 클릭 시>
         private void btn_tab4_searchFree_Click(object sender, EventArgs e)
         {
@@ -1582,6 +1711,43 @@ namespace FINAL_project_LibraryProgram_1234
             {
                 MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "게시판 검색 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        // <탭 4에서, 자유 관리모드를 열람모드로 변경 시>
+        private void rdobtn_tab4_seeFree_CheckedChanged(object sender, EventArgs e)
+        {
+            tab4_isFreeReadOnly = true;
+            tab4_isFreeModify = false;
+
+            txtbox_tab4_free_name.ReadOnly = true;
+            txtbox_tab4_free_body.ReadOnly = true;
+            txtbox_tab4_free_writer.ReadOnly = true;
+            txtbox_tab4_free_writernum.ReadOnly = true;
+        }
+
+        // <탭 4에서, 자유 관리모드를 삭제모드로 변경 시>
+        private void rdobtn_tab4_deleteFree_CheckedChanged(object sender, EventArgs e)
+        {
+            tab4_isFreeReadOnly = false;
+            tab4_isFreeModify = true;
+
+            txtbox_tab4_free_name.ReadOnly = true;
+            txtbox_tab4_free_body.ReadOnly = true;
+            txtbox_tab4_free_writer.ReadOnly = true;
+            txtbox_tab4_free_writernum.ReadOnly = true;
+        }
+
+        private void btn_tab4_free_delete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_tab4_free_reset_Click(object sender, EventArgs e)
+        {
+            txtbox_tab4_free_name.Text = "";
+            txtbox_tab4_free_body.Text = "";
+            txtbox_tab4_free_writer.Text = "";
+            txtbox_tab4_free_writernum.Text = "";
         }
     }
 }

@@ -193,14 +193,12 @@ namespace FINAL_project_LibraryProgram_1234
             this.txtbox_tab4_free_writer = new System.Windows.Forms.TextBox();
             this.label64 = new System.Windows.Forms.Label();
             this.btn_tab4_free_delete = new System.Windows.Forms.Button();
-            this.btn_tab4_free_save = new System.Windows.Forms.Button();
             this.btn_tab4_free_reset = new System.Windows.Forms.Button();
             this.txtbox_tab4_free_body = new System.Windows.Forms.TextBox();
             this.txtbox_tab4_free_name = new System.Windows.Forms.TextBox();
             this.label59 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.rdobtn_tab4_freeNew = new System.Windows.Forms.RadioButton();
             this.rdobtn_tab4_deleteFree = new System.Windows.Forms.RadioButton();
             this.rdobtn_tab4_seeFree = new System.Windows.Forms.RadioButton();
             this.label61 = new System.Windows.Forms.Label();
@@ -2050,7 +2048,6 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox15.Controls.Add(this.txtbox_tab4_free_writer);
             this.groupBox15.Controls.Add(this.label64);
             this.groupBox15.Controls.Add(this.btn_tab4_free_delete);
-            this.groupBox15.Controls.Add(this.btn_tab4_free_save);
             this.groupBox15.Controls.Add(this.btn_tab4_free_reset);
             this.groupBox15.Controls.Add(this.txtbox_tab4_free_body);
             this.groupBox15.Controls.Add(this.txtbox_tab4_free_name);
@@ -2098,22 +2095,13 @@ namespace FINAL_project_LibraryProgram_1234
             // btn_tab4_free_delete
             // 
             this.btn_tab4_free_delete.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_tab4_free_delete.Location = new System.Drawing.Point(365, 243);
+            this.btn_tab4_free_delete.Location = new System.Drawing.Point(55, 243);
             this.btn_tab4_free_delete.Name = "btn_tab4_free_delete";
-            this.btn_tab4_free_delete.Size = new System.Drawing.Size(308, 45);
+            this.btn_tab4_free_delete.Size = new System.Drawing.Size(618, 45);
             this.btn_tab4_free_delete.TabIndex = 43;
             this.btn_tab4_free_delete.Text = "강제삭제";
             this.btn_tab4_free_delete.UseVisualStyleBackColor = true;
-            // 
-            // btn_tab4_free_save
-            // 
-            this.btn_tab4_free_save.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_tab4_free_save.Location = new System.Drawing.Point(55, 243);
-            this.btn_tab4_free_save.Name = "btn_tab4_free_save";
-            this.btn_tab4_free_save.Size = new System.Drawing.Size(308, 45);
-            this.btn_tab4_free_save.TabIndex = 42;
-            this.btn_tab4_free_save.Text = "저장";
-            this.btn_tab4_free_save.UseVisualStyleBackColor = true;
+            this.btn_tab4_free_delete.Click += new System.EventHandler(this.btn_tab4_free_delete_Click);
             // 
             // btn_tab4_free_reset
             // 
@@ -2124,6 +2112,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_tab4_free_reset.TabIndex = 40;
             this.btn_tab4_free_reset.Text = "입력내용 초기화";
             this.btn_tab4_free_reset.UseVisualStyleBackColor = true;
+            this.btn_tab4_free_reset.Click += new System.EventHandler(this.btn_tab4_free_reset_Click);
             // 
             // txtbox_tab4_free_body
             // 
@@ -2160,7 +2149,6 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // groupBox16
             // 
-            this.groupBox16.Controls.Add(this.rdobtn_tab4_freeNew);
             this.groupBox16.Controls.Add(this.rdobtn_tab4_deleteFree);
             this.groupBox16.Controls.Add(this.rdobtn_tab4_seeFree);
             this.groupBox16.Controls.Add(this.label61);
@@ -2170,23 +2158,11 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox16.TabIndex = 54;
             this.groupBox16.TabStop = false;
             // 
-            // rdobtn_tab4_freeNew
-            // 
-            this.rdobtn_tab4_freeNew.AutoSize = true;
-            this.rdobtn_tab4_freeNew.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rdobtn_tab4_freeNew.Location = new System.Drawing.Point(400, 21);
-            this.rdobtn_tab4_freeNew.Name = "rdobtn_tab4_freeNew";
-            this.rdobtn_tab4_freeNew.Size = new System.Drawing.Size(78, 20);
-            this.rdobtn_tab4_freeNew.TabIndex = 32;
-            this.rdobtn_tab4_freeNew.Text = "신규작성";
-            this.rdobtn_tab4_freeNew.UseVisualStyleBackColor = true;
-            this.rdobtn_tab4_freeNew.CheckedChanged += new System.EventHandler(this.rdobtn_tab4_freeNew_CheckedChanged);
-            // 
             // rdobtn_tab4_deleteFree
             // 
             this.rdobtn_tab4_deleteFree.AutoSize = true;
             this.rdobtn_tab4_deleteFree.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rdobtn_tab4_deleteFree.Location = new System.Drawing.Point(300, 21);
+            this.rdobtn_tab4_deleteFree.Location = new System.Drawing.Point(365, 21);
             this.rdobtn_tab4_deleteFree.Name = "rdobtn_tab4_deleteFree";
             this.rdobtn_tab4_deleteFree.Size = new System.Drawing.Size(78, 20);
             this.rdobtn_tab4_deleteFree.TabIndex = 31;
@@ -2199,7 +2175,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.rdobtn_tab4_seeFree.AutoSize = true;
             this.rdobtn_tab4_seeFree.Checked = true;
             this.rdobtn_tab4_seeFree.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rdobtn_tab4_seeFree.Location = new System.Drawing.Point(200, 21);
+            this.rdobtn_tab4_seeFree.Location = new System.Drawing.Point(265, 21);
             this.rdobtn_tab4_seeFree.Name = "rdobtn_tab4_seeFree";
             this.rdobtn_tab4_seeFree.Size = new System.Drawing.Size(78, 20);
             this.rdobtn_tab4_seeFree.TabIndex = 30;
@@ -2355,6 +2331,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_tab4_notice_delete.TabIndex = 43;
             this.btn_tab4_notice_delete.Text = "삭제";
             this.btn_tab4_notice_delete.UseVisualStyleBackColor = true;
+            this.btn_tab4_notice_delete.Click += new System.EventHandler(this.btn_tab4_notice_delete_Click);
             // 
             // btn_tab4_notice_save
             // 
@@ -2363,8 +2340,9 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_tab4_notice_save.Name = "btn_tab4_notice_save";
             this.btn_tab4_notice_save.Size = new System.Drawing.Size(308, 45);
             this.btn_tab4_notice_save.TabIndex = 42;
-            this.btn_tab4_notice_save.Text = "수정/저장";
+            this.btn_tab4_notice_save.Text = "저장";
             this.btn_tab4_notice_save.UseVisualStyleBackColor = true;
+            this.btn_tab4_notice_save.Click += new System.EventHandler(this.btn_tab4_notice_save_Click);
             // 
             // btn_tab4_notice_reset
             // 
@@ -2375,6 +2353,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_tab4_notice_reset.TabIndex = 40;
             this.btn_tab4_notice_reset.Text = "입력내용 초기화";
             this.btn_tab4_notice_reset.UseVisualStyleBackColor = true;
+            this.btn_tab4_notice_reset.Click += new System.EventHandler(this.btn_tab4_notice_reset_Click);
             // 
             // txtbox_tab4_notice_body
             // 
@@ -3225,14 +3204,12 @@ namespace FINAL_project_LibraryProgram_1234
         private System.Windows.Forms.TextBox txtbox_tab4_free_writer;
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.Button btn_tab4_free_delete;
-        private System.Windows.Forms.Button btn_tab4_free_save;
         private System.Windows.Forms.Button btn_tab4_free_reset;
         private System.Windows.Forms.TextBox txtbox_tab4_free_body;
         private System.Windows.Forms.TextBox txtbox_tab4_free_name;
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.GroupBox groupBox16;
-        private System.Windows.Forms.RadioButton rdobtn_tab4_freeNew;
         private System.Windows.Forms.RadioButton rdobtn_tab4_deleteFree;
         private System.Windows.Forms.RadioButton rdobtn_tab4_seeFree;
         private System.Windows.Forms.Label label61;
