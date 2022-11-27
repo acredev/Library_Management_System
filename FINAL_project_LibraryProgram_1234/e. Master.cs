@@ -1852,12 +1852,12 @@ namespace FINAL_project_LibraryProgram_1234
         }
 
         // <탭 5에서, 데이터그리드에 있는 항목을 선택하면 텍스트뷰로 뿌려줌>
-        private void data_tab5_qna_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void data_tab5_qna_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
                 txtbox_tab5_memnum.Text = data_tab5_qna.Rows[e.RowIndex].Cells[0].Value.ToString();
-                txtbox_tab5_memnum.Text = data_tab5_qna.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtbox_tab5_memname.Text = data_tab5_qna.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txtbox_tab5_mememail.Text = data_tab5_qna.Rows[e.RowIndex].Cells[2].Value.ToString();
                 txtbox_tab5_title.Text = data_tab5_qna.Rows[e.RowIndex].Cells[3].Value.ToString();
                 txtbox_tab5_body.Text = data_tab5_qna.Rows[e.RowIndex].Cells[4].Value.ToString();
@@ -2003,7 +2003,7 @@ namespace FINAL_project_LibraryProgram_1234
                                     smtp.Send(mail);
                                     mail.Dispose();
 
-                                    MessageBox.Show(txtbox_tab5_memname + " 회원에게 정상적으로 답변 안내 이메일을 전송 완료 했습니다.  조회 버튼을 눌러, 게시글 목록을 다시 재 조회 바랍니다.");
+                                    MessageBox.Show(txtbox_tab5_memname.Text + " 회원에게 정상적으로 답변 안내 이메일을 전송 완료 했습니다.  조회 버튼을 눌러, 게시글 목록을 다시 재 조회 바랍니다.");
 
                                     txtbox_tab5_title.Text = "";
                                     txtbox_tab5_body.Text = "";
@@ -2021,7 +2021,7 @@ namespace FINAL_project_LibraryProgram_1234
                             }
                             else if (tab5_emailsend == false)
                             {
-                                MessageBox.Show(txtbox_tab5_memname + " 회원님이 작성하신 " + txtbox_tab5_title.Text + " 문의 게시글에 대한 답변이 등록되었습니다. 조회 버튼을 눌러, 게시글 목록을 다시 재 조회 바랍니다.");
+                                MessageBox.Show(txtbox_tab5_memname.Text + " 회원님이 작성하신 " + txtbox_tab5_title.Text + " 문의 게시글에 대한 답변이 등록되었습니다. 조회 버튼을 눌러, 게시글 목록을 다시 재 조회 바랍니다.");
 
                                 txtbox_tab5_title.Text = "";
                                 txtbox_tab5_body.Text = "";

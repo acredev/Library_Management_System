@@ -2734,7 +2734,6 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_tab5_delete.TabIndex = 44;
             this.btn_tab5_delete.Text = "삭제";
             this.btn_tab5_delete.UseVisualStyleBackColor = true;
-            this.btn_tab5_delete.Visible = false;
             this.btn_tab5_delete.Click += new System.EventHandler(this.btn_tab5_delete_Click);
             // 
             // btn_tab5_save
@@ -2747,7 +2746,6 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_tab5_save.TabIndex = 43;
             this.btn_tab5_save.Text = "저장";
             this.btn_tab5_save.UseVisualStyleBackColor = true;
-            this.btn_tab5_save.Visible = false;
             this.btn_tab5_save.Click += new System.EventHandler(this.btn_tab5_save_Click);
             // 
             // txtbox_tab5_answer
@@ -2807,7 +2805,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.data_tab5_qna.RowTemplate.Height = 35;
             this.data_tab5_qna.Size = new System.Drawing.Size(558, 601);
             this.data_tab5_qna.TabIndex = 56;
-            this.data_tab5_qna.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_tab5_qna_CellContentClick);
+            this.data_tab5_qna.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_tab5_qna_CellClick);
             // 
             // groupBox17
             // 
