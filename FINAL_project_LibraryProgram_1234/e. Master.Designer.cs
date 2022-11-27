@@ -261,7 +261,6 @@ namespace FINAL_project_LibraryProgram_1234
             this.label80 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.picture_exit = new System.Windows.Forms.PictureBox();
             this.picture_logout = new System.Windows.Forms.PictureBox();
             this.picture_support = new System.Windows.Forms.PictureBox();
@@ -311,7 +310,6 @@ namespace FINAL_project_LibraryProgram_1234
             this.tabcontrol_master.Controls.Add(this.tabPage3);
             this.tabcontrol_master.Controls.Add(this.tabPage4);
             this.tabcontrol_master.Controls.Add(this.tabPage5);
-            this.tabcontrol_master.Controls.Add(this.tabPage6);
             this.tabcontrol_master.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tabcontrol_master.Location = new System.Drawing.Point(9, 65);
             this.tabcontrol_master.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -3110,16 +3108,6 @@ namespace FINAL_project_LibraryProgram_1234
             this.label15.TabIndex = 32;
             this.label15.Text = "문의검색";
             // 
-            // tabPage6
-            // 
-            this.tabPage6.Location = new System.Drawing.Point(4, 51);
-            this.tabPage6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1049, 650);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "환경 설정";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
             // picture_exit
             // 
             this.picture_exit.Image = ((System.Drawing.Image)(resources.GetObject("picture_exit.Image")));
@@ -3254,7 +3242,6 @@ namespace FINAL_project_LibraryProgram_1234
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.DataGridView data_tab2_book;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtbox_tab2_bookabout;
