@@ -238,6 +238,35 @@ namespace FINAL_project_LibraryProgram_1234
             this.picture_support = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btn_tab4_searchFree = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label66 = new System.Windows.Forms.Label();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.label67 = new System.Windows.Forms.Label();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.label68 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label69 = new System.Windows.Forms.Label();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label73 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label77 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label79 = new System.Windows.Forms.Label();
+            this.label80 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label72 = new System.Windows.Forms.Label();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label75 = new System.Windows.Forms.Label();
             this.tabcontrol_master.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -269,6 +298,11 @@ namespace FINAL_project_LibraryProgram_1234
             ((System.ComponentModel.ISupportInitialize)(this.picture_exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_logout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_support)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox17.SuspendLayout();
+            this.groupBox18.SuspendLayout();
+            this.groupBox19.SuspendLayout();
+            this.groupBox20.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabcontrol_master
@@ -2446,8 +2480,15 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.groupBox20);
+            this.tabPage5.Controls.Add(this.button1);
+            this.tabPage5.Controls.Add(this.dataGridView1);
+            this.tabPage5.Controls.Add(this.groupBox17);
+            this.tabPage5.Controls.Add(this.groupBox18);
+            this.tabPage5.Controls.Add(this.groupBox19);
             this.tabPage5.Controls.Add(this.comboBox4);
             this.tabPage5.Controls.Add(this.label15);
+            this.tabPage5.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tabPage5.Location = new System.Drawing.Point(4, 51);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(1401, 744);
@@ -2548,6 +2589,317 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_tab4_searchFree.UseVisualStyleBackColor = true;
             this.btn_tab4_searchFree.Visible = false;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button1.Location = new System.Drawing.Point(6, 697);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(744, 38);
+            this.button1.TabIndex = 60;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 10);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 35;
+            this.dataGridView1.Size = new System.Drawing.Size(744, 681);
+            this.dataGridView1.TabIndex = 56;
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.BackColor = System.Drawing.Color.White;
+            this.label66.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label66.Location = new System.Drawing.Point(6, -1);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(82, 21);
+            this.label66.TabIndex = 29;
+            this.label66.Text = "관리모드";
+            // 
+            // groupBox17
+            // 
+            this.groupBox17.Controls.Add(this.radioButton1);
+            this.groupBox17.Controls.Add(this.radioButton2);
+            this.groupBox17.Controls.Add(this.label66);
+            this.groupBox17.Location = new System.Drawing.Point(756, 14);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(639, 104);
+            this.groupBox17.TabIndex = 58;
+            this.groupBox17.TabStop = false;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("나눔고딕", 10.5F);
+            this.radioButton1.Location = new System.Drawing.Point(335, 45);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(134, 20);
+            this.radioButton1.TabIndex = 31;
+            this.radioButton1.Text = "문의내용 답변모드";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Checked = true;
+            this.radioButton2.Font = new System.Drawing.Font("나눔고딕", 10.5F);
+            this.radioButton2.Location = new System.Drawing.Point(157, 45);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(134, 20);
+            this.radioButton2.TabIndex = 30;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "문의내용 열람모드";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.BackColor = System.Drawing.Color.White;
+            this.label67.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label67.Location = new System.Drawing.Point(6, -1);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(82, 21);
+            this.label67.TabIndex = 29;
+            this.label67.Text = "문의검색";
+            // 
+            // groupBox18
+            // 
+            this.groupBox18.Controls.Add(this.label67);
+            this.groupBox18.Controls.Add(this.label68);
+            this.groupBox18.Controls.Add(this.comboBox2);
+            this.groupBox18.Controls.Add(this.button2);
+            this.groupBox18.Controls.Add(this.textBox1);
+            this.groupBox18.Location = new System.Drawing.Point(756, 124);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Size = new System.Drawing.Size(639, 104);
+            this.groupBox18.TabIndex = 59;
+            this.groupBox18.TabStop = false;
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label68.Location = new System.Drawing.Point(22, 47);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(60, 16);
+            this.label68.TabIndex = 27;
+            this.label68.Text = "문의검색";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.Font = new System.Drawing.Font("나눔고딕", 10.2F);
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "회원번호",
+            "회원상태",
+            "이름",
+            "아이디",
+            "연락처",
+            "생년월일",
+            "이메일"});
+            this.comboBox2.Location = new System.Drawing.Point(101, 44);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 24);
+            this.comboBox2.TabIndex = 29;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("나눔고딕", 10.2F);
+            this.button2.Location = new System.Drawing.Point(534, 44);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(90, 28);
+            this.button2.TabIndex = 30;
+            this.button2.Text = "검색";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox1.Location = new System.Drawing.Point(228, 45);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(301, 23);
+            this.textBox1.TabIndex = 28;
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.BackColor = System.Drawing.Color.White;
+            this.label69.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label69.Location = new System.Drawing.Point(6, -1);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(82, 21);
+            this.label69.TabIndex = 34;
+            this.label69.Text = "문의내용";
+            // 
+            // groupBox19
+            // 
+            this.groupBox19.Controls.Add(this.label71);
+            this.groupBox19.Controls.Add(this.textBox2);
+            this.groupBox19.Controls.Add(this.label70);
+            this.groupBox19.Controls.Add(this.label69);
+            this.groupBox19.Controls.Add(this.textBox4);
+            this.groupBox19.Controls.Add(this.label73);
+            this.groupBox19.Controls.Add(this.textBox8);
+            this.groupBox19.Controls.Add(this.label77);
+            this.groupBox19.Controls.Add(this.textBox10);
+            this.groupBox19.Controls.Add(this.textBox11);
+            this.groupBox19.Controls.Add(this.label79);
+            this.groupBox19.Controls.Add(this.label80);
+            this.groupBox19.Font = new System.Drawing.Font("나눔고딕", 10.2F);
+            this.groupBox19.Location = new System.Drawing.Point(756, 234);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.Size = new System.Drawing.Size(639, 240);
+            this.groupBox19.TabIndex = 57;
+            this.groupBox19.TabStop = false;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(84, 38);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(540, 23);
+            this.textBox4.TabIndex = 27;
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.Font = new System.Drawing.Font("나눔고딕", 10.2F);
+            this.label73.Location = new System.Drawing.Point(48, 41);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(34, 16);
+            this.label73.TabIndex = 26;
+            this.label73.Text = "제목";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(410, 111);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
+            this.textBox8.Size = new System.Drawing.Size(214, 23);
+            this.textBox8.TabIndex = 15;
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Font = new System.Drawing.Font("나눔고딕", 10.2F);
+            this.label77.Location = new System.Drawing.Point(348, 114);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(0, 16);
+            this.label77.TabIndex = 14;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(84, 75);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
+            this.textBox10.Size = new System.Drawing.Size(540, 23);
+            this.textBox10.TabIndex = 6;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(84, 111);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.ReadOnly = true;
+            this.textBox11.Size = new System.Drawing.Size(241, 23);
+            this.textBox11.TabIndex = 9;
+            // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.Font = new System.Drawing.Font("나눔고딕", 10.2F);
+            this.label79.Location = new System.Drawing.Point(35, 78);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(47, 16);
+            this.label79.TabIndex = 5;
+            this.label79.Text = "회원명";
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.Font = new System.Drawing.Font("나눔고딕", 10.2F);
+            this.label80.Location = new System.Drawing.Point(22, 114);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(60, 16);
+            this.label80.TabIndex = 8;
+            this.label80.Text = "회원번호";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(84, 146);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(540, 85);
+            this.textBox2.TabIndex = 40;
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Font = new System.Drawing.Font("나눔고딕", 10.2F);
+            this.label70.Location = new System.Drawing.Point(18, 149);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(60, 16);
+            this.label70.TabIndex = 39;
+            this.label70.Text = "문의내용";
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Font = new System.Drawing.Font("나눔고딕", 10.2F);
+            this.label71.Location = new System.Drawing.Point(332, 114);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(77, 16);
+            this.label71.TabIndex = 41;
+            this.label71.Text = "회원 이메일";
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.BackColor = System.Drawing.Color.White;
+            this.label72.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label72.Location = new System.Drawing.Point(6, -1);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(82, 21);
+            this.label72.TabIndex = 34;
+            this.label72.Text = "문의답변";
+            // 
+            // groupBox20
+            // 
+            this.groupBox20.Controls.Add(this.textBox3);
+            this.groupBox20.Controls.Add(this.label75);
+            this.groupBox20.Controls.Add(this.label72);
+            this.groupBox20.Font = new System.Drawing.Font("나눔고딕", 10.2F);
+            this.groupBox20.Location = new System.Drawing.Point(756, 480);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Size = new System.Drawing.Size(639, 240);
+            this.groupBox20.TabIndex = 58;
+            this.groupBox20.TabStop = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(84, 23);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(540, 85);
+            this.textBox3.TabIndex = 40;
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Font = new System.Drawing.Font("나눔고딕", 10.2F);
+            this.label75.Location = new System.Drawing.Point(18, 26);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(60, 16);
+            this.label75.TabIndex = 39;
+            this.label75.Text = "답변내용";
+            // 
             // Master
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -2614,6 +2966,15 @@ namespace FINAL_project_LibraryProgram_1234
             ((System.ComponentModel.ISupportInitialize)(this.picture_exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_logout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_support)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox17.ResumeLayout(false);
+            this.groupBox17.PerformLayout();
+            this.groupBox18.ResumeLayout(false);
+            this.groupBox18.PerformLayout();
+            this.groupBox19.ResumeLayout(false);
+            this.groupBox19.PerformLayout();
+            this.groupBox20.ResumeLayout(false);
+            this.groupBox20.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2828,5 +3189,34 @@ namespace FINAL_project_LibraryProgram_1234
         private System.Windows.Forms.TextBox txtbox_tab4_notice_writer;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Button btn_tab4_searchFree;
+        private System.Windows.Forms.GroupBox groupBox20;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.GroupBox groupBox17;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.GroupBox groupBox18;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.GroupBox groupBox19;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label73;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label79;
+        private System.Windows.Forms.Label label80;
     }
 }
