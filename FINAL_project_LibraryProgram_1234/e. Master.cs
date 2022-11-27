@@ -55,6 +55,14 @@ namespace FINAL_project_LibraryProgram_1234
         public static bool tab3_isMemModify = false;
         public static bool tab3_isMemReadOnly = true;
 
+        public static bool tab4_isNoticeModify = false;
+        public static bool tab4_isNoticeReadOnly = true;
+        public static bool tab4_isNoticeNew = false;
+
+        public static bool tab4_isFreeModify = false;
+        public static bool tab4_isFreeReadOnly = true;
+        public static bool tab4_isFreeNew = false;
+
         // <탭 1에서, 조회/재조회 버튼 클릭시>
         private void btn_tab1_load_Click(object sender, EventArgs e)
         {
@@ -1018,7 +1026,6 @@ namespace FINAL_project_LibraryProgram_1234
         }
 
         // <탭 3에서, 회원관리모드 변경 시 - 열람모드>
-
         private void rdobtn_tab3_seemode_CheckedChanged(object sender, EventArgs e)
         {
             tab3_isMemModify = false;
@@ -1319,7 +1326,6 @@ namespace FINAL_project_LibraryProgram_1234
         }
 
         // <탭 3에서, 회원 강제탈퇴 클릭 시>
-
         private void btn_tab3_delete_Click(object sender, EventArgs e)
         {
             if (tab3_isMemModify == true)
@@ -1371,6 +1377,7 @@ namespace FINAL_project_LibraryProgram_1234
             }
         }
 
+        // <탭 4에서, 조회 / 재조회 버튼 클릭시>
         private void btn_tab4_load_Click(object sender, EventArgs e)
         {
             string loadfree_insertQuery = "SELECT * FROM library_project.board_free;";
@@ -1397,9 +1404,184 @@ namespace FINAL_project_LibraryProgram_1234
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "게시판 조회 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             connection.Close();
+        }
+
+        // <탭 4에서, 공지 관리모드를 열람모드로 변경 시>
+        private void rdobtn_tab4_seeNotice_CheckedChanged(object sender, EventArgs e)
+        {
+            tab4_isNoticeReadOnly = true;
+            tab4_isNoticeModify = false;
+            tab4_isNoticeNew = false;
+
+            txtbox_tab4_notice_title.ReadOnly = true;
+            txtbox_tab4_notice_body.ReadOnly = true;
+            txtbox_tab4_notice_writer.ReadOnly = true;
+        }
+
+        // <탭 4에서, 공지 관리모드를 수정모드로 변경 시>
+        private void rdobtn_tab4_modifyNotice_CheckedChanged(object sender, EventArgs e)
+        {
+            tab4_isNoticeReadOnly = false;
+            tab4_isNoticeModify = true;
+            tab4_isNoticeNew = false;
+
+            txtbox_tab4_notice_title.ReadOnly = false;
+            txtbox_tab4_notice_body.ReadOnly = false;
+            txtbox_tab4_notice_writer.ReadOnly = false;
+        }
+
+        // <탭 4에서, 공지 관리모드를 신규모드로 변경 시>
+        private void rdobtn_tab4_newNotice_CheckedChanged(object sender, EventArgs e)
+        {
+            tab4_isNoticeReadOnly = false;
+            tab4_isNoticeModify = false;
+            tab4_isNoticeNew = true;
+
+            txtbox_tab4_notice_title.ReadOnly = false;
+            txtbox_tab4_notice_body.ReadOnly = false;
+            txtbox_tab4_notice_writer.ReadOnly = false;
+        }
+
+        // <탭 4에서, 자유 관리모드를 열람모드로 변경 시>
+        private void rdobtn_tab4_seeFree_CheckedChanged(object sender, EventArgs e)
+        {
+            tab4_isFreeReadOnly = true;
+            tab4_isFreeModify = false;
+            tab4_isFreeNew = false;
+
+            txtbox_tab4_free_name.ReadOnly = true;
+            txtbox_tab4_free_body.ReadOnly = true;
+            txtbox_tab4_free_writer.ReadOnly = true;
+            txtbox_tab4_free_writernum.ReadOnly = true;
+        }
+
+        // <탭 4에서, 자유 관리모드를 삭제모드로 변경 시>
+        private void rdobtn_tab4_deleteFree_CheckedChanged(object sender, EventArgs e)
+        {
+            tab4_isFreeReadOnly = false;
+            tab4_isFreeModify = true;
+            tab4_isFreeNew = false;
+
+            txtbox_tab4_free_name.ReadOnly = true;
+            txtbox_tab4_free_body.ReadOnly = true;
+            txtbox_tab4_free_writer.ReadOnly = true;
+            txtbox_tab4_free_writernum.ReadOnly = true;
+        }
+
+        // <탭 4에서, 자유 관리모드를 신규모드로 변경 시>
+        private void rdobtn_tab4_freeNew_CheckedChanged(object sender, EventArgs e)
+        {
+            tab4_isFreeReadOnly = false;
+            tab4_isFreeModify = false;
+            tab4_isFreeNew = true;
+
+            txtbox_tab4_free_name.ReadOnly = false;
+            txtbox_tab4_free_body.ReadOnly = false;
+            txtbox_tab4_free_writer.ReadOnly = false;
+            txtbox_tab4_free_writernum.ReadOnly = false;
+        }
+
+        // <탭 4에서, 공지 검색 버튼 클릭 시>
+        private void btn_tab4_searchNotice_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtbox_tab4_searchNotice.Text == "")
+                {
+                    MessageBox.Show("검색명 입력 후 시도 바랍니다.");
+                }
+                else
+                {
+                    if (combobox_tab4_notice_search.Text == "제목")
+                    {
+                        string insertQuery_searchtitle = "SELECT * FROM library_project.board_notice WHERE 제목 = '" + txtbox_tab4_searchNotice.Text + "';";
+                        connection.Open();
+                        MySqlCommand searchCommand = new MySqlCommand(insertQuery_searchtitle, connection);
+                        MySqlDataAdapter searchAdapter = new MySqlDataAdapter(searchCommand);
+
+                        DataTable load_data_notice = new DataTable();
+                        searchAdapter.Fill(load_data_notice);
+
+                        data_tab4_notice.DataSource = load_data_notice;
+                        connection.Close();
+                    }
+                    else if (combobox_tab4_notice_search.Text == "내용")
+                    {
+                        string insertQuery_searchbody = "SELECT * FROM library_project.board_notice WHERE 내용 = '%" + txtbox_tab4_searchNotice.Text + "%';";
+                        connection.Open();
+                        MySqlCommand searchCommand = new MySqlCommand(insertQuery_searchbody, connection);
+                        MySqlDataAdapter searchAdapter = new MySqlDataAdapter(searchCommand);
+
+                        DataTable load_data_notice = new DataTable();
+                        searchAdapter.Fill(load_data_notice);
+
+                        data_tab4_notice.DataSource = load_data_notice;
+                        connection.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("범주 선택 후 검색 바랍니다.");
+                    }
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "게시판 검색 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // <탭 4에서, 자유 검색 버튼 클릭 시>
+        private void btn_tab4_searchFree_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtbox_tab4_searchFree.Text == "")
+                {
+                    MessageBox.Show("검색명 입력 후 시도 바랍니다.");
+                }
+                else
+                {
+                    if (combobox_tab4_searchFree.Text == "제목")
+                    {
+                        string insertQuery_searchtitle = "SELECT * FROM library_project.board_free WHERE 제목 = '" + txtbox_tab4_searchFree.Text + "';";
+                        connection.Open();
+                        MySqlCommand searchCommand = new MySqlCommand(insertQuery_searchtitle, connection);
+                        MySqlDataAdapter searchAdapter = new MySqlDataAdapter(searchCommand);
+
+                        DataTable load_data_free = new DataTable();
+                        searchAdapter.Fill(load_data_free);
+
+                        data_tab4_free.DataSource = load_data_free;
+                        connection.Close();
+                    }
+                    else if (combobox_tab4_notice_search.Text == "내용")
+                    {
+                        string insertQuery_searchbody = "SELECT * FROM library_project.board_free WHERE 내용 = '%" + txtbox_tab4_searchFree.Text + "%';";
+                        connection.Open();
+                        MySqlCommand searchCommand = new MySqlCommand(insertQuery_searchbody, connection);
+                        MySqlDataAdapter searchAdapter = new MySqlDataAdapter(searchCommand);
+
+                        DataTable load_data_free = new DataTable();
+                        searchAdapter.Fill(load_data_free);
+
+                        data_tab4_notice.DataSource = load_data_free;
+                        connection.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("범주 선택 후 검색 바랍니다.");
+                    }
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "게시판 검색 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

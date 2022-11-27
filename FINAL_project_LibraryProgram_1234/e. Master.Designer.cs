@@ -2022,6 +2022,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // combobox_tab4_searchFree
             // 
+            this.combobox_tab4_searchFree.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combobox_tab4_searchFree.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.combobox_tab4_searchFree.FormattingEnabled = true;
             this.combobox_tab4_searchFree.Items.AddRange(new object[] {
@@ -2072,7 +2073,7 @@ namespace FINAL_project_LibraryProgram_1234
             // label65
             // 
             this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(342, 216);
+            this.label65.Location = new System.Drawing.Point(355, 216);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(60, 16);
             this.label65.TabIndex = 48;
@@ -2179,6 +2180,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.rdobtn_tab4_freeNew.TabIndex = 32;
             this.rdobtn_tab4_freeNew.Text = "신규작성";
             this.rdobtn_tab4_freeNew.UseVisualStyleBackColor = true;
+            this.rdobtn_tab4_freeNew.CheckedChanged += new System.EventHandler(this.rdobtn_tab4_freeNew_CheckedChanged);
             // 
             // rdobtn_tab4_deleteFree
             // 
@@ -2190,6 +2192,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.rdobtn_tab4_deleteFree.TabIndex = 31;
             this.rdobtn_tab4_deleteFree.Text = "삭제모드";
             this.rdobtn_tab4_deleteFree.UseVisualStyleBackColor = true;
+            this.rdobtn_tab4_deleteFree.CheckedChanged += new System.EventHandler(this.rdobtn_tab4_deleteFree_CheckedChanged);
             // 
             // rdobtn_tab4_seeFree
             // 
@@ -2203,6 +2206,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.rdobtn_tab4_seeFree.TabStop = true;
             this.rdobtn_tab4_seeFree.Text = "열람모드";
             this.rdobtn_tab4_seeFree.UseVisualStyleBackColor = true;
+            this.rdobtn_tab4_seeFree.CheckedChanged += new System.EventHandler(this.rdobtn_tab4_seeFree_CheckedChanged);
             // 
             // label61
             // 
@@ -2259,6 +2263,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_tab4_searchNotice.Text = "검색";
             this.btn_tab4_searchNotice.UseVisualStyleBackColor = true;
             this.btn_tab4_searchNotice.Visible = false;
+            this.btn_tab4_searchNotice.Click += new System.EventHandler(this.btn_tab4_searchNotice_Click);
             // 
             // groupBox11
             // 
@@ -2286,6 +2291,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // combobox_tab4_notice_search
             // 
+            this.combobox_tab4_notice_search.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combobox_tab4_notice_search.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.combobox_tab4_notice_search.FormattingEnabled = true;
             this.combobox_tab4_notice_search.Items.AddRange(new object[] {
@@ -2425,6 +2431,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.rdobtn_tab4_newNotice.TabIndex = 32;
             this.rdobtn_tab4_newNotice.Text = "신규작성";
             this.rdobtn_tab4_newNotice.UseVisualStyleBackColor = true;
+            this.rdobtn_tab4_newNotice.CheckedChanged += new System.EventHandler(this.rdobtn_tab4_newNotice_CheckedChanged);
             // 
             // rdobtn_tab4_modifyNotice
             // 
@@ -2436,6 +2443,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.rdobtn_tab4_modifyNotice.TabIndex = 31;
             this.rdobtn_tab4_modifyNotice.Text = "수정모드";
             this.rdobtn_tab4_modifyNotice.UseVisualStyleBackColor = true;
+            this.rdobtn_tab4_modifyNotice.CheckedChanged += new System.EventHandler(this.rdobtn_tab4_modifyNotice_CheckedChanged);
             // 
             // rdobtn_tab4_seeNotice
             // 
@@ -2449,6 +2457,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.rdobtn_tab4_seeNotice.TabStop = true;
             this.rdobtn_tab4_seeNotice.Text = "열람모드";
             this.rdobtn_tab4_seeNotice.UseVisualStyleBackColor = true;
+            this.rdobtn_tab4_seeNotice.CheckedChanged += new System.EventHandler(this.rdobtn_tab4_seeNotice_CheckedChanged);
             // 
             // label55
             // 
@@ -2594,6 +2603,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_tab4_searchFree.Text = "검색";
             this.btn_tab4_searchFree.UseVisualStyleBackColor = true;
             this.btn_tab4_searchFree.Visible = false;
+            this.btn_tab4_searchFree.Click += new System.EventHandler(this.btn_tab4_searchFree_Click);
             // 
             // btn_tab5_load
             // 
