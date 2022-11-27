@@ -1417,7 +1417,6 @@ namespace FINAL_project_LibraryProgram_1234
 
             txtbox_tab4_notice_title.ReadOnly = true;
             txtbox_tab4_notice_body.ReadOnly = true;
-            txtbox_tab4_notice_writer.ReadOnly = true;
         }
 
         // <탭 4에서, 공지 관리모드를 수정모드로 변경 시>
@@ -1429,9 +1428,6 @@ namespace FINAL_project_LibraryProgram_1234
 
             txtbox_tab4_notice_title.ReadOnly = true;
             txtbox_tab4_notice_body.ReadOnly = false;
-            txtbox_tab4_notice_writer.ReadOnly = false;
-
-            MessageBox.Show("제목은 변경하실 수 없습니다.");
         }
 
         // <탭 4에서, 공지 관리모드를 신규모드로 변경 시>
@@ -1443,7 +1439,6 @@ namespace FINAL_project_LibraryProgram_1234
 
             txtbox_tab4_notice_title.ReadOnly = false;
             txtbox_tab4_notice_body.ReadOnly = false;
-            txtbox_tab4_notice_writer.ReadOnly = false;
         }
 
         // <탭 4에서, 공지 검색 버튼 클릭 시>
@@ -1472,7 +1467,7 @@ namespace FINAL_project_LibraryProgram_1234
                     }
                     else if (combobox_tab4_notice_search.Text == "내용")
                     {
-                        string insertQuery_searchbody = "SELECT * FROM library_project.board_notice WHERE 내용 = '%" + txtbox_tab4_searchNotice.Text + "%';";
+                        string insertQuery_searchbody = "SELECT * FROM library_project.board_notice WHERE 내용 = '" + txtbox_tab4_searchNotice.Text + "';";
                         connection.Open();
                         MySqlCommand searchCommand = new MySqlCommand(insertQuery_searchbody, connection);
                         MySqlDataAdapter searchAdapter = new MySqlDataAdapter(searchCommand);
@@ -1520,7 +1515,6 @@ namespace FINAL_project_LibraryProgram_1234
                             // 공지사항 텍스트박스 초기화
                             txtbox_tab4_notice_title.Text = "";
                             txtbox_tab4_notice_title.Text = "";
-                            txtbox_tab4_notice_writer.Text = "";
 
                             // 데이터 조회 화면 초기화
                             data_tab4_notice.DataSource = "";
@@ -1540,7 +1534,7 @@ namespace FINAL_project_LibraryProgram_1234
             {
                 if (txtbox_tab4_notice_title.Text != "" && txtbox_tab4_notice_body.Text != "")
                 {
-                    string newNotice_insertQuery = "INSERT INTO library_project.board_notice (제목, 내용, 작성자) VALUES ('" + txtbox_tab4_notice_title.Text + "', " + txtbox_tab4_notice_body.Text + "', " + txtbox_tab4_notice_writer.Text + "');";
+                    string newNotice_insertQuery = "INSERT INTO library_project.board_notice (제목, 내용) VALUES ('" + txtbox_tab4_notice_title.Text + "', '" + txtbox_tab4_notice_body.Text + "');";
                     connection.Open();
                     MySqlCommand newNotice_command = new MySqlCommand(newNotice_insertQuery, connection);
 
@@ -1553,7 +1547,6 @@ namespace FINAL_project_LibraryProgram_1234
                             // 공지사항 텍스트박스 초기화
                             txtbox_tab4_notice_title.Text = "";
                             txtbox_tab4_notice_title.Text = "";
-                            txtbox_tab4_notice_writer.Text = "";
 
                             // 데이터 조회 화면 초기화
                             data_tab4_notice.DataSource = "";
@@ -1586,7 +1579,6 @@ namespace FINAL_project_LibraryProgram_1234
             {
                 txtbox_tab4_notice_title.ReadOnly = false;
                 txtbox_tab4_notice_body.ReadOnly = false;
-                txtbox_tab4_notice_writer.ReadOnly = false;
 
                 if (MessageBox.Show("정말 " + txtbox_tab4_notice_title.Text + " 공지사항을 삭제하시겠습니까? 처리 이후에는 복구할 수 없습니다.", "공지사항 삭제", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -1603,7 +1595,6 @@ namespace FINAL_project_LibraryProgram_1234
                             // 공지사항 텍스트박스 초기화
                             txtbox_tab4_notice_title.Text = "";
                             txtbox_tab4_notice_title.Text = "";
-                            txtbox_tab4_notice_writer.Text = "";
 
                             // 데이터 조회 화면 초기화
                             data_tab4_notice.DataSource = "";
@@ -1627,7 +1618,6 @@ namespace FINAL_project_LibraryProgram_1234
             {
                 txtbox_tab4_notice_title.ReadOnly = true;
                 txtbox_tab4_notice_body.ReadOnly = true;
-                txtbox_tab4_notice_writer.ReadOnly = true;
 
                 MessageBox.Show("수정 모드에서만 사용 가능한 버튼입니다. 회원 관리 모드를 변경 후 진행 바랍니다.");
             }
@@ -1649,13 +1639,11 @@ namespace FINAL_project_LibraryProgram_1234
             {
                 txtbox_tab4_notice_title.ReadOnly = false;
                 txtbox_tab4_notice_body.ReadOnly = false;
-                txtbox_tab4_notice_writer.ReadOnly = false;
             }
             else if (tab4_isNoticeNew)
             {
                 txtbox_tab4_notice_title.ReadOnly = false;
                 txtbox_tab4_notice_body.ReadOnly = false;
-                txtbox_tab4_notice_writer.ReadOnly = false;
             }
             else
             {
