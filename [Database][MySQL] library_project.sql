@@ -60,7 +60,7 @@ CREATE TABLE `board_notice` (
 
 LOCK TABLES `board_notice` WRITE;
 /*!40000 ALTER TABLE `board_notice` DISABLE KEYS */;
-INSERT INTO `board_notice` VALUES ('test','test'),('test22','test22'),('test3','test3');
+INSERT INTO `board_notice` VALUES ('test','test'),('test22','test22'),('test3','test3'),('일이삼사 도서관에 오신 것을 환영합니','공지 내용입니다.'),('일이삼사 도서관 공지 테스트 입니다.','공지 내용입니다.'),('일이삼사 도서관 공지 테스트 입니다.','공지 내용입니다.');
 /*!40000 ALTER TABLE `board_notice` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -88,6 +88,7 @@ CREATE TABLE `board_qna` (
 
 LOCK TABLES `board_qna` WRITE;
 /*!40000 ALTER TABLE `board_qna` DISABLE KEYS */;
+INSERT INTO `board_qna` VALUES ('test','test','m_file@naver.com','test','test','test'),('test2','test2','m_file@naver.com','test2','test2','test2885'),('test4','test4','m_file@naver.com','test4','test3','test3');
 /*!40000 ALTER TABLE `board_qna` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -108,7 +109,7 @@ CREATE TABLE `book` (
   `도서상태` varchar(20) DEFAULT NULL,
   `대출여부` varchar(10) DEFAULT NULL,
   `도서가격` varchar(20) DEFAULT NULL,
-  `페이지수` varchar(20) DEFAULT NULL,
+  `페이지수` varchar(10) DEFAULT NULL,
   `도서소개` varchar(200) DEFAULT NULL,
   `대출한_회원번호` varchar(12) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -175,4 +176,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-27 21:24:32
+-- Dump completed on 2022-11-28  1:22:14
