@@ -62,6 +62,9 @@ namespace FINAL_project_LibraryProgram_1234
         public static bool tab4_isFreeModify = false;
         public static bool tab4_isFreeReadOnly = true;
 
+        public static bool tab5_isModify = false;
+        public static bool tab5_isReadOnly = true;
+
         // <탭 1에서, 조회/재조회 버튼 클릭시>
         private void btn_tab1_load_Click(object sender, EventArgs e)
         {
@@ -1408,6 +1411,21 @@ namespace FINAL_project_LibraryProgram_1234
             connection.Close();
         }
 
+        // <탭 4에서, 공지사항 클릭 시 txtbox로 내용전달>
+        private void data_tab4_notice_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                txtbox_tab4_notice_title.Text = data_tab4_notice.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtbox_tab4_notice_body.Text = data_tab4_notice.Rows[e.RowIndex].Cells[1].Value.ToString();
+
+            }
+            catch (Exception)
+            {
+                // 예외처리는 따로 안함, catch문을 써야 cellclick시 에러가 발생하지 않음
+            }
+        }
+
         // <탭 4에서, 공지 관리모드를 열람모드로 변경 시>
         private void rdobtn_tab4_seeNotice_CheckedChanged(object sender, EventArgs e)
         {
@@ -1637,7 +1655,6 @@ namespace FINAL_project_LibraryProgram_1234
         }
 
         // <탭 4에서, 입력 내용 초기화 버튼 클릭 시>
-
         private void btn_tab4_notice_reset_Click(object sender, EventArgs e)
         {
             if (tab4_isNoticeReadOnly)
@@ -1659,6 +1676,24 @@ namespace FINAL_project_LibraryProgram_1234
                 MessageBox.Show("게시판 관리 모드를 우선 선택 후 진행 바랍니다.");
             }
         }
+
+        // <탭 4에서, 자유게시판 글 클릭 시 txtbox로 내용전달>
+        private void data_tab4_free_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                txtbox_tab4_free_writer.Text = data_tab4_free.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtbox_tab4_free_writernum.Text = data_tab4_free.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtbox_tab4_free_name.Text = data_tab4_free.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtbox_tab4_free_body.Text = data_tab4_free.Rows[e.RowIndex].Cells[3].Value.ToString();
+
+            }
+            catch (Exception)
+            {
+                // 예외처리는 따로 안함, catch문을 써야 cellclick시 에러가 발생하지 않음
+            }
+        }
+
 
         // <탭 4에서, 자유 검색 버튼 클릭 시>
         private void btn_tab4_searchFree_Click(object sender, EventArgs e)
@@ -1791,12 +1826,38 @@ namespace FINAL_project_LibraryProgram_1234
             txtbox_tab4_free_writernum.Text = "";
         }
 
-        private void data_tab4_notice_CellClick(object sender, DataGridViewCellEventArgs e)
+        // <탭 5에서, 문의내역 불러오기 버튼 클릭 시>
+        private void btn_tab5_load_Click(object sender, EventArgs e)
+        {
+            string loadqna_insertQuery = "SELECT * FROM library_project.board_qna;";
+            connection.Open();
+            MySqlCommand loadqna_command = new MySqlCommand(loadqna_insertQuery, connection);
+
+            try
+            {
+                MySqlDataAdapter result_qna = new MySqlDataAdapter(loadqna_command);
+
+                DataTable data_load_qna = new DataTable();
+                result_qna.Fill(data_load_qna);
+
+                data_tab5_qna.DataSource = data_load_qna;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "문의사항 조회 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+        }
+
+        // <탭 5에서, 데이터그리드에 있는 항목을 선택하면 텍스트뷰로 뿌려줌>
+        private void data_tab5_qna_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                txtbox_tab4_notice_title.Text = data_tab4_notice.Rows[e.RowIndex].Cells[0].Value.ToString();
-                txtbox_tab4_notice_body.Text = data_tab4_notice.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtbox_tab5_memname.Text = data_tab5_qna.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtbox_tab5_memnum.Text = data_tab5_qna.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtbox_tab5_title.Text = data_tab5_qna.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtbox_tab5_body.Text = data_tab5_qna.Rows[e.RowIndex].Cells[3].Value.ToString();
 
             }
             catch (Exception)
@@ -1805,19 +1866,74 @@ namespace FINAL_project_LibraryProgram_1234
             }
         }
 
-        private void data_tab4_free_CellClick(object sender, DataGridViewCellEventArgs e)
+        // <탭 5에서, 라디오 버튼을 선택해 모드 변경 시>
+        private void rdobtn_tab5_see_CheckedChanged(object sender, EventArgs e)
+        {
+            tab5_isReadOnly = true;
+            tab5_isModify = false;
+
+            txtbox_tab5_memname.ReadOnly = true;
+            txtbox_tab5_memnum.ReadOnly = true;
+            txtbox_tab5_title.ReadOnly = true;
+            txtbox_tab5_body.ReadOnly = true;
+        }
+
+        private void rdo_btn5_set_CheckedChanged(object sender, EventArgs e)
+        {
+            tab5_isReadOnly = false;
+            tab5_isModify = true;
+
+            txtbox_tab5_memname.ReadOnly = false;
+            txtbox_tab5_memnum.ReadOnly = false;
+            txtbox_tab5_title.ReadOnly = false;
+            txtbox_tab5_body.ReadOnly = false;
+        }
+
+        private void btn_tab5_search_Click(object sender, EventArgs e)
         {
             try
             {
-                txtbox_tab4_free_writer.Text = data_tab4_free.Rows[e.RowIndex].Cells[0].Value.ToString();
-                txtbox_tab4_free_writernum.Text = data_tab4_free.Rows[e.RowIndex].Cells[1].Value.ToString();
-                txtbox_tab4_free_name.Text = data_tab4_free.Rows[e.RowIndex].Cells[2].Value.ToString();
-                txtbox_tab4_free_body.Text = data_tab4_free.Rows[e.RowIndex].Cells[3].Value.ToString();
+                if (txtbox_tab5_search.Text == "")
+                {
+                    MessageBox.Show("검색명 입력 후 시도 바랍니다.");
+                }
+                else
+                {
+                    if (combobox_tab5_search.Text == "제목")
+                    {
+                        string insertQuery_searchqnabyTitle = "SELECT * FROM library_project.board_qna WHERE 제목 = '" + txtbox_tab5_search.Text + "';";
+                        connection.Open();
+                        MySqlCommand command = new MySqlCommand(insertQuery_searchqnabyTitle, connection);
+                        MySqlDataAdapter adapter = new MySqlDataAdapter(command);
 
+                        DataTable load_qna = new DataTable();
+                        adapter.Fill(load_qna);
+
+                        data_tab5_qna.DataSource = load_qna;
+                        connection.Close();
+                    }
+                    else if (combobox_tab5_search.Text == "내용")
+                    {
+                        string insertQuery_searchqnabyTitle = "SELECT * FROM library_project.board_qna WHERE 내용 = '" + txtbox_tab5_search.Text + "';";
+                        connection.Open();
+                        MySqlCommand command = new MySqlCommand(insertQuery_searchqnabyTitle, connection);
+                        MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+
+                        DataTable load_qna = new DataTable();
+                        adapter.Fill(load_qna);
+
+                        data_tab5_qna.DataSource = load_qna;
+                        connection.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("범주 선택 후 검색 바랍니다.");
+                    }
+                }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                // 예외처리는 따로 안함, catch문을 써야 cellclick시 에러가 발생하지 않음
+                MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "문의 게시글 검색 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
