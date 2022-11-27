@@ -1714,7 +1714,7 @@ namespace FINAL_project_LibraryProgram_1234
         private void rdobtn_tab4_seeFree_CheckedChanged(object sender, EventArgs e)
         {
             tab4_isFreeReadOnly = true;
-            tab4_isFreeModify = false;
+            tab4_isFreeModify = true;
 
             txtbox_tab4_free_name.ReadOnly = true;
             txtbox_tab4_free_body.ReadOnly = true;
@@ -1735,14 +1735,13 @@ namespace FINAL_project_LibraryProgram_1234
         }
 
         // <탭 4에서, 자유게시판 삭제 버튼 클릭 시>
-
         private void btn_tab4_free_delete_Click(object sender, EventArgs e)
         {
             if (tab4_isFreeModify == true)
             {
                 if (MessageBox.Show("정말 자유게시판 " + txtbox_tab4_free_name.Text + " 글을 삭제 처리하시겠습니까? 처리 이후에는 복구할 수 없습니다.", "자유게시판 삭제", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    string delFree_insertQuery = "DELETE FROM library_project.board_notice WHERE 제목 = '" + txtbox_tab4_free_name.Text + "';";
+                    string delFree_insertQuery = "DELETE FROM library_project.board_free WHERE 제목 = '" + txtbox_tab4_free_name.Text + "';";
                     connection.Open();
                     MySqlCommand delFree_command = new MySqlCommand(delFree_insertQuery, connection);
 
@@ -1774,12 +1773,16 @@ namespace FINAL_project_LibraryProgram_1234
                 }
                 else
                 {
-                    // 없음
+                    MessageBox.Show("삭제 모드에서만 강제 삭제가 가능합니다. 모드를 변경해 주세요.");
                 }
+            }
+            else
+            {
+                MessageBox.Show("삭제 모드에서만 강제 삭제가 가능합니다. 모드를 변경해 주세요.");
             }
         }
 
-        // <탭 4에서, 자유게시판 입력내용 초기화 버튼 클릭 시>
+        // <탭 4에서, 자유게시판 내용 초기화 버튼 클릭 시>
         private void btn_tab4_free_reset_Click(object sender, EventArgs e)
         {
             txtbox_tab4_free_name.Text = "";
@@ -1794,6 +1797,22 @@ namespace FINAL_project_LibraryProgram_1234
             {
                 txtbox_tab4_notice_title.Text = data_tab4_notice.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtbox_tab4_notice_body.Text = data_tab4_notice.Rows[e.RowIndex].Cells[1].Value.ToString();
+
+            }
+            catch (Exception)
+            {
+                // 예외처리는 따로 안함, catch문을 써야 cellclick시 에러가 발생하지 않음
+            }
+        }
+
+        private void data_tab4_free_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                txtbox_tab4_free_writer.Text = data_tab4_free.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtbox_tab4_free_writernum.Text = data_tab4_free.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtbox_tab4_free_name.Text = data_tab4_free.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtbox_tab4_free_body.Text = data_tab4_free.Rows[e.RowIndex].Cells[3].Value.ToString();
 
             }
             catch (Exception)

@@ -2239,6 +2239,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.txtbox_tab4_free_writernum.Location = new System.Drawing.Point(316, 188);
             this.txtbox_tab4_free_writernum.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtbox_tab4_free_writernum.Name = "txtbox_tab4_free_writernum";
+            this.txtbox_tab4_free_writernum.ReadOnly = true;
             this.txtbox_tab4_free_writernum.Size = new System.Drawing.Size(190, 23);
             this.txtbox_tab4_free_writernum.TabIndex = 49;
             // 
@@ -2257,6 +2258,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.txtbox_tab4_free_writer.Location = new System.Drawing.Point(43, 188);
             this.txtbox_tab4_free_writer.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtbox_tab4_free_writer.Name = "txtbox_tab4_free_writer";
+            this.txtbox_tab4_free_writer.ReadOnly = true;
             this.txtbox_tab4_free_writer.Size = new System.Drawing.Size(210, 23);
             this.txtbox_tab4_free_writer.TabIndex = 47;
             // 
@@ -2290,7 +2292,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_tab4_free_reset.Name = "btn_tab4_free_reset";
             this.btn_tab4_free_reset.Size = new System.Drawing.Size(464, 29);
             this.btn_tab4_free_reset.TabIndex = 40;
-            this.btn_tab4_free_reset.Text = "입력내용 초기화";
+            this.btn_tab4_free_reset.Text = "내용 초기화";
             this.btn_tab4_free_reset.UseVisualStyleBackColor = true;
             this.btn_tab4_free_reset.Click += new System.EventHandler(this.btn_tab4_free_reset_Click);
             // 
@@ -2398,6 +2400,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.data_tab4_free.RowTemplate.Height = 35;
             this.data_tab4_free.Size = new System.Drawing.Size(509, 215);
             this.data_tab4_free.TabIndex = 42;
+            this.data_tab4_free.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_tab4_free_CellClick);
             // 
             // label62
             // 
