@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FINAL_project_LibraryProgram_1234
 {
-    public partial class Normal_2 : Form
+    public partial class Normal_Qna : Form
     {
-        public Normal_2()
+        public Normal_Qna()
         {
             InitializeComponent();
         }

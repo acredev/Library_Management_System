@@ -56,17 +56,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="k. NewMember_PersonalInformation.cs">
+    <Compile Include="o. NewMember_PersonalInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="k. NewMember_PersonalInformation.Designer.cs">
-      <DependentUpon>k. NewMember_PersonalInformation.cs</DependentUpon>
+    <Compile Include="o. NewMember_PersonalInformation.Designer.cs">
+      <DependentUpon>o. NewMember_PersonalInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="l. NewMember_Normal.cs">
+    <Compile Include="p. NewMember_Normal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="l. NewMember_Normal.Designer.cs">
-      <DependentUpon>l. NewMember_Normal.cs</DependentUpon>
+    <Compile Include="p. NewMember_Normal.Designer.cs">
+      <DependentUpon>p. NewMember_Normal.cs</DependentUpon>
     </Compile>
     <Compile Include="b. info.cs">
       <SubType>Form</SubType>
@@ -110,37 +110,61 @@
     <Compile Include="g. Normal.Designer.cs">
       <DependentUpon>g. Normal.cs</DependentUpon>
     </Compile>
-    <Compile Include="i. Normal_Find_ID.cs">
+    <Compile Include="m. Normal_Find_ID.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="i. Normal_Find_ID.Designer.cs">
-      <DependentUpon>i. Normal_Find_ID.cs</DependentUpon>
+    <Compile Include="m. Normal_Find_ID.Designer.cs">
+      <DependentUpon>m. Normal_Find_ID.cs</DependentUpon>
     </Compile>
-    <Compile Include="j. Normal_Find_PW.cs">
+    <Compile Include="n. Normal_Find_PW.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="j. Normal_Find_PW.Designer.cs">
-      <DependentUpon>j. Normal_Find_PW.cs</DependentUpon>
+    <Compile Include="n. Normal_Find_PW.Designer.cs">
+      <DependentUpon>n. Normal_Find_PW.cs</DependentUpon>
     </Compile>
-    <Compile Include="h, Normal_2.cs">
+    <Compile Include="h. Normal_loanBook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="h, Normal_2.Designer.cs">
-      <DependentUpon>h, Normal_2.cs</DependentUpon>
+    <Compile Include="h. Normal_loanBook.Designer.cs">
+      <DependentUpon>h. Normal_loanBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="j. Normal_Board.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="j. Normal_Board.Designer.cs">
+      <DependentUpon>j. Normal_Board.cs</DependentUpon>
+    </Compile>
+    <Compile Include="k. Normal_Mypage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="k. Normal_Mypage.Designer.cs">
+      <DependentUpon>k. Normal_Mypage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="l. Normal_Qna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="l. Normal_Qna.Designer.cs">
+      <DependentUpon>l. Normal_Qna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="i. Normal_SearchBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="i. Normal_SearchBook.Designer.cs">
+      <DependentUpon>i. Normal_SearchBook.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="n. SupportMail.cs">
+    <Compile Include="r. SupportMail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="n. SupportMail.Designer.cs">
-      <DependentUpon>n. SupportMail.cs</DependentUpon>
+    <Compile Include="r. SupportMail.Designer.cs">
+      <DependentUpon>r. SupportMail.cs</DependentUpon>
     </Compile>
-    <Compile Include="m. SupportMail_Before.cs">
+    <Compile Include="q. SupportMail_Before.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="m. SupportMail_Before.Designer.cs">
-      <DependentUpon>m. SupportMail_Before.cs</DependentUpon>
+    <Compile Include="q. SupportMail_Before.Designer.cs">
+      <DependentUpon>q. SupportMail_Before.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="b. info.resx">
       <DependentUpon>b. info.cs</DependentUpon>
@@ -163,17 +187,32 @@
     <EmbeddedResource Include="g. Master_Find_IDPW.resx">
       <DependentUpon>g. Master_Find_IDPW.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="i. Normal_Find_ID.resx">
-      <DependentUpon>i. Normal_Find_ID.cs</DependentUpon>
+    <EmbeddedResource Include="h. Normal_loanBook.resx">
+      <DependentUpon>h. Normal_loanBook.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="j. Normal_Find_PW.resx">
-      <DependentUpon>j. Normal_Find_PW.cs</DependentUpon>
+    <EmbeddedResource Include="i. Normal_SearchBook.resx">
+      <DependentUpon>i. Normal_SearchBook.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="l. NewMember_Normal.resx">
-      <DependentUpon>l. NewMember_Normal.cs</DependentUpon>
+    <EmbeddedResource Include="j. Normal_Board.resx">
+      <DependentUpon>j. Normal_Board.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="k. NewMember_PersonalInformation.resx">
-      <DependentUpon>k. NewMember_PersonalInformation.cs</DependentUpon>
+    <EmbeddedResource Include="k. Normal_Mypage.resx">
+      <DependentUpon>k. Normal_Mypage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="l. Normal_Qna.resx">
+      <DependentUpon>l. Normal_Qna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="m. Normal_Find_ID.resx">
+      <DependentUpon>m. Normal_Find_ID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="n. Normal_Find_PW.resx">
+      <DependentUpon>n. Normal_Find_PW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="p. NewMember_Normal.resx">
+      <DependentUpon>p. NewMember_Normal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o. NewMember_PersonalInformation.resx">
+      <DependentUpon>o. NewMember_PersonalInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -184,11 +223,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="n. SupportMail.resx">
-      <DependentUpon>n. SupportMail.cs</DependentUpon>
+    <EmbeddedResource Include="r. SupportMail.resx">
+      <DependentUpon>r. SupportMail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="m. SupportMail_Before.resx">
-      <DependentUpon>m. SupportMail_Before.cs</DependentUpon>
+    <EmbeddedResource Include="q. SupportMail_Before.resx">
+      <DependentUpon>q. SupportMail_Before.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

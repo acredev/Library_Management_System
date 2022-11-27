@@ -60,7 +60,7 @@ namespace FINAL_project_LibraryProgram_1234
         {
             if (MessageBox.Show("정말 도서관리 시스템을 종료하시겠습니까?", "종료하기", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Close();
+                Application.Exit();
             }
         }
 

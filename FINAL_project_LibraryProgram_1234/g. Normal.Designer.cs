@@ -33,21 +33,21 @@ namespace FINAL_project_LibraryProgram_1234
             this.label5 = new System.Windows.Forms.Label();
             this.picture_support = new System.Windows.Forms.PictureBox();
             this.picture_logout = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_loanbook = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btn_exit = new System.Windows.Forms.Button();
+            this.btn_qna = new System.Windows.Forms.Button();
+            this.btn_mypage = new System.Windows.Forms.Button();
+            this.btn_board = new System.Windows.Forms.Button();
+            this.btn_searchbook = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.data_notice = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.picture_support)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_logout)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_notice)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -72,6 +72,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.picture_support.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picture_support.TabIndex = 31;
             this.picture_support.TabStop = false;
+            this.picture_support.Click += new System.EventHandler(this.picture_support_Click);
             // 
             // picture_logout
             // 
@@ -83,106 +84,104 @@ namespace FINAL_project_LibraryProgram_1234
             this.picture_logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picture_logout.TabIndex = 30;
             this.picture_logout.TabStop = false;
+            this.picture_logout.Click += new System.EventHandler(this.picture_logout_Click);
             // 
-            // button1
+            // btn_loanbook
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(16, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(230, 122);
-            this.button1.TabIndex = 32;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_loanbook.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_loanbook.BackgroundImage")));
+            this.btn_loanbook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_loanbook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_loanbook.Location = new System.Drawing.Point(16, 22);
+            this.btn_loanbook.Name = "btn_loanbook";
+            this.btn_loanbook.Size = new System.Drawing.Size(230, 122);
+            this.btn_loanbook.TabIndex = 32;
+            this.btn_loanbook.UseVisualStyleBackColor = true;
+            this.btn_loanbook.Click += new System.EventHandler(this.btn_loanbook_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btn_exit);
+            this.groupBox1.Controls.Add(this.btn_qna);
+            this.groupBox1.Controls.Add(this.btn_mypage);
+            this.groupBox1.Controls.Add(this.btn_board);
+            this.groupBox1.Controls.Add(this.btn_searchbook);
+            this.groupBox1.Controls.Add(this.btn_loanbook);
             this.groupBox1.Location = new System.Drawing.Point(12, 277);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(779, 290);
             this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
             // 
-            // button2
+            // btn_exit
             // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(276, 22);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(230, 122);
-            this.button2.TabIndex = 33;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_exit.BackgroundImage")));
+            this.btn_exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_exit.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_exit.Location = new System.Drawing.Point(534, 150);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(230, 122);
+            this.btn_exit.TabIndex = 37;
+            this.btn_exit.UseVisualStyleBackColor = true;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
-            // button3
+            // btn_qna
             // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(534, 22);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(230, 122);
-            this.button3.TabIndex = 34;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_qna.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_qna.BackgroundImage")));
+            this.btn_qna.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_qna.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_qna.Location = new System.Drawing.Point(276, 150);
+            this.btn_qna.Name = "btn_qna";
+            this.btn_qna.Size = new System.Drawing.Size(230, 122);
+            this.btn_qna.TabIndex = 36;
+            this.btn_qna.UseVisualStyleBackColor = true;
+            this.btn_qna.Click += new System.EventHandler(this.btn_qna_Click);
             // 
-            // button4
+            // btn_mypage
             // 
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.Transparent;
-            this.button4.Location = new System.Drawing.Point(534, 150);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(230, 122);
-            this.button4.TabIndex = 37;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_mypage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_mypage.BackgroundImage")));
+            this.btn_mypage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_mypage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_mypage.Location = new System.Drawing.Point(16, 150);
+            this.btn_mypage.Name = "btn_mypage";
+            this.btn_mypage.Size = new System.Drawing.Size(230, 122);
+            this.btn_mypage.TabIndex = 35;
+            this.btn_mypage.UseVisualStyleBackColor = true;
+            this.btn_mypage.Click += new System.EventHandler(this.btn_mypage_Click);
             // 
-            // button5
+            // btn_board
             // 
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(276, 150);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(230, 122);
-            this.button5.TabIndex = 36;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn_board.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_board.BackgroundImage")));
+            this.btn_board.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_board.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_board.Location = new System.Drawing.Point(534, 22);
+            this.btn_board.Name = "btn_board";
+            this.btn_board.Size = new System.Drawing.Size(230, 122);
+            this.btn_board.TabIndex = 34;
+            this.btn_board.UseVisualStyleBackColor = true;
+            this.btn_board.Click += new System.EventHandler(this.btn_board_Click);
             // 
-            // button6
+            // btn_searchbook
             // 
-            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(16, 150);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(230, 122);
-            this.button6.TabIndex = 35;
-            this.button6.UseVisualStyleBackColor = true;
+            this.btn_searchbook.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_searchbook.BackgroundImage")));
+            this.btn_searchbook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_searchbook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_searchbook.Location = new System.Drawing.Point(276, 22);
+            this.btn_searchbook.Name = "btn_searchbook";
+            this.btn_searchbook.Size = new System.Drawing.Size(230, 122);
+            this.btn_searchbook.TabIndex = 33;
+            this.btn_searchbook.UseVisualStyleBackColor = true;
+            this.btn_searchbook.Click += new System.EventHandler(this.btn_searchbook_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.data_notice);
             this.groupBox2.Location = new System.Drawing.Point(12, 71);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(779, 209);
             this.groupBox2.TabIndex = 38;
             this.groupBox2.TabStop = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 32);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(748, 168);
-            this.dataGridView1.TabIndex = 40;
             // 
             // label2
             // 
@@ -195,6 +194,19 @@ namespace FINAL_project_LibraryProgram_1234
             this.label2.TabIndex = 41;
             this.label2.Text = "우리 도서관 공지사항";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // data_notice
+            // 
+            this.data_notice.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.data_notice.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.data_notice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data_notice.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
+            this.data_notice.Location = new System.Drawing.Point(16, 22);
+            this.data_notice.Name = "data_notice";
+            this.data_notice.ReadOnly = true;
+            this.data_notice.RowTemplate.Height = 25;
+            this.data_notice.Size = new System.Drawing.Size(748, 181);
+            this.data_notice.TabIndex = 40;
             // 
             // Normal
             // 
@@ -212,12 +224,13 @@ namespace FINAL_project_LibraryProgram_1234
             this.Name = "Normal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "일반 사용자 모드 (일이삼사 도서관)";
+            this.Load += new System.EventHandler(this.Normal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picture_support)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_logout)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_notice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,15 +241,15 @@ namespace FINAL_project_LibraryProgram_1234
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox picture_support;
         private System.Windows.Forms.PictureBox picture_logout;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_loanbook;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_exit;
+        private System.Windows.Forms.Button btn_qna;
+        private System.Windows.Forms.Button btn_mypage;
+        private System.Windows.Forms.Button btn_board;
+        private System.Windows.Forms.Button btn_searchbook;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView data_notice;
         private System.Windows.Forms.Label label2;
     }
 }
