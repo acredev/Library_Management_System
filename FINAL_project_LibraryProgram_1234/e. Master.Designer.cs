@@ -1245,7 +1245,6 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_tab2_delete.TabIndex = 39;
             this.btn_tab2_delete.Text = "강제삭제";
             this.btn_tab2_delete.UseVisualStyleBackColor = true;
-            this.btn_tab2_delete.Visible = false;
             this.btn_tab2_delete.Click += new System.EventHandler(this.btn_tab2_delete_Click);
             // 
             // btn_tab2_reset
@@ -1255,9 +1254,8 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_tab2_reset.Name = "btn_tab2_reset";
             this.btn_tab2_reset.Size = new System.Drawing.Size(613, 33);
             this.btn_tab2_reset.TabIndex = 35;
-            this.btn_tab2_reset.Text = "입력내용 초기화";
+            this.btn_tab2_reset.Text = "도서정보 화면 초기화";
             this.btn_tab2_reset.UseVisualStyleBackColor = true;
-            this.btn_tab2_reset.Visible = false;
             this.btn_tab2_reset.Click += new System.EventHandler(this.btn_tab2_reset_Click);
             // 
             // btn_tab2_save
@@ -1269,7 +1267,6 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_tab2_save.TabIndex = 34;
             this.btn_tab2_save.Text = "저장";
             this.btn_tab2_save.UseVisualStyleBackColor = true;
-            this.btn_tab2_save.Visible = false;
             this.btn_tab2_save.Click += new System.EventHandler(this.btn_tab2_save_Click);
             // 
             // label26
@@ -1536,7 +1533,7 @@ namespace FINAL_project_LibraryProgram_1234
             // rdobtn_tab3_modifymode
             // 
             this.rdobtn_tab3_modifymode.AutoSize = true;
-            this.rdobtn_tab3_modifymode.Location = new System.Drawing.Point(330, 45);
+            this.rdobtn_tab3_modifymode.Location = new System.Drawing.Point(335, 45);
             this.rdobtn_tab3_modifymode.Name = "rdobtn_tab3_modifymode";
             this.rdobtn_tab3_modifymode.Size = new System.Drawing.Size(163, 24);
             this.rdobtn_tab3_modifymode.TabIndex = 31;
@@ -1548,7 +1545,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.rdobtn_tab3_seemode.AutoSize = true;
             this.rdobtn_tab3_seemode.Checked = true;
-            this.rdobtn_tab3_seemode.Location = new System.Drawing.Point(162, 45);
+            this.rdobtn_tab3_seemode.Location = new System.Drawing.Point(157, 45);
             this.rdobtn_tab3_seemode.Name = "rdobtn_tab3_seemode";
             this.rdobtn_tab3_seemode.Size = new System.Drawing.Size(163, 24);
             this.rdobtn_tab3_seemode.TabIndex = 30;
@@ -1706,7 +1703,6 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_tab3_delete.TabIndex = 38;
             this.btn_tab3_delete.Text = "강제탈퇴";
             this.btn_tab3_delete.UseVisualStyleBackColor = true;
-            this.btn_tab3_delete.Visible = false;
             this.btn_tab3_delete.Click += new System.EventHandler(this.btn_tab3_delete_Click);
             // 
             // btn_tab3_reset
@@ -1716,9 +1712,8 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_tab3_reset.Name = "btn_tab3_reset";
             this.btn_tab3_reset.Size = new System.Drawing.Size(613, 33);
             this.btn_tab3_reset.TabIndex = 37;
-            this.btn_tab3_reset.Text = "입력내용 초기화";
+            this.btn_tab3_reset.Text = "회원정보 화면 초기화";
             this.btn_tab3_reset.UseVisualStyleBackColor = true;
-            this.btn_tab3_reset.Visible = false;
             this.btn_tab3_reset.Click += new System.EventHandler(this.btn_tab3_reset_Click);
             // 
             // btn_tab3_save
@@ -1730,7 +1725,6 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_tab3_save.TabIndex = 36;
             this.btn_tab3_save.Text = "저장";
             this.btn_tab3_save.UseVisualStyleBackColor = true;
-            this.btn_tab3_save.Visible = false;
             this.btn_tab3_save.Click += new System.EventHandler(this.btn_tab3_save_Click);
             // 
             // label52

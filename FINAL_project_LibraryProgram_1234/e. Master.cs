@@ -50,10 +50,10 @@ namespace FINAL_project_LibraryProgram_1234
         // <Master.cs 전체에서 사용할 변수들>
         public static bool tab2_isBookModify = false;
         public static bool tab2_isBookNew = false;
-        public static bool tab2_isBookReadOnly = false;
+        public static bool tab2_isBookReadOnly = true;
 
         public static bool tab3_isMemModify = false;
-        public static bool tab3_isMemReadOnly = false;
+        public static bool tab3_isMemReadOnly = true;
 
         // <탭 1에서, 조회/재조회 버튼 클릭시>
         private void btn_tab1_load_Click(object sender, EventArgs e)
@@ -769,9 +769,6 @@ namespace FINAL_project_LibraryProgram_1234
             txtbox_tab2_bookprice.ReadOnly = true;
             txtbox_tab2_bookpages.ReadOnly = true;
             txtbox_tab2_bookabout.ReadOnly = true;
-
-            btn_tab2_save.Visible = false;
-            btn_tab2_reset.Visible = false;
         }
 
         // <탭 2에서, 관리모드가 수정모드로 변경 시>
@@ -791,10 +788,6 @@ namespace FINAL_project_LibraryProgram_1234
             txtbox_tab2_bookprice.ReadOnly = false;
             txtbox_tab2_bookpages.ReadOnly = false;
             txtbox_tab2_bookabout.ReadOnly = false;
-
-            btn_tab2_delete.Visible = true;
-            btn_tab2_save.Visible = true;
-            btn_tab2_reset.Visible = true;
         }
 
         // <탭 2에서, 관리모드가 신규등록모드로 변경 시>
@@ -813,10 +806,6 @@ namespace FINAL_project_LibraryProgram_1234
             txtbox_tab2_bookprice.ReadOnly = false;
             txtbox_tab2_bookpages.ReadOnly = false;
             txtbox_tab2_bookabout.ReadOnly = false;
-
-            btn_tab2_delete.Visible = false;
-            btn_tab2_save.Visible = true;
-            btn_tab2_reset.Visible = true;
 
             txtbox_tab2_booknum.Text = "시스템에서 자동 입력되며, 보안을 위해 수정할 수 없습니다.";
             txtbox_tab2_bookname.Text = "";
@@ -922,7 +911,7 @@ namespace FINAL_project_LibraryProgram_1234
             }
             else
             {
-                MessageBox.Show("도서 관리 모드를 우선 선택 후 진행 바랍니다.");
+                MessageBox.Show("도서 수정 모드 또는 신규 등록 모드에서만 작동 가능한 버튼입니다.");
             }
         }
 
@@ -981,14 +970,14 @@ namespace FINAL_project_LibraryProgram_1234
         // <탭 2에서, 입력내용 초기화 버튼 클릭 시>
         private void btn_tab2_reset_Click(object sender, EventArgs e)
         {
-            txtbox_tab2_bookname.Text = "";
-            txtbox_tab2_isbn.Text = "";
-            txtbox_tab2_bookwrite.Text = "";
-            txtbox_tab2_bookpublisher.Text = "";
-            txtbox_tab2_bookdate.Text = "";
-            txtbox_tab2_bookprice.Text = "";
-            txtbox_tab2_bookpages.Text = "";
-            txtbox_tab2_bookabout.Text = "";
+                txtbox_tab2_bookname.Text = "";
+                txtbox_tab2_isbn.Text = "";
+                txtbox_tab2_bookwrite.Text = "";
+                txtbox_tab2_bookpublisher.Text = "";
+                txtbox_tab2_bookdate.Text = "";
+                txtbox_tab2_bookprice.Text = "";
+                txtbox_tab2_bookpages.Text = "";
+                txtbox_tab2_bookabout.Text = "";
         }
 
         // <탭 3에서, 조회/재조회 버튼 클릭시>
@@ -1062,10 +1051,6 @@ namespace FINAL_project_LibraryProgram_1234
             txtbox_tab3_memberemail.ReadOnly = false;
             txtbox_tab3_loan.ReadOnly = true;
             txtbox_tab3_address.ReadOnly = false;
-
-            btn_tab3_save.Visible = true;
-            btn_tab3_delete.Visible = true;
-            btn_tab3_reset.Visible = true;
         }
 
         // <탭 3에서, 회원검색 범주 선택시>
@@ -1269,7 +1254,7 @@ namespace FINAL_project_LibraryProgram_1234
         {
             if (tab3_isMemReadOnly == true)
             {
-                MessageBox.Show("신규 멤버 등록시에만 사용 가능한 버튼입니다.");
+                MessageBox.Show("신규 멤버 등록시에만 사용 가능한 버튼입니다. 회원 관리 모드를 변경 후 진행 바랍니다.");
             }
             else if (tab3_isMemModify == true)
             {
