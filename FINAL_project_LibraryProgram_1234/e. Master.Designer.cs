@@ -1355,6 +1355,7 @@ namespace FINAL_project_LibraryProgram_1234
             // btn_tab2_delete
             // 
             this.btn_tab2_delete.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_tab2_delete.ForeColor = System.Drawing.Color.OrangeRed;
             this.btn_tab2_delete.Location = new System.Drawing.Point(239, 368);
             this.btn_tab2_delete.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_tab2_delete.Name = "btn_tab2_delete";
@@ -1367,6 +1368,7 @@ namespace FINAL_project_LibraryProgram_1234
             // btn_tab2_reset
             // 
             this.btn_tab2_reset.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_tab2_reset.ForeColor = System.Drawing.Color.OrangeRed;
             this.btn_tab2_reset.Location = new System.Drawing.Point(8, 409);
             this.btn_tab2_reset.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_tab2_reset.Name = "btn_tab2_reset";
@@ -1858,6 +1860,7 @@ namespace FINAL_project_LibraryProgram_1234
             // btn_tab3_delete
             // 
             this.btn_tab3_delete.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_tab3_delete.ForeColor = System.Drawing.Color.OrangeRed;
             this.btn_tab3_delete.Location = new System.Drawing.Point(239, 364);
             this.btn_tab3_delete.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_tab3_delete.Name = "btn_tab3_delete";
@@ -1870,6 +1873,7 @@ namespace FINAL_project_LibraryProgram_1234
             // btn_tab3_reset
             // 
             this.btn_tab3_reset.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_tab3_reset.ForeColor = System.Drawing.Color.OrangeRed;
             this.btn_tab3_reset.Location = new System.Drawing.Point(8, 404);
             this.btn_tab3_reset.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_tab3_reset.Name = "btn_tab3_reset";
@@ -2273,6 +2277,7 @@ namespace FINAL_project_LibraryProgram_1234
             // btn_tab4_free_delete
             // 
             this.btn_tab4_free_delete.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_tab4_free_delete.ForeColor = System.Drawing.Color.OrangeRed;
             this.btn_tab4_free_delete.Location = new System.Drawing.Point(41, 214);
             this.btn_tab4_free_delete.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_tab4_free_delete.Name = "btn_tab4_free_delete";
@@ -2285,6 +2290,7 @@ namespace FINAL_project_LibraryProgram_1234
             // btn_tab4_free_reset
             // 
             this.btn_tab4_free_reset.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_tab4_free_reset.ForeColor = System.Drawing.Color.OrangeRed;
             this.btn_tab4_free_reset.Location = new System.Drawing.Point(41, 257);
             this.btn_tab4_free_reset.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_tab4_free_reset.Name = "btn_tab4_free_reset";
@@ -2509,6 +2515,7 @@ namespace FINAL_project_LibraryProgram_1234
             // btn_tab4_notice_delete
             // 
             this.btn_tab4_notice_delete.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_tab4_notice_delete.ForeColor = System.Drawing.Color.OrangeRed;
             this.btn_tab4_notice_delete.Location = new System.Drawing.Point(274, 214);
             this.btn_tab4_notice_delete.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_tab4_notice_delete.Name = "btn_tab4_notice_delete";
@@ -2533,6 +2540,7 @@ namespace FINAL_project_LibraryProgram_1234
             // btn_tab4_notice_reset
             // 
             this.btn_tab4_notice_reset.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_tab4_notice_reset.ForeColor = System.Drawing.Color.OrangeRed;
             this.btn_tab4_notice_reset.Location = new System.Drawing.Point(41, 257);
             this.btn_tab4_notice_reset.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_tab4_notice_reset.Name = "btn_tab4_notice_reset";
@@ -2725,6 +2733,7 @@ namespace FINAL_project_LibraryProgram_1234
             // btn_tab5_delete
             // 
             this.btn_tab5_delete.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_tab5_delete.ForeColor = System.Drawing.Color.OrangeRed;
             this.btn_tab5_delete.Location = new System.Drawing.Point(244, 179);
             this.btn_tab5_delete.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_tab5_delete.Name = "btn_tab5_delete";
