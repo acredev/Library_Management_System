@@ -1878,6 +1878,7 @@ namespace FINAL_project_LibraryProgram_1234
             txtbox_tab5_memnum.ReadOnly = true;
             txtbox_tab5_title.ReadOnly = true;
             txtbox_tab5_body.ReadOnly = true;
+            txtbox_tab5_answer.ReadOnly = true;
         }
 
         private void rdo_btn5_set_CheckedChanged(object sender, EventArgs e)
