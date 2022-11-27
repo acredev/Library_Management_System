@@ -1411,12 +1411,15 @@ namespace FINAL_project_LibraryProgram_1234
         // <탭 4에서, 공지 관리모드를 열람모드로 변경 시>
         private void rdobtn_tab4_seeNotice_CheckedChanged(object sender, EventArgs e)
         {
-            tab4_isNoticeReadOnly = true;
-            tab4_isNoticeModify = false;
-            tab4_isNoticeNew = false;
+            if (rdobtn_tab4_seeNotice.Checked == true)
+            {
+                tab4_isNoticeReadOnly = true;
+                tab4_isNoticeModify = false;
+                tab4_isNoticeNew = false;
 
-            txtbox_tab4_notice_title.ReadOnly = true;
-            txtbox_tab4_notice_body.ReadOnly = true;
+                txtbox_tab4_notice_title.ReadOnly = true;
+                txtbox_tab4_notice_body.ReadOnly = true;
+            }
         }
 
         // <탭 4에서, 공지 관리모드를 수정모드로 변경 시>
@@ -1439,6 +1442,9 @@ namespace FINAL_project_LibraryProgram_1234
 
             txtbox_tab4_notice_title.ReadOnly = false;
             txtbox_tab4_notice_body.ReadOnly = false;
+
+            txtbox_tab4_notice_title.Text = "";
+            txtbox_tab4_notice_body.Text = "";
         }
 
         // <탭 4에서, 공지 검색 버튼 클릭 시>
@@ -1780,6 +1786,20 @@ namespace FINAL_project_LibraryProgram_1234
             txtbox_tab4_free_body.Text = "";
             txtbox_tab4_free_writer.Text = "";
             txtbox_tab4_free_writernum.Text = "";
+        }
+
+        private void data_tab4_notice_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                txtbox_tab4_notice_title.Text = data_tab4_notice.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtbox_tab4_notice_body.Text = data_tab4_notice.Rows[e.RowIndex].Cells[1].Value.ToString();
+
+            }
+            catch (Exception)
+            {
+                // 예외처리는 따로 안함, catch문을 써야 cellclick시 에러가 발생하지 않음
+            }
         }
     }
 }

@@ -2300,6 +2300,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.txtbox_tab4_free_body.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtbox_tab4_free_body.Multiline = true;
             this.txtbox_tab4_free_body.Name = "txtbox_tab4_free_body";
+            this.txtbox_tab4_free_body.ReadOnly = true;
             this.txtbox_tab4_free_body.Size = new System.Drawing.Size(462, 138);
             this.txtbox_tab4_free_body.TabIndex = 3;
             // 
@@ -2308,6 +2309,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.txtbox_tab4_free_name.Location = new System.Drawing.Point(43, 19);
             this.txtbox_tab4_free_name.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtbox_tab4_free_name.Name = "txtbox_tab4_free_name";
+            this.txtbox_tab4_free_name.ReadOnly = true;
             this.txtbox_tab4_free_name.Size = new System.Drawing.Size(462, 23);
             this.txtbox_tab4_free_name.TabIndex = 2;
             // 
@@ -2545,6 +2547,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.txtbox_tab4_notice_body.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtbox_tab4_notice_body.Multiline = true;
             this.txtbox_tab4_notice_body.Name = "txtbox_tab4_notice_body";
+            this.txtbox_tab4_notice_body.ReadOnly = true;
             this.txtbox_tab4_notice_body.Size = new System.Drawing.Size(464, 165);
             this.txtbox_tab4_notice_body.TabIndex = 3;
             // 
@@ -2553,6 +2556,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.txtbox_tab4_notice_title.Location = new System.Drawing.Point(41, 19);
             this.txtbox_tab4_notice_title.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtbox_tab4_notice_title.Name = "txtbox_tab4_notice_title";
+            this.txtbox_tab4_notice_title.ReadOnly = true;
             this.txtbox_tab4_notice_title.Size = new System.Drawing.Size(464, 23);
             this.txtbox_tab4_notice_title.TabIndex = 2;
             // 
@@ -2655,6 +2659,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.data_tab4_notice.RowTemplate.Height = 35;
             this.data_tab4_notice.Size = new System.Drawing.Size(509, 215);
             this.data_tab4_notice.TabIndex = 42;
+            this.data_tab4_notice.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_tab4_notice_CellClick);
             // 
             // label53
             // 
