@@ -48,8 +48,8 @@ namespace FINAL_project_LibraryProgram_1234
                 data_notice.DataSource = load_data_notice;
 
                 string insertQuery2 = "SELECT 회원번호, 이름, 대출권수 FROM library_project.member WHERE 아이디 = '" + Label_id.Text + "';";
-                MySqlCommand command2 = new MySqlCommand(insertQuery, connection);
-                MySqlDataReader reader = command.ExecuteReader();
+                MySqlCommand command2 = new MySqlCommand(insertQuery2, connection);
+                MySqlDataReader reader = command2.ExecuteReader();
                 while(reader.Read())
                 {
                     label_num.Text = reader["회원번호"].ToString();
