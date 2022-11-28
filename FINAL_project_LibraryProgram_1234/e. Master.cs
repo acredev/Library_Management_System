@@ -571,7 +571,7 @@ namespace FINAL_project_LibraryProgram_1234
                 }
                 else
                 {
-                    MessageBox.Show("본 도서는 회원님께서 대출하신 도서가 아닙니다. 확인 후 시도해 주세요.");
+                    MessageBox.Show("본 도서는 해당 회원이 대출한 도서가 아니라 반납처리가 불가능 합니다.");
                 }
             }
         }

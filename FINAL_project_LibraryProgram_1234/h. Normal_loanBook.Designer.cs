@@ -65,6 +65,8 @@ namespace FINAL_project_LibraryProgram_1234
             this.txtbox_loancnt = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtbox_status = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtbox_loannum = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picture_support)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_logout)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -123,6 +125,8 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.txtbox_loannum);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.txtbox_status);
             this.groupBox2.Controls.Add(this.label12);
@@ -397,11 +401,17 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // data_book
             // 
+            this.data_book.AllowUserToAddRows = false;
+            this.data_book.AllowUserToDeleteRows = false;
+            this.data_book.AllowUserToResizeColumns = false;
+            this.data_book.AllowUserToResizeRows = false;
             this.data_book.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.data_book.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.data_book.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.data_book.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data_book.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.data_book.Location = new System.Drawing.Point(6, 22);
+            this.data_book.MultiSelect = false;
             this.data_book.Name = "data_book";
             this.data_book.ReadOnly = true;
             this.data_book.RowTemplate.Height = 25;
@@ -446,6 +456,25 @@ namespace FINAL_project_LibraryProgram_1234
             this.txtbox_status.Size = new System.Drawing.Size(272, 22);
             this.txtbox_status.TabIndex = 55;
             this.txtbox_status.Visible = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(56, 219);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(305, 15);
+            this.label14.TabIndex = 56;
+            this.label14.Text = "도서 대출한 사용자 관리번호 (사용자에게 보이지 않음)";
+            this.label14.Visible = false;
+            // 
+            // txtbox_loannum
+            // 
+            this.txtbox_loannum.Location = new System.Drawing.Point(59, 237);
+            this.txtbox_loannum.Name = "txtbox_loannum";
+            this.txtbox_loannum.ReadOnly = true;
+            this.txtbox_loannum.Size = new System.Drawing.Size(272, 22);
+            this.txtbox_loannum.TabIndex = 57;
+            this.txtbox_loannum.Visible = false;
             // 
             // Normal_loanBook
             // 
@@ -518,5 +547,7 @@ namespace FINAL_project_LibraryProgram_1234
         private System.Windows.Forms.TextBox txtbox_loancnt;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtbox_status;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtbox_loannum;
     }
 }

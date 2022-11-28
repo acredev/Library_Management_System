@@ -25,9 +25,10 @@ namespace FINAL_project_LibraryProgram_1234
             InitializeComponent();
         }
 
+        // 창 로드시 데이터그리드뷰 바로 출력
         private void Normal_loanBook_Load(object sender, EventArgs e)
         {
-            string insertQuery = "SELECT 관리번호, 이름, 저자, 출판사, 대출여부 FROM library_project.book;";
+            string insertQuery = "SELECT 관리번호, 이름, 저자, 출판사, 대출여부, 대출한_회원번호 FROM library_project.book;";
             connection.Open();
             MySqlCommand command = new MySqlCommand(insertQuery, connection);
 
@@ -37,6 +38,10 @@ namespace FINAL_project_LibraryProgram_1234
                 DataTable load_book = new DataTable();
                 adapter.Fill(load_book);
                 data_book.DataSource = load_book;
+
+                // 사용자에게 불필요한 정보인 관리번호와 대출한 회원번호 칼럼은 숨긴다.
+                this.data_book.Columns[0].Visible = false;
+                this.data_book.Columns[5].Visible = false;
             }
             catch (Exception ex)
             {
@@ -45,6 +50,7 @@ namespace FINAL_project_LibraryProgram_1234
             connection.Close();
         }
 
+        // 이전화면 돌아가기 버튼 클릭시
         private void btn_main_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("이전 화면으로 돌아가시겠습니까?", "돌아가기", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -55,12 +61,15 @@ namespace FINAL_project_LibraryProgram_1234
             }
         }
 
+        // 프로그램 문의접수 버튼 클릭시
+
         private void picture_support_Click(object sender, EventArgs e)
         {
             SupportMail showSupportMail = new SupportMail();
             showSupportMail.ShowDialog();
         }
 
+        // 로그아웃 버튼 클릭시
         private void picture_logout_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("로그아웃 후 메인화면으로 돌아가시겠습니까?", "로그아웃", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -69,8 +78,9 @@ namespace FINAL_project_LibraryProgram_1234
             }
         }
 
+        // 셀 클릭시 정보들을 텍스트박스로 자세히 볼 수 있도록 뿌려줌
         private void data_book_CellClick(object sender, DataGridViewCellEventArgs e)
-        {  
+        {
             try
             {
                 txtbox_booknum.Text = data_book.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -79,9 +89,9 @@ namespace FINAL_project_LibraryProgram_1234
                 txtbox_publisher.Text = data_book.Rows[e.RowIndex].Cells[3].Value.ToString();
                 txtbox_loanstatus.Text = data_book.Rows[e.RowIndex].Cells[4].Value.ToString();
 
+                // 셀 클릭 시 마다 회원정보를 계속 갱신해서 현재 회원이 대출가능한 상태인지 여부를 판단하는 알고리즘
                 string cnt_loan = "SELECT 대출권수, 회원상태 FROM library_project.member WHERE 회원번호 = '" + Normal.static_memnum + "';";
                 connection.Open();
-
                 MySqlCommand cnt_loan_cmd = new MySqlCommand(cnt_loan, connection);
                 MySqlDataReader cnt_loan_read = cnt_loan_cmd.ExecuteReader();
 
@@ -99,9 +109,10 @@ namespace FINAL_project_LibraryProgram_1234
             connection.Close();
         }
 
+        // 재조회 버튼 클릭시
         private void btn_load_Click(object sender, EventArgs e)
         {
-            string insertQuery = "SELECT 관리번호, 이름, 저자, 출판사, 대출여부 FROM library_project.book;";
+            string insertQuery = "SELECT 관리번호, 이름, 저자, 출판사, 대출여부, 대출한_회원번호 FROM library_project.book;";
             connection.Open();
             MySqlCommand command = new MySqlCommand(insertQuery, connection);
 
@@ -111,6 +122,10 @@ namespace FINAL_project_LibraryProgram_1234
                 DataTable load_book = new DataTable();
                 adapter.Fill(load_book);
                 data_book.DataSource = load_book;
+
+                // 사용자에게 불필요한 정보인 관리번호와 대출한 회원번호 칼럼은 숨긴다.
+                this.data_book.Columns[0].Visible = false;
+                this.data_book.Columns[5].Visible = false;
             }
             catch (Exception ex)
             {
@@ -118,6 +133,7 @@ namespace FINAL_project_LibraryProgram_1234
             }
             connection.Close();
 
+            // 텍스트박스의 모든내용 초기화
             txtbox_booknum.Text = "";
             txtbox_title.Text = "";
             txtbox_writer.Text = "";
@@ -125,6 +141,7 @@ namespace FINAL_project_LibraryProgram_1234
             txtbox_loanstatus.Text = "";
         }
 
+        // 검색범주 선택시
         private void combobox_search_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (combobox_search.SelectedItem.ToString() == "제목")
@@ -173,12 +190,14 @@ namespace FINAL_project_LibraryProgram_1234
             }
         }
 
+        // 검색 버튼 클릭시
         private void btn_search_Click(object sender, EventArgs e)
         {
             try
             {
                 if (combobox_search.Text != "")
                 {
+                    // 책 제목으로 검색한다면
                     if (searchByName == true)
                     {
                         string insertQuery = "SELECT 관리번호, 이름, 저자, 출판사, 대출여부 FROM library_project.book WHERE 이름 = '" + txtbox_search.Text + "';";
@@ -197,6 +216,7 @@ namespace FINAL_project_LibraryProgram_1234
                         txtbox_publisher.Text = "";
                         txtbox_loanstatus.Text = "";
                     }
+                    // 저자로 검색한다면
                     else if (searchByWriter == true)
                     {
                         string insertQuery = "SELECT 관리번호, 이름, 저자, 출판사, 대출여부 FROM library_project.book WHERE 저자 = '" + txtbox_search.Text + "';";
@@ -215,6 +235,7 @@ namespace FINAL_project_LibraryProgram_1234
                         txtbox_publisher.Text = "";
                         txtbox_loanstatus.Text = "";
                     }
+                    // 책 출판사로 검색한다면
                     else if (searchByPublisher == true)
                     {
                         string insertQuery = "SELECT 관리번호, 이름, 저자, 출판사, 대출여부 FROM library_project.book WHERE 출판사 = '" + txtbox_search.Text + "';";
@@ -233,6 +254,7 @@ namespace FINAL_project_LibraryProgram_1234
                         txtbox_publisher.Text = "";
                         txtbox_loanstatus.Text = "";
                     }
+                    // 대출 가능여부인 책을 보려면
                     else if (searchByStatus == true)
                     {
                         string insertQuery = "SELECT 관리번호, 이름, 저자, 출판사, 대출여부 FROM library_project.book WHERE 대출여부 = '" + combobox_searchbystatus.Text + "';";
@@ -263,6 +285,7 @@ namespace FINAL_project_LibraryProgram_1234
             }
         }
 
+        // 대출 버튼을 누른다면
         private void btn_bookloan_Click(object sender, EventArgs e)
         {
             bool isCanLoan = false;
@@ -274,16 +297,17 @@ namespace FINAL_project_LibraryProgram_1234
             }
             else
             {
+                // 사용자 대출권수가 0~9권이면 대출가능
                 if (txtbox_loancnt.Text == "0" || txtbox_loancnt.Text == "1" || txtbox_loancnt.Text == "2" || txtbox_loancnt.Text == "3" || txtbox_loancnt.Text == "4" || txtbox_loancnt.Text == "5" || txtbox_loancnt.Text == "6" || txtbox_loancnt.Text == "7" || txtbox_loancnt.Text == "8" || txtbox_loancnt.Text == "9" || txtbox_loancnt.Text == "10")
                 {
                     isCanLoan = true;
                 }
                 else { isCanLoan = false; }
 
-                if (txtbox_status.Text != "정상") { isCanStatus = false; }
+                if (txtbox_status.Text != "정상" && txtbox_loanstatus.Text != "대출 중") { isCanStatus = false; }
                 else { isCanStatus = true; }
 
-                if (isCanLoan == true && isCanStatus == true)
+                if (isCanLoan == true && isCanStatus == true && txtbox_loanstatus.Text != "대출 중")
                 {
                     string insertQuery = "UPDATE library_project.member SET 대출권수 = 대출권수 + 1 WHERE 회원번호 ='" + Normal.static_memnum + "'; " + "UPDATE library_project.book SET 대출여부 = '대출 중' WHERE 관리번호 = '" + txtbox_booknum.Text + "'; " + "UPDATE library_project.book SET 대출한_회원번호 = '" + Normal.static_memnum + "' WHERE 관리번호 = '" + txtbox_booknum.Text + "';";
                     connection.Open();
@@ -312,13 +336,17 @@ namespace FINAL_project_LibraryProgram_1234
                 {
                     MessageBox.Show("알 수 없는 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다.", "도서대출 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else if (txtbox_loanstatus.Text == "대출 중")
+                {
+                    MessageBox.Show("알 수 없는 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다.", "도서대출 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             connection.Close();
         }
 
         private void btn_bookback_Click(object sender, EventArgs e)
         {
-
+            bool isBookLoanYou = false;
         }
     }
 }
