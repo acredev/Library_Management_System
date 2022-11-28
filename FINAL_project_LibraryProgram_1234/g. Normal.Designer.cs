@@ -41,6 +41,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_board = new System.Windows.Forms.Button();
             this.btn_searchbook = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Label_id = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.data_notice = new System.Windows.Forms.DataGridView();
@@ -52,7 +53,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.Label_id = new System.Windows.Forms.Label();
+            this.btn_refresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picture_support)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_logout)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -102,7 +103,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_loanbook.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_loanbook.BackgroundImage")));
             this.btn_loanbook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_loanbook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_loanbook.Location = new System.Drawing.Point(16, 22);
+            this.btn_loanbook.Location = new System.Drawing.Point(16, 15);
             this.btn_loanbook.Name = "btn_loanbook";
             this.btn_loanbook.Size = new System.Drawing.Size(230, 122);
             this.btn_loanbook.TabIndex = 32;
@@ -111,6 +112,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_refresh);
             this.groupBox1.Controls.Add(this.btn_exit);
             this.groupBox1.Controls.Add(this.btn_qna);
             this.groupBox1.Controls.Add(this.btn_mypage);
@@ -129,7 +131,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_exit.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_exit.Location = new System.Drawing.Point(534, 150);
+            this.btn_exit.Location = new System.Drawing.Point(534, 143);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(230, 122);
             this.btn_exit.TabIndex = 37;
@@ -141,7 +143,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_qna.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_qna.BackgroundImage")));
             this.btn_qna.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_qna.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_qna.Location = new System.Drawing.Point(276, 150);
+            this.btn_qna.Location = new System.Drawing.Point(276, 143);
             this.btn_qna.Name = "btn_qna";
             this.btn_qna.Size = new System.Drawing.Size(230, 122);
             this.btn_qna.TabIndex = 36;
@@ -153,7 +155,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_mypage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_mypage.BackgroundImage")));
             this.btn_mypage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_mypage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_mypage.Location = new System.Drawing.Point(16, 150);
+            this.btn_mypage.Location = new System.Drawing.Point(16, 143);
             this.btn_mypage.Name = "btn_mypage";
             this.btn_mypage.Size = new System.Drawing.Size(230, 122);
             this.btn_mypage.TabIndex = 35;
@@ -165,7 +167,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_board.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_board.BackgroundImage")));
             this.btn_board.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_board.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_board.Location = new System.Drawing.Point(534, 22);
+            this.btn_board.Location = new System.Drawing.Point(534, 15);
             this.btn_board.Name = "btn_board";
             this.btn_board.Size = new System.Drawing.Size(230, 122);
             this.btn_board.TabIndex = 34;
@@ -177,7 +179,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_searchbook.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_searchbook.BackgroundImage")));
             this.btn_searchbook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_searchbook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_searchbook.Location = new System.Drawing.Point(276, 22);
+            this.btn_searchbook.Location = new System.Drawing.Point(276, 15);
             this.btn_searchbook.Name = "btn_searchbook";
             this.btn_searchbook.Size = new System.Drawing.Size(230, 122);
             this.btn_searchbook.TabIndex = 33;
@@ -195,6 +197,19 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox2.Size = new System.Drawing.Size(779, 209);
             this.groupBox2.TabIndex = 38;
             this.groupBox2.TabStop = false;
+            // 
+            // Label_id
+            // 
+            this.Label_id.AutoSize = true;
+            this.Label_id.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Label_id.Location = new System.Drawing.Point(382, 88);
+            this.Label_id.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Label_id.Name = "Label_id";
+            this.Label_id.Size = new System.Drawing.Size(332, 15);
+            this.Label_id.TabIndex = 50;
+            this.Label_id.Text = "사용자 아이디, 사용자에게 보이지 않음 (SQL사용위해 삽입)";
+            this.Label_id.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Label_id.Visible = false;
             // 
             // label1
             // 
@@ -332,18 +347,16 @@ namespace FINAL_project_LibraryProgram_1234
             this.label3.Text = "로그인 정보";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Label_id
+            // btn_refresh
             // 
-            this.Label_id.AutoSize = true;
-            this.Label_id.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Label_id.Location = new System.Drawing.Point(382, 88);
-            this.Label_id.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Label_id.Name = "Label_id";
-            this.Label_id.Size = new System.Drawing.Size(332, 15);
-            this.Label_id.TabIndex = 50;
-            this.Label_id.Text = "사용자 아이디, 사용자에게 보이지 않음 (SQL사용위해 삽입)";
-            this.Label_id.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Label_id.Visible = false;
+            this.btn_refresh.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_refresh.Location = new System.Drawing.Point(16, 256);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.Size = new System.Drawing.Size(748, 30);
+            this.btn_refresh.TabIndex = 39;
+            this.btn_refresh.Text = "새로고침";
+            this.btn_refresh.UseVisualStyleBackColor = true;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
             // 
             // Normal
             // 
@@ -401,5 +414,6 @@ namespace FINAL_project_LibraryProgram_1234
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label Label_id;
+        private System.Windows.Forms.Button btn_refresh;
     }
 }

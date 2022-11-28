@@ -35,6 +35,8 @@ namespace FINAL_project_LibraryProgram_1234
             this.picture_logout = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtbox_booknum = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -42,6 +44,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_bookloan = new System.Windows.Forms.Button();
             this.btn_load = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.combobox_searchbystatus = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btn_search = new System.Windows.Forms.Button();
             this.combobox_search = new System.Windows.Forms.ComboBox();
@@ -58,9 +61,8 @@ namespace FINAL_project_LibraryProgram_1234
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.data_book = new System.Windows.Forms.DataGridView();
-            this.combobox_searchbystatus = new System.Windows.Forms.ComboBox();
-            this.txtbox_booknum = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtbox_loancnt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picture_support)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_logout)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -119,6 +121,8 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.txtbox_loancnt);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.txtbox_booknum);
             this.groupBox2.Controls.Add(this.groupBox4);
@@ -132,6 +136,24 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox2.Size = new System.Drawing.Size(778, 496);
             this.groupBox2.TabIndex = 48;
             this.groupBox2.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(56, 55);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(253, 15);
+            this.label11.TabIndex = 50;
+            this.label11.Text = "책 대여용 관리번호 (사용자에게 보이지 않음)";
+            this.label11.Visible = false;
+            // 
+            // txtbox_booknum
+            // 
+            this.txtbox_booknum.Location = new System.Drawing.Point(59, 73);
+            this.txtbox_booknum.Name = "txtbox_booknum";
+            this.txtbox_booknum.ReadOnly = true;
+            this.txtbox_booknum.Size = new System.Drawing.Size(272, 22);
+            this.txtbox_booknum.TabIndex = 51;
             // 
             // groupBox4
             // 
@@ -208,6 +230,19 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox3.Size = new System.Drawing.Size(327, 147);
             this.groupBox3.TabIndex = 51;
             this.groupBox3.TabStop = false;
+            // 
+            // combobox_searchbystatus
+            // 
+            this.combobox_searchbystatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combobox_searchbystatus.FormattingEnabled = true;
+            this.combobox_searchbystatus.Items.AddRange(new object[] {
+            "대출 중",
+            "대출 가능"});
+            this.combobox_searchbystatus.Location = new System.Drawing.Point(49, 49);
+            this.combobox_searchbystatus.Name = "combobox_searchbystatus";
+            this.combobox_searchbystatus.Size = new System.Drawing.Size(272, 23);
+            this.combobox_searchbystatus.TabIndex = 54;
+            this.combobox_searchbystatus.Visible = false;
             // 
             // label8
             // 
@@ -369,37 +404,23 @@ namespace FINAL_project_LibraryProgram_1234
             this.data_book.TabIndex = 40;
             this.data_book.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_book_CellClick);
             // 
-            // combobox_searchbystatus
+            // label12
             // 
-            this.combobox_searchbystatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combobox_searchbystatus.FormattingEnabled = true;
-            this.combobox_searchbystatus.Items.AddRange(new object[] {
-            "대출 중",
-            "대출 가능"});
-            this.combobox_searchbystatus.Location = new System.Drawing.Point(49, 49);
-            this.combobox_searchbystatus.Name = "combobox_searchbystatus";
-            this.combobox_searchbystatus.Size = new System.Drawing.Size(272, 23);
-            this.combobox_searchbystatus.TabIndex = 54;
-            this.combobox_searchbystatus.Visible = false;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(56, 105);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(241, 15);
+            this.label12.TabIndex = 52;
+            this.label12.Text = "사용자 책 대여수 (사용자에게 보이지 않음)";
+            this.label12.Visible = false;
             // 
-            // txtbox_booknum
+            // txtbox_loancnt
             // 
-            this.txtbox_booknum.Location = new System.Drawing.Point(59, 73);
-            this.txtbox_booknum.Name = "txtbox_booknum";
-            this.txtbox_booknum.ReadOnly = true;
-            this.txtbox_booknum.Size = new System.Drawing.Size(272, 22);
-            this.txtbox_booknum.TabIndex = 51;
-            this.txtbox_booknum.Visible = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(56, 55);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(253, 15);
-            this.label11.TabIndex = 50;
-            this.label11.Text = "책 대여용 관리번호 (사용자에게 보이지 않음)";
-            this.label11.Visible = false;
+            this.txtbox_loancnt.Location = new System.Drawing.Point(59, 123);
+            this.txtbox_loancnt.Name = "txtbox_loancnt";
+            this.txtbox_loancnt.ReadOnly = true;
+            this.txtbox_loancnt.Size = new System.Drawing.Size(272, 22);
+            this.txtbox_loancnt.TabIndex = 53;
             // 
             // Normal_loanBook
             // 
@@ -468,5 +489,7 @@ namespace FINAL_project_LibraryProgram_1234
         private System.Windows.Forms.ComboBox combobox_searchbystatus;
         private System.Windows.Forms.TextBox txtbox_booknum;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtbox_loancnt;
     }
 }

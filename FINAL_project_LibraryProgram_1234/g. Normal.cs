@@ -21,6 +21,10 @@ namespace FINAL_project_LibraryProgram_1234
             Label_id.Text = id;
         }
 
+        public static string static_memid = string.Empty;
+        public static string static_memstatus = string.Empty;
+        public static string static_memnum = string.Empty;
+
         public Normal()
         {          
             InitializeComponent();
@@ -57,6 +61,10 @@ namespace FINAL_project_LibraryProgram_1234
                     label_loan.Text = reader["대출권수"].ToString();
                 }
                 connection.Close();
+
+                static_memid = Label_id.Text;
+                static_memnum = label_num.Text;
+                static_memstatus = label_loan.Text;
             }
             catch (Exception ex)
             {
@@ -118,6 +126,40 @@ namespace FINAL_project_LibraryProgram_1234
             {
                 Application.Exit();
             }
+        }
+        private void btn_refresh_Click(object sender, EventArgs e)
+        {
+            string insertQuery = "SELECT 제목, 내용 FROM library_project.board_notice;";
+            connection.Open();
+            MySqlCommand command = new MySqlCommand(insertQuery, connection);
+
+            try
+            {
+                MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                DataTable load_data_notice = new DataTable();
+                adapter.Fill(load_data_notice);
+                data_notice.DataSource = load_data_notice;
+
+                string insertQuery2 = "SELECT 회원번호, 이름, 대출권수 FROM library_project.member WHERE 아이디 = '" + Label_id.Text + "';";
+                MySqlCommand command2 = new MySqlCommand(insertQuery2, connection);
+                MySqlDataReader reader = command2.ExecuteReader();
+                while (reader.Read())
+                {
+                    label_num.Text = reader["회원번호"].ToString();
+                    label_name.Text = reader["이름"].ToString();
+                    label_loan.Text = reader["대출권수"].ToString();
+                }
+                connection.Close();
+
+                static_memid = Label_id.Text;
+                static_memnum = label_num.Text;
+                static_memstatus = label_loan.Text;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("비정상 접근입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "로딩 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
         }
     }
 }
