@@ -20,6 +20,12 @@ namespace FINAL_project_LibraryProgram_1234
             InitializeComponent();
         }
 
+        private void Login_Normal_Load(object sender, EventArgs e)
+        {
+            txtbox_id.Text = "";
+            txtbox_pwd.Text = "";
+        }
+
         // 로그인 버튼 클릭시
         private void btn_login_Click(object sender, EventArgs e)
         {
@@ -41,7 +47,6 @@ namespace FINAL_project_LibraryProgram_1234
 
                 while (myAccount.Read())
                 {
-
                     if (loginform_id == (string)myAccount["아이디"] && loginform_pwd == (string)myAccount["비밀번호"])
                     {
                         //MessageBox.Show("로그인 완료");
@@ -52,10 +57,11 @@ namespace FINAL_project_LibraryProgram_1234
 
                 if (login_status == 1)
                 {
-                    MessageBox.Show("로그인 완료");
+                    MessageBox.Show(loginform_id + " 회원님, 환영합니다.");
                     Normal showNormal = new Normal();
-                    showNormal.Show();
-                    Close();
+                    showNormal.SetText(loginform_id);
+
+                    showNormal.ShowDialog();
                 }
                 else
                 {

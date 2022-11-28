@@ -11,14 +11,27 @@ using MySql.Data.MySqlClient;
 
 namespace FINAL_project_LibraryProgram_1234
 {
+    public delegate void LoginGetEventHandler(string id);
     public partial class Normal : Form
     {
         // <MySQL 연결 변수>
         MySqlConnection connection = new MySqlConnection("Server = localhost;Database=library_project;Uid=root;Pwd=root;");
+        public void SetText(string id)
+        {
+            Label_id.Text = id;
+        }
 
         public Normal()
-        {
+        {          
             InitializeComponent();
+        }
+
+        public void Login(string id)
+        {
+            string result_id = "";
+            result_id = String.Format("ID : {0}", id);
+
+            label_num.Text = result_id;
         }
 
         private void Normal_Load(object sender, EventArgs e)
@@ -33,11 +46,23 @@ namespace FINAL_project_LibraryProgram_1234
                 DataTable load_data_notice = new DataTable();
                 adapter.Fill(load_data_notice);
                 data_notice.DataSource = load_data_notice;
+
+                string insertQuery2 = "SELECT 회원번호, 이름, 대출권수 FROM library_project.member WHERE 아이디 = '" + Label_id.Text + "';";
+                MySqlCommand command2 = new MySqlCommand(insertQuery, connection);
+                MySqlDataReader reader = command.ExecuteReader();
+                while(reader.Read())
+                {
+                    label_num.Text = reader["회원번호"].ToString();
+                    label_name.Text = reader["이름"].ToString();
+                    label_loan.Text = reader["대출권수"].ToString();
+                }
+                connection.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "로딩 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("비정상 접근입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "로딩 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            connection.Close();
 
         }
 
