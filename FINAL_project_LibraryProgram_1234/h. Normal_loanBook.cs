@@ -81,7 +81,7 @@ namespace FINAL_project_LibraryProgram_1234
                 txtbox_publisher.Text = data_book.Rows[e.RowIndex].Cells[3].Value.ToString();
                 txtbox_loanstatus.Text = data_book.Rows[e.RowIndex].Cells[4].Value.ToString();
 
-                string cnt_loan = "SELECT 대출권수 FROM library_project.member WHERE 회원번호 = '" + Normal.static_memnum + "';";
+                string cnt_loan = "SELECT 대출권수, 회원상태 FROM library_project.member WHERE 회원번호 = '" + Normal.static_memnum + "';";
                 connection.Open();
 
                 MySqlCommand cnt_loan_cmd = new MySqlCommand(cnt_loan, connection);
@@ -90,6 +90,7 @@ namespace FINAL_project_LibraryProgram_1234
                 while (cnt_loan_read.Read())
                 {
                     txtbox_loancnt.Text = cnt_loan_read["대출권수"].ToString();
+                    txtbox_status.Text = cnt_loan_read["회원상태"].ToString();
                 }
             }
 

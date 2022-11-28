@@ -63,6 +63,8 @@ namespace FINAL_project_LibraryProgram_1234
             this.data_book = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.txtbox_loancnt = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtbox_status = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picture_support)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_logout)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -121,6 +123,8 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.txtbox_status);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.txtbox_loancnt);
             this.groupBox2.Controls.Add(this.label11);
@@ -154,6 +158,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.txtbox_booknum.ReadOnly = true;
             this.txtbox_booknum.Size = new System.Drawing.Size(272, 22);
             this.txtbox_booknum.TabIndex = 51;
+            this.txtbox_booknum.Visible = false;
             // 
             // groupBox4
             // 
@@ -421,6 +426,26 @@ namespace FINAL_project_LibraryProgram_1234
             this.txtbox_loancnt.ReadOnly = true;
             this.txtbox_loancnt.Size = new System.Drawing.Size(272, 22);
             this.txtbox_loancnt.TabIndex = 53;
+            this.txtbox_loancnt.Visible = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(56, 163);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(213, 15);
+            this.label13.TabIndex = 54;
+            this.label13.Text = "사용자 상태 (사용자에게 보이지 않음)";
+            this.label13.Visible = false;
+            // 
+            // txtbox_status
+            // 
+            this.txtbox_status.Location = new System.Drawing.Point(59, 181);
+            this.txtbox_status.Name = "txtbox_status";
+            this.txtbox_status.ReadOnly = true;
+            this.txtbox_status.Size = new System.Drawing.Size(272, 22);
+            this.txtbox_status.TabIndex = 55;
+            this.txtbox_status.Visible = false;
             // 
             // Normal_loanBook
             // 
@@ -491,5 +516,7 @@ namespace FINAL_project_LibraryProgram_1234
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtbox_loancnt;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtbox_status;
     }
 }
