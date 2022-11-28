@@ -317,6 +317,13 @@ namespace FINAL_project_LibraryProgram_1234
                         if (insertBook_cmd.ExecuteNonQuery() != 0)
                         {
                             MessageBox.Show(txtbox_title.Text + " 도서 대출이 완료되었습니다. 재조회 버튼을 눌러 화면을 갱신해 주세요.");
+
+                            txtbox_booknum.Text = "";
+                            txtbox_title.Text = "";
+                            txtbox_writer.Text = "";
+                            txtbox_publisher.Text = "";
+                            txtbox_loanstatus.Text = "";
+                            data_book.DataSource = "";
                         }
                     }
                     catch (Exception ex)
@@ -338,7 +345,7 @@ namespace FINAL_project_LibraryProgram_1234
                 }
                 else if (txtbox_loanstatus.Text == "대출 중")
                 {
-                    MessageBox.Show("알 수 없는 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다.", "도서대출 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("타 사용자 또는 본인이 대출중인 도서입니다. 대출할 수 없습니다.", "도서대출 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             connection.Close();
