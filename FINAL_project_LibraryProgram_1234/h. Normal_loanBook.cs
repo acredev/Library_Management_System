@@ -65,9 +65,7 @@ namespace FINAL_project_LibraryProgram_1234
         {
             if (MessageBox.Show("로그아웃 후 메인화면으로 돌아가시겠습니까?", "로그아웃", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                this.Close();
-                Main showMain = new Main();
-                showMain.Show();
+                Application.Restart();
             }
         }
 
@@ -267,8 +265,8 @@ namespace FINAL_project_LibraryProgram_1234
 
         private void btn_bookloan_Click(object sender, EventArgs e)
         {
-            bool isCanLoan = true;
-            bool isCanStatus = true;
+            bool isCanLoan = false;
+            bool isCanStatus = false;
 
             if (txtbox_title.Text == "")
             {
@@ -276,34 +274,18 @@ namespace FINAL_project_LibraryProgram_1234
             }
             else
             {
-
-            }
-            /*
-            string check_status = "SELECT 대출권수, 회원상태 FROM library_project.member WHERE 회원번호 = '" + Normal.static_memid + "';";
-            connection.Open();
-            MySqlCommand check_status_cmd = new MySqlCommand(check_status, connection);
-            MySqlDataReader check_status_adt = check_status_cmd.ExecuteReader();
-            try
-            {
-                while (check_status_adt.Read())
+                if (txtbox_loancnt.Text == "0" || txtbox_loancnt.Text == "1" || txtbox_loancnt.Text == "2" || txtbox_loancnt.Text == "3" || txtbox_loancnt.Text == "4" || txtbox_loancnt.Text == "5" || txtbox_loancnt.Text == "6" || txtbox_loancnt.Text == "7" || txtbox_loancnt.Text == "8" || txtbox_loancnt.Text == "9" || txtbox_loancnt.Text == "10")
                 {
-                    if (check_status_adt["회원상태"].ToString() == "정상")
-                    {
-                        isCanStatus = true;
-                    }
-                    else if (check_status_adt["대출권수"].ToString() == "0" || check_status_adt["대출권수"].ToString() == "1" || check_status_adt["대출권수"].ToString() == "2" || check_status_adt["대출권수"].ToString() == "3" || check_status_adt["대출권수"].ToString() == "4" || check_status_adt["대출권수"].ToString() == "5" || check_status_adt["대출권수"].ToString() == "6" || check_status_adt["대출권수"].ToString() == "7" || check_status_adt["대출권수"].ToString() == "8" || check_status_adt["대출권수"].ToString() == "9")
-                    {
-                        isCanLoan = true;
-                    }
-                    else
-                    {
-                        isCanStatus = false;
-                        isCanLoan = false;
-                    }
+                    isCanLoan = true;
                 }
+                else { isCanLoan = false; }
+
+                if (txtbox_status.Text != "정상") { isCanStatus = false; }
+                else { isCanStatus = true; }
+
                 if (isCanLoan == true && isCanStatus == true)
                 {
-                    string insertQuery = "UPDATE library_project.book.member SET 대출권수 = 대출권수 + 1 WHERE 회원번호 = '" + Normal.static_memnum + "UPDATE library_project.book SET 대출여부 = '대출 중' WHERE 관리번호 = '" + txtbox_booknum.Text + "';";
+                    string insertQuery = "UPDATE library_project.member SET 대출권수 = 대출권수 + 1 WHERE 회원번호 ='" + Normal.static_memnum + "'; " + "UPDATE library_project.book SET 대출여부 = '대출 중' WHERE 관리번호 = '" + txtbox_booknum.Text + "'; " + "UPDATE library_project.book SET 대출한_회원번호 = '" + Normal.static_memnum + "' WHERE 관리번호 = '" + txtbox_booknum.Text + "';";
                     connection.Open();
                     MySqlCommand insertBook_cmd = new MySqlCommand(insertQuery, connection);
                     try
@@ -313,9 +295,9 @@ namespace FINAL_project_LibraryProgram_1234
                             MessageBox.Show(txtbox_title.Text + " 도서 대출이 완료되었습니다. 재조회 버튼을 눌러 화면을 갱신해 주세요.");
                         }
                     }
-                    catch
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("알 수 없는 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : ", "도서대출 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("알 수 없는 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "도서대출 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else if (isCanLoan == true && isCanStatus == false)
@@ -331,12 +313,7 @@ namespace FINAL_project_LibraryProgram_1234
                     MessageBox.Show("알 수 없는 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다.", "도서대출 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        
-            catch (Exception ex)
-            {
-
-            }
-            connection.Close();*/
+            connection.Close();
         }
 
         private void btn_bookback_Click(object sender, EventArgs e)

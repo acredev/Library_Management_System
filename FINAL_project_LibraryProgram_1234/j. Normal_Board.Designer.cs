@@ -84,6 +84,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.picture_logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picture_logout.TabIndex = 33;
             this.picture_logout.TabStop = false;
+            this.picture_logout.Click += new System.EventHandler(this.picture_logout_Click);
             // 
             // label5
             // 
