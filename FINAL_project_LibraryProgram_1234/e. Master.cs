@@ -1626,7 +1626,7 @@ namespace FINAL_project_LibraryProgram_1234
 
                                 // 공지사항 텍스트박스 초기화
                                 txtbox_tab4_notice_title.Text = "";
-                                txtbox_tab4_notice_title.Text = "";
+                                txtbox_tab4_notice_body.Text = "";
 
                                 // 데이터 조회 화면 초기화
                                 data_tab4_notice.DataSource = "";
