@@ -99,6 +99,7 @@ namespace FINAL_project_LibraryProgram_1234
                 {
                     txtbox_loancnt.Text = cnt_loan_read["대출권수"].ToString();
                     txtbox_status.Text = cnt_loan_read["회원상태"].ToString();
+                    txtbox_loannum.Text = Normal.static_memnum;
                 }
             }
 
@@ -353,7 +354,46 @@ namespace FINAL_project_LibraryProgram_1234
 
         private void btn_bookback_Click(object sender, EventArgs e)
         {
-            bool isBookLoanYou = false;
+            if (txtbox_title.Text == "")
+            {
+                MessageBox.Show("도서 정보를 불러온 후, 도서를 선택해 이용 바랍니다.");
+            }
+            else
+            {
+                if (txtbox_loannum.Text == Normal.static_memnum)
+                {
+                    string insertQuery = "UPDATE library_project.member SET 대출권수 = 대출권수 - 1 WHERE 회원번호 = '" + Normal.static_memnum + "'; " + "UPDATE library_project.book SET 대출여부 = '대출 가능' WHERE 관리번호 = '" + txtbox_booknum.Text + "'; " + "UPDATE library_project.book set 대출한_회원번호 = '' WHERE 관리번호 = '" + txtbox_booknum.Text + "';";
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand(insertQuery, connection);
+                    try
+                    {
+                        if (command.ExecuteNonQuery() != 0)
+                        {
+                            MessageBox.Show(txtbox_title.Text + "도서 반납이 완료되었습니다. 재조회 버튼을 눌러 화면을 갱신해 주세요.");
+
+                            txtbox_booknum.Text = "";
+                            txtbox_title.Text = "";
+                            txtbox_writer.Text = "";
+                            txtbox_publisher.Text = "";
+                            txtbox_loanstatus.Text = "";
+                            data_book.DataSource = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show("알 수 없는 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다.", "도서반납 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "도서반납 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    connection.Close();
+                }
+                else
+                {
+                    MessageBox.Show("본인이 대출한 도서가 아닙니다. 본인이 대출한 도서만 반납할 수 있습니다. 반납할 수 없습니다.", "도서반납 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

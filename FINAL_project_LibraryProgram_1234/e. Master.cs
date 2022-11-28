@@ -560,18 +560,18 @@ namespace FINAL_project_LibraryProgram_1234
                         }
                         else
                         {
-                            MessageBox.Show("알 수 없는 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다.", "도서대출 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("알 수 없는 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다.", "도서반납 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "도서대출 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "도서반납 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     connection.Close();
                 }
                 else
                 {
-                    MessageBox.Show("본 도서는 해당 회원이 대출한 도서가 아니라 반납처리가 불가능 합니다.");
+                    MessageBox.Show("본 도서는 해당 회원이 대출한 도서가 아니라 반납처리가 불가능 합니다. 강제 반납 처리가 불가합니다. 대출한 회원을 검색해서 처리 바랍니다.");
                 }
             }
         }
