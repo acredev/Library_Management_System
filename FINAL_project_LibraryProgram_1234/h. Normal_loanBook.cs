@@ -360,7 +360,7 @@ namespace FINAL_project_LibraryProgram_1234
             }
             else
             {
-                if (txtbox_loannum.Text == Normal.static_memnum)
+                if (txtbox_loannum.Text == Normal.static_memnum && txtbox_loanstatus.Text == "대출 중")
                 {
                     string insertQuery = "UPDATE library_project.member SET 대출권수 = 대출권수 - 1 WHERE 회원번호 = '" + Normal.static_memnum + "'; " + "UPDATE library_project.book SET 대출여부 = '대출 가능' WHERE 관리번호 = '" + txtbox_booknum.Text + "'; " + "UPDATE library_project.book set 대출한_회원번호 = '' WHERE 관리번호 = '" + txtbox_booknum.Text + "';";
                     connection.Open();
@@ -388,6 +388,10 @@ namespace FINAL_project_LibraryProgram_1234
                         MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "도서반납 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     connection.Close();
+                }
+                else if (txtbox_loanstatus.Text == "대출 가능")
+                {
+                    MessageBox.Show("대출 가능한 정상 도서입니다. 본인이 대출한 도서를 선택해 주세요.", "도서반납 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
