@@ -112,3 +112,8 @@ D:\Dev\C#.NET\Library_Management_System\FINAL_project_LibraryProgram_1234\obj\De
 D:\Dev\C#.NET\Library_Management_System\FINAL_project_LibraryProgram_1234\obj\Debug\FINAL_project_LibraryProgram_1234.csproj.CopyComplete
 D:\Dev\C#.NET\Library_Management_System\FINAL_project_LibraryProgram_1234\obj\Debug\FINAL_project_LibraryProgram_1234.exe
 D:\Dev\C#.NET\Library_Management_System\FINAL_project_LibraryProgram_1234\obj\Debug\FINAL_project_LibraryProgram_1234.pdb
+D:\Dev\C#.NET\Library_Management_System\FINAL_project_LibraryProgram_1234\obj\Debug\FINAL_project_LibraryProgram_1234.Normal_loanBook.resources
+D:\Dev\C#.NET\Library_Management_System\FINAL_project_LibraryProgram_1234\obj\Debug\FINAL_project_LibraryProgram_1234.Normal_SearchBook.resources
+D:\Dev\C#.NET\Library_Management_System\FINAL_project_LibraryProgram_1234\obj\Debug\FINAL_project_LibraryProgram_1234.Normal_Board.resources
+D:\Dev\C#.NET\Library_Management_System\FINAL_project_LibraryProgram_1234\obj\Debug\FINAL_project_LibraryProgram_1234.Normal_Mypage.resources
+D:\Dev\C#.NET\Library_Management_System\FINAL_project_LibraryProgram_1234\obj\Debug\FINAL_project_LibraryProgram_1234.Normal_Qna.resources

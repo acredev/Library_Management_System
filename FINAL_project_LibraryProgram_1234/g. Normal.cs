@@ -59,27 +59,32 @@ namespace FINAL_project_LibraryProgram_1234
 
         private void btn_loanbook_Click(object sender, EventArgs e)
         {
-
+            Normal_loanBook showLoan = new Normal_loanBook();
+            showLoan.ShowDialog();
         }
 
         private void btn_searchbook_Click(object sender, EventArgs e)
         {
-
+            Normal_SearchBook showSearch = new Normal_SearchBook();
+            showSearch.ShowDialog();
         }
 
         private void btn_board_Click(object sender, EventArgs e)
         {
-
+            Normal_Board showBoard = new Normal_Board();
+            showBoard.ShowDialog();
         }
 
         private void btn_mypage_Click(object sender, EventArgs e)
         {
-
+            Normal_Mypage showMypage = new Normal_Mypage();
+            showMypage.ShowDialog();
         }
 
         private void btn_qna_Click(object sender, EventArgs e)
         {
-
+            Normal_Qna showQna = new Normal_Qna();
+            showQna.ShowDialog();
         }
 
         private void btn_exit_Click(object sender, EventArgs e)

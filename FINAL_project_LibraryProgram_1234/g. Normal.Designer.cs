@@ -43,6 +43,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.data_notice = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picture_support)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_logout)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -175,6 +176,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.data_notice);
             this.groupBox2.Location = new System.Drawing.Point(12, 71);
@@ -205,8 +207,20 @@ namespace FINAL_project_LibraryProgram_1234
             this.data_notice.Name = "data_notice";
             this.data_notice.ReadOnly = true;
             this.data_notice.RowTemplate.Height = 25;
-            this.data_notice.Size = new System.Drawing.Size(748, 181);
+            this.data_notice.Size = new System.Drawing.Size(748, 163);
             this.data_notice.TabIndex = 40;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(13, 188);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(423, 15);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "※ 추가적인 자세한 공지사항 열람은, 하단 메뉴의 \'게시판\' 을 이용 바랍니다.";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Normal
             // 
@@ -251,5 +265,6 @@ namespace FINAL_project_LibraryProgram_1234
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView data_notice;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
