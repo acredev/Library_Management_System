@@ -35,6 +35,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.picture_logout = new System.Windows.Forms.PictureBox();
             this.btn_loanbook = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_refresh = new System.Windows.Forms.Button();
             this.btn_exit = new System.Windows.Forms.Button();
             this.btn_qna = new System.Windows.Forms.Button();
             this.btn_mypage = new System.Windows.Forms.Button();
@@ -53,7 +54,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_refresh = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picture_support)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_logout)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -125,6 +126,17 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
             // 
+            // btn_refresh
+            // 
+            this.btn_refresh.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_refresh.Location = new System.Drawing.Point(16, 256);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.Size = new System.Drawing.Size(748, 30);
+            this.btn_refresh.TabIndex = 39;
+            this.btn_refresh.Text = "새로고침";
+            this.btn_refresh.UseVisualStyleBackColor = true;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
+            // 
             // btn_exit
             // 
             this.btn_exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_exit.BackgroundImage")));
@@ -188,6 +200,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.Label_id);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label2);
@@ -347,16 +360,17 @@ namespace FINAL_project_LibraryProgram_1234
             this.label3.Text = "로그인 정보";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btn_refresh
+            // label8
             // 
-            this.btn_refresh.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_refresh.Location = new System.Drawing.Point(16, 256);
-            this.btn_refresh.Name = "btn_refresh";
-            this.btn_refresh.Size = new System.Drawing.Size(748, 30);
-            this.btn_refresh.TabIndex = 39;
-            this.btn_refresh.Text = "새로고침";
-            this.btn_refresh.UseVisualStyleBackColor = true;
-            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label8.Location = new System.Drawing.Point(469, 188);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(295, 15);
+            this.label8.TabIndex = 51;
+            this.label8.Text = "※ 한 회원당 최대 10권의 도서까지 대출 가능합니다.";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Normal
             // 
@@ -415,5 +429,6 @@ namespace FINAL_project_LibraryProgram_1234
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label Label_id;
         private System.Windows.Forms.Button btn_refresh;
+        private System.Windows.Forms.Label label8;
     }
 }

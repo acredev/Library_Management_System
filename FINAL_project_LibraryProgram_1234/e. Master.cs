@@ -579,7 +579,6 @@ namespace FINAL_project_LibraryProgram_1234
         // <탭 2에서, 조회/재조회 버튼 클릭시>
         private void btn_tab2_loadbook_Click(object sender, EventArgs e)
         {
-            
             txtbox_tab2_booknum.ReadOnly = true;
             string insertQuery_loadBook = "SELECT * FROM library_project.book;";
             connection.Open();
@@ -615,6 +614,7 @@ namespace FINAL_project_LibraryProgram_1234
                     txtbox_tab2_bookprice.Text = data_tab2_book.Rows[e.RowIndex].Cells[8].Value.ToString();
                     txtbox_tab2_bookpages.Text = data_tab2_book.Rows[e.RowIndex].Cells[9].Value.ToString();
                     txtbox_tab2_bookabout.Text = data_tab2_book.Rows[e.RowIndex].Cells[10].Value.ToString();
+                    txtbox_tab2_loannum.Text = data_tab2_book.Rows[e.RowIndex].Cells[11].Value.ToString();
                 }
                 catch (Exception)
                 {
@@ -980,6 +980,7 @@ namespace FINAL_project_LibraryProgram_1234
         // <탭 2에서, 입력내용 초기화 버튼 클릭 시>
         private void btn_tab2_reset_Click(object sender, EventArgs e)
         {
+            txtbox_tab2_booknum.Text = "";
                 txtbox_tab2_bookname.Text = "";
                 txtbox_tab2_isbn.Text = "";
                 txtbox_tab2_bookwrite.Text = "";
@@ -1526,7 +1527,7 @@ namespace FINAL_project_LibraryProgram_1234
             {
                 if (txtbox_tab4_notice_title.Text != "" && txtbox_tab4_notice_body.Text != "")
                 {
-                    string modifyNotice_insertQuery = "UPDATE library_project.board_notice SET 내용 = '" + txtbox_tab4_notice_body.Text + "' WHERE 제목 = '" + txtbox_tab4_notice_body.Text + "';";
+                    string modifyNotice_insertQuery = "UPDATE library_project.board_notice SET 내용 = '" + txtbox_tab4_notice_body.Text + "' WHERE 제목 = '" + txtbox_tab4_notice_title.Text + "';";
                     connection.Open();
                     MySqlCommand modifyNotice_command = new MySqlCommand(modifyNotice_insertQuery, connection);
 
@@ -1538,7 +1539,7 @@ namespace FINAL_project_LibraryProgram_1234
 
                             // 공지사항 텍스트박스 초기화
                             txtbox_tab4_notice_title.Text = "";
-                            txtbox_tab4_notice_title.Text = "";
+                            txtbox_tab4_notice_body.Text = "";
 
                             // 데이터 조회 화면 초기화
                             data_tab4_notice.DataSource = "";
@@ -1571,7 +1572,7 @@ namespace FINAL_project_LibraryProgram_1234
 
                             // 공지사항 텍스트박스 초기화
                             txtbox_tab4_notice_title.Text = "";
-                            txtbox_tab4_notice_title.Text = "";
+                            txtbox_tab4_notice_body.Text = "";
 
                             // 데이터 조회 화면 초기화
                             data_tab4_notice.DataSource = "";
@@ -1599,46 +1600,52 @@ namespace FINAL_project_LibraryProgram_1234
         {
             if (tab4_isNoticeReadOnly == true)
             {
-                MessageBox.Show("수정 모드에서만 사용 가능한 버튼입니다. 회원 관리 모드를 변경 후 진행 바랍니다.");
+                MessageBox.Show("수정 모드에서만 사용 가능한 버튼입니다. 게시판 관리 모드를 변경 후 진행 바랍니다.");
             }
             else if (tab4_isNoticeModify == true)
             {
                 txtbox_tab4_notice_title.ReadOnly = false;
                 txtbox_tab4_notice_body.ReadOnly = false;
-
-                if (MessageBox.Show("정말 " + txtbox_tab4_notice_title.Text + " 공지사항을 삭제하시겠습니까? 처리 이후에는 복구할 수 없습니다.", "공지사항 삭제", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (txtbox_tab4_notice_title.Text == "")
                 {
-                    string delNotice_insertQuery = "DELETE FROM library_project.board_notice WHERE 제목 = '" + txtbox_tab4_notice_title.Text + "';";
-                    connection.Open();
-                    MySqlCommand delNotice_command = new MySqlCommand(delNotice_insertQuery, connection);
-
-                    try
-                    {
-                        if (delNotice_command.ExecuteNonQuery() != 0)
-                        {
-                            MessageBox.Show("삭제 요청하신 공지사항 " + txtbox_tab4_notice_title.Text + " 게시글이 데이터베이스에서 삭제되었습니다. 조회 버튼을 눌러, 공지사항 목록을 다시 재 조회 바랍니다.");
-
-                            // 공지사항 텍스트박스 초기화
-                            txtbox_tab4_notice_title.Text = "";
-                            txtbox_tab4_notice_title.Text = "";
-
-                            // 데이터 조회 화면 초기화
-                            data_tab4_notice.DataSource = "";
-                        }
-                        else
-                        {
-                            MessageBox.Show("알 수 없는 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : ", "공지사항 삭제 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "공지사항 삭제 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    connection.Close();
+                    MessageBox.Show("삭제할 공지사항이 선택되지 않았습니다. 공지사항 선택 후 처리 바랍니다.");
                 }
                 else
                 {
-                    // 메시지박스 닫힘.
+                    if (MessageBox.Show("정말 " + txtbox_tab4_notice_title.Text + " 공지사항을 삭제하시겠습니까? 처리 이후에는 복구할 수 없습니다.", "공지사항 삭제", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        string delNotice_insertQuery = "DELETE FROM library_project.board_notice WHERE 제목 = '" + txtbox_tab4_notice_title.Text + "';";
+                        connection.Open();
+                        MySqlCommand delNotice_command = new MySqlCommand(delNotice_insertQuery, connection);
+
+                        try
+                        {
+                            if (delNotice_command.ExecuteNonQuery() != 0)
+                            {
+                                MessageBox.Show("삭제 요청하신 공지사항 " + txtbox_tab4_notice_title.Text + " 게시글이 데이터베이스에서 삭제되었습니다. 조회 버튼을 눌러, 공지사항 목록을 다시 재 조회 바랍니다.");
+
+                                // 공지사항 텍스트박스 초기화
+                                txtbox_tab4_notice_title.Text = "";
+                                txtbox_tab4_notice_title.Text = "";
+
+                                // 데이터 조회 화면 초기화
+                                data_tab4_notice.DataSource = "";
+                            }
+                            else
+                            {
+                                MessageBox.Show("알 수 없는 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : ", "공지사항 삭제 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "공지사항 삭제 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        connection.Close();
+                    }
+                    else
+                    {
+                        // 메시지박스 닫힘.
+                    }
                 }
             }
             else if (tab4_isNoticeNew == true)
@@ -1646,7 +1653,7 @@ namespace FINAL_project_LibraryProgram_1234
                 txtbox_tab4_notice_title.ReadOnly = true;
                 txtbox_tab4_notice_body.ReadOnly = true;
 
-                MessageBox.Show("수정 모드에서만 사용 가능한 버튼입니다. 회원 관리 모드를 변경 후 진행 바랍니다.");
+                MessageBox.Show("수정 모드에서만 사용 가능한 버튼입니다. 게시판 관리 모드를 변경 후 진행 바랍니다.");
             }
             else
             {
@@ -1659,7 +1666,7 @@ namespace FINAL_project_LibraryProgram_1234
         {
             if (tab4_isNoticeReadOnly)
             {
-                MessageBox.Show("수정 모드에서만 사용 가능한 버튼입니다. 회원 관리 모드를 변경 후 진행 바랍니다.");
+                MessageBox.Show("수정 모드에서만 사용 가능한 버튼입니다. 게시판 관리 모드를 변경 후 진행 바랍니다.");
             }
             else if (tab4_isNoticeModify)
             {
@@ -1957,7 +1964,7 @@ namespace FINAL_project_LibraryProgram_1234
         {
             if (tab5_isReadOnly == true)
             {
-                MessageBox.Show("수정 모드에서만 사용 가능한 버튼입니다. 회원 관리 모드를 변경 후 진행 바랍니다.");
+                MessageBox.Show("문의내용 삭제 / 답변 모드에서만 강제 삭제가 가능합니다. 모드를 변경해 주세요.");
             }
             else if (tab5_isModify == true)
             {
@@ -1971,7 +1978,6 @@ namespace FINAL_project_LibraryProgram_1234
                     {
                         if (qnaanswer_command.ExecuteNonQuery() != 0)
                         {
-                            MessageBox.Show(txtbox_tab5_memname + " 회원님이 작성하신 " + txtbox_tab5_title.Text + " 문의 게시글에 대한 답변이 등록되었습니다. 잠시 후, 회원에게 답변 알림 이메일이 발송됩니다.");
                             if (tab5_emailsend == true)
                             {
                                 MailMessage mail = new MailMessage();
@@ -2001,7 +2007,7 @@ namespace FINAL_project_LibraryProgram_1234
                                     smtp.Send(mail);
                                     mail.Dispose();
 
-                                    MessageBox.Show(txtbox_tab5_memname.Text + " 회원에게 정상적으로 답변 안내 이메일을 전송 완료 했습니다.  조회 버튼을 눌러, 게시글 목록을 다시 재 조회 바랍니다.");
+                                    MessageBox.Show(txtbox_tab5_memname.Text + " 회원에게 정상적으로 답변 안내 이메일을 전송하고, 문의 게시글에 대한 답변을 등록했습니다. 조회 버튼을 눌러, 게시글 목록을 다시 재 조회 바랍니다.");
 
                                     txtbox_tab5_title.Text = "";
                                     txtbox_tab5_body.Text = "";
@@ -2040,6 +2046,7 @@ namespace FINAL_project_LibraryProgram_1234
                     {
                         MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "문의내용 답변 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                    connection.Close();
                 }
                 else
                 {
@@ -2082,6 +2089,7 @@ namespace FINAL_project_LibraryProgram_1234
                     {
                         MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "게시글 삭제 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                    connection.Close();
                 }
                 else
                 {

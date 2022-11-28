@@ -265,6 +265,8 @@ namespace FINAL_project_LibraryProgram_1234
             this.picture_logout = new System.Windows.Forms.PictureBox();
             this.picture_support = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.txtbox_tab2_loannum = new System.Windows.Forms.TextBox();
             this.tabcontrol_master.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -570,7 +572,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // data_tab1_member
             // 
-            this.data_tab1_member.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data_tab1_member.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.data_tab1_member.Location = new System.Drawing.Point(14, 29);
             this.data_tab1_member.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.data_tab1_member.MultiSelect = false;
@@ -1318,6 +1320,8 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtbox_tab2_loannum);
+            this.groupBox1.Controls.Add(this.label63);
             this.groupBox1.Controls.Add(this.btn_tab2_delete);
             this.groupBox1.Controls.Add(this.btn_tab2_reset);
             this.groupBox1.Controls.Add(this.btn_tab2_save);
@@ -2416,6 +2420,8 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // data_tab4_free
             // 
+            this.data_tab4_free.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.data_tab4_free.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.data_tab4_free.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data_tab4_free.Location = new System.Drawing.Point(4, 26);
             this.data_tab4_free.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -2682,6 +2688,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // data_tab4_notice
             // 
+            this.data_tab4_notice.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.data_tab4_notice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data_tab4_notice.Location = new System.Drawing.Point(4, 26);
             this.data_tab4_notice.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -3195,6 +3202,26 @@ namespace FINAL_project_LibraryProgram_1234
             this.label5.Text = "일이삼사 도서관 관리";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(7, 304);
+            this.label63.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(133, 16);
+            this.label63.TabIndex = 40;
+            this.label63.Text = "도서 대출한 회원번호";
+            // 
+            // txtbox_tab2_loannum
+            // 
+            this.txtbox_tab2_loannum.Location = new System.Drawing.Point(144, 301);
+            this.txtbox_tab2_loannum.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab2_loannum.MaxLength = 20;
+            this.txtbox_tab2_loannum.Name = "txtbox_tab2_loannum";
+            this.txtbox_tab2_loannum.ReadOnly = true;
+            this.txtbox_tab2_loannum.Size = new System.Drawing.Size(325, 23);
+            this.txtbox_tab2_loannum.TabIndex = 41;
+            // 
             // Master
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
@@ -3510,5 +3537,7 @@ namespace FINAL_project_LibraryProgram_1234
         private System.Windows.Forms.CheckBox chkbox_tab5_emailsend;
         private System.Windows.Forms.Button btn_tab5_delete;
         private System.Windows.Forms.Button btn_tab5_save;
+        private System.Windows.Forms.TextBox txtbox_tab2_loannum;
+        private System.Windows.Forms.Label label63;
     }
 }
