@@ -35,6 +35,12 @@ namespace FINAL_project_LibraryProgram_1234
             this.picture_logout = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtbox_loannum = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtbox_status = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtbox_loancnt = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtbox_booknum = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -61,12 +67,6 @@ namespace FINAL_project_LibraryProgram_1234
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.data_book = new System.Windows.Forms.DataGridView();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtbox_loancnt = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtbox_status = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtbox_loannum = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picture_support)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_logout)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -115,10 +115,10 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(281, 18);
+            this.label5.Location = new System.Drawing.Point(254, 15);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(258, 40);
+            this.label5.Size = new System.Drawing.Size(321, 50);
             this.label5.TabIndex = 44;
             this.label5.Text = "일이삼사 도서관";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -145,12 +145,69 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox2.TabIndex = 48;
             this.groupBox2.TabStop = false;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(56, 219);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(403, 20);
+            this.label14.TabIndex = 56;
+            this.label14.Text = "도서 대출한 사용자 관리번호 (사용자에게 보이지 않음)";
+            this.label14.Visible = false;
+            // 
+            // txtbox_loannum
+            // 
+            this.txtbox_loannum.Location = new System.Drawing.Point(59, 237);
+            this.txtbox_loannum.Name = "txtbox_loannum";
+            this.txtbox_loannum.ReadOnly = true;
+            this.txtbox_loannum.Size = new System.Drawing.Size(272, 26);
+            this.txtbox_loannum.TabIndex = 57;
+            this.txtbox_loannum.Visible = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(56, 163);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(281, 20);
+            this.label13.TabIndex = 54;
+            this.label13.Text = "사용자 상태 (사용자에게 보이지 않음)";
+            this.label13.Visible = false;
+            // 
+            // txtbox_status
+            // 
+            this.txtbox_status.Location = new System.Drawing.Point(59, 181);
+            this.txtbox_status.Name = "txtbox_status";
+            this.txtbox_status.ReadOnly = true;
+            this.txtbox_status.Size = new System.Drawing.Size(272, 26);
+            this.txtbox_status.TabIndex = 55;
+            this.txtbox_status.Visible = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(56, 105);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(318, 20);
+            this.label12.TabIndex = 52;
+            this.label12.Text = "사용자 책 대여수 (사용자에게 보이지 않음)";
+            this.label12.Visible = false;
+            // 
+            // txtbox_loancnt
+            // 
+            this.txtbox_loancnt.Location = new System.Drawing.Point(59, 123);
+            this.txtbox_loancnt.Name = "txtbox_loancnt";
+            this.txtbox_loancnt.ReadOnly = true;
+            this.txtbox_loancnt.Size = new System.Drawing.Size(272, 26);
+            this.txtbox_loancnt.TabIndex = 53;
+            this.txtbox_loancnt.Visible = false;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(56, 55);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(253, 15);
+            this.label11.Size = new System.Drawing.Size(334, 20);
             this.label11.TabIndex = 50;
             this.label11.Text = "책 대여용 관리번호 (사용자에게 보이지 않음)";
             this.label11.Visible = false;
@@ -160,7 +217,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.txtbox_booknum.Location = new System.Drawing.Point(59, 73);
             this.txtbox_booknum.Name = "txtbox_booknum";
             this.txtbox_booknum.ReadOnly = true;
-            this.txtbox_booknum.Size = new System.Drawing.Size(272, 22);
+            this.txtbox_booknum.Size = new System.Drawing.Size(272, 26);
             this.txtbox_booknum.TabIndex = 51;
             this.txtbox_booknum.Visible = false;
             // 
@@ -181,7 +238,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(12, 51);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(307, 75);
+            this.label10.Size = new System.Drawing.Size(404, 100);
             this.label10.TabIndex = 54;
             this.label10.Text = "1. 현재 \'대출 중\' 인 도서는 대출 신청이 되지 않습니다.\r\n2. 로그인 한 회원 명의로 대출한 도서만\r\n    반납 신청이 가능합니다.\r\n3" +
     ". 1 회원당 최대 10권까지 대출 가능합니다.\r\n4. 분실 시, 도서가격에 맞는 금액을 배상해야 합니다.";
@@ -192,7 +249,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.label9.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label9.Location = new System.Drawing.Point(45, 18);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(252, 19);
+            this.label9.Size = new System.Drawing.Size(323, 23);
             this.label9.TabIndex = 54;
             this.label9.Text = "<도서 대출 / 반납 신청 전 주의사항>";
             // 
@@ -249,7 +306,7 @@ namespace FINAL_project_LibraryProgram_1234
             "대출 가능"});
             this.combobox_searchbystatus.Location = new System.Drawing.Point(49, 49);
             this.combobox_searchbystatus.Name = "combobox_searchbystatus";
-            this.combobox_searchbystatus.Size = new System.Drawing.Size(272, 23);
+            this.combobox_searchbystatus.Size = new System.Drawing.Size(272, 27);
             this.combobox_searchbystatus.TabIndex = 54;
             this.combobox_searchbystatus.Visible = false;
             // 
@@ -258,7 +315,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(49, 111);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(259, 30);
+            this.label8.Size = new System.Drawing.Size(342, 40);
             this.label8.TabIndex = 53;
             this.label8.Text = "※ 자세한 도서정보 검색 및 열람은,\r\n메인 화면의 \'도서 검색\' 메뉴를 이용 바랍니다.";
             // 
@@ -283,7 +340,7 @@ namespace FINAL_project_LibraryProgram_1234
             "대출여부"});
             this.combobox_search.Location = new System.Drawing.Point(49, 21);
             this.combobox_search.Name = "combobox_search";
-            this.combobox_search.Size = new System.Drawing.Size(272, 23);
+            this.combobox_search.Size = new System.Drawing.Size(272, 27);
             this.combobox_search.TabIndex = 50;
             this.combobox_search.SelectedIndexChanged += new System.EventHandler(this.combobox_search_SelectedIndexChanged);
             // 
@@ -292,7 +349,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(12, 24);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 15);
+            this.label7.Size = new System.Drawing.Size(41, 20);
             this.label7.TabIndex = 42;
             this.label7.Text = "검색";
             // 
@@ -300,7 +357,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.txtbox_search.Location = new System.Drawing.Point(49, 49);
             this.txtbox_search.Name = "txtbox_search";
-            this.txtbox_search.Size = new System.Drawing.Size(272, 22);
+            this.txtbox_search.Size = new System.Drawing.Size(272, 26);
             this.txtbox_search.TabIndex = 45;
             // 
             // groupBox1
@@ -324,7 +381,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.txtbox_title.Location = new System.Drawing.Point(49, 20);
             this.txtbox_title.Name = "txtbox_title";
             this.txtbox_title.ReadOnly = true;
-            this.txtbox_title.Size = new System.Drawing.Size(272, 22);
+            this.txtbox_title.Size = new System.Drawing.Size(272, 26);
             this.txtbox_title.TabIndex = 43;
             // 
             // txtbox_publisher
@@ -332,7 +389,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.txtbox_publisher.Location = new System.Drawing.Point(49, 76);
             this.txtbox_publisher.Name = "txtbox_publisher";
             this.txtbox_publisher.ReadOnly = true;
-            this.txtbox_publisher.Size = new System.Drawing.Size(136, 22);
+            this.txtbox_publisher.Size = new System.Drawing.Size(136, 26);
             this.txtbox_publisher.TabIndex = 49;
             // 
             // label3
@@ -340,7 +397,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 15);
+            this.label3.Size = new System.Drawing.Size(41, 20);
             this.label3.TabIndex = 42;
             this.label3.Text = "제목";
             // 
@@ -349,7 +406,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(6, 79);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 15);
+            this.label6.Size = new System.Drawing.Size(57, 20);
             this.label6.TabIndex = 48;
             this.label6.Text = "출판사";
             // 
@@ -358,7 +415,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(12, 51);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 15);
+            this.label4.Size = new System.Drawing.Size(41, 20);
             this.label4.TabIndex = 44;
             this.label4.Text = "저자";
             // 
@@ -367,7 +424,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.txtbox_loanstatus.Location = new System.Drawing.Point(252, 76);
             this.txtbox_loanstatus.Name = "txtbox_loanstatus";
             this.txtbox_loanstatus.ReadOnly = true;
-            this.txtbox_loanstatus.Size = new System.Drawing.Size(69, 22);
+            this.txtbox_loanstatus.Size = new System.Drawing.Size(69, 26);
             this.txtbox_loanstatus.TabIndex = 47;
             // 
             // txtbox_writer
@@ -375,7 +432,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.txtbox_writer.Location = new System.Drawing.Point(49, 48);
             this.txtbox_writer.Name = "txtbox_writer";
             this.txtbox_writer.ReadOnly = true;
-            this.txtbox_writer.Size = new System.Drawing.Size(272, 22);
+            this.txtbox_writer.Size = new System.Drawing.Size(272, 26);
             this.txtbox_writer.TabIndex = 45;
             // 
             // label1
@@ -383,7 +440,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(191, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 15);
+            this.label1.Size = new System.Drawing.Size(73, 20);
             this.label1.TabIndex = 46;
             this.label1.Text = "대출여부";
             // 
@@ -394,7 +451,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.label2.Location = new System.Drawing.Point(12, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 19);
+            this.label2.Size = new System.Drawing.Size(86, 23);
             this.label2.TabIndex = 41;
             this.label2.Text = "도서목록";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -414,71 +471,15 @@ namespace FINAL_project_LibraryProgram_1234
             this.data_book.MultiSelect = false;
             this.data_book.Name = "data_book";
             this.data_book.ReadOnly = true;
+            this.data_book.RowHeadersWidth = 51;
             this.data_book.RowTemplate.Height = 25;
             this.data_book.Size = new System.Drawing.Size(433, 425);
             this.data_book.TabIndex = 40;
             this.data_book.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_book_CellClick);
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(56, 105);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(241, 15);
-            this.label12.TabIndex = 52;
-            this.label12.Text = "사용자 책 대여수 (사용자에게 보이지 않음)";
-            this.label12.Visible = false;
-            // 
-            // txtbox_loancnt
-            // 
-            this.txtbox_loancnt.Location = new System.Drawing.Point(59, 123);
-            this.txtbox_loancnt.Name = "txtbox_loancnt";
-            this.txtbox_loancnt.ReadOnly = true;
-            this.txtbox_loancnt.Size = new System.Drawing.Size(272, 22);
-            this.txtbox_loancnt.TabIndex = 53;
-            this.txtbox_loancnt.Visible = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(56, 163);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(213, 15);
-            this.label13.TabIndex = 54;
-            this.label13.Text = "사용자 상태 (사용자에게 보이지 않음)";
-            this.label13.Visible = false;
-            // 
-            // txtbox_status
-            // 
-            this.txtbox_status.Location = new System.Drawing.Point(59, 181);
-            this.txtbox_status.Name = "txtbox_status";
-            this.txtbox_status.ReadOnly = true;
-            this.txtbox_status.Size = new System.Drawing.Size(272, 22);
-            this.txtbox_status.TabIndex = 55;
-            this.txtbox_status.Visible = false;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(56, 219);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(305, 15);
-            this.label14.TabIndex = 56;
-            this.label14.Text = "도서 대출한 사용자 관리번호 (사용자에게 보이지 않음)";
-            this.label14.Visible = false;
-            // 
-            // txtbox_loannum
-            // 
-            this.txtbox_loannum.Location = new System.Drawing.Point(59, 237);
-            this.txtbox_loannum.Name = "txtbox_loannum";
-            this.txtbox_loannum.ReadOnly = true;
-            this.txtbox_loannum.Size = new System.Drawing.Size(272, 22);
-            this.txtbox_loannum.TabIndex = 57;
-            this.txtbox_loannum.Visible = false;
-            // 
             // Normal_loanBook
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(802, 579);

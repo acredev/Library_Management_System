@@ -20,6 +20,7 @@ namespace FINAL_project_LibraryProgram_1234
             InitializeComponent();
         }
 
+        // 폼 로드 시 책 정보 자동 불러옴
         private void Normal_SearchBook_Load(object sender, EventArgs e)
         {
             string insertQuery = "SELECT 이름, ISBN, 저자, 출판일자, 출판사, 도서상태, 대출여부, 페이지수, 도서소개 FROM library_project.book;";
@@ -40,12 +41,14 @@ namespace FINAL_project_LibraryProgram_1234
             connection.Close();
         }
 
+        // 오류보고 / 개선요청 클릭시
         private void picture_support_Click(object sender, EventArgs e)
         {
             SupportMail showSupportMail = new SupportMail();
             showSupportMail.ShowDialog();
         }
 
+        // 로그아웃 클릭시
         private void picture_logout_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("로그아웃 후 메인화면으로 돌아가시겠습니까?", "로그아웃", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -54,6 +57,7 @@ namespace FINAL_project_LibraryProgram_1234
             }
         }
 
+        // 돌아가기 클릭시
         private void btn_main_click_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("이전 화면으로 돌아가시겠습니까?", "돌아가기", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -64,6 +68,7 @@ namespace FINAL_project_LibraryProgram_1234
             }
         }
 
+        // DataGridView 셀 클릭시 관련 정보들을 각 textbox에 뿌려줌
         private void data_book_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -86,6 +91,7 @@ namespace FINAL_project_LibraryProgram_1234
             connection.Close();
         }
 
+        // 재조회 버튼 클릭시
         private void btn_load_Click(object sender, EventArgs e)
         {
             string insertQuery = "SELECT 이름, ISBN, 저자, 출판일자, 출판사, 도서상태, 대출여부, 페이지수, 도서소개 FROM library_project.book;";
@@ -116,6 +122,7 @@ namespace FINAL_project_LibraryProgram_1234
             txtbox_about.Text = "";
         }
 
+        // 검색 범주 선택시
         private void combobox_search_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (combobox_search.SelectedItem.ToString() == "제목")
@@ -155,6 +162,7 @@ namespace FINAL_project_LibraryProgram_1234
             }
         }
 
+        // 도서 검색 클릭시
         private void btn_search_Click(object sender, EventArgs e)
         {
             if (combobox_search.Text == "")

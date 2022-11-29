@@ -39,6 +39,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btn_load = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.combobox_searchbyloanstatus = new System.Windows.Forms.ComboBox();
             this.btn_search = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.combobox_search = new System.Windows.Forms.ComboBox();
@@ -64,7 +65,6 @@ namespace FINAL_project_LibraryProgram_1234
             this.txtbox_isbn = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.data_book = new System.Windows.Forms.DataGridView();
-            this.combobox_searchbyloanstatus = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.picture_support)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_logout)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -113,7 +113,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(281, 18);
+            this.label5.Location = new System.Drawing.Point(254, 15);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(321, 50);
@@ -178,6 +178,19 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox3.Size = new System.Drawing.Size(327, 154);
             this.groupBox3.TabIndex = 51;
             this.groupBox3.TabStop = false;
+            // 
+            // combobox_searchbyloanstatus
+            // 
+            this.combobox_searchbyloanstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combobox_searchbyloanstatus.FormattingEnabled = true;
+            this.combobox_searchbyloanstatus.Items.AddRange(new object[] {
+            "대출 중",
+            "대출 가능"});
+            this.combobox_searchbyloanstatus.Location = new System.Drawing.Point(50, 48);
+            this.combobox_searchbyloanstatus.Name = "combobox_searchbyloanstatus";
+            this.combobox_searchbyloanstatus.Size = new System.Drawing.Size(264, 27);
+            this.combobox_searchbyloanstatus.TabIndex = 56;
+            this.combobox_searchbyloanstatus.Visible = false;
             // 
             // btn_search
             // 
@@ -438,19 +451,6 @@ namespace FINAL_project_LibraryProgram_1234
             this.data_book.Size = new System.Drawing.Size(433, 468);
             this.data_book.TabIndex = 40;
             this.data_book.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_book_CellClick);
-            // 
-            // combobox_searchbyloanstatus
-            // 
-            this.combobox_searchbyloanstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combobox_searchbyloanstatus.FormattingEnabled = true;
-            this.combobox_searchbyloanstatus.Items.AddRange(new object[] {
-            "대출 중",
-            "대출 가능"});
-            this.combobox_searchbyloanstatus.Location = new System.Drawing.Point(50, 48);
-            this.combobox_searchbyloanstatus.Name = "combobox_searchbyloanstatus";
-            this.combobox_searchbyloanstatus.Size = new System.Drawing.Size(264, 27);
-            this.combobox_searchbyloanstatus.TabIndex = 56;
-            this.combobox_searchbyloanstatus.Visible = false;
             // 
             // Normal_SearchBook
             // 
