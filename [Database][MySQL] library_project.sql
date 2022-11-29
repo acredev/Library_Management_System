@@ -38,6 +38,7 @@ CREATE TABLE `board_free` (
 
 LOCK TABLES `board_free` WRITE;
 /*!40000 ALTER TABLE `board_free` DISABLE KEYS */;
+INSERT INTO `board_free` VALUES ('테스트','111111111112','테스트게시글','테스트게시글'),('테스트','111111111112','테스트게시글2','테스트게시글2'),('테스트','111111111112','테스트게시글3','테스트게시글3'),('테스트','111111111112','테스트게시글4','테스트게시글4'),('테스트','111111111112','test','test'),('테스트','111111111112','test2','test22'),('테스트','111111111112','test3','test3'),('테스트','111111111112','test5','test5');
 /*!40000 ALTER TABLE `board_free` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -176,4 +177,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-29  2:35:38
+-- Dump completed on 2022-11-29 15:18:21
