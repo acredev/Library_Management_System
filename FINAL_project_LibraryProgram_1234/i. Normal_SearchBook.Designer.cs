@@ -39,7 +39,6 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btn_load = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btn_reset = new System.Windows.Forms.Button();
             this.btn_search = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.combobox_search = new System.Windows.Forms.ComboBox();
@@ -169,7 +168,6 @@ namespace FINAL_project_LibraryProgram_1234
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.combobox_searchbyloanstatus);
-            this.groupBox3.Controls.Add(this.btn_reset);
             this.groupBox3.Controls.Add(this.btn_search);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.combobox_search);
@@ -181,20 +179,9 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox3.TabIndex = 51;
             this.groupBox3.TabStop = false;
             // 
-            // btn_reset
-            // 
-            this.btn_reset.ForeColor = System.Drawing.Color.OrangeRed;
-            this.btn_reset.Location = new System.Drawing.Point(49, 78);
-            this.btn_reset.Name = "btn_reset";
-            this.btn_reset.Size = new System.Drawing.Size(265, 34);
-            this.btn_reset.TabIndex = 54;
-            this.btn_reset.Text = "재입력";
-            this.btn_reset.UseVisualStyleBackColor = true;
-            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
-            // 
             // btn_search
             // 
-            this.btn_search.Location = new System.Drawing.Point(49, 45);
+            this.btn_search.Location = new System.Drawing.Point(49, 79);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(265, 33);
             this.btn_search.TabIndex = 53;
@@ -222,9 +209,9 @@ namespace FINAL_project_LibraryProgram_1234
             "도서상태",
             "대출여부",
             "ISBN"});
-            this.combobox_search.Location = new System.Drawing.Point(49, 16);
+            this.combobox_search.Location = new System.Drawing.Point(50, 16);
             this.combobox_search.Name = "combobox_search";
-            this.combobox_search.Size = new System.Drawing.Size(74, 27);
+            this.combobox_search.Size = new System.Drawing.Size(264, 27);
             this.combobox_search.TabIndex = 50;
             this.combobox_search.SelectedIndexChanged += new System.EventHandler(this.combobox_search_SelectedIndexChanged);
             // 
@@ -239,9 +226,9 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // txtbox_search
             // 
-            this.txtbox_search.Location = new System.Drawing.Point(129, 17);
+            this.txtbox_search.Location = new System.Drawing.Point(49, 49);
             this.txtbox_search.Name = "txtbox_search";
-            this.txtbox_search.Size = new System.Drawing.Size(185, 26);
+            this.txtbox_search.Size = new System.Drawing.Size(265, 26);
             this.txtbox_search.TabIndex = 45;
             // 
             // groupBox1
@@ -459,9 +446,9 @@ namespace FINAL_project_LibraryProgram_1234
             this.combobox_searchbyloanstatus.Items.AddRange(new object[] {
             "대출 중",
             "대출 가능"});
-            this.combobox_searchbyloanstatus.Location = new System.Drawing.Point(129, 16);
+            this.combobox_searchbyloanstatus.Location = new System.Drawing.Point(50, 48);
             this.combobox_searchbyloanstatus.Name = "combobox_searchbyloanstatus";
-            this.combobox_searchbyloanstatus.Size = new System.Drawing.Size(185, 27);
+            this.combobox_searchbyloanstatus.Size = new System.Drawing.Size(264, 27);
             this.combobox_searchbyloanstatus.TabIndex = 56;
             this.combobox_searchbyloanstatus.Visible = false;
             // 
@@ -509,7 +496,6 @@ namespace FINAL_project_LibraryProgram_1234
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btn_load;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btn_reset;
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox combobox_search;

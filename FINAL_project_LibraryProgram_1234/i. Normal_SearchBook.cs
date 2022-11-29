@@ -158,13 +158,6 @@ namespace FINAL_project_LibraryProgram_1234
         private void btn_search_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void btn_reset_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
+        }        
     }
 }
