@@ -41,7 +41,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.label2 = new System.Windows.Forms.Label();
             this.data_notice = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_save = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.txtbox_free_body = new System.Windows.Forms.TextBox();
             this.txtbox_free_who = new System.Windows.Forms.TextBox();
@@ -49,11 +49,11 @@ namespace FINAL_project_LibraryProgram_1234
             this.txtbox_free_title = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rdobtn_free_new = new System.Windows.Forms.RadioButton();
+            this.rdobtn_free_readonly = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.data_free = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_main_click = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picture_support)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_logout)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -73,6 +73,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.picture_support.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picture_support.TabIndex = 34;
             this.picture_support.TabStop = false;
+            this.picture_support.Click += new System.EventHandler(this.picture_support_Click);
             // 
             // picture_logout
             // 
@@ -177,7 +178,7 @@ namespace FINAL_project_LibraryProgram_1234
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btn_save);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtbox_free_body);
             this.groupBox1.Controls.Add(this.txtbox_free_who);
@@ -193,14 +194,15 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox1.TabIndex = 42;
             this.groupBox1.TabStop = false;
             // 
-            // button1
+            // btn_save
             // 
-            this.button1.Location = new System.Drawing.Point(493, 219);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(279, 23);
-            this.button1.TabIndex = 51;
-            this.button1.Text = "등록";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_save.Location = new System.Drawing.Point(493, 207);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(279, 35);
+            this.btn_save.TabIndex = 51;
+            this.btn_save.Text = "등록";
+            this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // label8
             // 
@@ -218,7 +220,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.txtbox_free_body.Multiline = true;
             this.txtbox_free_body.Name = "txtbox_free_body";
             this.txtbox_free_body.ReadOnly = true;
-            this.txtbox_free_body.Size = new System.Drawing.Size(278, 96);
+            this.txtbox_free_body.Size = new System.Drawing.Size(278, 78);
             this.txtbox_free_body.TabIndex = 46;
             // 
             // txtbox_free_who
@@ -260,35 +262,37 @@ namespace FINAL_project_LibraryProgram_1234
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.radioButton2);
-            this.groupBox3.Controls.Add(this.radioButton1);
+            this.groupBox3.Controls.Add(this.rdobtn_free_new);
+            this.groupBox3.Controls.Add(this.rdobtn_free_readonly);
             this.groupBox3.Location = new System.Drawing.Point(457, 15);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(316, 46);
             this.groupBox3.TabIndex = 43;
             this.groupBox3.TabStop = false;
             // 
-            // radioButton2
+            // rdobtn_free_new
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(162, 16);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(94, 24);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "신규작성";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdobtn_free_new.AutoSize = true;
+            this.rdobtn_free_new.Location = new System.Drawing.Point(162, 16);
+            this.rdobtn_free_new.Name = "rdobtn_free_new";
+            this.rdobtn_free_new.Size = new System.Drawing.Size(94, 24);
+            this.rdobtn_free_new.TabIndex = 1;
+            this.rdobtn_free_new.Text = "신규작성";
+            this.rdobtn_free_new.UseVisualStyleBackColor = true;
+            this.rdobtn_free_new.CheckedChanged += new System.EventHandler(this.rdobtn_free_new_CheckedChanged);
             // 
-            // radioButton1
+            // rdobtn_free_readonly
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(74, 16);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(94, 24);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "열람모드";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdobtn_free_readonly.AutoSize = true;
+            this.rdobtn_free_readonly.Checked = true;
+            this.rdobtn_free_readonly.Location = new System.Drawing.Point(74, 16);
+            this.rdobtn_free_readonly.Name = "rdobtn_free_readonly";
+            this.rdobtn_free_readonly.Size = new System.Drawing.Size(94, 24);
+            this.rdobtn_free_readonly.TabIndex = 0;
+            this.rdobtn_free_readonly.TabStop = true;
+            this.rdobtn_free_readonly.Text = "열람모드";
+            this.rdobtn_free_readonly.UseVisualStyleBackColor = true;
+            this.rdobtn_free_readonly.CheckedChanged += new System.EventHandler(this.rdobtn_free_readonly_CheckedChanged);
             // 
             // label1
             // 
@@ -316,16 +320,18 @@ namespace FINAL_project_LibraryProgram_1234
             this.data_free.RowTemplate.Height = 25;
             this.data_free.Size = new System.Drawing.Size(445, 217);
             this.data_free.TabIndex = 40;
+            this.data_free.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_free_CellClick);
             // 
-            // button2
+            // btn_main_click
             // 
-            this.button2.ForeColor = System.Drawing.Color.Green;
-            this.button2.Location = new System.Drawing.Point(18, 6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 59);
-            this.button2.TabIndex = 43;
-            this.button2.Text = "메인화면";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_main_click.ForeColor = System.Drawing.Color.Green;
+            this.btn_main_click.Location = new System.Drawing.Point(18, 6);
+            this.btn_main_click.Name = "btn_main_click";
+            this.btn_main_click.Size = new System.Drawing.Size(112, 59);
+            this.btn_main_click.TabIndex = 43;
+            this.btn_main_click.Text = "이전화면";
+            this.btn_main_click.UseVisualStyleBackColor = true;
+            this.btn_main_click.Click += new System.EventHandler(this.btn_main_click_Click);
             // 
             // Normal_Board
             // 
@@ -333,7 +339,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(802, 579);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_main_click);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.picture_support);
@@ -376,7 +382,7 @@ namespace FINAL_project_LibraryProgram_1234
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtbox_notice_title;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtbox_free_body;
         private System.Windows.Forms.TextBox txtbox_free_who;
@@ -384,8 +390,8 @@ namespace FINAL_project_LibraryProgram_1234
         private System.Windows.Forms.TextBox txtbox_free_title;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.RadioButton rdobtn_free_new;
+        private System.Windows.Forms.RadioButton rdobtn_free_readonly;
+        private System.Windows.Forms.Button btn_main_click;
     }
 }
