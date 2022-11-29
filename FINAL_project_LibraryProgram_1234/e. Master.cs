@@ -579,6 +579,7 @@ namespace FINAL_project_LibraryProgram_1234
         // <탭 2에서, 조회/재조회 버튼 클릭시>
         private void btn_tab2_loadbook_Click(object sender, EventArgs e)
         {
+            rdobtn_tab2_seemode.Checked = true;
             txtbox_tab2_booknum.ReadOnly = true;
             string insertQuery_loadBook = "SELECT * FROM library_project.book;";
             connection.Open();
@@ -994,6 +995,7 @@ namespace FINAL_project_LibraryProgram_1234
         // <탭 3에서, 조회/재조회 버튼 클릭시>
         private void btn_tab3_loadmem_Click(object sender, EventArgs e)
         {
+            rdobtn_tab3_seemode.Checked = true;
             string insertQuery_loadMember = "SELECT 회원번호, 이름, 아이디, 성별, 주소, 연락처, 생년월일, 이메일, 가입일, 대출권수, 회원상태 FROM library_project.member;";
             connection.Open();
             MySqlCommand command = new MySqlCommand(insertQuery_loadMember, connection);
@@ -1383,6 +1385,9 @@ namespace FINAL_project_LibraryProgram_1234
         // <탭 4에서, 조회 / 재조회 버튼 클릭시>
         private void btn_tab4_load_Click(object sender, EventArgs e)
         {
+            rdobtn_tab4_seeNotice.Checked = true;
+            rdobtn_tab4_seeFree.Checked = true;
+
             string loadfree_insertQuery = "SELECT * FROM library_project.board_free;";
             connection.Open();
             MySqlCommand loadfree_command = new MySqlCommand(loadfree_insertQuery, connection);
@@ -1836,6 +1841,8 @@ namespace FINAL_project_LibraryProgram_1234
         // <탭 5에서, 문의내역 불러오기 버튼 클릭 시>
         private void btn_tab5_load_Click(object sender, EventArgs e)
         {
+            rdobtn_tab5_see.Checked = true;
+
             string loadqna_insertQuery = "SELECT * FROM library_project.board_qna;";
             connection.Open();
             MySqlCommand loadqna_command = new MySqlCommand(loadqna_insertQuery, connection);
