@@ -54,6 +54,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.label1 = new System.Windows.Forms.Label();
             this.data_free = new System.Windows.Forms.DataGridView();
             this.btn_main_click = new System.Windows.Forms.Button();
+            this.btn_load = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picture_support)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_logout)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -107,9 +108,9 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.data_notice);
-            this.groupBox2.Location = new System.Drawing.Point(12, 71);
+            this.groupBox2.Location = new System.Drawing.Point(12, 70);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(778, 245);
+            this.groupBox2.Size = new System.Drawing.Size(778, 204);
             this.groupBox2.TabIndex = 39;
             this.groupBox2.TabStop = false;
             // 
@@ -119,7 +120,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.txtbox_notice_body.Multiline = true;
             this.txtbox_notice_body.Name = "txtbox_notice_body";
             this.txtbox_notice_body.ReadOnly = true;
-            this.txtbox_notice_body.Size = new System.Drawing.Size(278, 189);
+            this.txtbox_notice_body.Size = new System.Drawing.Size(278, 143);
             this.txtbox_notice_body.TabIndex = 45;
             // 
             // label4
@@ -171,7 +172,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.data_notice.ReadOnly = true;
             this.data_notice.RowHeadersWidth = 51;
             this.data_notice.RowTemplate.Height = 25;
-            this.data_notice.Size = new System.Drawing.Size(445, 217);
+            this.data_notice.Size = new System.Drawing.Size(445, 171);
             this.data_notice.TabIndex = 40;
             this.data_notice.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_notice_CellClick);
             // 
@@ -188,7 +189,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.data_free);
-            this.groupBox1.Location = new System.Drawing.Point(12, 322);
+            this.groupBox1.Location = new System.Drawing.Point(12, 282);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(779, 245);
             this.groupBox1.TabIndex = 42;
@@ -299,7 +300,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
             this.label1.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(12, 0);
+            this.label1.Location = new System.Drawing.Point(12, -3);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(218, 23);
@@ -333,12 +334,23 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_main_click.UseVisualStyleBackColor = true;
             this.btn_main_click.Click += new System.EventHandler(this.btn_main_click_Click);
             // 
+            // btn_load
+            // 
+            this.btn_load.Location = new System.Drawing.Point(12, 532);
+            this.btn_load.Name = "btn_load";
+            this.btn_load.Size = new System.Drawing.Size(778, 35);
+            this.btn_load.TabIndex = 52;
+            this.btn_load.Text = "재조회";
+            this.btn_load.UseVisualStyleBackColor = true;
+            this.btn_load.Click += new System.EventHandler(this.btn_load_Click);
+            // 
             // Normal_Board
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(802, 579);
+            this.Controls.Add(this.btn_load);
             this.Controls.Add(this.btn_main_click);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
@@ -393,5 +405,6 @@ namespace FINAL_project_LibraryProgram_1234
         private System.Windows.Forms.RadioButton rdobtn_free_new;
         private System.Windows.Forms.RadioButton rdobtn_free_readonly;
         private System.Windows.Forms.Button btn_main_click;
+        private System.Windows.Forms.Button btn_load;
     }
 }

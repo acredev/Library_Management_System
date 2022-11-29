@@ -136,16 +136,83 @@ namespace FINAL_project_LibraryProgram_1234
         {
             if (rdobtn_free_readonly.Checked == true)
             {
-
+                MessageBox.Show("신규 작성 모드에서만 게시글 작성이 가능합니다. 모드를 변경 후 진행 바랍니다.");
             }
             else if (rdobtn_free_new.Checked == true)
             {
+                string insertQuery = "INSERT INTO library_project.board_free (작성자, 회원번호, 제목, 내용) VALUES ('" + Normal.static_memname + "', '" + Normal.static_memnum + "', '" + txtbox_free_title.Text + "', '" + txtbox_free_body.Text + "');";
+                connection.Open();
+                MySqlCommand command = new MySqlCommand(insertQuery, connection);
 
+                try
+                {
+                    if (command.ExecuteNonQuery() != 0)
+                    {
+                        MessageBox.Show("신규등록 요청하신 공지사항 제목 : " + txtbox_free_title.Text + " 게시글이 데이터베이스에 등록되었습니다. 조회 버튼을 눌러, 게시판 목록을 다시 재 조회 바랍니다.");
+
+                        // 텍스트박스 화면 초기화
+                        txtbox_free_body.Text = "";
+                        txtbox_free_title.Text = "";
+                        txtbox_free_who.Text = "";
+                        txtbox_notice_body.Text = "";
+                        txtbox_notice_title.Text = "";
+
+                        // 데이터 조회 화면 초기화
+                        data_notice.DataSource = "";
+                        data_free.DataSource = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("알 수 없는 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : ", "게시글 등록 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "게시글 등록 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                connection.Close();
             }
             else
             {
                 MessageBox.Show("글 모드를 선택 후 진행 바랍니다.");
             }
+        }
+
+        private void btn_load_Click(object sender, EventArgs e)
+        {
+            string insertQuery_loadNotice = "SELECT 제목, 내용 FROM library_project.board_notice;";
+            connection.Open();
+            MySqlCommand command = new MySqlCommand(insertQuery_loadNotice, connection);
+
+            try
+            {
+                MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                DataTable load_data_notice = new DataTable();
+                adapter.Fill(load_data_notice);
+                data_notice.DataSource = load_data_notice;
+
+                string insertQuery_loadFree = "SELECT 작성자, 제목, 내용 FROM library_project.board_free";
+                MySqlCommand command2 = new MySqlCommand(insertQuery_loadFree, connection);
+                MySqlDataAdapter adapter2 = new MySqlDataAdapter(command2);
+                DataTable load_data_free = new DataTable();
+                adapter2.Fill(load_data_free);
+                data_free.DataSource = load_data_free;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "조회 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+
+            // 텍스트박스 화면 초기화
+            txtbox_free_body.Text = "";
+            txtbox_free_title.Text = "";
+            txtbox_free_who.Text = "";
+            txtbox_notice_body.Text = "";
+            txtbox_notice_title.Text = "";
+
+            // 라디오 버튼 다시 열람모드로 변경
+            rdobtn_free_readonly.Checked = true;
         }
     }
 }

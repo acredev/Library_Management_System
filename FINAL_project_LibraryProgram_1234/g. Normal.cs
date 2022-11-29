@@ -24,6 +24,7 @@ namespace FINAL_project_LibraryProgram_1234
         public static string static_memid = string.Empty;
         public static string static_memstatus = string.Empty;
         public static string static_memnum = string.Empty;
+        public static string static_memname = string.Empty;
 
         public Normal()
         {          
@@ -65,6 +66,7 @@ namespace FINAL_project_LibraryProgram_1234
                 static_memid = Label_id.Text;
                 static_memnum = label_num.Text;
                 static_memstatus = label_loan.Text;
+                static_memname = label_name.Text;
             }
             catch (Exception ex)
             {
