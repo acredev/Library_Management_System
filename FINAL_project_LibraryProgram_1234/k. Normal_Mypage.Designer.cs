@@ -68,27 +68,27 @@ namespace FINAL_project_LibraryProgram_1234
             this.label1 = new System.Windows.Forms.Label();
             this.txtbox_memnum = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label_my = new System.Windows.Forms.Label();
             this.btn_main = new System.Windows.Forms.Button();
             this.maskedtxtbox_birth = new System.Windows.Forms.MaskedTextBox();
             this.maskedtxtbox_tel = new System.Windows.Forms.MaskedTextBox();
             this.combobox_gender = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.label_noModify = new System.Windows.Forms.Label();
+            this.label_canModify = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label20 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_check_tel = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label22 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btn_checknum_tel = new System.Windows.Forms.Button();
+            this.label_istelok = new System.Windows.Forms.Label();
+            this.btn_check_email = new System.Windows.Forms.Button();
+            this.btn_checknum_email = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
+            this.label_isemailok = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picture_support)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_logout)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -143,7 +143,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox2.Controls.Add(this.btn_modifymeminfo);
             this.groupBox2.Controls.Add(this.groupBox1);
             this.groupBox2.Controls.Add(this.groupBox3);
-            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.label_my);
             this.groupBox2.Location = new System.Drawing.Point(12, 71);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(779, 496);
@@ -480,23 +480,23 @@ namespace FINAL_project_LibraryProgram_1234
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 69);
+            this.label3.Location = new System.Drawing.Point(15, 69);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 15);
             this.label3.TabIndex = 44;
             this.label3.Text = "회원번호";
             // 
-            // label2
+            // label_my
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(12, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 19);
-            this.label2.TabIndex = 41;
-            this.label2.Text = "내 정보";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_my.AutoSize = true;
+            this.label_my.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_my.Location = new System.Drawing.Point(12, 0);
+            this.label_my.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_my.Name = "label_my";
+            this.label_my.Size = new System.Drawing.Size(58, 19);
+            this.label_my.TabIndex = 41;
+            this.label_my.Text = "내 정보";
+            this.label_my.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_main
             // 
@@ -545,7 +545,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox4.BackColor = System.Drawing.Color.Transparent;
             this.groupBox4.Controls.Add(this.label20);
             this.groupBox4.Controls.Add(this.linkLabel1);
-            this.groupBox4.Controls.Add(this.label18);
+            this.groupBox4.Controls.Add(this.label_noModify);
             this.groupBox4.Controls.Add(this.txtbox_memnum);
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.label4);
@@ -567,17 +567,17 @@ namespace FINAL_project_LibraryProgram_1234
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox5.Controls.Add(this.label24);
-            this.groupBox5.Controls.Add(this.button4);
+            this.groupBox5.Controls.Add(this.label_isemailok);
+            this.groupBox5.Controls.Add(this.btn_checknum_email);
             this.groupBox5.Controls.Add(this.textBox2);
             this.groupBox5.Controls.Add(this.label23);
-            this.groupBox5.Controls.Add(this.button3);
-            this.groupBox5.Controls.Add(this.label22);
-            this.groupBox5.Controls.Add(this.button2);
+            this.groupBox5.Controls.Add(this.btn_check_email);
+            this.groupBox5.Controls.Add(this.label_istelok);
+            this.groupBox5.Controls.Add(this.btn_checknum_tel);
             this.groupBox5.Controls.Add(this.textBox1);
             this.groupBox5.Controls.Add(this.label21);
-            this.groupBox5.Controls.Add(this.button1);
-            this.groupBox5.Controls.Add(this.label19);
+            this.groupBox5.Controls.Add(this.btn_check_tel);
+            this.groupBox5.Controls.Add(this.label_canModify);
             this.groupBox5.Controls.Add(this.txtbox_pwdcheck);
             this.groupBox5.Controls.Add(this.maskedtxtbox_tel);
             this.groupBox5.Controls.Add(this.combobox_gender);
@@ -600,31 +600,31 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox5.TabIndex = 73;
             this.groupBox5.TabStop = false;
             // 
-            // label18
+            // label_noModify
             // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
-            this.label18.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label18.Location = new System.Drawing.Point(5, 0);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(69, 19);
-            this.label18.TabIndex = 74;
-            this.label18.Text = "변경불가";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_noModify.AutoSize = true;
+            this.label_noModify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
+            this.label_noModify.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_noModify.Location = new System.Drawing.Point(5, 0);
+            this.label_noModify.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_noModify.Name = "label_noModify";
+            this.label_noModify.Size = new System.Drawing.Size(69, 19);
+            this.label_noModify.TabIndex = 74;
+            this.label_noModify.Text = "변경불가";
+            this.label_noModify.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label19
+            // label_canModify
             // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
-            this.label19.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label19.Location = new System.Drawing.Point(5, -1);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(69, 19);
-            this.label19.TabIndex = 75;
-            this.label19.Text = "변경가능";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_canModify.AutoSize = true;
+            this.label_canModify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
+            this.label_canModify.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_canModify.Location = new System.Drawing.Point(5, -1);
+            this.label_canModify.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_canModify.Name = "label_canModify";
+            this.label_canModify.Size = new System.Drawing.Size(69, 19);
+            this.label_canModify.TabIndex = 75;
+            this.label_canModify.Text = "변경가능";
+            this.label_canModify.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel1
             // 
@@ -640,20 +640,21 @@ namespace FINAL_project_LibraryProgram_1234
             // label20
             // 
             this.label20.AutoSize = true;
+            this.label20.ForeColor = System.Drawing.Color.DarkRed;
             this.label20.Location = new System.Drawing.Point(15, 211);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(195, 30);
             this.label20.TabIndex = 68;
             this.label20.Text = "※ 도서관 시스템 이용을 위해\r\n    상기 정보는 변경 불가능합니다.";
             // 
-            // button1
+            // btn_check_tel
             // 
-            this.button1.Location = new System.Drawing.Point(438, 23);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 79;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_check_tel.Location = new System.Drawing.Point(438, 23);
+            this.btn_check_tel.Name = "btn_check_tel";
+            this.btn_check_tel.Size = new System.Drawing.Size(75, 23);
+            this.btn_check_tel.TabIndex = 79;
+            this.btn_check_tel.Text = "본인인증";
+            this.btn_check_tel.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -674,43 +675,43 @@ namespace FINAL_project_LibraryProgram_1234
             this.label21.Text = "연락처\r\n인증번호";
             this.label21.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // button2
+            // btn_checknum_tel
             // 
-            this.button2.Location = new System.Drawing.Point(438, 55);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 82;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_checknum_tel.Location = new System.Drawing.Point(438, 55);
+            this.btn_checknum_tel.Name = "btn_checknum_tel";
+            this.btn_checknum_tel.Size = new System.Drawing.Size(75, 23);
+            this.btn_checknum_tel.TabIndex = 82;
+            this.btn_checknum_tel.Text = "인증확인";
+            this.btn_checknum_tel.UseVisualStyleBackColor = true;
             // 
-            // label22
+            // label_istelok
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("나눔고딕", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label22.Location = new System.Drawing.Point(320, 81);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(103, 13);
-            this.label22.TabIndex = 83;
-            this.label22.Text = "연락처 인증완료 여부";
-            this.label22.Visible = false;
+            this.label_istelok.AutoSize = true;
+            this.label_istelok.Font = new System.Drawing.Font("나눔고딕", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_istelok.Location = new System.Drawing.Point(320, 81);
+            this.label_istelok.Name = "label_istelok";
+            this.label_istelok.Size = new System.Drawing.Size(103, 13);
+            this.label_istelok.TabIndex = 83;
+            this.label_istelok.Text = "연락처 인증완료 여부";
+            this.label_istelok.Visible = false;
             // 
-            // button3
+            // btn_check_email
             // 
-            this.button3.Location = new System.Drawing.Point(438, 97);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 84;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_check_email.Location = new System.Drawing.Point(438, 97);
+            this.btn_check_email.Name = "btn_check_email";
+            this.btn_check_email.Size = new System.Drawing.Size(75, 23);
+            this.btn_check_email.TabIndex = 84;
+            this.btn_check_email.Text = "본인인증";
+            this.btn_check_email.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btn_checknum_email
             // 
-            this.button4.Location = new System.Drawing.Point(438, 159);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 87;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_checknum_email.Location = new System.Drawing.Point(438, 159);
+            this.btn_checknum_email.Name = "btn_checknum_email";
+            this.btn_checknum_email.Size = new System.Drawing.Size(75, 23);
+            this.btn_checknum_email.TabIndex = 87;
+            this.btn_checknum_email.Text = "인증확인";
+            this.btn_checknum_email.UseVisualStyleBackColor = true;
             // 
             // textBox2
             // 
@@ -731,16 +732,16 @@ namespace FINAL_project_LibraryProgram_1234
             this.label23.Text = "이메일\r\n인증번호";
             this.label23.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label24
+            // label_isemailok
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("나눔고딕", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label24.Location = new System.Drawing.Point(320, 185);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(103, 13);
-            this.label24.TabIndex = 88;
-            this.label24.Text = "이메일 인증완료 여부";
-            this.label24.Visible = false;
+            this.label_isemailok.AutoSize = true;
+            this.label_isemailok.Font = new System.Drawing.Font("나눔고딕", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_isemailok.Location = new System.Drawing.Point(320, 185);
+            this.label_isemailok.Name = "label_isemailok";
+            this.label_isemailok.Size = new System.Drawing.Size(103, 13);
+            this.label_isemailok.TabIndex = 88;
+            this.label_isemailok.Text = "이메일 인증완료 여부";
+            this.label_isemailok.Visible = false;
             // 
             // Normal_Mypage
             // 
@@ -783,7 +784,7 @@ namespace FINAL_project_LibraryProgram_1234
         private System.Windows.Forms.PictureBox picture_logout;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_my;
         private System.Windows.Forms.TextBox txtbox_address;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtbox_pwd;
@@ -823,20 +824,20 @@ namespace FINAL_project_LibraryProgram_1234
         private System.Windows.Forms.MaskedTextBox maskedtxtbox_tel;
         private System.Windows.Forms.ComboBox combobox_gender;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label_isemailok;
+        private System.Windows.Forms.Button btn_checknum_email;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_check_email;
+        private System.Windows.Forms.Label label_istelok;
+        private System.Windows.Forms.Button btn_checknum_tel;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button btn_check_tel;
+        private System.Windows.Forms.Label label_canModify;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label_noModify;
     }
 }
