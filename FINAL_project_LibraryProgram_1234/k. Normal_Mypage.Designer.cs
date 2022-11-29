@@ -73,11 +73,29 @@ namespace FINAL_project_LibraryProgram_1234
             this.maskedtxtbox_birth = new System.Windows.Forms.MaskedTextBox();
             this.maskedtxtbox_tel = new System.Windows.Forms.MaskedTextBox();
             this.combobox_gender = new System.Windows.Forms.ComboBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label22 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picture_support)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_logout)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // picture_support
@@ -118,39 +136,13 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.combobox_gender);
-            this.groupBox2.Controls.Add(this.maskedtxtbox_tel);
-            this.groupBox2.Controls.Add(this.maskedtxtbox_birth);
-            this.groupBox2.Controls.Add(this.chkbox_seepwd);
-            this.groupBox2.Controls.Add(this.label_isPwdSame);
-            this.groupBox2.Controls.Add(this.txtbox_pwdcheck);
-            this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.txtbox_status);
+            this.groupBox2.Controls.Add(this.groupBox5);
+            this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.btn_load);
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.btn_deletemem);
             this.groupBox2.Controls.Add(this.btn_modifymeminfo);
             this.groupBox2.Controls.Add(this.groupBox1);
             this.groupBox2.Controls.Add(this.groupBox3);
-            this.groupBox2.Controls.Add(this.txtbox_address);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.txtbox_pwd);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.txtbox_loanbook);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.txtbox_newdate);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.txtbox_email);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.txtbox_id);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.txtbox_name);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.txtbox_memnum);
-            this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(12, 71);
             this.groupBox2.Name = "groupBox2";
@@ -162,7 +154,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.chkbox_seepwd.AutoSize = true;
             this.chkbox_seepwd.Font = new System.Drawing.Font("나눔고딕", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.chkbox_seepwd.Location = new System.Drawing.Point(218, 352);
+            this.chkbox_seepwd.Location = new System.Drawing.Point(215, 78);
             this.chkbox_seepwd.Name = "chkbox_seepwd";
             this.chkbox_seepwd.Size = new System.Drawing.Size(46, 17);
             this.chkbox_seepwd.TabIndex = 76;
@@ -174,7 +166,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.label_isPwdSame.AutoSize = true;
             this.label_isPwdSame.Font = new System.Drawing.Font("나눔고딕", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_isPwdSame.Location = new System.Drawing.Point(70, 353);
+            this.label_isPwdSame.Location = new System.Drawing.Point(67, 79);
             this.label_isPwdSame.Name = "label_isPwdSame";
             this.label_isPwdSame.Size = new System.Drawing.Size(90, 13);
             this.label_isPwdSame.TabIndex = 75;
@@ -184,7 +176,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // txtbox_pwdcheck
             // 
-            this.txtbox_pwdcheck.Location = new System.Drawing.Point(71, 330);
+            this.txtbox_pwdcheck.Location = new System.Drawing.Point(68, 56);
             this.txtbox_pwdcheck.MaxLength = 20;
             this.txtbox_pwdcheck.Name = "txtbox_pwdcheck";
             this.txtbox_pwdcheck.ReadOnly = true;
@@ -196,7 +188,7 @@ namespace FINAL_project_LibraryProgram_1234
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(15, 327);
+            this.label17.Location = new System.Drawing.Point(12, 53);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(55, 30);
             this.label17.TabIndex = 73;
@@ -205,17 +197,17 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // txtbox_status
             // 
-            this.txtbox_status.Location = new System.Drawing.Point(567, 291);
+            this.txtbox_status.Location = new System.Drawing.Point(71, 128);
             this.txtbox_status.MaxLength = 30;
             this.txtbox_status.Name = "txtbox_status";
             this.txtbox_status.ReadOnly = true;
-            this.txtbox_status.Size = new System.Drawing.Size(196, 22);
+            this.txtbox_status.Size = new System.Drawing.Size(120, 22);
             this.txtbox_status.TabIndex = 72;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(511, 294);
+            this.label16.Location = new System.Drawing.Point(15, 131);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(55, 15);
             this.label16.TabIndex = 71;
@@ -224,7 +216,7 @@ namespace FINAL_project_LibraryProgram_1234
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(511, 237);
+            this.label15.Location = new System.Drawing.Point(12, 101);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(55, 15);
             this.label15.TabIndex = 69;
@@ -256,9 +248,9 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Location = new System.Drawing.Point(16, 22);
+            this.groupBox1.Location = new System.Drawing.Point(16, 20);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(747, 130);
+            this.groupBox1.Size = new System.Drawing.Size(747, 106);
             this.groupBox1.TabIndex = 66;
             this.groupBox1.TabStop = false;
             // 
@@ -267,7 +259,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label14.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label14.Location = new System.Drawing.Point(343, 24);
+            this.label14.Location = new System.Drawing.Point(343, 10);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(57, 19);
             this.label14.TabIndex = 67;
@@ -276,28 +268,28 @@ namespace FINAL_project_LibraryProgram_1234
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(215, 60);
+            this.label13.Location = new System.Drawing.Point(215, 36);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(335, 45);
+            this.label13.Size = new System.Drawing.Size(335, 60);
             this.label13.TabIndex = 66;
             this.label13.Text = "1. 회원 탈퇴 / 회원정보 변경 후 복구가 불가능합니다.\r\n2. 대출한 도서가 남아있을 경우, 탈퇴 신청이 불가능 합니다.\r\n3. 회원번호와 아" +
-    "이디는 변경 불가능 합니다.";
+    "이디는 변경 불가능 합니다.\r\n4. 연락처와 이메일 주소는 본인인증 후 변경 가능합니다.";
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.rdobtn_modify);
             this.groupBox3.Controls.Add(this.rdobtn_readonly);
-            this.groupBox3.Location = new System.Drawing.Point(16, 154);
+            this.groupBox3.Location = new System.Drawing.Point(16, 123);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(747, 70);
+            this.groupBox3.Size = new System.Drawing.Size(747, 40);
             this.groupBox3.TabIndex = 65;
             this.groupBox3.TabStop = false;
             // 
             // rdobtn_modify
             // 
             this.rdobtn_modify.AutoSize = true;
-            this.rdobtn_modify.Location = new System.Drawing.Point(376, 30);
+            this.rdobtn_modify.Location = new System.Drawing.Point(376, 13);
             this.rdobtn_modify.Name = "rdobtn_modify";
             this.rdobtn_modify.Size = new System.Drawing.Size(101, 19);
             this.rdobtn_modify.TabIndex = 1;
@@ -309,7 +301,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.rdobtn_readonly.AutoSize = true;
             this.rdobtn_readonly.Checked = true;
-            this.rdobtn_readonly.Location = new System.Drawing.Point(274, 30);
+            this.rdobtn_readonly.Location = new System.Drawing.Point(274, 13);
             this.rdobtn_readonly.Name = "rdobtn_readonly";
             this.rdobtn_readonly.Size = new System.Drawing.Size(73, 19);
             this.rdobtn_readonly.TabIndex = 0;
@@ -330,18 +322,18 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // txtbox_address
             // 
-            this.txtbox_address.Location = new System.Drawing.Point(315, 347);
+            this.txtbox_address.Location = new System.Drawing.Point(68, 160);
             this.txtbox_address.MaxLength = 50;
             this.txtbox_address.Multiline = true;
             this.txtbox_address.Name = "txtbox_address";
             this.txtbox_address.ReadOnly = true;
-            this.txtbox_address.Size = new System.Drawing.Size(448, 63);
+            this.txtbox_address.Size = new System.Drawing.Size(187, 80);
             this.txtbox_address.TabIndex = 63;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(283, 350);
+            this.label12.Location = new System.Drawing.Point(36, 160);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(31, 15);
             this.label12.TabIndex = 62;
@@ -349,7 +341,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // txtbox_pwd
             // 
-            this.txtbox_pwd.Location = new System.Drawing.Point(71, 298);
+            this.txtbox_pwd.Location = new System.Drawing.Point(68, 24);
             this.txtbox_pwd.MaxLength = 20;
             this.txtbox_pwd.Name = "txtbox_pwd";
             this.txtbox_pwd.ReadOnly = true;
@@ -361,7 +353,7 @@ namespace FINAL_project_LibraryProgram_1234
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(15, 301);
+            this.label11.Location = new System.Drawing.Point(12, 27);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(55, 15);
             this.label11.TabIndex = 60;
@@ -369,17 +361,17 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // txtbox_loanbook
             // 
-            this.txtbox_loanbook.Location = new System.Drawing.Point(315, 319);
+            this.txtbox_loanbook.Location = new System.Drawing.Point(71, 158);
             this.txtbox_loanbook.MaxLength = 10;
             this.txtbox_loanbook.Name = "txtbox_loanbook";
             this.txtbox_loanbook.ReadOnly = true;
-            this.txtbox_loanbook.Size = new System.Drawing.Size(196, 22);
+            this.txtbox_loanbook.Size = new System.Drawing.Size(120, 22);
             this.txtbox_loanbook.TabIndex = 59;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(259, 322);
+            this.label10.Location = new System.Drawing.Point(15, 161);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(55, 15);
             this.label10.TabIndex = 58;
@@ -387,17 +379,17 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // txtbox_newdate
             // 
-            this.txtbox_newdate.Location = new System.Drawing.Point(567, 319);
+            this.txtbox_newdate.Location = new System.Drawing.Point(71, 186);
             this.txtbox_newdate.MaxLength = 10;
             this.txtbox_newdate.Name = "txtbox_newdate";
             this.txtbox_newdate.ReadOnly = true;
-            this.txtbox_newdate.Size = new System.Drawing.Size(196, 22);
+            this.txtbox_newdate.Size = new System.Drawing.Size(120, 22);
             this.txtbox_newdate.TabIndex = 57;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(523, 322);
+            this.label9.Location = new System.Drawing.Point(22, 189);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(43, 15);
             this.label9.TabIndex = 56;
@@ -405,17 +397,18 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // txtbox_email
             // 
-            this.txtbox_email.Location = new System.Drawing.Point(567, 262);
+            this.txtbox_email.Location = new System.Drawing.Point(320, 98);
             this.txtbox_email.MaxLength = 30;
+            this.txtbox_email.Multiline = true;
             this.txtbox_email.Name = "txtbox_email";
             this.txtbox_email.ReadOnly = true;
-            this.txtbox_email.Size = new System.Drawing.Size(196, 22);
+            this.txtbox_email.Size = new System.Drawing.Size(117, 56);
             this.txtbox_email.TabIndex = 55;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(523, 265);
+            this.label8.Location = new System.Drawing.Point(277, 101);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(43, 15);
             this.label8.TabIndex = 54;
@@ -424,7 +417,7 @@ namespace FINAL_project_LibraryProgram_1234
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(271, 265);
+            this.label7.Location = new System.Drawing.Point(277, 27);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(43, 15);
             this.label7.TabIndex = 52;
@@ -433,7 +426,7 @@ namespace FINAL_project_LibraryProgram_1234
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(283, 294);
+            this.label6.Location = new System.Drawing.Point(37, 130);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 15);
             this.label6.TabIndex = 50;
@@ -441,17 +434,17 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // txtbox_id
             // 
-            this.txtbox_id.Location = new System.Drawing.Point(71, 266);
+            this.txtbox_id.Location = new System.Drawing.Point(71, 99);
             this.txtbox_id.MaxLength = 10;
             this.txtbox_id.Name = "txtbox_id";
             this.txtbox_id.ReadOnly = true;
-            this.txtbox_id.Size = new System.Drawing.Size(187, 22);
+            this.txtbox_id.Size = new System.Drawing.Size(120, 22);
             this.txtbox_id.TabIndex = 49;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 269);
+            this.label4.Location = new System.Drawing.Point(27, 102);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 15);
             this.label4.TabIndex = 48;
@@ -459,17 +452,17 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // txtbox_name
             // 
-            this.txtbox_name.Location = new System.Drawing.Point(315, 234);
+            this.txtbox_name.Location = new System.Drawing.Point(70, 25);
             this.txtbox_name.MaxLength = 5;
             this.txtbox_name.Name = "txtbox_name";
             this.txtbox_name.ReadOnly = true;
-            this.txtbox_name.Size = new System.Drawing.Size(196, 22);
+            this.txtbox_name.Size = new System.Drawing.Size(121, 22);
             this.txtbox_name.TabIndex = 47;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(283, 237);
+            this.label1.Location = new System.Drawing.Point(39, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 15);
             this.label1.TabIndex = 46;
@@ -477,17 +470,17 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // txtbox_memnum
             // 
-            this.txtbox_memnum.Location = new System.Drawing.Point(71, 234);
+            this.txtbox_memnum.Location = new System.Drawing.Point(71, 66);
             this.txtbox_memnum.MaxLength = 12;
             this.txtbox_memnum.Name = "txtbox_memnum";
             this.txtbox_memnum.ReadOnly = true;
-            this.txtbox_memnum.Size = new System.Drawing.Size(187, 22);
+            this.txtbox_memnum.Size = new System.Drawing.Size(120, 22);
             this.txtbox_memnum.TabIndex = 45;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 237);
+            this.label3.Location = new System.Drawing.Point(10, 69);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 15);
             this.label3.TabIndex = 44;
@@ -518,20 +511,20 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // maskedtxtbox_birth
             // 
-            this.maskedtxtbox_birth.Location = new System.Drawing.Point(567, 234);
+            this.maskedtxtbox_birth.Location = new System.Drawing.Point(68, 98);
             this.maskedtxtbox_birth.Mask = "0000-00-00";
             this.maskedtxtbox_birth.Name = "maskedtxtbox_birth";
             this.maskedtxtbox_birth.ReadOnly = true;
-            this.maskedtxtbox_birth.Size = new System.Drawing.Size(196, 22);
+            this.maskedtxtbox_birth.Size = new System.Drawing.Size(187, 22);
             this.maskedtxtbox_birth.TabIndex = 2;
             // 
             // maskedtxtbox_tel
             // 
-            this.maskedtxtbox_tel.Location = new System.Drawing.Point(315, 262);
+            this.maskedtxtbox_tel.Location = new System.Drawing.Point(320, 24);
             this.maskedtxtbox_tel.Mask = "000-0000-0000";
             this.maskedtxtbox_tel.Name = "maskedtxtbox_tel";
             this.maskedtxtbox_tel.ReadOnly = true;
-            this.maskedtxtbox_tel.Size = new System.Drawing.Size(196, 22);
+            this.maskedtxtbox_tel.Size = new System.Drawing.Size(117, 22);
             this.maskedtxtbox_tel.TabIndex = 77;
             // 
             // combobox_gender
@@ -542,10 +535,212 @@ namespace FINAL_project_LibraryProgram_1234
             this.combobox_gender.Items.AddRange(new object[] {
             "남자",
             "여자"});
-            this.combobox_gender.Location = new System.Drawing.Point(315, 291);
+            this.combobox_gender.Location = new System.Drawing.Point(68, 127);
             this.combobox_gender.Name = "combobox_gender";
-            this.combobox_gender.Size = new System.Drawing.Size(196, 23);
+            this.combobox_gender.Size = new System.Drawing.Size(187, 23);
             this.combobox_gender.TabIndex = 78;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox4.Controls.Add(this.label20);
+            this.groupBox4.Controls.Add(this.linkLabel1);
+            this.groupBox4.Controls.Add(this.label18);
+            this.groupBox4.Controls.Add(this.txtbox_memnum);
+            this.groupBox4.Controls.Add(this.label3);
+            this.groupBox4.Controls.Add(this.label4);
+            this.groupBox4.Controls.Add(this.txtbox_id);
+            this.groupBox4.Controls.Add(this.txtbox_status);
+            this.groupBox4.Controls.Add(this.label16);
+            this.groupBox4.Controls.Add(this.txtbox_newdate);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.label10);
+            this.groupBox4.Controls.Add(this.txtbox_loanbook);
+            this.groupBox4.Controls.Add(this.label1);
+            this.groupBox4.Controls.Add(this.txtbox_name);
+            this.groupBox4.Location = new System.Drawing.Point(16, 162);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(223, 248);
+            this.groupBox4.TabIndex = 68;
+            this.groupBox4.TabStop = false;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox5.Controls.Add(this.label24);
+            this.groupBox5.Controls.Add(this.button4);
+            this.groupBox5.Controls.Add(this.textBox2);
+            this.groupBox5.Controls.Add(this.label23);
+            this.groupBox5.Controls.Add(this.button3);
+            this.groupBox5.Controls.Add(this.label22);
+            this.groupBox5.Controls.Add(this.button2);
+            this.groupBox5.Controls.Add(this.textBox1);
+            this.groupBox5.Controls.Add(this.label21);
+            this.groupBox5.Controls.Add(this.button1);
+            this.groupBox5.Controls.Add(this.label19);
+            this.groupBox5.Controls.Add(this.txtbox_pwdcheck);
+            this.groupBox5.Controls.Add(this.maskedtxtbox_tel);
+            this.groupBox5.Controls.Add(this.combobox_gender);
+            this.groupBox5.Controls.Add(this.label11);
+            this.groupBox5.Controls.Add(this.txtbox_pwd);
+            this.groupBox5.Controls.Add(this.maskedtxtbox_birth);
+            this.groupBox5.Controls.Add(this.txtbox_email);
+            this.groupBox5.Controls.Add(this.label17);
+            this.groupBox5.Controls.Add(this.label8);
+            this.groupBox5.Controls.Add(this.chkbox_seepwd);
+            this.groupBox5.Controls.Add(this.txtbox_address);
+            this.groupBox5.Controls.Add(this.label15);
+            this.groupBox5.Controls.Add(this.label7);
+            this.groupBox5.Controls.Add(this.label12);
+            this.groupBox5.Controls.Add(this.label_isPwdSame);
+            this.groupBox5.Controls.Add(this.label6);
+            this.groupBox5.Location = new System.Drawing.Point(245, 163);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(518, 247);
+            this.groupBox5.TabIndex = 73;
+            this.groupBox5.TabStop = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
+            this.label18.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label18.Location = new System.Drawing.Point(5, 0);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(69, 19);
+            this.label18.TabIndex = 74;
+            this.label18.Text = "변경불가";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
+            this.label19.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label19.Location = new System.Drawing.Point(5, -1);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(69, 19);
+            this.label19.TabIndex = 75;
+            this.label19.Text = "변경가능";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("나눔고딕", 8F);
+            this.linkLabel1.Location = new System.Drawing.Point(105, 50);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(86, 13);
+            this.linkLabel1.TabIndex = 75;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "개명을 하셨나요?";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(15, 211);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(195, 30);
+            this.label20.TabIndex = 68;
+            this.label20.Text = "※ 도서관 시스템 이용을 위해\r\n    상기 정보는 변경 불가능합니다.";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(438, 23);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 79;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(320, 56);
+            this.textBox1.MaxLength = 30;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(117, 22);
+            this.textBox1.TabIndex = 81;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(265, 53);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(55, 30);
+            this.label21.TabIndex = 80;
+            this.label21.Text = "연락처\r\n인증번호";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(438, 55);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 82;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("나눔고딕", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label22.Location = new System.Drawing.Point(320, 81);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(103, 13);
+            this.label22.TabIndex = 83;
+            this.label22.Text = "연락처 인증완료 여부";
+            this.label22.Visible = false;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(438, 97);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 84;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(438, 159);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 87;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(320, 160);
+            this.textBox2.MaxLength = 30;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(117, 22);
+            this.textBox2.TabIndex = 86;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(265, 157);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(55, 30);
+            this.label23.TabIndex = 85;
+            this.label23.Text = "이메일\r\n인증번호";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("나눔고딕", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label24.Location = new System.Drawing.Point(320, 185);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(103, 13);
+            this.label24.TabIndex = 88;
+            this.label24.Text = "이메일 인증완료 여부";
+            this.label24.Visible = false;
             // 
             // Normal_Mypage
             // 
@@ -573,6 +768,10 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -623,5 +822,21 @@ namespace FINAL_project_LibraryProgram_1234
         private System.Windows.Forms.MaskedTextBox maskedtxtbox_birth;
         private System.Windows.Forms.MaskedTextBox maskedtxtbox_tel;
         private System.Windows.Forms.ComboBox combobox_gender;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label label18;
     }
 }

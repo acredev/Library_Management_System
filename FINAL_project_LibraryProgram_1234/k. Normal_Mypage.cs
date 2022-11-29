@@ -23,6 +23,7 @@ namespace FINAL_project_LibraryProgram_1234
             InitializeComponent();
         }
 
+        
         private void Normal_Mypage_Load(object sender, EventArgs e)
         {
             try
