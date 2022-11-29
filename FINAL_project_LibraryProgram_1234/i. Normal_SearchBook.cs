@@ -120,44 +120,44 @@ namespace FINAL_project_LibraryProgram_1234
         {
             if (combobox_search.SelectedItem.ToString() == "제목")
             {
-                txtbox_title.Visible = true;
+                txtbox_search.Visible = true;
                 combobox_searchbyloanstatus.Visible = false;
 
-                txtbox_title.Text = "";
+                txtbox_search.Text = "";
             }
             else if (combobox_search.SelectedItem.ToString() == "저자")
             {
-                txtbox_title.Visible = true;
+                txtbox_search.Visible = true;
                 combobox_searchbyloanstatus.Visible = false;
 
-                txtbox_title.Text = "";
+                txtbox_search.Text = "";
             }
             else if (combobox_search.SelectedItem.ToString() == "출판사")
             {
-                txtbox_title.Visible = true;
+                txtbox_search.Visible = true;
                 combobox_searchbyloanstatus.Visible = false;
 
-                txtbox_title.Text = "";
+                txtbox_search.Text = "";
             }
             else if (combobox_search.SelectedItem.ToString() == "대출여부")
             {
-                txtbox_title.Visible = false;
+                txtbox_search.Visible = false;
                 combobox_searchbyloanstatus.Visible = true;
 
-                txtbox_title.Text = "";
+                txtbox_search.Text = "";
             }
             else if (combobox_search.SelectedItem.ToString() == "ISBN")
             {
-                txtbox_title.Visible = true;
+                txtbox_search.Visible = true;
                 combobox_searchbyloanstatus.Visible = false;
 
-                txtbox_title.Text = "";
+                txtbox_search.Text = "";
             }
         }
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-
+          //  if (txt)
         }        
     }
 }
