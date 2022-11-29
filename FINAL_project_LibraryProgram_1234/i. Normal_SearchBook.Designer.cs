@@ -426,11 +426,11 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // data_book
             // 
-            this.data_book.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.data_book.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.data_book.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data_book.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.data_book.Location = new System.Drawing.Point(6, 22);
+            this.data_book.MultiSelect = false;
             this.data_book.Name = "data_book";
             this.data_book.ReadOnly = true;
             this.data_book.RowHeadersWidth = 51;

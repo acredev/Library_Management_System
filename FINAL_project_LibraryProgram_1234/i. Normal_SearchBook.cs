@@ -157,7 +157,77 @@ namespace FINAL_project_LibraryProgram_1234
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-          //  if (txt)
-        }        
+            if (combobox_search.Text == "")
+            {
+                MessageBox.Show("검색범주 선택 후 시도 바랍니다.");
+            }
+            else if (txtbox_search.Text == "" && combobox_search.Text == "")
+            {
+                MessageBox.Show("검색명 입력 후 시도 바랍니다.");
+            }
+            else
+            {
+                if (combobox_search.Text == "제목")
+                {
+                    string insertQuery = "SELECT 이름, ISBN, 저자, 출판일자, 출판사, 도서상태, 대출여부, 페이지수 FROM library_project.book WHERE 이름 = '" + txtbox_search.Text + "';";
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand(insertQuery, connection);
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+
+                    DataTable load_data_book = new DataTable();
+                    adapter.Fill(load_data_book);
+                    data_book.DataSource = load_data_book;
+                    connection.Close();
+                }
+                else if (combobox_search.Text == "저자")
+                {
+                    string insertQuery = "SELECT 이름, ISBN, 저자, 출판일자, 출판사, 도서상태, 대출여부, 페이지수 FROM library_project.book WHERE 저자 = '" + txtbox_search.Text + "';";
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand(insertQuery, connection);
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+
+                    DataTable load_data_book = new DataTable();
+                    adapter.Fill(load_data_book);
+                    data_book.DataSource = load_data_book;
+                    connection.Close();
+                }
+                else if (combobox_search.Text == "출판사")
+                {
+                    string insertQuery = "SELECT 이름, ISBN, 저자, 출판일자, 출판사, 도서상태, 대출여부, 페이지수 FROM library_project.book WHERE 출판사 = '" + txtbox_search.Text + "';";
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand(insertQuery, connection);
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+
+                    DataTable load_data_book = new DataTable();
+                    adapter.Fill(load_data_book);
+                    data_book.DataSource = load_data_book;
+                    connection.Close();
+                }
+                else if (combobox_search.Text == "대출여부")
+                {
+                    string insertQuery = "SELECT 이름, ISBN, 저자, 출판일자, 출판사, 도서상태, 대출여부, 페이지수 FROM library_project.book WHERE 대출여부 = '" + combobox_searchbyloanstatus.Text + "';";
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand(insertQuery, connection);
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+
+                    DataTable load_data_book = new DataTable();
+                    adapter.Fill(load_data_book);
+                    data_book.DataSource = load_data_book;
+                    connection.Close();
+                }
+                else if (combobox_search.Text == "ISBN")
+                {
+                    string insertQuery = "SELECT 이름, ISBN, 저자, 출판일자, 출판사, 도서상태, 대출여부, 페이지수 FROM library_project.book WHERE ISBN = '" + txtbox_search.Text + "';";
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand(insertQuery, connection);
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+
+                    DataTable load_data_book = new DataTable();
+                    adapter.Fill(load_data_book);
+                    data_book.DataSource = load_data_book;
+                    connection.Close();
+                }
+            }
+        } 
     }
 }

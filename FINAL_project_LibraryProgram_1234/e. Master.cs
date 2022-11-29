@@ -268,9 +268,9 @@ namespace FINAL_project_LibraryProgram_1234
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                // 예외처리는 따로 안함, catch문을 써야 cellclick시 에러가 발생하지 않음
+                MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "검색 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
