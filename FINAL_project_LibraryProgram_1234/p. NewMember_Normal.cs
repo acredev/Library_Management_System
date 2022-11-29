@@ -23,7 +23,7 @@ namespace FINAL_project_LibraryProgram_1234
         public static int emailcheck_num = randomNum.Next(10000000, 99999999);
         //전화번호 인증 난수
         public static Random randomNumTel = new Random();
-        public static int telcheck_num = randomNumTel.Next(10000000, 99999999);
+        public static int telcheck_num = randomNumTel.Next(00000001, 99999999);
 
         //회원가입 진행 상태 bool형 변수
         public static bool id_check = false;

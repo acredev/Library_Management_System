@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+using MySql.Data.MySqlClient; // MySQL 사용 참조
+using System.Net.Mail; // EMail 클라이언트 사용 참조
+using System.Net; // EMail SMTP 사용 참조
 
 namespace FINAL_project_LibraryProgram_1234
 {
@@ -127,8 +129,18 @@ namespace FINAL_project_LibraryProgram_1234
                 txtbox_loanbook.ReadOnly = true;
                 txtbox_status.ReadOnly = true;
 
+                chkbox_seepwd.Visible = false;
                 label_isPwdSame.Visible = false;
+                label_check_tel.Visible = false;
+                txtbox_check_tel.Visible = false;
+                btn_checknum_tel.Visible = false;
+                label_check_email.Visible = false;
+                txtbox_check_email.Visible = false;
+                btn_checknum_email.Visible = false;
+
                 label_isPwdSame.Text = "";
+                txtbox_pwd.Text = "";
+                txtbox_pwdcheck.Text = "";
 
                 txtbox_pwd.Text = "";
                 txtbox_pwdcheck.Text = "";
@@ -140,7 +152,7 @@ namespace FINAL_project_LibraryProgram_1234
         private void rdobtn_modify_CheckedChanged(object sender, EventArgs e)
         {
             txtbox_memnum.ReadOnly = true;
-            txtbox_name.ReadOnly = false;
+            txtbox_name.ReadOnly = true;
             txtbox_id.ReadOnly = true;
             txtbox_pwd.ReadOnly = false;
             txtbox_pwdcheck.ReadOnly = false;
@@ -153,13 +165,27 @@ namespace FINAL_project_LibraryProgram_1234
             txtbox_loanbook.ReadOnly = true;
             txtbox_status.ReadOnly = true;
 
+            chkbox_seepwd.Visible = true;
             label_isPwdSame.Visible = true;
-            label_isPwdSame.Text = "";
+            label_check_tel.Visible = true;
+            txtbox_check_tel.Visible = true;
+            btn_checknum_tel.Visible = true;
+            label_check_email.Visible = true;
+            txtbox_check_email.Visible = true;
+            btn_checknum_email.Visible = true;
 
+            label_isPwdSame.Text = "";
             txtbox_pwd.Text = "";
             txtbox_pwdcheck.Text = "";
+            txtbox_check_tel.Text = "";
+            txtbox_check_email.Text = "";
 
             chkbox_seepwd.Checked = false;
+        }
+
+        private void label_isYouChangeName_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("메인 화면의 '도서관 문의' 화면에서, 간단한 관련 정보를 남겨주세요. 변경 절차를 도서관에서 유선상 안내할 예정입니다.");
         }
 
         private void btn_load_Click(object sender, EventArgs e)
@@ -215,11 +241,6 @@ namespace FINAL_project_LibraryProgram_1234
         }
 
         private void btn_deletemem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label_isPwdSame_Click(object sender, EventArgs e)
         {
 
         }
