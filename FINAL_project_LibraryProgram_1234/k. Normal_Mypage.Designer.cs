@@ -206,6 +206,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_checknum_email.Text = "인증확인";
             this.btn_checknum_email.UseVisualStyleBackColor = true;
             this.btn_checknum_email.Visible = false;
+            this.btn_checknum_email.Click += new System.EventHandler(this.btn_checknum_email_Click);
             // 
             // txtbox_check_email
             // 
@@ -237,6 +238,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_check_email.Text = "본인인증";
             this.btn_check_email.UseVisualStyleBackColor = true;
             this.btn_check_email.Visible = false;
+            this.btn_check_email.Click += new System.EventHandler(this.btn_check_email_Click);
             // 
             // label_istelok
             // 
@@ -258,6 +260,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_checknum_tel.Text = "인증확인";
             this.btn_checknum_tel.UseVisualStyleBackColor = true;
             this.btn_checknum_tel.Visible = false;
+            this.btn_checknum_tel.Click += new System.EventHandler(this.btn_checknum_tel_Click);
             // 
             // txtbox_check_tel
             // 
@@ -289,6 +292,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_check_tel.Text = "본인인증";
             this.btn_check_tel.UseVisualStyleBackColor = true;
             this.btn_check_tel.Visible = false;
+            this.btn_check_tel.Click += new System.EventHandler(this.btn_check_tel_Click);
             // 
             // label_canModify
             // 
@@ -678,7 +682,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label14.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label14.Location = new System.Drawing.Point(343, 10);
+            this.label14.Location = new System.Drawing.Point(342, 18);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(57, 19);
             this.label14.TabIndex = 67;
@@ -687,12 +691,12 @@ namespace FINAL_project_LibraryProgram_1234
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(215, 36);
+            this.label13.Location = new System.Drawing.Point(105, 42);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(335, 60);
+            this.label13.Size = new System.Drawing.Size(599, 45);
             this.label13.TabIndex = 66;
-            this.label13.Text = "1. 회원 탈퇴 / 회원정보 변경 후 복구가 불가능합니다.\r\n2. 대출한 도서가 남아있을 경우, 탈퇴 신청이 불가능 합니다.\r\n3. 회원번호와 아" +
-    "이디는 변경 불가능 합니다.\r\n4. 연락처와 이메일 주소는 본인인증 후 변경 가능합니다.";
+            this.label13.Text = "1. 회원 탈퇴 / 회원정보 변경 후 복구가 불가능합니다.\r\n2. 대출한 도서가 남아있을 경우, 탈퇴 신청이 불가능 합니다.\r\n3. 연락처와 이메" +
+    "일 주소를 변경하지 않더라도, 회원정보 변경 시 보안을 위해 본인인증 절차를 거쳐야 합니다.";
             // 
             // groupBox3
             // 
@@ -748,7 +752,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_main.Name = "btn_main";
             this.btn_main.Size = new System.Drawing.Size(112, 59);
             this.btn_main.TabIndex = 57;
-            this.btn_main.Text = "메인화면";
+            this.btn_main.Text = "이전화면";
             this.btn_main.UseVisualStyleBackColor = true;
             this.btn_main.Click += new System.EventHandler(this.btn_main_Click);
             // 
