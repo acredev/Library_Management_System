@@ -34,25 +34,25 @@ namespace FINAL_project_LibraryProgram_1234
             this.picture_logout = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtbox_notice_body = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtbox_notice_title = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.data_notice = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtbox_free_body = new System.Windows.Forms.TextBox();
+            this.txtbox_free_who = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtbox_free_title = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.data_free = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picture_support)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_logout)).BeginInit();
@@ -60,7 +60,7 @@ namespace FINAL_project_LibraryProgram_1234
             ((System.ComponentModel.ISupportInitialize)(this.data_notice)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_free)).BeginInit();
             this.SuspendLayout();
             // 
             // picture_support
@@ -100,9 +100,9 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.txtbox_notice_body);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txtbox_notice_title);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.data_notice);
@@ -112,14 +112,14 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox2.TabIndex = 39;
             this.groupBox2.TabStop = false;
             // 
-            // textBox2
+            // txtbox_notice_body
             // 
-            this.textBox2.Location = new System.Drawing.Point(494, 50);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(278, 189);
-            this.textBox2.TabIndex = 45;
+            this.txtbox_notice_body.Location = new System.Drawing.Point(494, 50);
+            this.txtbox_notice_body.Multiline = true;
+            this.txtbox_notice_body.Name = "txtbox_notice_body";
+            this.txtbox_notice_body.ReadOnly = true;
+            this.txtbox_notice_body.Size = new System.Drawing.Size(278, 189);
+            this.txtbox_notice_body.TabIndex = 45;
             // 
             // label4
             // 
@@ -130,13 +130,13 @@ namespace FINAL_project_LibraryProgram_1234
             this.label4.TabIndex = 44;
             this.label4.Text = "내용";
             // 
-            // textBox1
+            // txtbox_notice_title
             // 
-            this.textBox1.Location = new System.Drawing.Point(494, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(278, 26);
-            this.textBox1.TabIndex = 43;
+            this.txtbox_notice_title.Location = new System.Drawing.Point(494, 22);
+            this.txtbox_notice_title.Name = "txtbox_notice_title";
+            this.txtbox_notice_title.ReadOnly = true;
+            this.txtbox_notice_title.Size = new System.Drawing.Size(278, 26);
+            this.txtbox_notice_title.TabIndex = 43;
             // 
             // label3
             // 
@@ -172,20 +172,21 @@ namespace FINAL_project_LibraryProgram_1234
             this.data_notice.RowTemplate.Height = 25;
             this.data_notice.Size = new System.Drawing.Size(445, 217);
             this.data_notice.TabIndex = 40;
+            this.data_notice.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_notice_CellClick);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.txtbox_free_body);
+            this.groupBox1.Controls.Add(this.txtbox_free_who);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtbox_free_title);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.data_free);
             this.groupBox1.Location = new System.Drawing.Point(12, 322);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(779, 245);
@@ -210,24 +211,24 @@ namespace FINAL_project_LibraryProgram_1234
             this.label8.TabIndex = 50;
             this.label8.Text = "내용";
             // 
-            // textBox5
+            // txtbox_free_body
             // 
-            this.textBox5.Location = new System.Drawing.Point(494, 123);
-            this.textBox5.MaxLength = 200;
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(278, 96);
-            this.textBox5.TabIndex = 46;
+            this.txtbox_free_body.Location = new System.Drawing.Point(494, 123);
+            this.txtbox_free_body.MaxLength = 200;
+            this.txtbox_free_body.Multiline = true;
+            this.txtbox_free_body.Name = "txtbox_free_body";
+            this.txtbox_free_body.ReadOnly = true;
+            this.txtbox_free_body.Size = new System.Drawing.Size(278, 96);
+            this.txtbox_free_body.TabIndex = 46;
             // 
-            // textBox4
+            // txtbox_free_who
             // 
-            this.textBox4.Location = new System.Drawing.Point(494, 95);
-            this.textBox4.MaxLength = 5;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(278, 26);
-            this.textBox4.TabIndex = 49;
+            this.txtbox_free_who.Location = new System.Drawing.Point(494, 95);
+            this.txtbox_free_who.MaxLength = 5;
+            this.txtbox_free_who.Name = "txtbox_free_who";
+            this.txtbox_free_who.ReadOnly = true;
+            this.txtbox_free_who.Size = new System.Drawing.Size(278, 26);
+            this.txtbox_free_who.TabIndex = 49;
             // 
             // label7
             // 
@@ -238,14 +239,14 @@ namespace FINAL_project_LibraryProgram_1234
             this.label7.TabIndex = 48;
             this.label7.Text = "작성자";
             // 
-            // textBox3
+            // txtbox_free_title
             // 
-            this.textBox3.Location = new System.Drawing.Point(494, 67);
-            this.textBox3.MaxLength = 20;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(278, 26);
-            this.textBox3.TabIndex = 47;
+            this.txtbox_free_title.Location = new System.Drawing.Point(494, 67);
+            this.txtbox_free_title.MaxLength = 20;
+            this.txtbox_free_title.Name = "txtbox_free_title";
+            this.txtbox_free_title.ReadOnly = true;
+            this.txtbox_free_title.Size = new System.Drawing.Size(278, 26);
+            this.txtbox_free_title.TabIndex = 47;
             // 
             // label6
             // 
@@ -302,19 +303,19 @@ namespace FINAL_project_LibraryProgram_1234
             this.label1.Text = "우리 도서관 자유 게시판";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridView1
+            // data_free
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 22);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(445, 217);
-            this.dataGridView1.TabIndex = 40;
+            this.data_free.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.data_free.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.data_free.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data_free.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
+            this.data_free.Location = new System.Drawing.Point(6, 22);
+            this.data_free.Name = "data_free";
+            this.data_free.ReadOnly = true;
+            this.data_free.RowHeadersWidth = 51;
+            this.data_free.RowTemplate.Height = 25;
+            this.data_free.Size = new System.Drawing.Size(445, 217);
+            this.data_free.TabIndex = 40;
             // 
             // button2
             // 
@@ -344,6 +345,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.Name = "Normal_Board";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Normal_Board";
+            this.Load += new System.EventHandler(this.Normal_Board_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picture_support)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_logout)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -353,7 +355,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_free)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -369,17 +371,17 @@ namespace FINAL_project_LibraryProgram_1234
         private System.Windows.Forms.DataGridView data_notice;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DataGridView data_free;
+        private System.Windows.Forms.TextBox txtbox_notice_body;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtbox_notice_title;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtbox_free_body;
+        private System.Windows.Forms.TextBox txtbox_free_who;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtbox_free_title;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.RadioButton radioButton2;
