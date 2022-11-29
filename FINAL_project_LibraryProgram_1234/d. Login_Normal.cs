@@ -15,6 +15,8 @@ namespace FINAL_project_LibraryProgram_1234
 {
     public partial class Login_Normal : Form
     {
+        // MySQL 연결
+        MySqlConnection connection = new MySqlConnection("Server = localhost;Database=library_project;Uid=root;Pwd=root;");
         public Login_Normal()
         {
             InitializeComponent();
@@ -31,17 +33,14 @@ namespace FINAL_project_LibraryProgram_1234
         {
             try
             {
-                MySqlConnection connection = new MySqlConnection("Server = localhost;Database=library_project;Uid=root;Pwd=root;");
-                connection.Open();
-
-                int login_status = 0;
-
                 string loginform_id = txtbox_id.Text;
                 string loginform_pwd = txtbox_pwd.Text;
 
                 string selectQuery = "SELECT * FROM library_project.member WHERE 아이디=\'" + loginform_id + "\' ";
                 MySqlCommand Selectcommand = new MySqlCommand(selectQuery, connection);
+                connection.Open();
 
+                int login_status = 0;
 
                 MySqlDataReader myAccount = Selectcommand.ExecuteReader();
 

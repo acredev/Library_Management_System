@@ -38,21 +38,21 @@ namespace FINAL_project_LibraryProgram_1234
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtbox_body = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtbox_title = new System.Windows.Forms.TextBox();
-            this.btn_submit = new System.Windows.Forms.Button();
             this.btn_reset = new System.Windows.Forms.Button();
+            this.btn_submit = new System.Windows.Forms.Button();
+            this.txtbox_title = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtbox_body = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btn_load = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.rdobtn_see = new System.Windows.Forms.RadioButton();
-            this.rdobtn_new = new System.Windows.Forms.RadioButton();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.rdobtn_new = new System.Windows.Forms.RadioButton();
+            this.rdobtn_see = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.picture_logout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_support)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.data_qna)).BeginInit();
@@ -117,6 +117,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.data_qna.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data_qna.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.data_qna.Location = new System.Drawing.Point(6, 22);
+            this.data_qna.MultiSelect = false;
             this.data_qna.Name = "data_qna";
             this.data_qna.ReadOnly = true;
             this.data_qna.RowHeadersWidth = 51;
@@ -161,43 +162,16 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox1.TabIndex = 50;
             this.groupBox1.TabStop = false;
             // 
-            // label13
+            // btn_reset
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(12, 49);
-            this.label13.Name = "label13";
-            this.label13.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label13.Size = new System.Drawing.Size(31, 15);
-            this.label13.TabIndex = 58;
-            this.label13.Text = "내용";
-            // 
-            // txtbox_body
-            // 
-            this.txtbox_body.Location = new System.Drawing.Point(43, 46);
-            this.txtbox_body.MaxLength = 200;
-            this.txtbox_body.Multiline = true;
-            this.txtbox_body.Name = "txtbox_body";
-            this.txtbox_body.ReadOnly = true;
-            this.txtbox_body.Size = new System.Drawing.Size(255, 93);
-            this.txtbox_body.TabIndex = 59;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 24);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 15);
-            this.label6.TabIndex = 66;
-            this.label6.Text = "제목";
-            // 
-            // txtbox_title
-            // 
-            this.txtbox_title.Location = new System.Drawing.Point(43, 21);
-            this.txtbox_title.MaxLength = 20;
-            this.txtbox_title.Name = "txtbox_title";
-            this.txtbox_title.ReadOnly = true;
-            this.txtbox_title.Size = new System.Drawing.Size(255, 22);
-            this.txtbox_title.TabIndex = 67;
+            this.btn_reset.ForeColor = System.Drawing.Color.OrangeRed;
+            this.btn_reset.Location = new System.Drawing.Point(169, 145);
+            this.btn_reset.Name = "btn_reset";
+            this.btn_reset.Size = new System.Drawing.Size(152, 44);
+            this.btn_reset.TabIndex = 68;
+            this.btn_reset.Text = "재입력";
+            this.btn_reset.UseVisualStyleBackColor = true;
+            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
             // 
             // btn_submit
             // 
@@ -209,16 +183,43 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_submit.UseVisualStyleBackColor = true;
             this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
             // 
-            // btn_reset
+            // txtbox_title
             // 
-            this.btn_reset.ForeColor = System.Drawing.Color.OrangeRed;
-            this.btn_reset.Location = new System.Drawing.Point(169, 145);
-            this.btn_reset.Name = "btn_reset";
-            this.btn_reset.Size = new System.Drawing.Size(152, 44);
-            this.btn_reset.TabIndex = 68;
-            this.btn_reset.Text = "재입력";
-            this.btn_reset.UseVisualStyleBackColor = true;
-            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
+            this.txtbox_title.Location = new System.Drawing.Point(43, 21);
+            this.txtbox_title.MaxLength = 20;
+            this.txtbox_title.Name = "txtbox_title";
+            this.txtbox_title.ReadOnly = true;
+            this.txtbox_title.Size = new System.Drawing.Size(255, 22);
+            this.txtbox_title.TabIndex = 67;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 24);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(31, 15);
+            this.label6.TabIndex = 66;
+            this.label6.Text = "제목";
+            // 
+            // txtbox_body
+            // 
+            this.txtbox_body.Location = new System.Drawing.Point(43, 46);
+            this.txtbox_body.MaxLength = 200;
+            this.txtbox_body.Multiline = true;
+            this.txtbox_body.Name = "txtbox_body";
+            this.txtbox_body.ReadOnly = true;
+            this.txtbox_body.Size = new System.Drawing.Size(255, 93);
+            this.txtbox_body.TabIndex = 59;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(12, 49);
+            this.label13.Name = "label13";
+            this.label13.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label13.Size = new System.Drawing.Size(31, 15);
+            this.label13.TabIndex = 58;
+            this.label13.Text = "내용";
             // 
             // groupBox4
             // 
@@ -263,17 +264,6 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox2.TabIndex = 57;
             this.groupBox2.TabStop = false;
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label14.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label14.Location = new System.Drawing.Point(135, 17);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(57, 19);
-            this.label14.TabIndex = 68;
-            this.label14.Text = "<주의>";
-            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.label14);
@@ -285,18 +275,27 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox5.TabIndex = 69;
             this.groupBox5.TabStop = false;
             // 
-            // rdobtn_see
+            // label14
             // 
-            this.rdobtn_see.AutoSize = true;
-            this.rdobtn_see.Checked = true;
-            this.rdobtn_see.Location = new System.Drawing.Point(85, 16);
-            this.rdobtn_see.Name = "rdobtn_see";
-            this.rdobtn_see.Size = new System.Drawing.Size(73, 19);
-            this.rdobtn_see.TabIndex = 0;
-            this.rdobtn_see.TabStop = true;
-            this.rdobtn_see.Text = "열람모드";
-            this.rdobtn_see.UseVisualStyleBackColor = true;
-            this.rdobtn_see.CheckedChanged += new System.EventHandler(this.rdobtn_see_CheckedChanged);
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label14.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label14.Location = new System.Drawing.Point(135, 17);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(57, 19);
+            this.label14.TabIndex = 68;
+            this.label14.Text = "<주의>";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.rdobtn_new);
+            this.groupBox3.Controls.Add(this.rdobtn_see);
+            this.groupBox3.Location = new System.Drawing.Point(445, 241);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(327, 46);
+            this.groupBox3.TabIndex = 56;
+            this.groupBox3.TabStop = false;
             // 
             // rdobtn_new
             // 
@@ -310,16 +309,18 @@ namespace FINAL_project_LibraryProgram_1234
             this.rdobtn_new.UseVisualStyleBackColor = true;
             this.rdobtn_new.CheckedChanged += new System.EventHandler(this.rdobtn_new_CheckedChanged);
             // 
-            // groupBox3
+            // rdobtn_see
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.rdobtn_new);
-            this.groupBox3.Controls.Add(this.rdobtn_see);
-            this.groupBox3.Location = new System.Drawing.Point(445, 241);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(327, 46);
-            this.groupBox3.TabIndex = 56;
-            this.groupBox3.TabStop = false;
+            this.rdobtn_see.AutoSize = true;
+            this.rdobtn_see.Checked = true;
+            this.rdobtn_see.Location = new System.Drawing.Point(85, 16);
+            this.rdobtn_see.Name = "rdobtn_see";
+            this.rdobtn_see.Size = new System.Drawing.Size(73, 19);
+            this.rdobtn_see.TabIndex = 0;
+            this.rdobtn_see.TabStop = true;
+            this.rdobtn_see.Text = "열람모드";
+            this.rdobtn_see.UseVisualStyleBackColor = true;
+            this.rdobtn_see.CheckedChanged += new System.EventHandler(this.rdobtn_see_CheckedChanged);
             // 
             // Normal_Qna
             // 

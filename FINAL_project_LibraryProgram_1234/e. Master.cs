@@ -65,6 +65,8 @@ namespace FINAL_project_LibraryProgram_1234
         public static bool tab5_isReadOnly = true;
         public static bool tab5_emailsend = false;
 
+        public static bool tab6_masterid = false;
+
         // <탭 1에서, 조회/재조회 버튼 클릭시>
         private void btn_tab1_load_Click(object sender, EventArgs e)
         {
@@ -2106,6 +2108,126 @@ namespace FINAL_project_LibraryProgram_1234
             else
             {
                 //없음
+            }
+        }
+
+        private void btn_tab6_backup_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.ProcessStartInfo psi = new System.Diagnostics.ProcessStartInfo();
+            System.Diagnostics.Process process = new System.Diagnostics.Process();
+
+            psi.FileName = @"cmd";
+            psi.CreateNoWindow = true;
+            psi.UseShellExecute = false;
+
+            psi.RedirectStandardOutput = true;
+            psi.RedirectStandardInput = true;
+            psi.RedirectStandardError = true;
+
+            process.StartInfo = psi;
+            process.Start();
+
+            process.StandardInput.Write(@"mkdir C:\1234library" + Environment.NewLine);
+            process.StandardInput.Write(@"mysqldump -uroot -proot --databases library_project > C:/1234library/1234library_data_backup.sql" + Environment.NewLine) ;
+            process.StandardInput.Close();
+
+            string result = process.StandardOutput.ReadToEnd();
+            process.WaitForExit();
+            process.Close();
+            MessageBox.Show("사용자의 컴퓨터 C:\\1234library 폴더에 DB 백업이 완료되었습니다. 파일이 보이지 않을 경우, 우측 상단의 '오류보고/개선요청' 메뉴를 통해, 아래의 문구와 함께 접수 바랍니다.\n\n\n" + result);
+        }
+
+        private void btn_tab6_restore_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.ProcessStartInfo psi = new System.Diagnostics.ProcessStartInfo();
+            System.Diagnostics.Process process = new System.Diagnostics.Process();
+
+            psi.FileName = @"cmd";
+            psi.CreateNoWindow = true;
+            psi.UseShellExecute = false;
+
+            psi.RedirectStandardOutput = true;
+            psi.RedirectStandardInput = true;
+            psi.RedirectStandardError = true;
+
+            process.StartInfo = psi;
+            process.Start();
+
+            process.StandardInput.Write(@"mysql -uroot -proot < C:/1234library/1234library_data_backup.sql" + Environment.NewLine);
+            process.StandardInput.Close();
+
+            string result = process.StandardOutput.ReadToEnd();
+            process.WaitForExit();
+            process.Close();
+            MessageBox.Show("사용자의 컴퓨터 C:\\1234library 폴더에 DB 백업이 완료되었습니다. 파일이 보이지 않을 경우, 우측 상단의 '오류보고/개선요청' 메뉴를 통해, 아래의 문구와 함께 접수 바랍니다.\n\n\n" + result);
+        }
+
+        private void btn_tab6_idcheck_Click(object sender, EventArgs e)
+        {
+            if (txtbox_tab6_id.Text != "")
+            {
+                string insertQuery = "SELECT *, COUNT(*) as cnt FROM library_project.master WHERE 아이디 = '" + txtbox_tab6_id.Text + "';";
+                connection.Open();
+                MySqlCommand command = new MySqlCommand(insertQuery, connection);
+                MySqlDataReader reader = command.ExecuteReader();
+
+                try
+                {
+                    while (reader.Read())
+                    {
+                        string count_idcheck = reader["cnt"].ToString();
+                        if (count_idcheck == "0")
+                        {
+                            MessageBox.Show("신규 관리자 등록이 가능한 아이디 입니다. 등록 절차를 계속 진행해 주세요.", "아이디 중복확인");
+                            tab6_masterid = true;
+                        }
+                        else if (txtbox_tab6_id.Text == "")
+                        {
+                            MessageBox.Show("아이디 입력 후 버튼을 눌러주세요.", "아이디 중복확인", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            MessageBox.Show("중복된 아이디로, 회원가입이 불가능합니다. 다른 아이디로 다시 시도해 주세요.", "아이디 중복확인", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "아이디 중복확인 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                connection.Close();
+            }
+            else
+            {
+                MessageBox.Show("아이디값 입력 후 조회 바랍니다.");
+            }
+        }
+
+        private void btn_tab6_newmaster_Click(object sender, EventArgs e)
+        {
+            if (tab6_masterid == true)
+            {
+                try
+                {
+                    string insertQuery = "INSERT INTO library_project.master (아이디, 비밀번호) VALUES ('" + txtbox_tab6_id.Text + "', '" + txtbox_tab6_pwd.Text + "');";
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand(insertQuery, connection);
+
+                    if (command.ExecuteNonQuery() != 0)
+                    {
+                        MessageBox.Show(txtbox_tab6_id.Text + " 아이디의 신규 관리자 등록이 완료되었습니다.", "신규 관리자 등록 완료", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtbox_tab6_id.Text = "";
+                        txtbox_tab6_pwd.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("비정상 입력 정보입니다. 재확인 바랍니다.", "회원가입 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("빈 항목값 또는 형식에 맞지 않는 값이 있는지 확인 바랍니다. 오류가 지속될 경우, 하단의 '오류내용'을 토대로, 메인 화면의 '오류보고/개선요청' 으로 문의접수 바랍니다.\n\n오류내용 : " + ex.Message, "신규 관리자 등록 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

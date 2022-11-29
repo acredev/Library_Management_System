@@ -9,11 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient; // MySQL 연동
 
 namespace FINAL_project_LibraryProgram_1234
 {
     public partial class Login_Master : Form
     {
+        // MySQL 연결
+        MySqlConnection connection = new MySqlConnection("Server = localhost;Database=library_project;Uid=root;Pwd=root;");
         public Login_Master()
         {
             InitializeComponent();
@@ -22,16 +25,47 @@ namespace FINAL_project_LibraryProgram_1234
         // 로그인 버튼 클릭시
         private void btn_login_Click(object sender, EventArgs e)
         {
-            Master showMaster = new Master();
-            if (txtbox_id.Text == "1234" && txtbox_pwd.Text == "1234pwd")
+            try
             {
-                showMaster.Show();
-                this.Visible = false;
+                string insertQuery = "SELECT * FROM library_project.master WHERE 아이디 = '" + txtbox_id.Text + "';";
+                MySqlCommand command = new MySqlCommand(insertQuery, connection);
+                connection.Open();
+
+                MySqlDataReader reader = command.ExecuteReader();
+
+                int login_status = 0;
+
+                while (reader.Read())
+                {
+                    if (txtbox_id.Text == reader["아이디"].ToString() && txtbox_pwd.Text == reader["비밀번호"].ToString())
+                    {
+                        /*
+                        MessageBox.Show(txtbox_id.Text + " 관리자님, 환영합니다.");
+
+                        Master showMaster = new Master();
+                        showMaster.ShowDialog();
+                        */
+                        login_status = 1;
+                    }
+
+                    if (login_status == 1)
+                    {
+                        MessageBox.Show(txtbox_id.Text + " 관리자님, 환영합니다.");
+
+                        Master showMaster = new Master();
+                        showMaster.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("회원 정보를 확인해 주세요.");
+                    }
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("아이디 또는 비밀번호가 틀렸습니다.", "로그인 오류");
+                MessageBox.Show(ex.Message);
             }
+            connection.Close();
         }
 
         // 비밀번호 보기 체크박스 클릭시
