@@ -31,7 +31,7 @@ namespace FINAL_project_LibraryProgram_1234
         // 로그아웃 픽쳐박스 클릭시
         private void picture_logout_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("로그아웃 후 메인화면으로 돌아가시겠습니까?", "로그아웃", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("로그아웃 후 메인화면으로 돌아가시겠습니까?", "로그아웃", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Application.Restart();
             }
@@ -2116,6 +2116,13 @@ namespace FINAL_project_LibraryProgram_1234
             }
         }
 
+        // <탭 6에서, DB 환경변수 설정방법 링크라벨 클릭 시>
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://acredev.tistory.com/47");
+        }
+
         // <탭 6에서, DB백업 버튼 클릭 시>
         private void btn_tab6_backup_Click(object sender, EventArgs e)
         {
@@ -2239,6 +2246,6 @@ namespace FINAL_project_LibraryProgram_1234
                     MessageBox.Show("빈 항목값 또는 형식에 맞지 않는 값이 있는지 확인 바랍니다. 오류가 지속될 경우, 하단의 '오류내용'을 토대로, 메인 화면의 '오류보고/개선요청' 으로 문의접수 바랍니다.\n\n오류내용 : " + ex.Message, "신규 관리자 등록 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
+        }        
     }
 }
