@@ -21,7 +21,7 @@
 * 릴리즈 : (예정)
 
 ## 🖧 ERD 설계도
-![Untitled](https://user-images.githubusercontent.com/3482382/204815390-200e6e40-4756-4ebc-b06d-2aac1aed9a8d.png)<br>
+![Untitled](https://user-images.githubusercontent.com/3482382/204819910-99861cef-2304-4a84-91a7-cbdec8e5ac5b.png)
 
 ## 📑 WinForm 구성
 * 총 13개의 `WinForm`으로 구성되어 있으며, 나눔고딕 `font`를 이용해 사용자의 가독성을 높였습니다.
