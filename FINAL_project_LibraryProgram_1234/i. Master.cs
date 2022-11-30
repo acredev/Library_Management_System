@@ -66,6 +66,7 @@ namespace FINAL_project_LibraryProgram_1234
         public static bool tab5_emailsend = false;
 
         public static bool tab6_masterid = false;
+        public static bool tab6_master_checkid = false;
 
         // <탭 1에서, 조회/재조회 버튼 클릭시>
         private void btn_tab1_load_Click(object sender, EventArgs e)
@@ -196,7 +197,7 @@ namespace FINAL_project_LibraryProgram_1234
                 }
                 else
                 {
-                    if (combobox_tab1_searchmem.Text =="회원번호")
+                    if (combobox_tab1_searchmem.Text == "회원번호")
                     {
                         string insertQuery = "SELECT 회원번호, 이름, 아이디, 대출권수, 회원상태, 성별, 생년월일, 연락처, 주소 FROM library_project.member WHERE 회원번호 = '" + maskedtxtBox_tab1_searchmem.Text + "';";
                         connection.Open();
@@ -984,14 +985,14 @@ namespace FINAL_project_LibraryProgram_1234
         private void btn_tab2_reset_Click(object sender, EventArgs e)
         {
             txtbox_tab2_booknum.Text = "";
-                txtbox_tab2_bookname.Text = "";
-                txtbox_tab2_isbn.Text = "";
-                txtbox_tab2_bookwrite.Text = "";
-                txtbox_tab2_bookpublisher.Text = "";
-                txtbox_tab2_bookdate.Text = "";
-                txtbox_tab2_bookprice.Text = "";
-                txtbox_tab2_bookpages.Text = "";
-                txtbox_tab2_bookabout.Text = "";
+            txtbox_tab2_bookname.Text = "";
+            txtbox_tab2_isbn.Text = "";
+            txtbox_tab2_bookwrite.Text = "";
+            txtbox_tab2_bookpublisher.Text = "";
+            txtbox_tab2_bookdate.Text = "";
+            txtbox_tab2_bookprice.Text = "";
+            txtbox_tab2_bookpages.Text = "";
+            txtbox_tab2_bookabout.Text = "";
         }
 
         // <탭 3에서, 조회/재조회 버튼 클릭시>
@@ -2141,7 +2142,7 @@ namespace FINAL_project_LibraryProgram_1234
             process.Start();
 
             process.StandardInput.Write(@"mkdir C:\1234library" + Environment.NewLine);
-            process.StandardInput.Write(@"mysqldump -uroot -proot --databases library_project > C:/1234library/1234library_data_backup.sql" + Environment.NewLine) ;
+            process.StandardInput.Write(@"mysqldump -uroot -proot --databases library_project > C:/1234library/1234library_data_backup.sql" + Environment.NewLine);
             process.StandardInput.Close();
 
             string result = process.StandardOutput.ReadToEnd();
@@ -2215,7 +2216,7 @@ namespace FINAL_project_LibraryProgram_1234
             }
             else
             {
-                MessageBox.Show("아이디 입력 후 버튼을 눌러주세요.", "신규 관리자 등록", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("아이디 입력 후 중복 확인 버튼을 눌러주세요.", "신규 관리자 등록", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -2245,7 +2246,124 @@ namespace FINAL_project_LibraryProgram_1234
                 {
                     MessageBox.Show("빈 항목값 또는 형식에 맞지 않는 값이 있는지 확인 바랍니다. 오류가 지속될 경우, 하단의 '오류내용'을 토대로, 메인 화면의 '오류보고/개선요청' 으로 문의접수 바랍니다.\n\n오류내용 : " + ex.Message, "신규 관리자 등록 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                connection.Close();
             }
-        }        
+            else
+            {
+                MessageBox.Show("아이디 중복확인 후 진행 바랍니다.", "신규 관리자 등록 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btn_tab6_change_check_Click(object sender, EventArgs e)
+        {
+            if (txtbox_tab6_change_checkid.Text != "")
+            {
+                string insertQuery = "SELECT *, COUNT(*) as cnt FROM library_project.master WHERE 아이디 = '" + txtbox_tab6_change_checkid.Text + "';";
+                connection.Open();
+                MySqlCommand command = new MySqlCommand(insertQuery, connection);
+                MySqlDataReader reader = command.ExecuteReader();
+
+                try
+                {
+                    while (reader.Read())
+                    {
+                        string count_idcheck = reader["cnt"].ToString();
+                        if (count_idcheck != "0")
+                        {
+                            MessageBox.Show("관리자 조회가 완료되었습니다.", "관리자 계정 관리", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            tab6_master_checkid = true;
+                            txtbox_tab6_change_checkid.ReadOnly = true;
+                        }
+                        else if (txtbox_tab6_change_checkid.Text == "")
+                        {
+                            MessageBox.Show("아이디 입력 후 버튼을 눌러주세요.", "관리자 계정 관리", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else
+                        {
+                            MessageBox.Show("중복된 아이디로, 회원가입이 불가능합니다. 다른 아이디로 다시 시도해 주세요.", "관리자 계정 관리", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "관리자 계정 관리 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                connection.Close();
+            }
+            else
+            {
+                MessageBox.Show("아이디 입력 후 정보 확인 버튼을 눌러주세요.", "관리자 PW 변경", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btn_tab6_changepwd_Click(object sender, EventArgs e)
+        {
+            if (tab6_master_checkid == true)
+            {
+                try
+                {
+                    string insertQuery = "UPDATE library_project.master SET 비밀번호 = '" + txtbox_tab6_changepwd.Text + "' WHERE 아이디 = '" + txtbox_tab6_change_checkid.Text + "';";
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand(insertQuery, connection);
+
+                    if (command.ExecuteNonQuery() != 0)
+                    {
+                        MessageBox.Show(txtbox_tab6_change_checkid.Text + " 아이디의 관리자 비밀번호 변경이 완료되었습니다.", "관리자 비밀번호 변경 완료", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtbox_tab6_change_checkid.Text = "";
+                        txtbox_tab6_changepwd.Text = "";
+                        tab6_master_checkid = false;
+                        txtbox_tab6_change_checkid.ReadOnly = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("비정상 입력 정보입니다. 재확인 바랍니다.", "관리자 비밀번호 변경 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("빈 항목값 또는 형식에 맞지 않는 값이 있는지 확인 바랍니다. 오류가 지속될 경우, 하단의 '오류내용'을 토대로, 메인 화면의 '오류보고/개선요청' 으로 문의접수 바랍니다.\n\n오류내용 : " + ex.Message, "관리자 비밀번호 변경 실패", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                connection.Close();
+            }
+            else
+            {
+                MessageBox.Show("아이디를 통한 정보확인 후 진행 바랍니다.", "관리자 비밀번호 변경 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btn_tab6_deletemaster_Click(object sender, EventArgs e)
+        {
+            if (tab6_master_checkid == true)
+            {
+                try
+                {
+                    string insertQuery = "DELETE FROM library_project.master WHERE 아이디 = '" + txtbox_tab6_change_checkid.Text + "';";
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand(insertQuery, connection);
+
+                    if (command.ExecuteNonQuery() != 0)
+                    {
+                        MessageBox.Show(txtbox_tab6_change_checkid.Text + " 아이디의 관리자 정보 삭제가 완료되었습니다.", "관리자 정보 삭제 완료", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtbox_tab6_change_checkid.Text = "";
+                        txtbox_tab6_changepwd.Text = "";
+                        tab6_master_checkid = false;
+                        txtbox_tab6_change_checkid.ReadOnly = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("비정상 입력 정보입니다. 재확인 바랍니다.", "관리자 정보 삭제 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("빈 항목값 또는 형식에 맞지 않는 값이 있는지 확인 바랍니다. 오류가 지속될 경우, 하단의 '오류내용'을 토대로, 메인 화면의 '오류보고/개선요청' 으로 문의접수 바랍니다.\n\n오류내용 : " + ex.Message, "관리자 정보 삭제 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                connection.Close();
+            }
+            else
+            {
+                MessageBox.Show("아이디를 통한 정보확인 후 진행 바랍니다.", "관리자 정보 삭제 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

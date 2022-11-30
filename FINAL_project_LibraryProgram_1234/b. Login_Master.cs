@@ -41,19 +41,18 @@ namespace FINAL_project_LibraryProgram_1234
                     {
                         isMasterLogin = true;
                     }
+                }
+                if (isMasterLogin == true)
+                {
+                    MessageBox.Show(txtbox_id.Text + " 관리자님, 환영합니다.", "로그인 성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    if (isMasterLogin == true)
-                    {
-                        MessageBox.Show(txtbox_id.Text + " 관리자님, 환영합니다.", "로그인 성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        Master showMaster = new Master();
-                        showMaster.ShowDialog();
-                    }
-                    else
-                    {
-                        MessageBox.Show("회원 정보를 확인해 주세요.", "로그인 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        isMasterLogin = false;
-                    }
+                    Master showMaster = new Master();
+                    showMaster.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("회원 정보를 확인해 주세요.", "로그인 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    isMasterLogin = false;
                 }
             }
             catch (Exception ex)

@@ -272,6 +272,10 @@ namespace FINAL_project_LibraryProgram_1234
             this.label78 = new System.Windows.Forms.Label();
             this.label76 = new System.Windows.Forms.Label();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.groupBox23 = new System.Windows.Forms.GroupBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label82 = new System.Windows.Forms.Label();
+            this.label81 = new System.Windows.Forms.Label();
             this.label74 = new System.Windows.Forms.Label();
             this.btn_tab6_restore = new System.Windows.Forms.Button();
             this.btn_tab6_backup = new System.Windows.Forms.Button();
@@ -279,10 +283,14 @@ namespace FINAL_project_LibraryProgram_1234
             this.picture_logout = new System.Windows.Forms.PictureBox();
             this.picture_support = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.groupBox23 = new System.Windows.Forms.GroupBox();
-            this.label81 = new System.Windows.Forms.Label();
-            this.label82 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.groupBox24 = new System.Windows.Forms.GroupBox();
+            this.btn_tab6_change_check = new System.Windows.Forms.Button();
+            this.btn_tab6_changepwd = new System.Windows.Forms.Button();
+            this.txtbox_tab6_changepwd = new System.Windows.Forms.TextBox();
+            this.txtbox_tab6_change_checkid = new System.Windows.Forms.TextBox();
+            this.label83 = new System.Windows.Forms.Label();
+            this.label84 = new System.Windows.Forms.Label();
+            this.btn_tab6_deletemaster = new System.Windows.Forms.Button();
             this.tabcontrol_master.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -319,10 +327,11 @@ namespace FINAL_project_LibraryProgram_1234
             this.tabPage6.SuspendLayout();
             this.groupBox22.SuspendLayout();
             this.groupBox21.SuspendLayout();
+            this.groupBox23.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_logout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_support)).BeginInit();
-            this.groupBox23.SuspendLayout();
+            this.groupBox24.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabcontrol_master
@@ -3197,6 +3206,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.groupBox24);
             this.tabPage6.Controls.Add(this.groupBox22);
             this.tabPage6.Controls.Add(this.groupBox21);
             this.tabPage6.Location = new System.Drawing.Point(4, 51);
@@ -3219,14 +3229,14 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox22.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox22.Name = "groupBox22";
             this.groupBox22.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.groupBox22.Size = new System.Drawing.Size(1045, 266);
+            this.groupBox22.Size = new System.Drawing.Size(521, 266);
             this.groupBox22.TabIndex = 2;
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "관리자 ID/PW 신규등록";
             // 
             // btn_tab6_idcheck
             // 
-            this.btn_tab6_idcheck.Location = new System.Drawing.Point(614, 106);
+            this.btn_tab6_idcheck.Location = new System.Drawing.Point(388, 86);
             this.btn_tab6_idcheck.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_tab6_idcheck.Name = "btn_tab6_idcheck";
             this.btn_tab6_idcheck.Size = new System.Drawing.Size(126, 32);
@@ -3237,10 +3247,10 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // btn_tab6_newmaster
             // 
-            this.btn_tab6_newmaster.Location = new System.Drawing.Point(744, 105);
+            this.btn_tab6_newmaster.Location = new System.Drawing.Point(15, 193);
             this.btn_tab6_newmaster.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_tab6_newmaster.Name = "btn_tab6_newmaster";
-            this.btn_tab6_newmaster.Size = new System.Drawing.Size(111, 90);
+            this.btn_tab6_newmaster.Size = new System.Drawing.Size(499, 67);
             this.btn_tab6_newmaster.TabIndex = 3;
             this.btn_tab6_newmaster.Text = "등록";
             this.btn_tab6_newmaster.UseVisualStyleBackColor = true;
@@ -3248,7 +3258,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // txtbox_tab6_pwd
             // 
-            this.txtbox_tab6_pwd.Location = new System.Drawing.Point(312, 160);
+            this.txtbox_tab6_pwd.Location = new System.Drawing.Point(94, 140);
             this.txtbox_tab6_pwd.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtbox_tab6_pwd.MaxLength = 20;
             this.txtbox_tab6_pwd.Name = "txtbox_tab6_pwd";
@@ -3257,7 +3267,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // txtbox_tab6_id
             // 
-            this.txtbox_tab6_id.Location = new System.Drawing.Point(312, 105);
+            this.txtbox_tab6_id.Location = new System.Drawing.Point(94, 85);
             this.txtbox_tab6_id.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtbox_tab6_id.MaxLength = 10;
             this.txtbox_tab6_id.Name = "txtbox_tab6_id";
@@ -3268,7 +3278,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.label78.AutoSize = true;
             this.label78.Font = new System.Drawing.Font("나눔고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label78.Location = new System.Drawing.Point(229, 167);
+            this.label78.Location = new System.Drawing.Point(11, 147);
             this.label78.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label78.Name = "label78";
             this.label78.Size = new System.Drawing.Size(82, 21);
@@ -3279,7 +3289,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.label76.AutoSize = true;
             this.label76.Font = new System.Drawing.Font("나눔고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label76.Location = new System.Drawing.Point(242, 112);
+            this.label76.Location = new System.Drawing.Point(24, 92);
             this.label76.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(64, 21);
@@ -3300,6 +3310,54 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox21.TabIndex = 1;
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "DB백업/복원";
+            // 
+            // groupBox23
+            // 
+            this.groupBox23.Controls.Add(this.linkLabel1);
+            this.groupBox23.Controls.Add(this.label82);
+            this.groupBox23.Controls.Add(this.label81);
+            this.groupBox23.Location = new System.Drawing.Point(5, 14);
+            this.groupBox23.Name = "groupBox23";
+            this.groupBox23.Size = new System.Drawing.Size(1035, 138);
+            this.groupBox23.TabIndex = 3;
+            this.groupBox23.TabStop = false;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("나눔고딕", 14.25F, System.Drawing.FontStyle.Bold);
+            this.linkLabel1.Location = new System.Drawing.Point(413, 101);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(219, 21);
+            this.linkLabel1.TabIndex = 6;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "설정 방법 (개발자 블로그)";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Font = new System.Drawing.Font("나눔고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label82.Location = new System.Drawing.Point(54, 54);
+            this.label82.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(954, 42);
+            this.label82.TabIndex = 5;
+            this.label82.Text = "해당 기능은 사용자 PC에 따라 정상적인 동작이 되지 않을 수 있습니다.\r\n해당 DB백원/복원 기능을 사용하기 전에, 윈도우 시스템 환경변수 \'p" +
+    "ath\' 설정에 MySQL을 등록하고 사용해야 합니다.";
+            this.label82.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.Font = new System.Drawing.Font("나눔고딕", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label81.ForeColor = System.Drawing.Color.DarkRed;
+            this.label81.Location = new System.Drawing.Point(484, 27);
+            this.label81.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(66, 21);
+            this.label81.TabIndex = 4;
+            this.label81.Text = "<주의>";
             // 
             // label74
             // 
@@ -3384,53 +3442,96 @@ namespace FINAL_project_LibraryProgram_1234
             this.label5.Text = "일이삼사 도서관 관리";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // groupBox23
+            // groupBox24
             // 
-            this.groupBox23.Controls.Add(this.linkLabel1);
-            this.groupBox23.Controls.Add(this.label82);
-            this.groupBox23.Controls.Add(this.label81);
-            this.groupBox23.Location = new System.Drawing.Point(5, 14);
-            this.groupBox23.Name = "groupBox23";
-            this.groupBox23.Size = new System.Drawing.Size(1035, 138);
-            this.groupBox23.TabIndex = 3;
-            this.groupBox23.TabStop = false;
+            this.groupBox24.Controls.Add(this.btn_tab6_deletemaster);
+            this.groupBox24.Controls.Add(this.btn_tab6_change_check);
+            this.groupBox24.Controls.Add(this.btn_tab6_changepwd);
+            this.groupBox24.Controls.Add(this.txtbox_tab6_changepwd);
+            this.groupBox24.Controls.Add(this.txtbox_tab6_change_checkid);
+            this.groupBox24.Controls.Add(this.label83);
+            this.groupBox24.Controls.Add(this.label84);
+            this.groupBox24.Location = new System.Drawing.Point(528, 381);
+            this.groupBox24.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.groupBox24.Name = "groupBox24";
+            this.groupBox24.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.groupBox24.Size = new System.Drawing.Size(521, 266);
+            this.groupBox24.TabIndex = 8;
+            this.groupBox24.TabStop = false;
+            this.groupBox24.Text = "관리자 PW 변경 / 관리자 정보 삭제";
             // 
-            // label81
+            // btn_tab6_change_check
             // 
-            this.label81.AutoSize = true;
-            this.label81.Font = new System.Drawing.Font("나눔고딕", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label81.ForeColor = System.Drawing.Color.DarkRed;
-            this.label81.Location = new System.Drawing.Point(484, 27);
-            this.label81.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(66, 21);
-            this.label81.TabIndex = 4;
-            this.label81.Text = "<주의>";
+            this.btn_tab6_change_check.Location = new System.Drawing.Point(388, 86);
+            this.btn_tab6_change_check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btn_tab6_change_check.Name = "btn_tab6_change_check";
+            this.btn_tab6_change_check.Size = new System.Drawing.Size(126, 32);
+            this.btn_tab6_change_check.TabIndex = 7;
+            this.btn_tab6_change_check.Text = "정보확인";
+            this.btn_tab6_change_check.UseVisualStyleBackColor = true;
+            this.btn_tab6_change_check.Click += new System.EventHandler(this.btn_tab6_change_check_Click);
             // 
-            // label82
+            // btn_tab6_changepwd
             // 
-            this.label82.AutoSize = true;
-            this.label82.Font = new System.Drawing.Font("나눔고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label82.Location = new System.Drawing.Point(54, 54);
-            this.label82.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(954, 42);
-            this.label82.TabIndex = 5;
-            this.label82.Text = "해당 기능은 사용자 PC에 따라 정상적인 동작이 되지 않을 수 있습니다.\r\n해당 DB백원/복원 기능을 사용하기 전에, 윈도우 시스템 환경변수 \'p" +
-    "ath\' 설정에 MySQL을 등록하고 사용해야 합니다.";
-            this.label82.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_tab6_changepwd.Location = new System.Drawing.Point(15, 193);
+            this.btn_tab6_changepwd.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btn_tab6_changepwd.Name = "btn_tab6_changepwd";
+            this.btn_tab6_changepwd.Size = new System.Drawing.Size(250, 67);
+            this.btn_tab6_changepwd.TabIndex = 3;
+            this.btn_tab6_changepwd.Text = "PW 변경";
+            this.btn_tab6_changepwd.UseVisualStyleBackColor = true;
+            this.btn_tab6_changepwd.Click += new System.EventHandler(this.btn_tab6_changepwd_Click);
             // 
-            // linkLabel1
+            // txtbox_tab6_changepwd
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("나눔고딕", 14.25F, System.Drawing.FontStyle.Bold);
-            this.linkLabel1.Location = new System.Drawing.Point(413, 101);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(219, 21);
-            this.linkLabel1.TabIndex = 6;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "설정 방법 (개발자 블로그)";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.txtbox_tab6_changepwd.Location = new System.Drawing.Point(94, 140);
+            this.txtbox_tab6_changepwd.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab6_changepwd.MaxLength = 20;
+            this.txtbox_tab6_changepwd.Name = "txtbox_tab6_changepwd";
+            this.txtbox_tab6_changepwd.Size = new System.Drawing.Size(286, 35);
+            this.txtbox_tab6_changepwd.TabIndex = 6;
+            // 
+            // txtbox_tab6_change_checkid
+            // 
+            this.txtbox_tab6_change_checkid.Location = new System.Drawing.Point(94, 85);
+            this.txtbox_tab6_change_checkid.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbox_tab6_change_checkid.MaxLength = 10;
+            this.txtbox_tab6_change_checkid.Name = "txtbox_tab6_change_checkid";
+            this.txtbox_tab6_change_checkid.Size = new System.Drawing.Size(286, 35);
+            this.txtbox_tab6_change_checkid.TabIndex = 5;
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.Font = new System.Drawing.Font("나눔고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label83.Location = new System.Drawing.Point(11, 147);
+            this.label83.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(82, 21);
+            this.label83.TabIndex = 4;
+            this.label83.Text = "비밀번호";
+            // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.Font = new System.Drawing.Font("나눔고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label84.Location = new System.Drawing.Point(24, 92);
+            this.label84.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(64, 21);
+            this.label84.TabIndex = 3;
+            this.label84.Text = "아이디";
+            // 
+            // btn_tab6_deletemaster
+            // 
+            this.btn_tab6_deletemaster.Location = new System.Drawing.Point(267, 193);
+            this.btn_tab6_deletemaster.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btn_tab6_deletemaster.Name = "btn_tab6_deletemaster";
+            this.btn_tab6_deletemaster.Size = new System.Drawing.Size(250, 67);
+            this.btn_tab6_deletemaster.TabIndex = 8;
+            this.btn_tab6_deletemaster.Text = "관리자 정보 삭제";
+            this.btn_tab6_deletemaster.UseVisualStyleBackColor = true;
+            this.btn_tab6_deletemaster.Click += new System.EventHandler(this.btn_tab6_deletemaster_Click);
             // 
             // Master
             // 
@@ -3508,11 +3609,13 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox22.PerformLayout();
             this.groupBox21.ResumeLayout(false);
             this.groupBox21.PerformLayout();
+            this.groupBox23.ResumeLayout(false);
+            this.groupBox23.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_logout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_support)).EndInit();
-            this.groupBox23.ResumeLayout(false);
-            this.groupBox23.PerformLayout();
+            this.groupBox24.ResumeLayout(false);
+            this.groupBox24.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3772,5 +3875,13 @@ namespace FINAL_project_LibraryProgram_1234
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label82;
         private System.Windows.Forms.Label label81;
+        private System.Windows.Forms.GroupBox groupBox24;
+        private System.Windows.Forms.Button btn_tab6_change_check;
+        private System.Windows.Forms.Button btn_tab6_changepwd;
+        private System.Windows.Forms.TextBox txtbox_tab6_changepwd;
+        private System.Windows.Forms.TextBox txtbox_tab6_change_checkid;
+        private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.Label label84;
+        private System.Windows.Forms.Button btn_tab6_deletemaster;
     }
 }
