@@ -195,7 +195,7 @@ namespace FINAL_project_LibraryProgram_1234
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.ForeColor = System.Drawing.Color.OrangeRed;
             this.button2.Location = new System.Drawing.Point(164, 372);
             this.button2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button2.Name = "button2";

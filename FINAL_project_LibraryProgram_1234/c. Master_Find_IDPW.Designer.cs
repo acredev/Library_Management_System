@@ -101,7 +101,6 @@ namespace FINAL_project_LibraryProgram_1234
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "도서관 관리자 아이디 찾기 (일이삼사 도서관)";
-            this.Load += new System.EventHandler(this.Master_Find_IDPW_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

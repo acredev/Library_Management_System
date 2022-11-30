@@ -77,6 +77,7 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             // btn_back
             // 
+            this.btn_back.ForeColor = System.Drawing.Color.OrangeRed;
             this.btn_back.Location = new System.Drawing.Point(26, 116);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(383, 23);

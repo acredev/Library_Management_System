@@ -17,21 +17,11 @@ namespace FINAL_project_LibraryProgram_1234
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             Login_Master showLogin_Master = new Login_Master();
             showLogin_Master.Show();
             this.Close();
-        }
-
-        private void Master_Find_IDPW_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
