@@ -73,12 +73,12 @@ namespace FINAL_project_LibraryProgram_1234
             {
                 if (txtbox_teloremail.Text == "")
                 {
-                    MessageBox.Show("전화번호 입력 후 재 시도 바랍니다.", "아이디 찾기 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("전화번호 입력 후 재 시도 바랍니다.", "본인인증 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
                     var body = smsapi.SendMessageAsync(txtbox_teloremail.Text, "일이삼사 도서관 본인인증 인증 번호입니다." + "[" + randomSMS_num.ToString() + "]");
-                    MessageBox.Show("사용자의 휴대폰 번호 : " + txtbox_teloremail.Text + "로 인증번호가 발송되었습니다. 인증번호를 올바르게 입력해 주세요.");
+                    MessageBox.Show("사용자의 휴대폰 번호 : " + txtbox_teloremail.Text + "로 인증번호가 발송되었습니다. 인증번호를 올바르게 입력해 주세요.", "본인인증", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             // 이메일로 인증번호 발송
@@ -86,7 +86,7 @@ namespace FINAL_project_LibraryProgram_1234
             {
                 if (txtbox_teloremail.Text == "")
                 {
-                    MessageBox.Show("이메일 주소 입력 후 재 시도 바랍니다.", "아이디 찾기 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("이메일 주소 입력 후 재 시도 바랍니다.", "아이디 찾기 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -119,7 +119,7 @@ namespace FINAL_project_LibraryProgram_1234
                         smtp.Send(mail);
                         smtp.Dispose();
 
-                        MessageBox.Show("사용자의 이메일 주소 : " + txtbox_teloremail.Text + "로 인증번호가 발송되었습니다. 인증번호를 올바르게 입력해 주세요.");
+                        MessageBox.Show("사용자의 이메일 주소 : " + txtbox_teloremail.Text + "로 인증번호가 발송되었습니다. 인증번호를 올바르게 입력해 주세요.", "본인인증", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
                     {
@@ -137,12 +137,12 @@ namespace FINAL_project_LibraryProgram_1234
             {
                 if (txtbox_checknum.Text == randomSMS_num.ToString())
                 {
-                    MessageBox.Show("휴대폰 인증이 완료되었습니다. 아이디 찾기 과정을 진행해 주세요.", "인증 완료");
+                    MessageBox.Show("휴대폰 인증이 완료되었습니다. 아이디 찾기 과정을 진행해 주세요.", "인증 완료", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     telcheck = true;
                 }
                 else
                 {
-                    MessageBox.Show("휴대폰 인증이 실패했습니다. 인증번호 확인 후 재시도 바랍니다.", "인증 실패");
+                    MessageBox.Show("휴대폰 인증이 실패했습니다. 인증번호 확인 후 재시도 바랍니다.", "인증 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     telcheck = false;
                 }
             }
@@ -180,11 +180,11 @@ namespace FINAL_project_LibraryProgram_1234
                         string idfind_result = reader["아이디"].ToString();
                         if (idfind_result_cnt == "0")
                         {
-                            MessageBox.Show("회원가입되어 있지 않은 정보입니다.");
+                            MessageBox.Show("회원가입되어 있지 않은 정보입니다.", "아이디 찾기 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         else
                         {
-                            MessageBox.Show("요청하신 아이디는 " + idfind_result + "입니다.");
+                            MessageBox.Show("요청하신 아이디는 " + idfind_result + "입니다.", "아이디 찾기 성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Close();
                         }
                     }
@@ -212,11 +212,11 @@ namespace FINAL_project_LibraryProgram_1234
                         string idfind_result = reader["아이디"].ToString();
                         if (idfind_result_cnt == "0")
                         {
-                            MessageBox.Show("회원가입되어 있지 않은 정보입니다.");
+                            MessageBox.Show("회원가입되어 있지 않은 정보입니다.", "아이디 찾기 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         else
                         {
-                            MessageBox.Show("요청하신 아이디는 " + idfind_result + "입니다.");
+                            MessageBox.Show("요청하신 아이디는 " + idfind_result + "입니다.", "아이디 찾기 성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Close();
                         }
                     }
@@ -230,7 +230,7 @@ namespace FINAL_project_LibraryProgram_1234
             }
             else if (telcheck == false && emailcheck == false)
             {
-                MessageBox.Show("회원정보에 등록된 전화번호, 또는 이메일 주소로 본인인증 후 아이디 찾기를 진행해 주시기 바랍니다.", "아이디 찾기 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("회원정보에 등록된 전화번호, 또는 이메일 주소로 본인인증 후 아이디 찾기를 진행해 주시기 바랍니다.", "아이디 찾기 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

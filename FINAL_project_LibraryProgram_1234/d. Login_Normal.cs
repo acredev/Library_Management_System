@@ -56,7 +56,7 @@ namespace FINAL_project_LibraryProgram_1234
 
                 if (login_status == 1)
                 {
-                    MessageBox.Show(loginform_id + " 회원님, 환영합니다.");
+                    MessageBox.Show(loginform_id + " 회원님, 환영합니다.", "로그인 성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Normal showNormal = new Normal();
                     showNormal.SetText(loginform_id);
 
@@ -64,7 +64,7 @@ namespace FINAL_project_LibraryProgram_1234
                 }
                 else
                 {
-                    MessageBox.Show("회원 정보를 확인해 주세요.");
+                    MessageBox.Show("회원 정보를 확인해 주세요.", "로그인 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
             }

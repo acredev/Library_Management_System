@@ -35,7 +35,7 @@ namespace FINAL_project_LibraryProgram_1234
 			MailMessage mail = new MailMessage();
 			if (txtFrom.Text == "")
             {
-				MessageBox.Show("회신 받을 메일 주소를 입력 바랍니다.", "오류");
+				MessageBox.Show("회신 받을 메일 주소를 입력 바랍니다.", "오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 			mail.From = new MailAddress(txtFrom.Text + "@" + txtAddress.Text, "일이삼사 도서관 문의접수", System.Text.Encoding.UTF8);
 			mail.To.Add(txtTo.Text);
@@ -63,7 +63,7 @@ namespace FINAL_project_LibraryProgram_1234
 				smtp.Send(mail);
 				mail.Dispose();
 
-				MessageBox.Show("문의 메일이 정상적으로 전송 완료 되었습니다. 감사합니다." + "\r\n\r\n" + "입력해주신 " + txtFrom.Text + "@" + txtAddress.Text + " 주소로 답변 드리겠습니다.", "문의 메일 정상 전송 완료");
+				MessageBox.Show("문의 메일이 정상적으로 전송 완료 되었습니다." + "\r\n\r\n" + "입력해주신 " + txtFrom.Text + "@" + txtAddress.Text + " 주소로 답변 드리겠습니다. 감사합니다.", "문의 메일 정상 전송 완료", MessageBoxButtons.OK, MessageBoxIcon.Information);
 			}
 			catch (Exception ex)
 			{
@@ -80,20 +80,10 @@ namespace FINAL_project_LibraryProgram_1234
 
         private void button2_Click(object sender, EventArgs e)
 		{
-			if (MessageBox.Show("문의 내용을 전부 폐기하고 이전 화면으로 돌아가시겠습니까?", "종료하기", MessageBoxButtons.YesNo) == DialogResult.Yes)
+			if (MessageBox.Show("문의 내용을 전부 폐기하고 이전 화면으로 돌아가시겠습니까?", "종료하기", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 			{
 				this.Close();
 			}
 		}
-
-        private void txtSubject_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SupportMail_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

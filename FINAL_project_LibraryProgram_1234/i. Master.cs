@@ -40,7 +40,7 @@ namespace FINAL_project_LibraryProgram_1234
         // <프로그램 종료 픽쳐박스 클릭시>
         private void picture_exit_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("일이삼사 도서관리 프로그램을 정말 종료하시곘습니까?", "프로그램 종료", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("정말 도서관리 시스템을 종료하시겠습니까?", "종료하기", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Application.Exit();
             }
@@ -192,7 +192,7 @@ namespace FINAL_project_LibraryProgram_1234
             {
                 if (txtbox_tab1_searchmem.Text == "" && maskedtxtBox_tab1_searchmem.Text == "")
                 {
-                    MessageBox.Show("검색명 입력 후 시도 바랍니다.");
+                    MessageBox.Show("검색명 입력 후 시도 바랍니다.", "검색 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -322,7 +322,7 @@ namespace FINAL_project_LibraryProgram_1234
             {
                 if (txtbox_tab1_searchbook.Text == "" && combobox_tab1_searchbookbystatus.SelectedItem.ToString() == "" && maskedtxtBox_tab1_searchmem.Text == "")
                 {
-                    MessageBox.Show("검색명 입력 후 시도 바랍니다.");
+                    MessageBox.Show("검색명 입력 후 시도 바랍니다.", "검색 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -391,15 +391,15 @@ namespace FINAL_project_LibraryProgram_1234
 
             if (txtbox_tab1_membernum.Text == "" && txtbox_tab1_booknum.Text == "")
             {
-                MessageBox.Show("회원 정보와 도서 정보를 불러온 후, 대출 대상 회원과 도서를 선택해 이용 바랍니다.");
+                MessageBox.Show("회원 정보와 도서 정보를 불러온 후, 대출 대상 회원과 도서를 선택해 이용 바랍니다.", "대출 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (txtbox_tab1_membernum.Text == "" && txtbox_tab1_booknum.Text != "")
             {
-                MessageBox.Show("대출 대상 회원을 선택 바랍니다.");
+                MessageBox.Show("대출 대상 회원을 선택 바랍니다.", "대출 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (txtbox_tab1_membernum.Text != "" && txtbox_tab1_booknum.Text == "")
             {
-                MessageBox.Show("대출 대상 도서를 선택 바랍니다.");
+                MessageBox.Show("대출 대상 도서를 선택 바랍니다.", "대출 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -424,7 +424,7 @@ namespace FINAL_project_LibraryProgram_1234
                     {
                         if (command_loan.ExecuteNonQuery() != 0)
                         {
-                            MessageBox.Show(txtbox_tab1_name.Text + "회원님의 " + txtbox_tab1_bookname.Text + " 도서 대출이 완료되었습니다. 재조회 버튼을 눌러 화면을 갱신해 주세요.");
+                            MessageBox.Show(txtbox_tab1_name.Text + "회원님의 " + txtbox_tab1_bookname.Text + " 도서 대출이 완료되었습니다. 재조회 버튼을 눌러 화면을 갱신해 주세요.", "대출 성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             // 회원 정보 텍스트박스 초기화
                             txtbox_tab1_membernum.Text = "";
@@ -470,11 +470,11 @@ namespace FINAL_project_LibraryProgram_1234
                 {
                     if (txtbox_tab1_membernum.Text == txtbox_tab1_wholoanbook.Text)
                     {
-                        MessageBox.Show("본 도서는 회원님께서 대출하신 도서입니다.");
+                        MessageBox.Show(txtbox_tab1_bookname.Text + "도서는 회원번호 : " + txtbox_tab1_membernum.Text + " 회원님께서 이미 대출하고 계신 도서입니다.", "도서대출 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
                     {
-                        MessageBox.Show("현재 " + txtbox_tab1_bookname.Text + "도서는 타 회원이 대출 중인 도서로, 대출이 불가능합니다.");
+                        MessageBox.Show(txtbox_tab1_bookname.Text + "도서는 이미 타 회원이 대출 중인 도서로, 대출이 불가능합니다.", "도서대출 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else if (isMemberCanLoanStatus == false && isMemberCanStatus == true && isBookCanStatus == true)
@@ -487,7 +487,7 @@ namespace FINAL_project_LibraryProgram_1234
                 }
                 else
                 {
-                    MessageBox.Show(txtbox_tab1_name.Text + "회원님은 대출이 불가능한 회원입니다.");
+                    MessageBox.Show(txtbox_tab1_name.Text + "회원님은 대출이 불가능한 회원입니다.", "도서대출 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -508,15 +508,15 @@ namespace FINAL_project_LibraryProgram_1234
 
             if (txtbox_tab1_membernum.Text == "" && txtbox_tab1_booknum.Text == "")
             {
-                MessageBox.Show("회원 정보와 도서 정보를 불러온 후, 반납 대상 회원과 도서를 선택해 이용 바랍니다.");
+                MessageBox.Show("회원 정보와 도서 정보를 불러온 후, 반납 대상 회원과 도서를 선택해 이용 바랍니다.", "도서반납 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (txtbox_tab1_membernum.Text == "" && txtbox_tab1_booknum.Text != "")
             {
-                MessageBox.Show("반납 대상 회원을 선택 바랍니다.");
+                MessageBox.Show("반납 대상 회원을 선택 바랍니다.", "도서반납 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (txtbox_tab1_membernum.Text != "" && txtbox_tab1_booknum.Text == "")
             {
-                MessageBox.Show("반납 대상 도서를 선택 바랍니다.");
+                MessageBox.Show("반납 대상 도서를 선택 바랍니다.", "도서반납 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -529,7 +529,7 @@ namespace FINAL_project_LibraryProgram_1234
                     {
                         if (command_bookback.ExecuteNonQuery() != 0)
                         {
-                            MessageBox.Show(txtbox_tab1_name.Text + "회원님의" + txtbox_tab1_bookname.Text + "도서 반납이 완료되었습니다. 재조회 버튼을 눌러 화면을 갱신해 주세요.");
+                            MessageBox.Show(txtbox_tab1_name.Text + "회원님의" + txtbox_tab1_bookname.Text + "도서 반납이 완료되었습니다. 재조회 버튼을 눌러 화면을 갱신해 주세요.", "도서반납 완료", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             // 회원 정보 텍스트박스 초기화
                             txtbox_tab1_membernum.Text = "";
@@ -573,7 +573,7 @@ namespace FINAL_project_LibraryProgram_1234
                 }
                 else
                 {
-                    MessageBox.Show("본 도서는 해당 회원이 대출한 도서가 아니라 반납처리가 불가능 합니다. 강제 반납 처리가 불가합니다. 대출한 회원을 검색해서 처리 바랍니다.");
+                    MessageBox.Show("본 도서는 해당 회원이 대출한 도서가 아니라 반납처리가 불가능 합니다. 강제 반납 처리가 불가합니다. 대출한 회원을 검색해서 처리 바랍니다.", "도서반납 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -600,7 +600,7 @@ namespace FINAL_project_LibraryProgram_1234
         {
             if (rdobtn_tab2_newmode.Checked == true)
             {
-                MessageBox.Show("신규 도서 등록 모드입니다. 관리모드 변경 후 이용 바랍니다.");
+                MessageBox.Show("신규 도서 등록 모드입니다. 관리모드 변경 후 이용 바랍니다.", "도서등록 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -672,7 +672,7 @@ namespace FINAL_project_LibraryProgram_1234
             {
                 if (txtbox_tab2_searchbook.Text == "" && maskedtextbox_tab2_searchbookbynum.Text == "" && combobox_tab2_searchbybookstatus.Text == "")
                 {
-                    MessageBox.Show("검색명 입력 후 시도 바랍니다.");
+                    MessageBox.Show("검색명 입력 후 시도 바랍니다.", "도서검색 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -756,7 +756,7 @@ namespace FINAL_project_LibraryProgram_1234
                     }
                     else
                     {
-                        MessageBox.Show("범주 선택 후 검색 바랍니다.");
+                        MessageBox.Show("범주 선택 후 검색 바랍니다.", "도서검색 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }
@@ -837,7 +837,7 @@ namespace FINAL_project_LibraryProgram_1234
         {
             if (tab2_isBookReadOnly == true)
             {
-                MessageBox.Show("신규 도서 등록시에만 사용 가능한 버튼입니다.");
+                MessageBox.Show("신규 도서 등록시에만 사용 가능한 버튼입니다.", "도서등록 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (tab2_isBookModify == true)
             {
@@ -851,7 +851,7 @@ namespace FINAL_project_LibraryProgram_1234
                     {
                         if (modi1fy_command.ExecuteNonQuery() != 0)
                         {
-                            MessageBox.Show("수정 요청하신 도서 관리번호 " + txtbox_tab2_booknum.Text + " 도서가 데이터베이스에 수정되었습니다. 조회 버튼을 눌러, 도서 목록을 다시 재 조회 바랍니다.");
+                            MessageBox.Show("수정 요청하신 도서 관리번호 " + txtbox_tab2_booknum.Text + " 도서가 데이터베이스에 수정되었습니다. 조회 버튼을 눌러, 도서 목록을 다시 재 조회 바랍니다.", "도서등록 성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             // 도서 정보 텍스트박스 초기화
                             txtbox_tab2_bookname.Text = "";
                             txtbox_tab2_isbn.Text = "";
@@ -891,7 +891,7 @@ namespace FINAL_project_LibraryProgram_1234
                     {
                         if (command.ExecuteNonQuery() != 0)
                         {
-                            MessageBox.Show("신규 등록하신 " + txtbox_tab2_bookname.Text + " 도서가 데이터베이스에 등록되었습니다. 본 도서의 관리 번호는 " + book_num + "입니다. 조회 버튼을 눌러, 도서 목록을 다시 재 조회 바랍니다.");
+                            MessageBox.Show("신규 등록하신 " + txtbox_tab2_bookname.Text + " 도서가 데이터베이스에 등록되었습니다. 본 도서의 관리 번호는 " + book_num + "입니다. 조회 버튼을 눌러, 도서 목록을 다시 재 조회 바랍니다.", "도서등록 성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             // 도서 정보 텍스트박스 초기화
                             txtbox_tab2_bookname.Text = "";
@@ -919,12 +919,12 @@ namespace FINAL_project_LibraryProgram_1234
                 }
                 else
                 {
-                    MessageBox.Show("도서 이름과 도서 상태 항목은 필수 입력 항목입니다. 필수 입력 항목을 입력 후, 다시 시도해 주세요.");
+                    MessageBox.Show("도서 이름과 도서 상태 항목은 필수 입력 항목입니다. 필수 입력 항목을 입력 후, 다시 시도해 주세요.", "도서등록 성공", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show("도서 수정 모드 또는 신규 등록 모드에서만 작동 가능한 버튼입니다.");
+                MessageBox.Show("도서 수정 모드 또는 신규 등록 모드에서만 작동 가능한 버튼입니다.", "도서등록 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -960,23 +960,23 @@ namespace FINAL_project_LibraryProgram_1234
                         }
                         else
                         {
-                            MessageBox.Show("알 수 없는 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : ", "회원정보 수정 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("알 수 없는 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : ", "도서정보 삭제", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "회원정보 수정 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "도서정보 삭제", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     connection.Close();
                 }
                 else
                 {
-
+                    // 처리없음.
                 }
             }
             else
             {
-                MessageBox.Show("도서정보 수정 모드에서만 강제 삭제 처리가 가능합니다. 도서 관리 모드를 변경 후 진행 바랍니다.");
+                MessageBox.Show("도서정보 수정 모드에서만 강제 삭제 처리가 가능합니다. 도서 관리 모드를 변경 후 진행 바랍니다.", "도서정보 삭제", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -1156,7 +1156,7 @@ namespace FINAL_project_LibraryProgram_1234
             {
                 if (txtbox_tab3_searchmem.Text == "" && maskedtxtbox_tab3_search.Text == "" && combobox_tab3_searchmembystatus.Text == "")
                 {
-                    MessageBox.Show("검색명 입력 후 시도 바랍니다.");
+                    MessageBox.Show("검색명 입력 후 시도 바랍니다.", "회원 검색 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -1253,7 +1253,7 @@ namespace FINAL_project_LibraryProgram_1234
                     }
                     else
                     {
-                        MessageBox.Show("범주 선택 후 검색 바랍니다.");
+                        MessageBox.Show("범주 선택 후 검색 바랍니다.", "회원 검색 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }
@@ -1268,7 +1268,7 @@ namespace FINAL_project_LibraryProgram_1234
         {
             if (tab3_isMemReadOnly == true)
             {
-                MessageBox.Show("신규 멤버 등록시에만 사용 가능한 버튼입니다. 회원 관리 모드를 변경 후 진행 바랍니다.");
+                MessageBox.Show("신규 멤버 등록시에만 사용 가능한 버튼입니다. 회원 관리 모드를 변경 후 진행 바랍니다.", "회원 등록 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (tab3_isMemModify == true)
             {
@@ -1282,7 +1282,7 @@ namespace FINAL_project_LibraryProgram_1234
                     {
                         if (modifymem_command.ExecuteNonQuery() != 0)
                         {
-                            MessageBox.Show("수정 요청하신 회원번호 " + txtbox_tab3_membernum.Text + " 회원의 정보가 데이터베이스에 수정되었습니다. 조회 버튼을 눌러, 회원 목록을 다시 재 조회 바랍니다.");
+                            MessageBox.Show("수정 요청하신 회원번호 " + txtbox_tab3_membernum.Text + " 회원의 정보가 데이터베이스에 수정되었습니다. 조회 버튼을 눌러, 회원 목록을 다시 재 조회 바랍니다.", "회원정보 수정 성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             // 회원 정보 텍스트박스 초기화
                             txtbox_tab3_membername.Text = "";
                             txtbox_tab3_memberid.Text = "";
@@ -1310,7 +1310,7 @@ namespace FINAL_project_LibraryProgram_1234
                 }
                 else
                 {
-                    MessageBox.Show("도서 관리 모드를 우선 선택 후 진행 바랍니다.");
+                    MessageBox.Show("회원 관리 모드를 우선 선택 후 진행 바랍니다.", "회원 등록 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -1337,7 +1337,7 @@ namespace FINAL_project_LibraryProgram_1234
         {
             if (tab3_isMemModify == true)
             {
-                if (MessageBox.Show("정말 " + txtbox_tab3_membername.Text + "회원을 강제 탈퇴 처리하시겠습니까? 처리 이후에는 복구할 수 없습니다.", "회원정보 삭제", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("정말 " + txtbox_tab3_membername.Text + " 회원을 강제 탈퇴 처리하시겠습니까? 처리 이후에는 복구할 수 없습니다.", "회원정보 삭제", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     string delMem_insertQuery = "DELETE FROM library_project.member WHERE 회원번호 = '" + txtbox_tab3_membernum.Text + "';";
                     connection.Open();
@@ -1347,7 +1347,7 @@ namespace FINAL_project_LibraryProgram_1234
                     {
                         if (delMem_command.ExecuteNonQuery() != 0)
                         {
-                            MessageBox.Show("삭제 요청하신 회원번호 " + txtbox_tab3_membernum.Text + " 회원의 정보가 데이터베이스에서 삭제되었습니다. 조회 버튼을 눌러, 회원 목록을 다시 재 조회 바랍니다.");
+                            MessageBox.Show("삭제 요청하신 회원번호 " + txtbox_tab3_membernum.Text + " 회원의 정보가 데이터베이스에서 삭제되었습니다. 조회 버튼을 눌러, 회원 목록을 다시 재 조회 바랍니다.", "회원정보 삭제", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             // 회원 정보 텍스트박스 초기화
                             txtbox_tab3_membername.Text = "";
                             txtbox_tab3_memberid.Text = "";
@@ -1375,12 +1375,12 @@ namespace FINAL_project_LibraryProgram_1234
                 }
                 else
                 {
-
+                    // 처리 없음.
                 }
             }
             else
             {
-                MessageBox.Show("회원정보 수정 모드에서만 강제 탈퇴 처리가 가능합니다. 회원 관리 모드를 변경 후 진행 바랍니다.");
+                MessageBox.Show("회원정보 수정 모드에서만 강제 탈퇴 처리가 가능합니다. 회원 관리 모드를 변경 후 진행 바랍니다.", "회원정보 삭제", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             }
         }
 
@@ -1480,7 +1480,7 @@ namespace FINAL_project_LibraryProgram_1234
             {
                 if (txtbox_tab4_searchNotice.Text == "")
                 {
-                    MessageBox.Show("검색명 입력 후 시도 바랍니다.");
+                    MessageBox.Show("검색명 입력 후 시도 바랍니다.", "공지사항 검색 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -1512,7 +1512,7 @@ namespace FINAL_project_LibraryProgram_1234
                     }
                     else
                     {
-                        MessageBox.Show("범주 선택 후 검색 바랍니다.");
+                        MessageBox.Show("범주 선택 후 검색 바랍니다.", "공지사항 검색 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }
@@ -1528,7 +1528,7 @@ namespace FINAL_project_LibraryProgram_1234
         {
             if (tab4_isNoticeReadOnly == true)
             {
-                MessageBox.Show("수정 모드에서만 사용 가능한 버튼입니다. 회원 관리 모드를 변경 후 진행 바랍니다.");
+                MessageBox.Show("수정 모드에서만 사용 가능한 버튼입니다. 회원 관리 모드를 변경 후 진행 바랍니다.", "공지사항 저장 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (tab4_isNoticeModify == true)
             {
@@ -1542,7 +1542,7 @@ namespace FINAL_project_LibraryProgram_1234
                     {
                         if (modifyNotice_command.ExecuteNonQuery() != 0)
                         {
-                            MessageBox.Show("수정 요청하신 공지사항 제목 : " + txtbox_tab4_notice_title.Text + " 공지의 내용 수정이 완료되었습니다. 조회 버튼을 눌러, 공지사항 목록을 다시 재 조회 바랍니다.");
+                            MessageBox.Show("수정 요청하신 공지사항 제목 : " + txtbox_tab4_notice_title.Text + " 공지의 내용 수정이 완료되었습니다. 조회 버튼을 눌러, 공지사항 목록을 다시 재 조회 바랍니다.", "공지사항 저장 성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             // 공지사항 텍스트박스 초기화
                             txtbox_tab4_notice_title.Text = "";
@@ -1575,7 +1575,7 @@ namespace FINAL_project_LibraryProgram_1234
                     {
                         if (newNotice_command.ExecuteNonQuery() != 0)
                         {
-                            MessageBox.Show("신규등록 요청하신 공지사항 제목 : " + txtbox_tab4_notice_title.Text + " 공지사항 게시글이 데이터베이스에 등록되었습니다. 조회 버튼을 눌러, 공지사항 목록을 다시 재 조회 바랍니다.");
+                            MessageBox.Show("신규등록 요청하신 공지사항 제목 : " + txtbox_tab4_notice_title.Text + " 공지사항 게시글이 데이터베이스에 등록되었습니다. 조회 버튼을 눌러, 공지사항 목록을 다시 재 조회 바랍니다.", "공지사항 저장 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                             // 공지사항 텍스트박스 초기화
                             txtbox_tab4_notice_title.Text = "";
@@ -1598,7 +1598,7 @@ namespace FINAL_project_LibraryProgram_1234
             }
             else
             {
-                MessageBox.Show("게시판 관리 모드를 우선 선택 후 진행 바랍니다.");
+                MessageBox.Show("게시판 관리 모드를 우선 선택 후 진행 바랍니다.", "공지사항 관리", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -1607,7 +1607,7 @@ namespace FINAL_project_LibraryProgram_1234
         {
             if (tab4_isNoticeReadOnly == true)
             {
-                MessageBox.Show("수정 모드에서만 사용 가능한 버튼입니다. 게시판 관리 모드를 변경 후 진행 바랍니다.");
+                MessageBox.Show("수정 모드에서만 사용 가능한 버튼입니다. 게시판 관리 모드를 변경 후 진행 바랍니다.", "공지사항 삭제 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (tab4_isNoticeModify == true)
             {
@@ -1615,7 +1615,7 @@ namespace FINAL_project_LibraryProgram_1234
                 txtbox_tab4_notice_body.ReadOnly = false;
                 if (txtbox_tab4_notice_title.Text == "")
                 {
-                    MessageBox.Show("삭제할 공지사항이 선택되지 않았습니다. 공지사항 선택 후 처리 바랍니다.");
+                    MessageBox.Show("삭제할 공지사항이 선택되지 않았습니다. 공지사항 선택 후 처리 바랍니다.", "공지사항 저장 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -1629,7 +1629,7 @@ namespace FINAL_project_LibraryProgram_1234
                         {
                             if (delNotice_command.ExecuteNonQuery() != 0)
                             {
-                                MessageBox.Show("삭제 요청하신 공지사항 " + txtbox_tab4_notice_title.Text + " 게시글이 데이터베이스에서 삭제되었습니다. 조회 버튼을 눌러, 공지사항 목록을 다시 재 조회 바랍니다.");
+                                MessageBox.Show("삭제 요청하신 공지사항 " + txtbox_tab4_notice_title.Text + " 게시글이 데이터베이스에서 삭제되었습니다. 조회 버튼을 눌러, 공지사항 목록을 다시 재 조회 바랍니다.", "공지사항 삭제 성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                 // 공지사항 텍스트박스 초기화
                                 txtbox_tab4_notice_title.Text = "";
@@ -1660,11 +1660,11 @@ namespace FINAL_project_LibraryProgram_1234
                 txtbox_tab4_notice_title.ReadOnly = true;
                 txtbox_tab4_notice_body.ReadOnly = true;
 
-                MessageBox.Show("수정 모드에서만 사용 가능한 버튼입니다. 게시판 관리 모드를 변경 후 진행 바랍니다.");
+                MessageBox.Show("수정 모드에서만 사용 가능한 버튼입니다. 게시판 관리 모드를 변경 후 진행 바랍니다.", "공지사항 저장 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                MessageBox.Show("게시판 관리 모드를 우선 선택 후 진행 바랍니다.");
+                MessageBox.Show("공지사항 관리 모드를 우선 선택 후 진행 바랍니다.", "공지사항 관리", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -1673,7 +1673,7 @@ namespace FINAL_project_LibraryProgram_1234
         {
             if (tab4_isNoticeReadOnly)
             {
-                MessageBox.Show("수정 모드에서만 사용 가능한 버튼입니다. 게시판 관리 모드를 변경 후 진행 바랍니다.");
+                MessageBox.Show("수정 모드에서만 사용 가능한 버튼입니다. 게시판 관리 모드를 변경 후 진행 바랍니다.", "입력내용 초기화 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (tab4_isNoticeModify)
             {
@@ -1687,7 +1687,7 @@ namespace FINAL_project_LibraryProgram_1234
             }
             else
             {
-                MessageBox.Show("게시판 관리 모드를 우선 선택 후 진행 바랍니다.");
+                MessageBox.Show("게시판 관리 모드를 선택 후 진행 바랍니다.", "입력내용 초기화 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -1716,7 +1716,7 @@ namespace FINAL_project_LibraryProgram_1234
             {
                 if (txtbox_tab4_searchFree.Text == "")
                 {
-                    MessageBox.Show("검색명 입력 후 시도 바랍니다.");
+                    MessageBox.Show("검색명 입력 후 시도 바랍니다.", "게시판 검색 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -1748,7 +1748,7 @@ namespace FINAL_project_LibraryProgram_1234
                     }
                     else
                     {
-                        MessageBox.Show("범주 선택 후 검색 바랍니다.");
+                        MessageBox.Show("검색 범주 선택 후 검색 바랍니다.", "게시판 검색 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }
@@ -1798,7 +1798,7 @@ namespace FINAL_project_LibraryProgram_1234
                     {
                         if (delFree_command.ExecuteNonQuery() != 0)
                         {
-                            MessageBox.Show("삭제 요청하신 게시글 " + txtbox_tab4_free_name.Text + " 글이 데이터베이스에서 삭제되었습니다. 조회 버튼을 눌러, 게시글 목록을 다시 재 조회 바랍니다.");
+                            MessageBox.Show("삭제 요청하신 게시글 " + txtbox_tab4_free_name.Text + " 글이 데이터베이스에서 삭제되었습니다. 조회 버튼을 눌러, 게시글 목록을 다시 재 조회 바랍니다.", "자유게시판 삭제 성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             // 게시글 정보 텍스트박스 초기화
                             txtbox_tab4_free_name.Text = "";
@@ -1822,12 +1822,12 @@ namespace FINAL_project_LibraryProgram_1234
                 }
                 else
                 {
-                    MessageBox.Show("삭제 모드에서만 강제 삭제가 가능합니다. 모드를 변경해 주세요.");
+                    MessageBox.Show("삭제 모드에서만 강제 삭제가 가능합니다. 게시판 관리 모드를 변경해 주세요.", "자유게시판 삭제 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show("삭제 모드에서만 강제 삭제가 가능합니다. 모드를 변경해 주세요.");
+                MessageBox.Show("삭제 모드에서만 강제 삭제가 가능합니다. 게시판 관리 모드를 변경해 주세요.", "자유게시판 삭제 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -1884,7 +1884,7 @@ namespace FINAL_project_LibraryProgram_1234
             }
         }
 
-        // <탭 5에서, 라디오 버튼을 선택해 모드 변경 시>
+        // <탭 5에서, 라디오 버튼을 선택해 모드 변경 시 (열람모드)>
         private void rdobtn_tab5_see_CheckedChanged(object sender, EventArgs e)
         {
             tab5_isReadOnly = true;
@@ -1897,6 +1897,7 @@ namespace FINAL_project_LibraryProgram_1234
             txtbox_tab5_answer.ReadOnly = true;
         }
 
+        // <탭 5에서, 라디오 버튼을 선택해 모드 변경 시 (삭제/답변모드)>
         private void rdo_btn5_set_CheckedChanged(object sender, EventArgs e)
         {
             tab5_isReadOnly = false;
@@ -1909,13 +1910,14 @@ namespace FINAL_project_LibraryProgram_1234
             txtbox_tab5_answer.ReadOnly = false;
         }
 
+        // <탭 5에서, 검색하기 버튼 클릭 시>
         private void btn_tab5_search_Click(object sender, EventArgs e)
         {
             try
             {
                 if (txtbox_tab5_search.Text == "")
                 {
-                    MessageBox.Show("검색명 입력 후 시도 바랍니다.");
+                    MessageBox.Show("검색명 입력 후 시도 바랍니다.", "문의게시판 검색 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -1947,16 +1949,17 @@ namespace FINAL_project_LibraryProgram_1234
                     }
                     else
                     {
-                        MessageBox.Show("범주 선택 후 검색 바랍니다.");
+                        MessageBox.Show("검색 범주 선택 후 검색 바랍니다.", "문의게시판 검색 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "문의 게시글 검색 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "문의게시판 검색 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+        // <탭 5에서, 답변내용을 이메일로도 전송하기 체크박스 클릭 시>
         private void chkbox_tab5_emailsend_CheckedChanged(object sender, EventArgs e)
         {
             if (chkbox_tab5_emailsend.Checked == true)
@@ -1969,11 +1972,12 @@ namespace FINAL_project_LibraryProgram_1234
             }
         }
 
+        // <탭 5에서, 답변 저장하기 버튼 클릭 시>
         private void btn_tab5_save_Click(object sender, EventArgs e)
         {
             if (tab5_isReadOnly == true)
             {
-                MessageBox.Show("문의내용 삭제 / 답변 모드에서만 강제 삭제가 가능합니다. 모드를 변경해 주세요.");
+                MessageBox.Show("문의내용 삭제 / 답변 모드에서만 강제 삭제가 가능합니다. 모드를 변경해 주세요.", "문의게시판 관리 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (tab5_isModify == true)
             {
@@ -2016,7 +2020,7 @@ namespace FINAL_project_LibraryProgram_1234
                                     smtp.Send(mail);
                                     mail.Dispose();
 
-                                    MessageBox.Show(txtbox_tab5_memname.Text + " 회원에게 정상적으로 답변 안내 이메일을 전송하고, 문의 게시글에 대한 답변을 등록했습니다. 조회 버튼을 눌러, 게시글 목록을 다시 재 조회 바랍니다.");
+                                    MessageBox.Show(txtbox_tab5_memname.Text + " 회원에게 정상적으로 답변 안내 이메일을 전송하고, 문의 게시글에 대한 답변을 등록했습니다. 조회 버튼을 눌러, 게시글 목록을 다시 재 조회 바랍니다.", "문의게시판 답변등록 성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                     txtbox_tab5_title.Text = "";
                                     txtbox_tab5_body.Text = "";
@@ -2034,7 +2038,7 @@ namespace FINAL_project_LibraryProgram_1234
                             }
                             else if (tab5_emailsend == false)
                             {
-                                MessageBox.Show(txtbox_tab5_memname.Text + " 회원님이 작성하신 " + txtbox_tab5_title.Text + " 문의 게시글에 대한 답변이 등록되었습니다. 조회 버튼을 눌러, 게시글 목록을 다시 재 조회 바랍니다.");
+                                MessageBox.Show(txtbox_tab5_memname.Text + " 회원님이 작성하신 " + txtbox_tab5_title.Text + " 문의 게시글에 대한 답변이 등록되었습니다. 조회 버튼을 눌러, 게시글 목록을 다시 재 조회 바랍니다.", "문의게시판 답변등록 성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                 txtbox_tab5_title.Text = "";
                                 txtbox_tab5_body.Text = "";
@@ -2048,27 +2052,28 @@ namespace FINAL_project_LibraryProgram_1234
                         }
                         else
                         {
-                            MessageBox.Show("알 수 없는 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : ", "문의내용 답변 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("알 수 없는 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : ", "문의게시판 답변등록 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "문의내용 답변 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "문의게시판 답변등록 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     connection.Close();
                 }
                 else
                 {
-                    MessageBox.Show("답변 내용 작성 후 진행 바랍니다.");
+                    MessageBox.Show("답변 내용 작성 후 진행 바랍니다.", "문의게시판 답변등록 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
 
+        // <탭 5에서, 문의 게시글 삭제하기 버튼 클릭 시>
         private void btn_tab5_delete_Click(object sender, EventArgs e)
         {
             if (tab5_isReadOnly == true)
             {
-                MessageBox.Show("문의내용 삭제 / 답변 모드에서만 강제 삭제가 가능합니다. 모드를 변경해 주세요.");
+                MessageBox.Show("문의내용 삭제 / 답변 모드에서만 강제 삭제가 가능합니다. 모드를 변경해 주세요.", "문의게시판 관리 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (tab5_isModify == true)
             {
@@ -2082,7 +2087,7 @@ namespace FINAL_project_LibraryProgram_1234
                     {
                         if (delqna_command.ExecuteNonQuery() != 0)
                         {
-                            MessageBox.Show("삭제 요청하신 게시글 " + txtbox_tab5_title.Text + " 글이 데이터베이스에서 삭제되었습니다. 조회 버튼을 눌러, 게시글 목록을 다시 재 조회 바랍니다.");
+                            MessageBox.Show("삭제 요청하신 게시글 " + txtbox_tab5_title.Text + " 글이 데이터베이스에서 삭제되었습니다. 조회 버튼을 눌러, 게시글 목록을 다시 재 조회 바랍니다.", "문의게시판 관리 성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             txtbox_tab5_title.Text = "";
                             txtbox_tab5_body.Text = "";
@@ -2102,7 +2107,7 @@ namespace FINAL_project_LibraryProgram_1234
                 }
                 else
                 {
-                    MessageBox.Show("삭제/답변 모드에서만 삭제가 가능합니다. 모드를 변경해 주세요.");
+                    MessageBox.Show("삭제/답변 모드에서만 삭제가 가능합니다. 게시판 관리 모드를 변경해 주세요.", "문의게시판 관리 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
@@ -2111,6 +2116,7 @@ namespace FINAL_project_LibraryProgram_1234
             }
         }
 
+        // <탭 6에서, DB백업 버튼 클릭 시>
         private void btn_tab6_backup_Click(object sender, EventArgs e)
         {
             System.Diagnostics.ProcessStartInfo psi = new System.Diagnostics.ProcessStartInfo();
@@ -2134,9 +2140,10 @@ namespace FINAL_project_LibraryProgram_1234
             string result = process.StandardOutput.ReadToEnd();
             process.WaitForExit();
             process.Close();
-            MessageBox.Show("사용자의 컴퓨터 C:\\1234library 폴더에 DB 백업이 완료되었습니다. 파일이 보이지 않을 경우, 우측 상단의 '오류보고/개선요청' 메뉴를 통해, 아래의 문구와 함께 접수 바랍니다.\n\n\n" + result);
+            MessageBox.Show("사용자의 컴퓨터 C:\\1234library 폴더에 DB 백업이 완료되었습니다. 파일이 보이지 않을 경우, 우측 상단의 '오류보고/개선요청' 메뉴를 통해, 아래의 문구와 함께 접수 바랍니다.\n\n\n" + result, "DB 백업 성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        // <탭 6에서, DB복원 버튼 클릭 시>
         private void btn_tab6_restore_Click(object sender, EventArgs e)
         {
             System.Diagnostics.ProcessStartInfo psi = new System.Diagnostics.ProcessStartInfo();
@@ -2159,9 +2166,11 @@ namespace FINAL_project_LibraryProgram_1234
             string result = process.StandardOutput.ReadToEnd();
             process.WaitForExit();
             process.Close();
-            MessageBox.Show("사용자의 컴퓨터 C:\\1234library 폴더에 DB 백업이 완료되었습니다. 파일이 보이지 않을 경우, 우측 상단의 '오류보고/개선요청' 메뉴를 통해, 아래의 문구와 함께 접수 바랍니다.\n\n\n" + result);
+            MessageBox.Show("DB 복원이 성공했습니다. 프로그램을 재 실행 합니다. 복원이 제대로 이루어지지 않았을 경우, 우측 상단의 '오류보고/개선요청' 메뉴를 통해, 아래의 문구와 함께 접수 바랍니다.\n\n\n" + result, "DB 복원 성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Application.Restart();
         }
 
+        // <탭 6에서, ID 중복확인 버튼 클릭 시>
         private void btn_tab6_idcheck_Click(object sender, EventArgs e)
         {
             if (txtbox_tab6_id.Text != "")
@@ -2178,16 +2187,16 @@ namespace FINAL_project_LibraryProgram_1234
                         string count_idcheck = reader["cnt"].ToString();
                         if (count_idcheck == "0")
                         {
-                            MessageBox.Show("신규 관리자 등록이 가능한 아이디 입니다. 등록 절차를 계속 진행해 주세요.", "아이디 중복확인");
+                            MessageBox.Show("신규 관리자 등록이 가능한 아이디 입니다. 등록 절차를 계속 진행해 주세요.", "신규 관리자 등록", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             tab6_masterid = true;
                         }
                         else if (txtbox_tab6_id.Text == "")
                         {
-                            MessageBox.Show("아이디 입력 후 버튼을 눌러주세요.", "아이디 중복확인", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("아이디 입력 후 버튼을 눌러주세요.", "신규 관리자 등록", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         else
                         {
-                            MessageBox.Show("중복된 아이디로, 회원가입이 불가능합니다. 다른 아이디로 다시 시도해 주세요.", "아이디 중복확인", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("중복된 아이디로, 회원가입이 불가능합니다. 다른 아이디로 다시 시도해 주세요.", "신규 관리자 등록", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                 }
@@ -2199,10 +2208,11 @@ namespace FINAL_project_LibraryProgram_1234
             }
             else
             {
-                MessageBox.Show("아이디값 입력 후 조회 바랍니다.");
+                MessageBox.Show("아이디 입력 후 버튼을 눌러주세요.", "신규 관리자 등록", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
+        // <탭 6에서, 신규 관리자 등록버튼 클릭 시>
         private void btn_tab6_newmaster_Click(object sender, EventArgs e)
         {
             if (tab6_masterid == true)
@@ -2221,7 +2231,7 @@ namespace FINAL_project_LibraryProgram_1234
                     }
                     else
                     {
-                        MessageBox.Show("비정상 입력 정보입니다. 재확인 바랍니다.", "회원가입 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("비정상 입력 정보입니다. 재확인 바랍니다.", "신규 관리자 등록 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 catch (Exception ex)

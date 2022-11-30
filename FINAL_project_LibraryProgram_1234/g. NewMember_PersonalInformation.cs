@@ -63,15 +63,15 @@ namespace FINAL_project_LibraryProgram_1234
             }
             else if (chk1 == false && chk2 == true)
             {
-                MessageBox.Show("이용약관에 미동의시 일이삼사 도서관리 프로그램을 정상적으로 이용하실 수 없습니다.", "이용약관 동의 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("이용약관에 미동의시 일이삼사 도서관리 프로그램을 정상적으로 이용하실 수 없습니다.", "이용약관 동의 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (chk1 == true && chk2 == false)
             {
-                MessageBox.Show("개인정보 수집 및 이용동의 약관에 미동의시 일이삼사 도서관리 프로그램을 정상적으로 이용하실 수 없습니다.", "이용약관 동의 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("개인정보 수집 및 이용동의 약관에 미동의시 일이삼사 도서관리 프로그램을 정상적으로 이용하실 수 없습니다.", "이용약관 동의 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                MessageBox.Show("이용약관과 개인정보 수집 및 이용동의 약관에 미동의시 일이삼사 도서관리 프로그램을 정상적으로 이용하실 수 없습니다.", "이용약관 동의 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("이용약관과 개인정보 수집 및 이용동의 약관에 미동의시 일이삼사 도서관리 프로그램을 정상적으로 이용하실 수 없습니다.", "이용약관 동의 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

@@ -15,6 +15,8 @@ namespace FINAL_project_LibraryProgram_1234
 {
     public partial class Login_Master : Form
     {
+        private static bool isMasterLogin = false;
+
         // MySQL 연결
         MySqlConnection connection = new MySqlConnection("Server = localhost;Database=library_project;Uid=root;Pwd=root;");
         public Login_Master()
@@ -33,31 +35,24 @@ namespace FINAL_project_LibraryProgram_1234
 
                 MySqlDataReader reader = command.ExecuteReader();
 
-                int login_status = 0;
-
                 while (reader.Read())
                 {
                     if (txtbox_id.Text == reader["아이디"].ToString() && txtbox_pwd.Text == reader["비밀번호"].ToString())
                     {
-                        /*
-                        MessageBox.Show(txtbox_id.Text + " 관리자님, 환영합니다.");
-
-                        Master showMaster = new Master();
-                        showMaster.ShowDialog();
-                        */
-                        login_status = 1;
+                        isMasterLogin = true;
                     }
 
-                    if (login_status == 1)
+                    if (isMasterLogin == true)
                     {
-                        MessageBox.Show(txtbox_id.Text + " 관리자님, 환영합니다.");
+                        MessageBox.Show(txtbox_id.Text + " 관리자님, 환영합니다.", "로그인 성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         Master showMaster = new Master();
                         showMaster.ShowDialog();
                     }
                     else
                     {
-                        MessageBox.Show("회원 정보를 확인해 주세요.");
+                        MessageBox.Show("회원 정보를 확인해 주세요.", "로그인 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        isMasterLogin = false;
                     }
                 }
             }
@@ -100,7 +95,7 @@ namespace FINAL_project_LibraryProgram_1234
         // 프로그램 종료 버튼 클릭시
         private void btn_exit_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("정말 도서관리 시스템을 종료하시겠습니까?", "종료하기", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("정말 도서관리 시스템을 종료하시겠습니까?", "종료하기", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Application.Exit();
             }

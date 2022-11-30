@@ -72,22 +72,22 @@ namespace FINAL_project_LibraryProgram_1234
                    string count_idcheck = reader["cnt"].ToString();
                     if (count_idcheck == "0")
                     {
-                        MessageBox.Show("회원가입이 가능한 아이디입니다. 회원가입 절차를 계속 진행해 주세요.", "아이디 중복확인");
+                        MessageBox.Show("회원가입이 가능한 아이디입니다. 회원가입 절차를 계속 진행해 주세요.", "아이디 중복확인", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         id_check = true;
                     }
                     else if (txtbox_id.Text == "")
                     {
-                        MessageBox.Show("아이디 입력 후 버튼을 눌러주세요.", "아이디 중복확인", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("아이디 입력 후 버튼을 눌러주세요.", "아이디 중복확인", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
                     {
-                        MessageBox.Show("중복된 아이디로, 회원가입이 불가능합니다. 다른 아이디로 다시 시도해 주세요.", "아이디 중복확인", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("중복된 아이디로, 회원가입이 불가능합니다. 다른 아이디로 다시 시도해 주세요.", "아이디 중복확인", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }
             catch(Exception ex)
             {
-                MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "아이디 중복확인 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("MySQL 연결 오류입니다. 오류보고 / 문의사항 메뉴에서 문의 바랍니다. \n\n오류내용 : " + ex.Message, "아이디 중복확인 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             connection.Close();
         }
@@ -162,12 +162,12 @@ namespace FINAL_project_LibraryProgram_1234
         {
             if (comboBox_tel.Text == "" || maskedtxtBox_tel.Text == "")
             {
-                MessageBox.Show("휴대폰 번호가 입력되지 않았습니다. 입력후 다시 시도해 주세요.");
+                MessageBox.Show("휴대폰 번호가 입력되지 않았습니다. 입력후 다시 시도해 주세요.", "본인인증 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 var body = smsapi.SendMessageAsync(comboBox_tel.Text + maskedtxtBox_tel.Text, "일이삼사 도서관 본인인증 인증 번호입니다." + "[" + telcheck_num.ToString() + "]");
-                MessageBox.Show("사용자의 휴대폰 번호 : " + comboBox_tel.Text + "-" + maskedtxtBox_tel.Text + "로 인증번호가 발송되었습니다. 인증번호를 올바르게 입력해 주세요.");
+                MessageBox.Show("사용자의 휴대폰 번호 : " + comboBox_tel.Text + "-" + maskedtxtBox_tel.Text + "로 인증번호가 발송되었습니다. 인증번호를 올바르게 입력해 주세요.", "본인인증", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -176,12 +176,12 @@ namespace FINAL_project_LibraryProgram_1234
         {
             if (txtbox_telchecknum.Text == telcheck_num.ToString())
             {
-                MessageBox.Show("휴대폰 인증이 완료되었습니다. 회원가입을 진행해 주세요.", "인증 완료");
+                MessageBox.Show("휴대폰 인증이 완료되었습니다. 회원가입을 진행해 주세요.", "본인인증 완료", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 tel_check = true;
             }
             else
             {
-                MessageBox.Show("휴대폰 인증이 실패했습니다. 인증번호를 확인해 주세요.", "인증 실패");
+                MessageBox.Show("휴대폰 인증이 실패했습니다. 인증번호를 확인해 주세요.", "본인인증 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -217,11 +217,11 @@ namespace FINAL_project_LibraryProgram_1234
                 smtp.Send(mail);
                 smtp.Dispose();
 
-                MessageBox.Show("이메일 인증번호가 전송되었습니다. 인증번호 입력 후 인증확인 버튼을 눌러주세요.", "전송 완료");
+                MessageBox.Show("이메일 인증번호가 전송되었습니다. 인증번호 입력 후 인증확인 버튼을 눌러주세요.", "본인인증", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("이메일 발송 오류입니다. 이메일 주소 또는 네트워크 상태를 확인해 주세요." + ex.ToString());
+                MessageBox.Show("이메일 발송 오류입니다. 이메일 주소 또는 네트워크 상태를 확인해 주세요. 오류가 지속될 경우, 아래의 에러 메시지를 함께 첨부해 오류보고/개선요청 항목으로 문의 바랍니다. 불편을 드려 죄송합니다.\n\n" + ex.ToString(), "이메일 전송 실패", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -230,12 +230,12 @@ namespace FINAL_project_LibraryProgram_1234
         {
             if (txtbox_emailchecknum.Text == emailcheck_num.ToString())
             {
-                MessageBox.Show("이메일 인증이 완료되었습니다. 회원가입을 진행해 주세요.", "인증 완료");
+                MessageBox.Show("이메일 인증이 완료되었습니다. 회원가입을 진행해 주세요.", "본인인증 완료", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 email_check = true;
             }
             else
             {
-                MessageBox.Show("이메일 인증이 실패했습니다. 인증번호를 확인해 주세요.", "인증 실패");
+                MessageBox.Show("이메일 인증이 실패했습니다. 인증번호를 확인해 주세요.", "본인인증 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

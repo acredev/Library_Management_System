@@ -69,7 +69,7 @@ namespace FINAL_project_LibraryProgram_1234
             label_teloremail.Text = "이메일 주소";
             if (rdobtn_emailcheck.Checked == true)
             {
-                MessageBox.Show("아이디 조회 시, 회원정보에 입력된 이메일이 자동으로 입력됩니다.");
+                MessageBox.Show("아이디 조회 시, 회원정보에 입력된 이메일이 자동으로 입력됩니다.", "비밀번호 찾기", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -78,11 +78,11 @@ namespace FINAL_project_LibraryProgram_1234
         {
             if (txtbox_name.Text == "" || txtbox_id.Text == "")
             {
-                MessageBox.Show("회원정보에 등록된 아이디와 이름을 정확하게 입력 후 진행해 주시기 바랍니다.", "비밀번호 찾기 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("회원정보에 등록된 아이디와 이름을 정확하게 입력 후 진행해 주시기 바랍니다.", "비밀번호 찾기 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (txtbox_name.Text == "" && txtbox_id.Text == "")
             {
-                MessageBox.Show("회원정보에 등록된 아이디와 이름을 정확하게 입력 후 진행해 주시기 바랍니다.", "비밀번호 찾기 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("회원정보에 등록된 아이디와 이름을 정확하게 입력 후 진행해 주시기 바랍니다.", "비밀번호 찾기 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -100,11 +100,11 @@ namespace FINAL_project_LibraryProgram_1234
                         pwdfind_result_email = reader["이메일"].ToString();
                         if (pwdfind_result_cnt == "0")
                         {
-                            MessageBox.Show("회원가입되어 있지 않은 정보입니다. 아이디 찾기 과정부터 진행 바랍니다.");
+                            MessageBox.Show("회원가입되어 있지 않은 정보입니다.", "아이디 조회 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         else
                         {
-                            MessageBox.Show("아이디 조회가 완료 되었습니다. 다음 절차를 진행해 주세요.");
+                            MessageBox.Show("아이디 조회가 완료 되었습니다. 다음 절차를 진행해 주세요.", "아이디 조회 성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             if (rdobtn_telcheck.Checked == true && rdobtn_emailcheck.Checked == false)
                             {
                                 label_teloremail.Text = "전화번호";
@@ -164,19 +164,19 @@ namespace FINAL_project_LibraryProgram_1234
             {
                 if (txtbox_teloremail.Text == "아이디 조회 후 자동 입력됩니다.")
                 {
-                    MessageBox.Show("아이디 조회 절차를 거친 후 재 시도 바랍니다.", "비밀번호 찾기 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("아이디 조회 절차를 거친 후 재 시도 바랍니다.", "비밀번호 찾기 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
                     var body = smsapi.SendMessageAsync(pwdfind_result_tel, "일이삼사 도서관 본인인증 인증 번호입니다." + "[" + randomSMS_num.ToString() + "]");
-                    MessageBox.Show("회원정보에 등록된 사용자의 휴대폰 번호로 인증번호가 발송되었습니다. 인증번호를 올바르게 입력해 주세요.");
+                    MessageBox.Show("회원정보에 등록된 사용자의 휴대폰 번호로 인증번호가 발송되었습니다. 인증번호를 올바르게 입력해 주세요.", "본인인증", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }   
             else if (rdobtn_emailcheck.Checked == true)
             {
                 if (txtbox_teloremail.Text == "아이디 조회 후 자동 입력됩니다.")
                 {
-                    MessageBox.Show("아이디 조회 절차를 거친 후 재 시도 바랍니다.", "비밀번호 찾기 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("아이디 조회 절차를 거친 후 재 시도 바랍니다.", "비밀번호 찾기 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -209,11 +209,11 @@ namespace FINAL_project_LibraryProgram_1234
                         smtp.Send(mail);
                         smtp.Dispose();
 
-                        MessageBox.Show("회원정보에 등록된 사용자의 이메일 주소로 인증번호가 발송되었습니다. 인증번호를 올바르게 입력해 주세요.");
+                        MessageBox.Show("회원정보에 등록된 사용자의 이메일 주소로 인증번호가 발송되었습니다. 인증번호를 올바르게 입력해 주세요.", "본인인증", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("이메일 발송 오류입니다. Google SMTP 서버 문제일 수 있습니다. 메인 화면의 '오류보고 / 개선요청' 항목에서 문의 접수 바랍니다. \n\n 오류 메시지 : " + ex.ToString(), "아이디 찾기 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("이메일 발송 오류입니다. Google SMTP 서버 문제일 수 있습니다. 메인 화면의 '오류보고 / 개선요청' 항목에서 문의 접수 바랍니다. 불편을 드려 죄송합니다.\n\n오류 메시지 : " + ex.ToString(), "비밀번호 찾기 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -231,12 +231,12 @@ namespace FINAL_project_LibraryProgram_1234
             {
                 if (txtbox_checknum.Text == randomSMS_num.ToString())
                 {
-                    MessageBox.Show("휴대폰 인증이 완료되었습니다. 비밀번호 찾기 과정을 진행해 주세요.", "인증 완료");
+                    MessageBox.Show("휴대폰 인증이 완료되었습니다. 비밀번호 찾기 과정을 진행해 주세요.", "인증 완료", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     telcheck = true;
                 }
                 else
                 {
-                    MessageBox.Show("휴대폰 인증이 실패했습니다. 인증번호 확인 후 재시도 바랍니다.", "인증 실패");
+                    MessageBox.Show("휴대폰 인증이 실패했습니다. 인증번호 확인 후 재시도 바랍니다.", "인증 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     telcheck = false;
                 }
             }
@@ -246,12 +246,12 @@ namespace FINAL_project_LibraryProgram_1234
             {
                 if (txtbox_checknum.Text == randomEMail_num.ToString())
                 {
-                    MessageBox.Show("이메일 인증이 완료되었습니다. 비밀번호 찾기 과정을 진행해 주세요.", "인증 완료");
+                    MessageBox.Show("이메일 인증이 완료되었습니다. 비밀번호 찾기 과정을 진행해 주세요.", "인증 완료", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     emailcheck = true;
                 }
                 else
                 {
-                    MessageBox.Show("이메일 인증이 실패했습니다. 인증번호 확인 후 재시도 바랍니다.", "인증 실패");
+                    MessageBox.Show("이메일 인증이 실패했습니다. 인증번호 확인 후 재시도 바랍니다.", "인증 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -286,7 +286,7 @@ namespace FINAL_project_LibraryProgram_1234
                         if (rdobtn_telcheck.Checked == true && rdobtn_emailcheck.Checked == false)
                         {
                             var body = smsapi.SendMessageAsync(pwdfind_result_tel, "일이삼사 도서관 임시 비밀번호입니다." + "[" + randompwd_result.ToString() + "]");
-                            MessageBox.Show("임시 비밀번호가 사용자의 전화번호로 발송되었습니다. 보안을 위해 임시 비밀번호로 로그인 후, 비밀번호 변경 절차를 거쳐 주세요.");
+                            MessageBox.Show("임시 비밀번호가 사용자의 전화번호로 발송되었습니다. 보안을 위해 임시 비밀번호로 로그인 후, 비밀번호 변경 절차를 거쳐 주세요.", "비밀번호 찾기", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Close();
                         }
                         else if (rdobtn_telcheck.Checked == false && rdobtn_emailcheck.Checked == true)
@@ -320,7 +320,7 @@ namespace FINAL_project_LibraryProgram_1234
                                 smtp.Send(mail);
                                 smtp.Dispose();
 
-                                MessageBox.Show("임시 비밀번호가 사용자의 이메일로 발송되었습니다. 보안을 위해 임시 비밀번호로 로그인 후, 비밀번호 변경 절차를 거쳐 주세요.");
+                                MessageBox.Show("임시 비밀번호가 사용자의 이메일로 발송되었습니다. 보안을 위해 임시 비밀번호로 로그인 후, 비밀번호 변경 절차를 거쳐 주세요.", "비밀번호 찾기", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Close();
                             }
                             catch (Exception ex)
@@ -330,7 +330,7 @@ namespace FINAL_project_LibraryProgram_1234
                         }
                         else
                         {
-                            MessageBox.Show("알 수 없는 프로그램 오류입니다. 메인 화면의 '오류보고 / 개선요청' 항목으로 진입해 오류를 보고해 주세요. 불편을 드려 죄송합니다.", "비밀번호 찾기 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("알 수 없는 프로그램 오류입니다. 메인 화면의 '오류보고 / 개선요청' 항목으로 진입해 오류를 보고해 주세요. 불편을 드려 죄송합니다.", "비밀번호 찾기 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                 }
@@ -342,7 +342,7 @@ namespace FINAL_project_LibraryProgram_1234
             }
             else
             {
-                MessageBox.Show("본인인증 절차를 거친 후 진행 바랍니다.", "비밀번호 찾기 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("본인인증 절차를 거친 후 진행 바랍니다.", "비밀번호 찾기 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

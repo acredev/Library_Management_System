@@ -130,7 +130,6 @@ namespace FINAL_project_LibraryProgram_1234
             this.txtSubject.ReadOnly = true;
             this.txtSubject.Size = new System.Drawing.Size(385, 27);
             this.txtSubject.TabIndex = 9;
-            this.txtSubject.TextChanged += new System.EventHandler(this.txtSubject_TextChanged);
             // 
             // txtTo
             // 
@@ -280,7 +279,6 @@ namespace FINAL_project_LibraryProgram_1234
             this.Name = "SupportMail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "일이삼사 도서관 문의 / 오류보고";
-            this.Load += new System.EventHandler(this.SupportMail_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
