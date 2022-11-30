@@ -44,7 +44,7 @@ CREATE TABLE `board_free` (
 
 LOCK TABLES `board_free` WRITE;
 /*!40000 ALTER TABLE `board_free` DISABLE KEYS */;
-INSERT INTO `board_free` VALUES ('테스트','111111111112','테스트게시글','테스트게시글'),('테스트','111111111112','테스트게시글2','테스트게시글2'),('테스트','111111111112','테스트게시글3','테스트게시글3'),('테스트','111111111112','테스트게시글4','테스트게시글4'),('테스트','111111111112','test','test'),('테스트','111111111112','test2','test22'),('테스트','111111111112','test3','test3'),('테스트','111111111112','test5','test5');
+INSERT INTO `board_free` VALUES ('테스트','111111111112','테스트게시글','테스트게시글'),('테스트','111111111112','테스트게시글2','테스트게시글2'),('테스트','111111111112','테스트게시글3','테스트게시글3'),('테스트','111111111112','테스트게시글4','테스트게시글4'),('테스트','111111111112','test','test'),('테스트','111111111112','test2','test22'),('테스트','111111111112','test3','test3'),('테스트','111111111112','test5','test5'),('이민혁','2211253659','이민혁','내용 테스트');
 /*!40000 ALTER TABLE `board_free` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -152,7 +152,7 @@ CREATE TABLE `master` (
 
 LOCK TABLES `master` WRITE;
 /*!40000 ALTER TABLE `master` DISABLE KEYS */;
-INSERT INTO `master` VALUES ('asdf','asdf'),('test','test'),('test2','test2'),('test3','test3');
+INSERT INTO `master` VALUES ('master','master'),('test','test'),('test1','test1');
 /*!40000 ALTER TABLE `master` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -199,4 +199,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-30  2:01:03
+-- Dump completed on 2022-11-30 21:04:00
