@@ -51,9 +51,10 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.label_main.AutoSize = true;
             this.label_main.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_main.Location = new System.Drawing.Point(427, 51);
+            this.label_main.Location = new System.Drawing.Point(320, 45);
+            this.label_main.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_main.Name = "label_main";
-            this.label_main.Size = new System.Drawing.Size(584, 43);
+            this.label_main.Size = new System.Drawing.Size(452, 34);
             this.label_main.TabIndex = 0;
             this.label_main.Text = "일이삼사 도서관 도서 관리 프로그램";
             this.label_main.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -66,9 +67,11 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupofbtn.Controls.Add(this.btn_login_master);
             this.groupofbtn.Controls.Add(this.btn_info);
             this.groupofbtn.Controls.Add(this.btn_login_normal);
-            this.groupofbtn.Location = new System.Drawing.Point(445, 97);
+            this.groupofbtn.Location = new System.Drawing.Point(334, 86);
+            this.groupofbtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupofbtn.Name = "groupofbtn";
-            this.groupofbtn.Size = new System.Drawing.Size(553, 172);
+            this.groupofbtn.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.groupofbtn.Size = new System.Drawing.Size(415, 152);
             this.groupofbtn.TabIndex = 1;
             this.groupofbtn.TabStop = false;
             // 
@@ -77,9 +80,10 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_support.Cursor = System.Windows.Forms.Cursors.Help;
             this.btn_support.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_support.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_support.Location = new System.Drawing.Point(364, 88);
+            this.btn_support.Location = new System.Drawing.Point(273, 78);
+            this.btn_support.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_support.Name = "btn_support";
-            this.btn_support.Size = new System.Drawing.Size(184, 39);
+            this.btn_support.Size = new System.Drawing.Size(138, 34);
             this.btn_support.TabIndex = 5;
             this.btn_support.Text = "오류보고 / 개선요청";
             this.btn_support.UseVisualStyleBackColor = true;
@@ -90,9 +94,10 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_howtouse.Cursor = System.Windows.Forms.Cursors.Help;
             this.btn_howtouse.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_howtouse.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_howtouse.Location = new System.Drawing.Point(364, 51);
+            this.btn_howtouse.Location = new System.Drawing.Point(273, 45);
+            this.btn_howtouse.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_howtouse.Name = "btn_howtouse";
-            this.btn_howtouse.Size = new System.Drawing.Size(184, 39);
+            this.btn_howtouse.Size = new System.Drawing.Size(138, 34);
             this.btn_howtouse.TabIndex = 4;
             this.btn_howtouse.Text = "사용방법";
             this.btn_howtouse.UseVisualStyleBackColor = true;
@@ -102,9 +107,10 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.btn_exit.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_exit.ForeColor = System.Drawing.Color.OrangeRed;
-            this.btn_exit.Location = new System.Drawing.Point(364, 127);
+            this.btn_exit.Location = new System.Drawing.Point(273, 112);
+            this.btn_exit.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(184, 39);
+            this.btn_exit.Size = new System.Drawing.Size(138, 34);
             this.btn_exit.TabIndex = 6;
             this.btn_exit.Text = "종료";
             this.btn_exit.UseVisualStyleBackColor = true;
@@ -113,9 +119,10 @@ namespace FINAL_project_LibraryProgram_1234
             // btn_login_master
             // 
             this.btn_login_master.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_login_master.Location = new System.Drawing.Point(185, 14);
+            this.btn_login_master.Location = new System.Drawing.Point(139, 12);
+            this.btn_login_master.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_login_master.Name = "btn_login_master";
-            this.btn_login_master.Size = new System.Drawing.Size(179, 152);
+            this.btn_login_master.Size = new System.Drawing.Size(134, 134);
             this.btn_login_master.TabIndex = 2;
             this.btn_login_master.Text = "도서관 관리자\r\n\r\n로그인";
             this.btn_login_master.UseVisualStyleBackColor = true;
@@ -126,9 +133,10 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_info.Cursor = System.Windows.Forms.Cursors.Help;
             this.btn_info.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_info.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_info.Location = new System.Drawing.Point(364, 14);
+            this.btn_info.Location = new System.Drawing.Point(273, 12);
+            this.btn_info.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_info.Name = "btn_info";
-            this.btn_info.Size = new System.Drawing.Size(184, 39);
+            this.btn_info.Size = new System.Drawing.Size(138, 34);
             this.btn_info.TabIndex = 3;
             this.btn_info.Text = "정보";
             this.btn_info.UseVisualStyleBackColor = true;
@@ -138,9 +146,10 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.btn_login_normal.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_login_normal.ImageKey = "(없음)";
-            this.btn_login_normal.Location = new System.Drawing.Point(5, 14);
+            this.btn_login_normal.Location = new System.Drawing.Point(4, 12);
+            this.btn_login_normal.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_login_normal.Name = "btn_login_normal";
-            this.btn_login_normal.Size = new System.Drawing.Size(179, 152);
+            this.btn_login_normal.Size = new System.Drawing.Size(134, 134);
             this.btn_login_normal.TabIndex = 1;
             this.btn_login_normal.Text = "개인 사용자\r\n\r\n로그인";
             this.btn_login_normal.UseVisualStyleBackColor = true;
@@ -149,9 +158,10 @@ namespace FINAL_project_LibraryProgram_1234
             // picturebox_main
             // 
             this.picturebox_main.Image = ((System.Drawing.Image)(resources.GetObject("picturebox_main.Image")));
-            this.picturebox_main.Location = new System.Drawing.Point(45, 51);
+            this.picturebox_main.Location = new System.Drawing.Point(34, 45);
+            this.picturebox_main.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.picturebox_main.Name = "picturebox_main";
-            this.picturebox_main.Size = new System.Drawing.Size(367, 219);
+            this.picturebox_main.Size = new System.Drawing.Size(275, 193);
             this.picturebox_main.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picturebox_main.TabIndex = 2;
             this.picturebox_main.TabStop = false;
@@ -160,9 +170,10 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.linklabel_gotofont.AutoSize = true;
             this.linklabel_gotofont.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.linklabel_gotofont.Location = new System.Drawing.Point(835, 283);
+            this.linklabel_gotofont.Location = new System.Drawing.Point(626, 250);
+            this.linklabel_gotofont.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linklabel_gotofont.Name = "linklabel_gotofont";
-            this.linklabel_gotofont.Size = new System.Drawing.Size(156, 17);
+            this.linklabel_gotofont.Size = new System.Drawing.Size(123, 14);
             this.linklabel_gotofont.TabIndex = 10;
             this.linklabel_gotofont.TabStop = true;
             this.linklabel_gotofont.Text = "나눔고딕 설치 바로가기";
@@ -173,18 +184,19 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.label_aboutfont.AutoSize = true;
             this.label_aboutfont.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_aboutfont.Location = new System.Drawing.Point(41, 283);
+            this.label_aboutfont.Location = new System.Drawing.Point(31, 250);
+            this.label_aboutfont.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_aboutfont.Name = "label_aboutfont";
-            this.label_aboutfont.Size = new System.Drawing.Size(718, 17);
+            this.label_aboutfont.Size = new System.Drawing.Size(563, 14);
             this.label_aboutfont.TabIndex = 11;
             this.label_aboutfont.Text = "※ 가독성을 위해 \'나눔 고딕\' 폰트를 사용했으며, 미 설치된 컴퓨터에서는 의도한 바와 다르게 표시될 수 있습니다.";
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(1044, 316);
+            this.ClientSize = new System.Drawing.Size(783, 279);
             this.Controls.Add(this.label_aboutfont);
             this.Controls.Add(this.linklabel_gotofont);
             this.Controls.Add(this.picturebox_main);
@@ -192,6 +204,7 @@ namespace FINAL_project_LibraryProgram_1234
             this.Controls.Add(this.label_main);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Main";

@@ -38,14 +38,13 @@ namespace FINAL_project_LibraryProgram_1234
         // 정보 버튼 클릭시
         private void btn_info_Click(object sender, EventArgs e)
         {
-            info showForminfo = new info();
-            showForminfo.ShowDialog();
+            System.Diagnostics.Process.Start("https://github.com/acredev/Library_Management_System/blob/main/README.md");
         }
 
         // 사용방법 버튼 클릭시
         private void btn_howtouse_Click(object sender, EventArgs e)
         {
-
+            System.Diagnostics.Process.Start("https://github.com/acredev/Library_Management_System/blob/main/HOWTOUSE.md");
         }
 
         // 오류보고 / 개선요청 버튼 클릭시

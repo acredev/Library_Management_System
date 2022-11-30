@@ -93,7 +93,6 @@ D:\Dev\C#.NET\Library_Management_System\FINAL_project_LibraryProgram_1234\bin\De
 D:\Dev\C#.NET\Library_Management_System\FINAL_project_LibraryProgram_1234\bin\Debug\Newtonsoft.Json.xml
 D:\Dev\C#.NET\Library_Management_System\FINAL_project_LibraryProgram_1234\obj\Debug\FINAL_project_LibraryProgram_1234.csproj.AssemblyReference.cache
 D:\Dev\C#.NET\Library_Management_System\FINAL_project_LibraryProgram_1234\obj\Debug\FINAL_project_LibraryProgram_1234.exe.config
-D:\Dev\C#.NET\Library_Management_System\FINAL_project_LibraryProgram_1234\obj\Debug\FINAL_project_LibraryProgram_1234.info.resources
 D:\Dev\C#.NET\Library_Management_System\FINAL_project_LibraryProgram_1234\obj\Debug\FINAL_project_LibraryProgram_1234.Login_Master.resources
 D:\Dev\C#.NET\Library_Management_System\FINAL_project_LibraryProgram_1234\obj\Debug\FINAL_project_LibraryProgram_1234.Login_Normal.resources
 D:\Dev\C#.NET\Library_Management_System\FINAL_project_LibraryProgram_1234\obj\Debug\FINAL_project_LibraryProgram_1234.Main.resources
@@ -117,3 +116,4 @@ D:\Dev\C#.NET\Library_Management_System\FINAL_project_LibraryProgram_1234\obj\De
 D:\Dev\C#.NET\Library_Management_System\FINAL_project_LibraryProgram_1234\obj\Debug\FINAL_project_LibraryProgram_1234.Normal_Board.resources
 D:\Dev\C#.NET\Library_Management_System\FINAL_project_LibraryProgram_1234\obj\Debug\FINAL_project_LibraryProgram_1234.Normal_Mypage.resources
 D:\Dev\C#.NET\Library_Management_System\FINAL_project_LibraryProgram_1234\obj\Debug\FINAL_project_LibraryProgram_1234.Normal_Qna.resources
+D:\Dev\C#.NET\Library_Management_System\FINAL_project_LibraryProgram_1234\obj\Debug\FINAL_project_LibraryProgram_1234.Normal_BeforeMypage.resources

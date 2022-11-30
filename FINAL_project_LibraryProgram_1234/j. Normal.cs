@@ -111,8 +111,8 @@ namespace FINAL_project_LibraryProgram_1234
 
         private void btn_mypage_Click(object sender, EventArgs e)
         {
-            Normal_Mypage showMypage = new Normal_Mypage();
-            showMypage.ShowDialog();
+            Normal_BeforeMypage showBeforeMaPage = new Normal_BeforeMypage();
+            showBeforeMaPage.ShowDialog();
         }
 
         private void btn_qna_Click(object sender, EventArgs e)

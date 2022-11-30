@@ -56,29 +56,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="o. NewMember_PersonalInformation.cs">
+    <Compile Include="g. NewMember_PersonalInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="o. NewMember_PersonalInformation.Designer.cs">
-      <DependentUpon>o. NewMember_PersonalInformation.cs</DependentUpon>
+    <Compile Include="g. NewMember_PersonalInformation.Designer.cs">
+      <DependentUpon>g. NewMember_PersonalInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="p. NewMember_Normal.cs">
+    <Compile Include="h. NewMember_Normal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="p. NewMember_Normal.Designer.cs">
-      <DependentUpon>p. NewMember_Normal.cs</DependentUpon>
+    <Compile Include="h. NewMember_Normal.Designer.cs">
+      <DependentUpon>h. NewMember_Normal.cs</DependentUpon>
     </Compile>
-    <Compile Include="b. info.cs">
+    <Compile Include="b. Login_Master.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="b. info.Designer.cs">
-      <DependentUpon>b. info.cs</DependentUpon>
-    </Compile>
-    <Compile Include="c. Login_Master.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="c. Login_Master.Designer.cs">
-      <DependentUpon>c. Login_Master.cs</DependentUpon>
+    <Compile Include="b. Login_Master.Designer.cs">
+      <DependentUpon>b. Login_Master.cs</DependentUpon>
     </Compile>
     <Compile Include="d. Login_Normal.cs">
       <SubType>Form</SubType>
@@ -92,65 +86,71 @@
     <Compile Include="a. Main.Designer.cs">
       <DependentUpon>a. Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="e. Master.cs">
+    <Compile Include="i. Master.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="e. Master.Designer.cs">
-      <DependentUpon>e. Master.cs</DependentUpon>
+    <Compile Include="i. Master.Designer.cs">
+      <DependentUpon>i. Master.cs</DependentUpon>
     </Compile>
-    <Compile Include="g. Master_Find_IDPW.cs">
+    <Compile Include="c. Master_Find_IDPW.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="g. Master_Find_IDPW.Designer.cs">
-      <DependentUpon>g. Master_Find_IDPW.cs</DependentUpon>
+    <Compile Include="c. Master_Find_IDPW.Designer.cs">
+      <DependentUpon>c. Master_Find_IDPW.cs</DependentUpon>
     </Compile>
-    <Compile Include="g. Normal.cs">
+    <Compile Include="j. Normal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="g. Normal.Designer.cs">
-      <DependentUpon>g. Normal.cs</DependentUpon>
+    <Compile Include="j. Normal.Designer.cs">
+      <DependentUpon>j. Normal.cs</DependentUpon>
     </Compile>
-    <Compile Include="m. Normal_Find_ID.cs">
+    <Compile Include="e. Normal_Find_ID.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="m. Normal_Find_ID.Designer.cs">
-      <DependentUpon>m. Normal_Find_ID.cs</DependentUpon>
+    <Compile Include="e. Normal_Find_ID.Designer.cs">
+      <DependentUpon>e. Normal_Find_ID.cs</DependentUpon>
     </Compile>
-    <Compile Include="n. Normal_Find_PW.cs">
+    <Compile Include="f. Normal_Find_PW.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="n. Normal_Find_PW.Designer.cs">
-      <DependentUpon>n. Normal_Find_PW.cs</DependentUpon>
+    <Compile Include="f. Normal_Find_PW.Designer.cs">
+      <DependentUpon>f. Normal_Find_PW.cs</DependentUpon>
     </Compile>
-    <Compile Include="h. Normal_loanBook.cs">
+    <Compile Include="k. Normal_loanBook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="h. Normal_loanBook.Designer.cs">
-      <DependentUpon>h. Normal_loanBook.cs</DependentUpon>
+    <Compile Include="k. Normal_loanBook.Designer.cs">
+      <DependentUpon>k. Normal_loanBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="j. Normal_Board.cs">
+    <Compile Include="m. Normal_Board.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="j. Normal_Board.Designer.cs">
-      <DependentUpon>j. Normal_Board.cs</DependentUpon>
+    <Compile Include="m. Normal_Board.Designer.cs">
+      <DependentUpon>m. Normal_Board.cs</DependentUpon>
     </Compile>
-    <Compile Include="k. Normal_Mypage.cs">
+    <Compile Include="o. Normal_Mypage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="k. Normal_Mypage.Designer.cs">
-      <DependentUpon>k. Normal_Mypage.cs</DependentUpon>
+    <Compile Include="o. Normal_Mypage.Designer.cs">
+      <DependentUpon>o. Normal_Mypage.cs</DependentUpon>
     </Compile>
-    <Compile Include="l. Normal_Qna.cs">
+    <Compile Include="n. Normal_BeforeMypage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="l. Normal_Qna.Designer.cs">
-      <DependentUpon>l. Normal_Qna.cs</DependentUpon>
+    <Compile Include="n. Normal_BeforeMypage.Designer.cs">
+      <DependentUpon>n. Normal_BeforeMypage.cs</DependentUpon>
     </Compile>
-    <Compile Include="i. Normal_SearchBook.cs">
+    <Compile Include="p. Normal_Qna.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="i. Normal_SearchBook.Designer.cs">
-      <DependentUpon>i. Normal_SearchBook.cs</DependentUpon>
+    <Compile Include="p. Normal_Qna.Designer.cs">
+      <DependentUpon>p. Normal_Qna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="l. Normal_SearchBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="l. Normal_SearchBook.Designer.cs">
+      <DependentUpon>l. Normal_SearchBook.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -166,11 +166,8 @@
     <Compile Include="q. SupportMail_Before.Designer.cs">
       <DependentUpon>q. SupportMail_Before.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="b. info.resx">
-      <DependentUpon>b. info.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="c. Login_Master.resx">
-      <DependentUpon>c. Login_Master.cs</DependentUpon>
+    <EmbeddedResource Include="b. Login_Master.resx">
+      <DependentUpon>b. Login_Master.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="d. Login_Normal.resx">
       <DependentUpon>d. Login_Normal.cs</DependentUpon>
@@ -178,41 +175,44 @@
     <EmbeddedResource Include="a. Main.resx">
       <DependentUpon>a. Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="e. Master.resx">
-      <DependentUpon>e. Master.cs</DependentUpon>
+    <EmbeddedResource Include="i. Master.resx">
+      <DependentUpon>i. Master.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="g. Normal.resx">
-      <DependentUpon>g. Normal.cs</DependentUpon>
+    <EmbeddedResource Include="j. Normal.resx">
+      <DependentUpon>j. Normal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="g. Master_Find_IDPW.resx">
-      <DependentUpon>g. Master_Find_IDPW.cs</DependentUpon>
+    <EmbeddedResource Include="c. Master_Find_IDPW.resx">
+      <DependentUpon>c. Master_Find_IDPW.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="h. Normal_loanBook.resx">
-      <DependentUpon>h. Normal_loanBook.cs</DependentUpon>
+    <EmbeddedResource Include="k. Normal_loanBook.resx">
+      <DependentUpon>k. Normal_loanBook.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="i. Normal_SearchBook.resx">
-      <DependentUpon>i. Normal_SearchBook.cs</DependentUpon>
+    <EmbeddedResource Include="l. Normal_SearchBook.resx">
+      <DependentUpon>l. Normal_SearchBook.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="j. Normal_Board.resx">
-      <DependentUpon>j. Normal_Board.cs</DependentUpon>
+    <EmbeddedResource Include="m. Normal_Board.resx">
+      <DependentUpon>m. Normal_Board.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="k. Normal_Mypage.resx">
-      <DependentUpon>k. Normal_Mypage.cs</DependentUpon>
+    <EmbeddedResource Include="n. Normal_BeforeMypage.resx">
+      <DependentUpon>n. Normal_BeforeMypage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="l. Normal_Qna.resx">
-      <DependentUpon>l. Normal_Qna.cs</DependentUpon>
+    <EmbeddedResource Include="o. Normal_Mypage.resx">
+      <DependentUpon>o. Normal_Mypage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="m. Normal_Find_ID.resx">
-      <DependentUpon>m. Normal_Find_ID.cs</DependentUpon>
+    <EmbeddedResource Include="p. Normal_Qna.resx">
+      <DependentUpon>p. Normal_Qna.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="n. Normal_Find_PW.resx">
-      <DependentUpon>n. Normal_Find_PW.cs</DependentUpon>
+    <EmbeddedResource Include="e. Normal_Find_ID.resx">
+      <DependentUpon>e. Normal_Find_ID.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="p. NewMember_Normal.resx">
-      <DependentUpon>p. NewMember_Normal.cs</DependentUpon>
+    <EmbeddedResource Include="f. Normal_Find_PW.resx">
+      <DependentUpon>f. Normal_Find_PW.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="o. NewMember_PersonalInformation.resx">
-      <DependentUpon>o. NewMember_PersonalInformation.cs</DependentUpon>
+    <EmbeddedResource Include="h. NewMember_Normal.resx">
+      <DependentUpon>h. NewMember_Normal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="g. NewMember_PersonalInformation.resx">
+      <DependentUpon>g. NewMember_PersonalInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
