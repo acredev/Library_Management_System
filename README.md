@@ -150,4 +150,4 @@
   * `r. SupportMail.cs`<br><br>
   ![r  SupportMail](https://user-images.githubusercontent.com/3482382/204792846-3f2c046a-5dde-4bcd-8890-b78f24da7d20.png)<br>
     * `Form Load` 즉시 사용자 컴퓨터의 기본 정보를 로드합니다.
-    * 프로그램 문제에 대해 문의접수가 가능합니다.
+    * 프로그램 문제에 대해 `EMail`로 문의접수가 가능합니다.
