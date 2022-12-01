@@ -20,7 +20,7 @@
 * 테스트 : 2022. 11. 30 ~ 2022. 11. 30
 
 ## 💾 ERD 설계도
-![Untitled](https://user-images.githubusercontent.com/3482382/204819910-99861cef-2304-4a84-91a7-cbdec8e5ac5b.png)
+![Untitled](https://user-images.githubusercontent.com/3482382/204819910-99861cef-2304-4a84-91a7-cbdec8e5ac5b.png)<br><br><br>
 
 ## 📑 WinForm 구성
 * 총 13개의 `WinForm`으로 구성되어 있으며, 나눔고딕 `font`를 이용해 사용자의 가독성을 높였습니다.
@@ -36,7 +36,7 @@
 
   * `b. Login_master.cs`<br><br>
   ![b  Login_Master](https://user-images.githubusercontent.com/3482382/204792594-8f1fc6fc-e2c9-4400-8573-4bc23fd98b0d.png)<br>
-    * `도서관 관리자` 로그인 화면입니다.
+    * `도서관 관리자` 로그인 화면입니다.<br><br>
 
   * `c. Master_Find_IDPW.cs`<br><br>
   ![c  Master_Find_IDPW](https://user-images.githubusercontent.com/3482382/204792604-9141797a-5548-443d-83a9-f22c3f1afc22.png)<br>

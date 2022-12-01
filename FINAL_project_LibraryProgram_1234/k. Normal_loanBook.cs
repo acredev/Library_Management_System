@@ -25,6 +25,15 @@ namespace FINAL_project_LibraryProgram_1234
             InitializeComponent();
         }
 
+        //대출 / 반납시 Normal.form의 대출한 도서권수 label 값도 변경되도록 form 정보 인자로 공유
+
+        Normal normal;
+        public Normal_loanBook(Normal reLoad_Normal)
+        {
+            InitializeComponent();
+            normal = reLoad_Normal;
+        }
+
         // 창 로드시 데이터그리드뷰 바로 출력
         private void Normal_loanBook_Load(object sender, EventArgs e)
         {
@@ -325,6 +334,15 @@ namespace FINAL_project_LibraryProgram_1234
                             txtbox_publisher.Text = "";
                             txtbox_loanstatus.Text = "";
                             data_book.DataSource = "";
+
+                            // 대출 완료시 query문을 보내 normal form의 label값을 다시 리로드
+                            string insertQuery2 = "SELECT 대출권수 FROM library_project.member WHERE 회원번호 = '" + Normal.static_memnum + "';";
+                            MySqlCommand command2 = new MySqlCommand(insertQuery2, connection);
+                            MySqlDataReader reader = command2.ExecuteReader();
+                            while(reader.Read())
+                            {
+                                normal.label_loan.Text = reader["대출권수"].ToString();
+                            }
                         }
                     }
                     catch (Exception ex)

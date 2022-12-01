@@ -16,6 +16,8 @@ namespace FINAL_project_LibraryProgram_1234
     {
         // <MySQL 연결 변수>
         MySqlConnection connection = new MySqlConnection("Server = localhost;Database=library_project;Uid=root;Pwd=root;");
+
+        // Label_id 값을 Normal 내부의 다른 Form 으로 공유
         public void SetText(string id)
         {
             Label_id.Text = id;
@@ -92,7 +94,7 @@ namespace FINAL_project_LibraryProgram_1234
 
         private void btn_loanbook_Click(object sender, EventArgs e)
         {
-            Normal_loanBook showLoan = new Normal_loanBook();
+            Normal_loanBook showLoan = new Normal_loanBook(this);
             showLoan.ShowDialog();
         }
 
@@ -127,7 +129,7 @@ namespace FINAL_project_LibraryProgram_1234
                 Application.Exit();
             }
         }
-        private void btn_refresh_Click(object sender, EventArgs e)
+        public void btn_refresh_Click(object sender, EventArgs e)
         {
             string insertQuery = "SELECT 제목, 내용 FROM library_project.board_notice;";
             connection.Open();

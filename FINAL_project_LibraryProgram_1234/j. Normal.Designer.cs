@@ -67,9 +67,10 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(375, 20);
+            this.label5.Location = new System.Drawing.Point(281, 18);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(321, 50);
+            this.label5.Size = new System.Drawing.Size(258, 40);
             this.label5.TabIndex = 27;
             this.label5.Text = "일이삼사 도서관";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -77,9 +78,10 @@ namespace FINAL_project_LibraryProgram_1234
             // picture_support
             // 
             this.picture_support.Image = ((System.Drawing.Image)(resources.GetObject("picture_support.Image")));
-            this.picture_support.Location = new System.Drawing.Point(905, 10);
+            this.picture_support.Location = new System.Drawing.Point(679, 9);
+            this.picture_support.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.picture_support.Name = "picture_support";
-            this.picture_support.Size = new System.Drawing.Size(63, 63);
+            this.picture_support.Size = new System.Drawing.Size(47, 56);
             this.picture_support.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picture_support.TabIndex = 31;
             this.picture_support.TabStop = false;
@@ -88,9 +90,10 @@ namespace FINAL_project_LibraryProgram_1234
             // picture_logout
             // 
             this.picture_logout.Image = ((System.Drawing.Image)(resources.GetObject("picture_logout.Image")));
-            this.picture_logout.Location = new System.Drawing.Point(999, 10);
+            this.picture_logout.Location = new System.Drawing.Point(749, 9);
+            this.picture_logout.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.picture_logout.Name = "picture_logout";
-            this.picture_logout.Size = new System.Drawing.Size(56, 63);
+            this.picture_logout.Size = new System.Drawing.Size(42, 56);
             this.picture_logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picture_logout.TabIndex = 30;
             this.picture_logout.TabStop = false;
@@ -101,10 +104,9 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_loanbook.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_loanbook.BackgroundImage")));
             this.btn_loanbook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_loanbook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_loanbook.Location = new System.Drawing.Point(52, 17);
-            this.btn_loanbook.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btn_loanbook.Location = new System.Drawing.Point(39, 15);
             this.btn_loanbook.Name = "btn_loanbook";
-            this.btn_loanbook.Size = new System.Drawing.Size(293, 127);
+            this.btn_loanbook.Size = new System.Drawing.Size(220, 112);
             this.btn_loanbook.TabIndex = 32;
             this.btn_loanbook.UseVisualStyleBackColor = true;
             this.btn_loanbook.Click += new System.EventHandler(this.btn_loanbook_Click);
@@ -118,21 +120,18 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox1.Controls.Add(this.btn_board);
             this.groupBox1.Controls.Add(this.btn_searchbook);
             this.groupBox1.Controls.Add(this.btn_loanbook);
-            this.groupBox1.Location = new System.Drawing.Point(16, 314);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox1.Location = new System.Drawing.Point(12, 277);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox1.Size = new System.Drawing.Size(1039, 329);
+            this.groupBox1.Size = new System.Drawing.Size(779, 290);
             this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
             // 
             // btn_refresh
             // 
             this.btn_refresh.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_refresh.Location = new System.Drawing.Point(21, 288);
-            this.btn_refresh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btn_refresh.Location = new System.Drawing.Point(16, 254);
             this.btn_refresh.Name = "btn_refresh";
-            this.btn_refresh.Size = new System.Drawing.Size(997, 34);
+            this.btn_refresh.Size = new System.Drawing.Size(748, 30);
             this.btn_refresh.TabIndex = 39;
             this.btn_refresh.Text = "화면 새로고침";
             this.btn_refresh.UseVisualStyleBackColor = true;
@@ -144,10 +143,9 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_exit.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_exit.Location = new System.Drawing.Point(681, 154);
-            this.btn_exit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btn_exit.Location = new System.Drawing.Point(511, 136);
             this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(293, 127);
+            this.btn_exit.Size = new System.Drawing.Size(220, 112);
             this.btn_exit.TabIndex = 37;
             this.btn_exit.UseVisualStyleBackColor = true;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
@@ -157,10 +155,9 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_qna.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_qna.BackgroundImage")));
             this.btn_qna.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_qna.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_qna.Location = new System.Drawing.Point(368, 154);
-            this.btn_qna.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btn_qna.Location = new System.Drawing.Point(276, 136);
             this.btn_qna.Name = "btn_qna";
-            this.btn_qna.Size = new System.Drawing.Size(293, 127);
+            this.btn_qna.Size = new System.Drawing.Size(220, 112);
             this.btn_qna.TabIndex = 36;
             this.btn_qna.UseVisualStyleBackColor = true;
             this.btn_qna.Click += new System.EventHandler(this.btn_qna_Click);
@@ -170,10 +167,9 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_mypage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_mypage.BackgroundImage")));
             this.btn_mypage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_mypage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_mypage.Location = new System.Drawing.Point(52, 154);
-            this.btn_mypage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btn_mypage.Location = new System.Drawing.Point(39, 136);
             this.btn_mypage.Name = "btn_mypage";
-            this.btn_mypage.Size = new System.Drawing.Size(293, 127);
+            this.btn_mypage.Size = new System.Drawing.Size(220, 112);
             this.btn_mypage.TabIndex = 35;
             this.btn_mypage.UseVisualStyleBackColor = true;
             this.btn_mypage.Click += new System.EventHandler(this.btn_mypage_Click);
@@ -183,10 +179,9 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_board.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_board.BackgroundImage")));
             this.btn_board.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_board.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_board.Location = new System.Drawing.Point(681, 17);
-            this.btn_board.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btn_board.Location = new System.Drawing.Point(511, 15);
             this.btn_board.Name = "btn_board";
-            this.btn_board.Size = new System.Drawing.Size(293, 127);
+            this.btn_board.Size = new System.Drawing.Size(220, 112);
             this.btn_board.TabIndex = 34;
             this.btn_board.UseVisualStyleBackColor = true;
             this.btn_board.Click += new System.EventHandler(this.btn_board_Click);
@@ -196,10 +191,9 @@ namespace FINAL_project_LibraryProgram_1234
             this.btn_searchbook.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_searchbook.BackgroundImage")));
             this.btn_searchbook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_searchbook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_searchbook.Location = new System.Drawing.Point(368, 17);
-            this.btn_searchbook.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btn_searchbook.Location = new System.Drawing.Point(276, 15);
             this.btn_searchbook.Name = "btn_searchbook";
-            this.btn_searchbook.Size = new System.Drawing.Size(293, 127);
+            this.btn_searchbook.Size = new System.Drawing.Size(220, 112);
             this.btn_searchbook.TabIndex = 33;
             this.btn_searchbook.UseVisualStyleBackColor = true;
             this.btn_searchbook.Click += new System.EventHandler(this.btn_searchbook_Click);
@@ -212,11 +206,9 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.data_notice);
             this.groupBox2.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox2.Location = new System.Drawing.Point(16, 80);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox2.Location = new System.Drawing.Point(12, 71);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox2.Size = new System.Drawing.Size(1039, 237);
+            this.groupBox2.Size = new System.Drawing.Size(779, 209);
             this.groupBox2.TabIndex = 38;
             this.groupBox2.TabStop = false;
             // 
@@ -224,9 +216,10 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label8.Location = new System.Drawing.Point(625, 213);
+            this.label8.Location = new System.Drawing.Point(469, 188);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(389, 20);
+            this.label8.Size = new System.Drawing.Size(295, 15);
             this.label8.TabIndex = 51;
             this.label8.Text = "※ 한 회원당 최대 10권의 도서까지 대출 가능합니다.";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -235,9 +228,10 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.Label_id.AutoSize = true;
             this.Label_id.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Label_id.Location = new System.Drawing.Point(509, 100);
+            this.Label_id.Location = new System.Drawing.Point(382, 88);
+            this.Label_id.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Label_id.Name = "Label_id";
-            this.Label_id.Size = new System.Drawing.Size(438, 20);
+            this.Label_id.Size = new System.Drawing.Size(332, 15);
             this.Label_id.TabIndex = 50;
             this.Label_id.Text = "사용자 아이디, 사용자에게 보이지 않음 (SQL사용위해 삽입)";
             this.Label_id.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -247,9 +241,10 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(17, 213);
+            this.label1.Location = new System.Drawing.Point(13, 188);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(559, 20);
+            this.label1.Size = new System.Drawing.Size(423, 15);
             this.label1.TabIndex = 42;
             this.label1.Text = "※ 추가적인 자세한 공지사항 열람은, 하단 메뉴의 \'게시판\' 을 이용 바랍니다.";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -258,9 +253,10 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(16, 0);
+            this.label2.Location = new System.Drawing.Point(12, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(193, 23);
+            this.label2.Size = new System.Drawing.Size(152, 19);
             this.label2.TabIndex = 41;
             this.label2.Text = "우리 도서관 공지사항";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -271,13 +267,12 @@ namespace FINAL_project_LibraryProgram_1234
             this.data_notice.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.data_notice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data_notice.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
-            this.data_notice.Location = new System.Drawing.Point(21, 25);
-            this.data_notice.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.data_notice.Location = new System.Drawing.Point(16, 22);
             this.data_notice.Name = "data_notice";
             this.data_notice.ReadOnly = true;
             this.data_notice.RowHeadersWidth = 51;
             this.data_notice.RowTemplate.Height = 25;
-            this.data_notice.Size = new System.Drawing.Size(997, 185);
+            this.data_notice.Size = new System.Drawing.Size(748, 163);
             this.data_notice.TabIndex = 40;
             // 
             // groupBox3
@@ -289,11 +284,9 @@ namespace FINAL_project_LibraryProgram_1234
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Location = new System.Drawing.Point(16, 10);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox3.Location = new System.Drawing.Point(12, 9);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox3.Size = new System.Drawing.Size(352, 67);
+            this.groupBox3.Size = new System.Drawing.Size(264, 59);
             this.groupBox3.TabIndex = 43;
             this.groupBox3.TabStop = false;
             // 
@@ -301,9 +294,10 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.label_loan.AutoSize = true;
             this.label_loan.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_loan.Location = new System.Drawing.Point(296, 39);
+            this.label_loan.Location = new System.Drawing.Point(222, 34);
+            this.label_loan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_loan.Name = "label_loan";
-            this.label_loan.Size = new System.Drawing.Size(48, 20);
+            this.label_loan.Size = new System.Drawing.Size(37, 15);
             this.label_loan.TabIndex = 48;
             this.label_loan.Text = "OOO";
             this.label_loan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -312,9 +306,10 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.label_name.AutoSize = true;
             this.label_name.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_name.Location = new System.Drawing.Point(84, 39);
+            this.label_name.Location = new System.Drawing.Point(63, 34);
+            this.label_name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_name.Name = "label_name";
-            this.label_name.Size = new System.Drawing.Size(48, 20);
+            this.label_name.Size = new System.Drawing.Size(37, 15);
             this.label_name.TabIndex = 47;
             this.label_name.Text = "OOO";
             this.label_name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -323,9 +318,10 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.label_num.AutoSize = true;
             this.label_num.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_num.Location = new System.Drawing.Point(100, 22);
+            this.label_num.Location = new System.Drawing.Point(75, 19);
+            this.label_num.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_num.Name = "label_num";
-            this.label_num.Size = new System.Drawing.Size(48, 20);
+            this.label_num.Size = new System.Drawing.Size(37, 15);
             this.label_num.TabIndex = 46;
             this.label_num.Text = "OOO";
             this.label_num.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -334,9 +330,10 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(172, 39);
+            this.label7.Location = new System.Drawing.Point(129, 34);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(130, 20);
+            this.label7.Size = new System.Drawing.Size(99, 15);
             this.label7.TabIndex = 45;
             this.label7.Text = "대출 중인 도서 : ";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -345,9 +342,10 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.Location = new System.Drawing.Point(17, 39);
+            this.label6.Location = new System.Drawing.Point(13, 34);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 20);
+            this.label6.Size = new System.Drawing.Size(55, 15);
             this.label6.TabIndex = 44;
             this.label6.Text = "회원명 : ";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -356,9 +354,10 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(17, 22);
+            this.label4.Location = new System.Drawing.Point(13, 19);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 20);
+            this.label4.Size = new System.Drawing.Size(67, 15);
             this.label4.TabIndex = 43;
             this.label4.Text = "회원번호 : ";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -367,19 +366,20 @@ namespace FINAL_project_LibraryProgram_1234
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(16, 0);
+            this.label3.Location = new System.Drawing.Point(12, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 23);
+            this.label3.Size = new System.Drawing.Size(88, 19);
             this.label3.TabIndex = 43;
             this.label3.Text = "로그인 정보";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Normal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1069, 656);
+            this.ClientSize = new System.Drawing.Size(802, 579);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -388,7 +388,6 @@ namespace FINAL_project_LibraryProgram_1234
             this.Controls.Add(this.label5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Normal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "일반 사용자 모드 (일이삼사 도서관)";
@@ -423,7 +422,6 @@ namespace FINAL_project_LibraryProgram_1234
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label_loan;
         private System.Windows.Forms.Label label_name;
         private System.Windows.Forms.Label label_num;
         private System.Windows.Forms.Label label7;
@@ -431,7 +429,8 @@ namespace FINAL_project_LibraryProgram_1234
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label Label_id;
-        private System.Windows.Forms.Button btn_refresh;
         private System.Windows.Forms.Label label8;
+        public System.Windows.Forms.Button btn_refresh;
+        public System.Windows.Forms.Label label_loan;
     }
 }
